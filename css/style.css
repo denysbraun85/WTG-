@@ -1,0 +1,98 @@
+/*=============================COMPONENTS=============================
+1. Fonts
+2. Reset
+3. Global
+4. Colors
+=====================================================================*/
+
+/*====================================================================
+                                1. Fonts
+=====================================================================*/
+
+/*====================================================================
+                                    END
+=====================================================================*/
+
+/*====================================================================
+                                2. Reset
+=====================================================================*/
+* {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    outline: none;
+}
+/*====================================================================
+                                    END
+=====================================================================*/
+
+/*====================================================================
+                                3. Global
+=====================================================================*/
+body {
+    background: #ccc;
+    padding-top: 100px;
+}
+/*---------------------------------Button----------------------------*/
+.main-btn {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    font-size: 16px;
+    background: transparent;
+    color: var(--color-btn);
+    border-radius: 50px 50px 50px 0;
+    border: 2px solid var(--color-btn);
+    outline: none;
+    padding: 10px 0;
+    transition: all 0.3s ease-in-out;
+}
+.main-btn span {
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+.main-btn:hover {
+    border: 2px solid transparent;
+}
+.main-btn:hover span{
+    color: var(--color-btn);
+}
+.main-btn:before {
+    display: block;
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    height: 80%;
+    width: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 2px solid transparent;
+    background: transparent;
+    border-radius: 50px;
+    transition: all .3s ease-in-out;
+}
+.main-btn:hover:before{
+    width: 101%;
+    height: 100%;
+    background: var(--color-btn-hover);
+    border-radius: 50px 50px 50px 0;
+    box-shadow: 0 10px 30px var(--main-btn-shadow);
+}
+/*====================================================================
+                                    END
+=====================================================================*/
+
+/*====================================================================
+                                4. Colors
+=====================================================================*/
+:root {
+    --color-btn: #fff;
+    --color-btn-hover: #006aff;
+    --main-btn-shadow: rgba(0, 114, 255, 0.3);
+}
+/*====================================================================
+                                    END
+=====================================================================*/
