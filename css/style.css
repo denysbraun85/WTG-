@@ -41,7 +41,6 @@ img {
 =====================================================================*/
 body {
     background: #ccc;
-    padding-top: 100px;
 }
 /*---------------------------------Button----------------------------*/
 .main-btn {
@@ -115,6 +114,17 @@ body {
     width: 100%;
 }
 .logo-box {
+    width: 100%;
+    text-align: center;
+}
+.logo-box img {
+    width: 50%;
+}
+.navigation {
+}
+.navigation ul {
+    display: flex;
+    justify-content: right;
     width: 100%;
 }
 /*====================================================================
