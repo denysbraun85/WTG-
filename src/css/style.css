@@ -1,0 +1,172 @@
+/*=============================COMPONENTS=============================
+ * 1. Fonts
+ * 2. Reset
+ * 3. Colors
+ * 4. Global
+ * 5. Main header
+ @mixin ===============================END=================================*/
+/*====================================================================
+                               1. Fonts
+ @mixin ====================================================================*/
+/*====================================================================
+                                    END
+ @mixin ====================================================================*/
+/*====================================================================
+                                2. Reset
+ @mixin ====================================================================*/
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+img {
+  width: 100%; }
+
+/*====================================================================
+                                    END
+ @mixin ====================================================================*/
+/*====================================================================
+                                3. Colors
+ @mixin ====================================================================*/
+/*====================================================================
+                                    END
+ @mixin ====================================================================*/
+/*====================================================================
+                                4. Global
+ @mixin ====================================================================*/
+body {
+  background: #ccc; }
+
+/*---------------------------------Button----------------------------*/
+.main-btn {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  font-size: 16px;
+  background: transparent;
+  color: #fff;
+  -webkit-border-radius: 50px 50px 50px 0;
+          border-radius: 50px 50px 50px 0;
+  border: 2px solid var(--color-btn);
+  outline: none;
+  padding: 10px 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  .main-btn span {
+    display: block;
+    position: relative;
+    z-index: 1; }
+  .main-btn:hover {
+    border: 2px solid transparent; }
+    .main-btn:hover span {
+      color: #fff; }
+    .main-btn:hover:before {
+      width: 101%;
+      height: 100%;
+      background: #006aff;
+      -webkit-border-radius: 50px 50px 50px 0;
+              border-radius: 50px 50px 50px 0;
+      -webkit-box-shadow: 0 10px 30px rgba(0, 114, 255, 0.3);
+              box-shadow: 0 10px 30px rgba(0, 114, 255, 0.3); }
+  .main-btn:before {
+    display: block;
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    height: 80%;
+    width: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    border: 2px solid transparent;
+    background: transparent;
+    -webkit-border-radius: 50px;
+            border-radius: 50px;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out; }
+
+/*====================================================================
+                                    END
+ @mixin ====================================================================*/
+/* ==================================================================
+                            STYLES HOLINEY
+ @mixin ==================================================================*/
+/* ==================================================================
+                            STYLE DOWNARROW
+ @mixin ==================================================================*/
+.arrow_down {
+  border-bottom: 2px solid #ffffff;
+  max-width: 57px;
+  width: 100%;
+  padding: 3px 0 18px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s; }
+  .arrow_down img {
+    width: 34px;
+    margin: 0 auto;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
+  .arrow_down:hover {
+    background: #006aff; }
+    .arrow_down:hover img {
+      -webkit-transform: translateY(35%);
+          -ms-transform: translateY(35%);
+              transform: translateY(35%); }
+
+/* ==================================================================
+                            STYLE DOWNARROW
+ @mixin ==================================================================*/
+/* ==================================================================
+                            STYLES HOLINEY
+ @mixin ==================================================================*/
+/*====================================================================
+                                5. Main header
+ @mixin ====================================================================*/
+.main-header {
+  position: relative;
+  width: 100%; }
+  .main-header .logo-box {
+    width: 100%;
+    text-align: center; }
+    .main-header .logo-box img {
+      width: 50%; }
+  .main-header .navigation ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: right;
+    -webkit-justify-content: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+    width: 100%; }
+
+/*====================================================================
+                                    END
+ @mixin ====================================================================*/
