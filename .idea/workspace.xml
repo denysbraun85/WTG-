@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19722a5d-ae65-4ff2-ab51-78a7c2c5aaaf" name="Default" comment="fresh code" />
+    <list default="true" id="19722a5d-ae65-4ff2-ab51-78a7c2c5aaaf" name="Default" comment="fresh code">
+      <change beforePath="$PROJECT_DIR$/src/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Krub-Bold.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Krub-Bold.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Krub-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Krub-Bold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Krub-Bold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Krub-Regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Krub-Regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Krub-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Krub-Regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Krub-Regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/VarelaRound-Regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/VarelaRound-Regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/VarelaRound-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/VarelaRound-Regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/VarelaRound-Regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/VarelaRound-Regular_1.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/VarelaRound-Regular_1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/VarelaRound-Regular_1.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/VarelaRound-Regular_1.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/VarelaRound-Regular_1.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sass/style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/style.sass" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -16,22 +40,36 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+            <state relative-caret-position="336">
+              <caret line="36" column="46" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sass/style.sass">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="75" column="33" lean-forward="true" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sass/style.sass">
+        <entry file="file://$PROJECT_DIR$/src/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="124" column="27" lean-forward="true" selection-start-line="124" selection-start-column="27" selection-end-line="124" selection-end-column="27" />
+            <state relative-caret-position="190">
+              <caret line="67" column="37" lean-forward="true" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>url</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -72,6 +110,17 @@
             <path>
               <item name="WTG-" type="b2602c69:ProjectViewProjectNode" />
               <item name="WTG-" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WTG-" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WTG-" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WTG-" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WTG-" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -129,7 +178,7 @@
       <updated>1560196939441</updated>
       <workItem from="1560196941637" duration="2203000" />
       <workItem from="1560235424330" duration="1243000" />
-      <workItem from="1560236933082" duration="3619000" />
+      <workItem from="1560236933082" duration="6954000" />
     </task>
     <task id="LOCAL-00001" summary="fresh code">
       <created>1560240694312</created>
@@ -142,17 +191,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7065000" />
+    <option name="totallyTimeSpent" value="10400000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49584815" weight="0.25718608" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49584815" visible="true" weight="0.25718608" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Gulp" order="2" sideWeight="0.5041518" side_tool="true" weight="0.24960339" />
       <window_info id="npm" order="3" sideWeight="0.5061947" side_tool="true" weight="0.24960339" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.32993197" />
+      <window_info anchor="bottom" id="Messages" weight="0.32993197" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -162,7 +212,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3282313" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3282313" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -198,23 +248,34 @@
     <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/style.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/util-deprecate/node.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+        <state relative-caret-position="336">
+          <caret line="36" column="46" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/transfonter.org-20190611-104815/stylesheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="22" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sass/style.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="124" column="27" lean-forward="true" selection-start-line="124" selection-start-column="27" selection-end-line="124" selection-end-column="27" />
+        <state relative-caret-position="228">
+          <caret line="75" column="33" lean-forward="true" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="67" column="37" lean-forward="true" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="37" />
         </state>
       </provider>
     </entry>
