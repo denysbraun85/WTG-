@@ -40,6 +40,7 @@ $color-btn-hover: #006aff
 $main-btn-shadow: rgba(0, 114, 255, 0.3)
 $header-color: rgba(3, 47, 171, 0.5)
 $header-color-menu: #032fab
+$form-border-color: #e0e0e0
 /*====================================================================
                                     END
  =====================================================================*/
@@ -59,7 +60,7 @@ body
   background: transparent
   color: $color-btn
   border-radius: 50px 50px 50px 0
-  border: 2px solid var(--color-btn)
+  border: 2px solid $color-btn
   outline: none
   padding: 10px 0
   transition: all 0.3s ease-in-out
@@ -113,6 +114,16 @@ body
   .header-top
     background: $header-color-menu
     .language-container
+      p
+        width: 100%
+        max-width: 200px
+        margin-bottom: 5px
+        margin-left: auto
+        color: $form-border-color
+        border: 1px solid $form-border-color
+        text-align: center
+        border-radius: 50px
+        margin-top: 5px
 
 /*====================================================================
                                     END
