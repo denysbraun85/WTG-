@@ -8,6 +8,28 @@
 /*====================================================================
                                1. Fonts
  @mixin ====================================================================*/
+@font-face {
+  font-family: 'Fira Sans medium';
+  src: url("../fonts/FiraSans-Medium.eot");
+  src: url("../fonts/FiraSans-Medium.eot?#iefix") format("embedded-opentype");
+  src: url("../fonts/FiraSans-Medium.woff2") format("woff2");
+  src: url("../fonts/FiraSans-Medium.woff") format("woff");
+  src: url("../fonts/FiraSans-Medium.ttf") format("truetype");
+  src: url("../fonts/FiraSans-Medium.svg#FiraSans-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Fira Sans regular';
+  src: url("../fonts/FiraSans-Regular.eot");
+  src: url("../fonts/FiraSans-Regular.eot?#iefix") format("embedded-opentype");
+  src: url("../fonts/FiraSans-Regular.woff2") format("woff2");
+  src: url("../fonts/FiraSans-Regular.woff") format("woff");
+  src: url("../fonts/FiraSans-Regular.ttf") format("truetype");
+  src: url("../fonts/FiraSans-Regular.svg#FiraSans-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 /*====================================================================
                                     END
  @mixin ====================================================================*/
@@ -42,7 +64,8 @@ img {
                                 4. Global
  @mixin ====================================================================*/
 body {
-  background: #ccc; }
+  background: #ccc;
+  font-family: "Fira Sans regular"; }
 
 /*---------------------------------Button----------------------------*/
 .main-btn {
