@@ -165,7 +165,7 @@ body {
   color: #fff;
   margin-bottom: 30px;
   border-bottom: 2px solid #fff;
-  max-width: 57px;
+  max-width: 50px;
   width: 100%;
   padding: 3px 0 35px 0;
   display: -webkit-box;
@@ -189,7 +189,7 @@ body {
   .wrap_arrow_down:before {
     position: absolute;
     content: '|';
-    font-size: 36px;
+    font-size: 42px;
     top: -30px;
     left: 43%; }
   .wrap_arrow_down:after {
@@ -198,9 +198,9 @@ body {
     -webkit-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
             transform: rotate(90deg);
-    font-size: 22px;
-    bottom: 4px;
-    left: 42%; }
+    font-size: 17px;
+    bottom: 6px;
+    left: 41%; }
   .wrap_arrow_down img {
     width: 34px;
     margin: 0 auto;
