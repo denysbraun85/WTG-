@@ -3,7 +3,7 @@
  * 2. Reset
  * 3. Colors
  * 4. Global
- * 5. Main header
+ * 5. Main Header
  @mixin ===============================END=================================*/
 /*====================================================================
                                1. Fonts
@@ -96,6 +96,25 @@ body {
     -webkit-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out; }
+  .main-btn:focus {
+    outline: none; }
+
+/*====================================================================
+                                    END
+ @mixin ====================================================================*/
+/*====================================================================
+                             5. Main Header
+ @mixin ====================================================================*/
+.main-header {
+  position: relative; }
+  .main-header .header-bottom {
+    background: rgba(3, 47, 171, 0.5); }
+    .main-header .header-bottom .logo-box img {
+      width: 100%;
+      max-width: 110px;
+      padding: 15px 0; }
+  .main-header .header-top {
+    background: #032fab; }
 
 /*====================================================================
                                     END
