@@ -10,7 +10,15 @@ $(document).ready(function () {
     });
 
     $('.select_container select').select2({
-        'allowClear': true,
+        'allowClear': true
+    });
+
+    $(".js-select2").select2({
+        closeOnSelect : false,
+        placeholder : "Placeholder",
+        allowHtml: true,
+        allowClear: true,
+        tags: true // создает новые опции на лету
     });
 
 });
