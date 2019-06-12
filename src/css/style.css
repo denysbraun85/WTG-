@@ -182,11 +182,15 @@ body {
 /* ==================================================================
                             STYLE DOWNARROW
  @mixin ==================================================================*/
-.arrow_down {
-  border-bottom: 2px solid #ffffff;
-  max-width: 57px;
+.wrap_arrow_down {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #fff;
+  max-width: 50px;
   width: 100%;
-  padding: 3px 0 18px 0;
+  padding: 3px 0 35px 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -202,18 +206,30 @@ body {
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s; }
-  .arrow_down img {
+  .wrap_arrow_down:hover {
+    color: #fff;
+    text-decoration: none; }
+  .wrap_arrow_down:before {
+    position: absolute;
+    content: '|';
+    font-size: 42px;
+    top: -30px;
+    left: 43%; }
+  .wrap_arrow_down:after {
+    position: absolute;
+    content: '>';
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+    font-size: 17px;
+    bottom: 6px;
+    left: 41%; }
+  .wrap_arrow_down img {
     width: 34px;
     margin: 0 auto;
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s; }
-  .arrow_down:hover {
-    background: #006aff; }
-    .arrow_down:hover img {
-      -webkit-transform: translateY(35%);
-          -ms-transform: translateY(35%);
-              transform: translateY(35%); }
 
 /* ==================================================================
                             STYLE DOWNARROW

@@ -186,23 +186,40 @@ body
 /* ==================================================================
                             STYLE DOWNARROW
  ===================================================================*/
-.arrow_down
-  border-bottom: 2px solid #ffffff
-  max-width: 57px
+.wrap_arrow_down
+  position: relative
+  text-decoration: none
+  color: $color-btn
+  margin-bottom: 30px
+  &:hover
+    color: $color-btn
+    text-decoration: none
+  .arrow_down
+  border-bottom: 2px solid $color-btn
+  max-width: 50px
   width: 100%
-  padding: 3px 0 18px 0
+  padding: 3px 0 35px 0
   display: flex
   justify-content: center
   align-items: center
   transition: .3s
+  &:before
+    position: absolute;
+    content: '|';
+    font-size: 42px;
+    top: -30px;
+    left: 43%; 
+  &:after
+    position: absolute
+    content: '>'
+    transform: rotate(90deg);
+    font-size: 17px;
+    bottom: 6px;
+    left: 41%;
   img
     width: 34px
     margin: 0 auto
     transition: .3s
-  &:hover
-    background: #006aff
-    img
-      transform: translateY(35%)
 /* ==================================================================
                             STYLE DOWNARROW
  ===================================================================*/
