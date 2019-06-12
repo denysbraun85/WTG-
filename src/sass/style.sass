@@ -3,36 +3,37 @@
  * 2. Reset
  * 3. Colors
  * 4. Global
- * 5. Main Header
+ * 5. Main Section
+ *    5.1 Main Header
  ================================END=================================*/
 
 /*====================================================================
                                1. Fonts
  =====================================================================*/
-@font-face 
-  font-family: 'Fira Sans medium'
-  src: url('../fonts/FiraSans-Medium.eot')
-  src: url('../fonts/FiraSans-Medium.eot?#iefix') format('embedded-opentype')
-  src: url('../fonts/FiraSans-Medium.woff2') format('woff2')
-  src: url('../fonts/FiraSans-Medium.woff') format('woff')
-  src: url('../fonts/FiraSans-Medium.ttf') format('truetype')
-  src: url('../fonts/FiraSans-Medium.svg#FiraSans-Medium') format('svg')
-  font-weight: 500
-  font-style: normal
-
-@font-face 
-  font-family: 'Fira Sans regular'
-  src: url('../fonts/FiraSans-Regular.eot')
-  src: url('../fonts/FiraSans-Regular.eot?#iefix') format('embedded-opentype')
-  src: url('../fonts/FiraSans-Regular.woff2') format('woff2')
-  src: url('../fonts/FiraSans-Regular.woff') format('woff')
-  src: url('../fonts/FiraSans-Regular.ttf') format('truetype')
-  src: url('../fonts/FiraSans-Regular.svg#FiraSans-Regular') format('svg')
+@font-face
+  font-family: 'IBM Plex Sans regular'
+  src: url('../fonts/IBMPlexSans.eot')
+  src: url('../fonts/IBMPlexSans.eot?#iefix') format('embedded-opentype')
+  src: url('../fonts/IBMPlexSans.woff2') format('woff2')
+  src: url('../fonts/IBMPlexSans.woff') format('woff')
+  src: url('../fonts/IBMPlexSans.ttf') format('truetype')
+  src: url('../fonts/IBMPlexSans.svg#IBMPlexSans') format('svg')
   font-weight: normal
   font-style: normal
 
-$font-face-regular: 'Fira Sans regular'
-$font-face-medium:  'Fira Sans medium'
+@font-face
+  font-family: 'IBM Plex Sans medium'
+  src: url('../fonts/IBMPlexSans-Medium.eot')
+  src: url('../fonts/IBMPlexSans-Medium.eot?#iefix') format('embedded-opentype')
+  src: url('../fonts/IBMPlexSans-Medium.woff2') format('woff2')
+  src: url('../fonts/IBMPlexSans-Medium.woff') format('woff')
+  src: url('../fonts/IBMPlexSans-Medium.ttf') format('truetype')
+  src: url('../fonts/IBMPlexSans-Medium.svg#IBMPlexSans-Medium') format('svg')
+  font-weight: 500
+  font-style: normal
+
+$font-face-regular: 'IBM Plex Sans regular'
+$font-face-medium:  'IBM Plex Sans medium'
 /*====================================================================
                                     END
  =====================================================================*/
@@ -74,7 +75,7 @@ $form-border-color: #e0e0e0
  =====================================================================*/
 body
   background: #ccc
-  font-family: $font-face-regular
+  font-family: 'IBM Plex Sans regular', sans-serif
   font-size: 15px
 
 /*---------------------------------Button----------------------------*/
@@ -127,43 +128,66 @@ body
  =====================================================================*/
 
 /*====================================================================
-                             5. Main Header
+                             5. Main Section
  =====================================================================*/
-.main-header
+.main-section
   position: relative
-  .header-bottom
-    background: $header-color
-    .logo-box
-      img
-        width: 100%
-        max-width: 110px
-        padding: 15px 0
-    .navigation
+  width: 100%
+  height: 100vh
+  background: url("../img/background/main-bg.jpg")
+  background-size: cover
+  .main-overlay
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 0
+    .bg-blocks
+      background: url("../img/background/blocks.png")
       width: 100%
-      ul
-        display: flex
-        justify-content: space-between
-        align-items: center
-        li
-          a
-           padding: 36px 22px
-           color: $color-btn
-           font-size: 22px
-           text-decoration: none
-           text-transform: uppercase
-  .header-top
-    background: $header-color-menu
-    .language-container
-      p
-        width: 100%
-        max-width: 200px
-        margin-bottom: 5px
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 1
+  .main-header
+    position: relative
+    z-index: 2
+    .header-bottom
+      background: $header-color
+      .logo-box
+        img
+          width: 100%
+          max-width: 110px
+          padding: 15px 0
+      .navigation
+        width: 50%
         margin-left: auto
-        color: $form-border-color
-        border: 1px solid $form-border-color
-        text-align: center
-        border-radius: 50px
-        margin-top: 5px
+        ul
+          display: flex
+          justify-content: space-between
+          align-items: center
+          li
+            a
+             padding: 36px 22px
+             color: $color-btn
+             font-size: 22px
+             text-decoration: none
+             text-transform: uppercase
+    .header-top
+      background: $header-color-menu
+      .language-container
+        p
+          width: 100%
+          max-width: 200px
+          margin-bottom: 5px
+          margin-left: auto
+          color: $form-border-color
+          border: 1px solid $form-border-color
+          text-align: center
+          border-radius: 50px
+          margin-top: 5px
 
 /*====================================================================
                                     END
@@ -195,31 +219,31 @@ body
     color: $color-btn
     text-decoration: none
   .arrow_down
-  border-bottom: 2px solid $color-btn
-  max-width: 50px
-  width: 100%
-  padding: 3px 0 35px 0
-  display: flex
-  justify-content: center
-  align-items: center
-  transition: .3s
-  &:before
-    position: absolute;
-    content: '|';
-    font-size: 42px;
-    top: -30px;
-    left: 43%; 
-  &:after
-    position: absolute
-    content: '>'
-    transform: rotate(90deg);
-    font-size: 17px;
-    bottom: 6px;
-    left: 41%;
-  img
-    width: 34px
-    margin: 0 auto
+    border-bottom: 2px solid $color-btn
+    max-width: 50px
+    width: 100%
+    padding: 3px 0 35px 0
+    display: flex
+    justify-content: center
+    align-items: center
     transition: .3s
+    &:before
+      position: absolute
+      content: '|'
+      font-size: 42px
+      top: -30px
+      left: 43%
+    &:after
+      position: absolute
+      content: '>'
+      transform: rotate(90deg)
+      font-size: 17px
+      bottom: 6px
+      left: 41%
+    img
+      width: 34px
+      margin: 0 auto
+      transition: .3s
 /* ==================================================================
                             STYLE DOWNARROW
  ===================================================================*/
