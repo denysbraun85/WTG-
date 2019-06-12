@@ -9,6 +9,6 @@ $(document).ready(function () {
         });
     });
 
-    $('.search_select').select2();
+    $('.select_container select').select2();
 
 });

@@ -1,28 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19722a5d-ae65-4ff2-ab51-78a7c2c5aaaf" name="Default" comment="fresh code">
+    <list default="true" id="19722a5d-ae65-4ff2-ab51-78a7c2c5aaaf" name="Default" comment="add fonts">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fonts/Krub-Bold.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fonts/Krub-Bold.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fonts/Krub-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fonts/Krub-Bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fonts/Krub-Bold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fonts/Krub-Regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fonts/Krub-Regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fonts/Krub-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fonts/Krub-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fonts/Krub-Regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fonts/VarelaRound-Regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fonts/VarelaRound-Regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fonts/VarelaRound-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fonts/VarelaRound-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fonts/VarelaRound-Regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fonts/VarelaRound-Regular_1.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fonts/VarelaRound-Regular_1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fonts/VarelaRound-Regular_1.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fonts/VarelaRound-Regular_1.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fonts/VarelaRound-Regular_1.woff2" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sass/style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/style.sass" afterDir="false" />
     </list>
@@ -37,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="36" column="46" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
+            <state relative-caret-position="172">
+              <caret line="80" column="20" lean-forward="true" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -49,17 +30,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sass/style.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="75" column="33" lean-forward="true" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
+            <state relative-caret-position="1862">
+              <caret line="152" column="36" selection-start-line="152" selection-start-column="36" selection-end-line="152" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
-              <caret line="67" column="37" lean-forward="true" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="37" />
+              <caret line="68" column="35" selection-start-line="68" selection-start-column="35" selection-end-line="68" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -83,6 +64,7 @@
         <option value="$PROJECT_DIR$/src/js/main.js" />
         <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/src/sass/style.sass" />
+        <option value="$PROJECT_DIR$/../wtg24.com/public/index.php" />
       </list>
     </option>
   </component>
@@ -93,7 +75,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1068" />
@@ -178,7 +160,7 @@
       <updated>1560196939441</updated>
       <workItem from="1560196941637" duration="2203000" />
       <workItem from="1560235424330" duration="1243000" />
-      <workItem from="1560236933082" duration="6954000" />
+      <workItem from="1560236933082" duration="11583000" />
     </task>
     <task id="LOCAL-00001" summary="fresh code">
       <created>1560240694312</created>
@@ -187,20 +169,36 @@
       <option name="project" value="LOCAL" />
       <updated>1560240694312</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add fonts">
+      <created>1560251269654</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1560251269654</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10400000" />
+    <option name="totallyTimeSpent" value="15029000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49584815" visible="true" weight="0.25718608" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49367088" weight="0.25718608" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Gulp" order="2" sideWeight="0.5041518" side_tool="true" weight="0.24960339" />
-      <window_info id="npm" order="3" sideWeight="0.5061947" side_tool="true" weight="0.24960339" />
+      <window_info id="npm" order="3" sideWeight="0.5063291" side_tool="true" weight="0.25718608" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Messages" weight="0.32993197" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -209,10 +207,10 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32993197" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3282313" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32993197" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3282313" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -226,7 +224,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fresh code" />
-    <option name="LAST_COMMIT_MESSAGE" value="fresh code" />
+    <MESSAGE value="add fonts" />
+    <option name="LAST_COMMIT_MESSAGE" value="add fonts" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/old/index.html" />
@@ -251,13 +250,6 @@
     <entry file="file://$PROJECT_DIR$/node_modules/util-deprecate/node.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="36" column="46" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Downloads/transfonter.org-20190611-104815/stylesheet.css">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -265,17 +257,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sass/style.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="75" column="33" lean-forward="true" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="67" column="37" lean-forward="true" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="37" />
+          <caret line="68" column="35" selection-start-line="68" selection-start-column="35" selection-end-line="68" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../wtg24.com/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/style.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1862">
+          <caret line="152" column="36" selection-start-line="152" selection-start-column="36" selection-end-line="152" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="80" column="20" lean-forward="true" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
         </state>
       </provider>
     </entry>

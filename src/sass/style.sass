@@ -47,6 +47,7 @@ $font-face-medium:  'Fira Sans medium'
   outline: none
 ul
   list-style: none
+  margin-bottom: 0
 a
   text-decoration: none
 img
@@ -74,6 +75,7 @@ $form-border-color: #e0e0e0
 body
   background: #ccc
   font-family: $font-face-regular
+  font-size: 15px
 
 /*---------------------------------Button----------------------------*/
 .main-btn
@@ -136,6 +138,19 @@ body
         width: 100%
         max-width: 110px
         padding: 15px 0
+    .navigation
+      width: 100%
+      ul
+        display: flex
+        justify-content: space-between
+        align-items: center
+        li
+          a
+           padding: 36px 22px
+           color: $color-btn
+           font-size: 22px
+           text-decoration: none
+           text-transform: uppercase
   .header-top
     background: $header-color-menu
     .language-container
@@ -182,15 +197,15 @@ body
     color: $color-btn
     text-decoration: none
   .arrow_down
-  border-bottom: 2px solid $color-btn
-  max-width: 50px
-  width: 100%
-  padding: 3px 0 18px 0
-  display: flex
-  justify-content: center
-  align-items: center
-  transition: all .3s ease-in 3s;
-  animation: bounce 2s infinite 2s;
+    border-bottom: 2px solid $color-btn
+    max-width: 50px
+    width: 100%
+    padding: 3px 0 18px 0
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: all .3s ease-in 3s;
+    animation: bounce 2s infinite 2s;
   // &:before
   //   position: absolute;
   //   content: '|';
@@ -217,19 +232,17 @@ body
  ===================================================================*/
 
 
-@keyframes bounce
-  0%,
-    100%,
-    20%,
-    50%,
-    80%
-    transform: translateY(0)
-
-  40%
-    transform: translateY(-10px)
-
-  60%
-    transform: translateY(-5px)
+// @keyframes bounce
+//   0%,
+//     100%,
+//     20%,
+//     50%,
+//     80%
+//     transform: translateY(0)
+//   40%
+//     transform: translateY(-10px)
+//   60%
+//     transform: translateY(-5px)
 
 
 /* ==================================================================
@@ -245,25 +258,28 @@ body
 
 
 .wrap_select_search
-  // max-width: 1530px
-  // width: 100%
-  // margin: 0 auto
+  max-width: 1530px
+  width: 100%
+  margin: 0 auto
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between
+  align-items: center
   .select_container
-    max-width: 300px
     width: 100%
     padding: 0 10px
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0;
-    // .search_select
-    //   max-width: 300px
-    //   width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 10px 0
+    span 
+      border-radius: 50px !important
+      &:focus
+        border-radius: 50px 50px 0 0 !important
+    .select2
+      width: 100% !important
+      &:focus
+        border-radius: 50px 50px 0 0 !important
     input 
-      max-width: 300px
       width: 100%
       border-radius: 50px 50px 50px 0
       border: 2px solid $color-btn
