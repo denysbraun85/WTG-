@@ -66,6 +66,7 @@ $main-btn-shadow: rgba(0, 114, 255, 0.3)
 $header-color: rgba(3, 47, 171, 0.5)
 $header-color-menu: #032fab
 $form-border-color: #e0e0e0
+$bg-color-menu: #fff
 /*====================================================================
                                     END
  =====================================================================*/
@@ -90,7 +91,7 @@ body
   border-radius: 50px 50px 50px 0
   border: 2px solid $color-btn
   outline: none
-  padding: 10px 0
+  padding: 10px 160px
   transition: all 0.3s ease-in-out
   span
     display: block
@@ -98,6 +99,7 @@ body
     z-index: 1
   &:hover
     border: 2px solid transparent
+    cursor: pointer
     span
       color: $color-btn
     &:before
@@ -132,21 +134,16 @@ body
  =====================================================================*/
 .main-section
   position: relative
-  width: 100%
   height: 100vh
   background: url("../img/background/main-bg.jpg")
   background-size: cover
   .main-overlay
-    width: 100%
-    height: 100%
     position: absolute
     top: 0
     left: 0
     z-index: 0
     .bg-blocks
       background: url("../img/background/blocks.png")
-      width: 100%
-      height: 100%
       position: absolute
       top: 0
       left: 0
@@ -158,23 +155,23 @@ body
       background: $header-color
       .logo-box
         img
-          width: 100%
           max-width: 110px
           padding: 15px 0
       .navigation
-        width: 50%
-        margin-left: auto
+        overflow: hidden
         ul
-          display: flex
-          justify-content: space-between
-          align-items: center
           li
             a
-             padding: 36px 22px
+             padding: 35px 22px
              color: $color-btn
              font-size: 22px
              text-decoration: none
              text-transform: uppercase
+             transition: all 0.3s ease-in
+             &:hover
+               color: $color-btn-hover
+               background: $bg-color-menu
+
     .header-top
       background: $header-color-menu
       .language-container
@@ -188,6 +185,12 @@ body
           text-align: center
           border-radius: 50px
           margin-top: 5px
+  .main-button-container
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    bottom: 30px
+    .main-btn
 
 /*====================================================================
                                     END
