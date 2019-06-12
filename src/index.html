@@ -22,9 +22,9 @@
 </head>
 
 <body>
-    <main class="main-section">
-        <div class="main-overlay">
-            <div class="bg-blocks"></div>
+    <main class="main-section w-100">
+        <div class="main-overlay h-100 w-100">
+            <div class="bg-blocks h-100 w-100"></div>
         </div>
         <header class="main-header">
             <div class="header-top">
@@ -49,14 +49,14 @@
             <div class="header-bottom">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-xl-1 col-lg-1 col-md-1">
+                        <div class="col-md-1">
                             <div class="logo-box">
-                                <a href="#"><img src="img/logo/logo-white.svg" alt="logo"></a>
+                                <a href="#"><img class="w-100" src="img/logo/logo-white.svg" alt="logo"></a>
                             </div>
                         </div>
-                        <div class="col-xl-11  col-lg-11  col-md-11">
-                            <nav class="navigation">
-                                <ul>
+                        <div class="col-md-11">
+                            <nav class="navigation h-100 w-100">
+                                <ul class="d-flex justify-content-end align-items-center h-100">
                                     <li><a href="#">Home</a></li>
                                     <li><a href="#">Properties</a></li>
                                     <li><a href="#">About</a></li>
@@ -69,13 +69,9 @@
             </div>
         </header>
 
-        <!--Main button-->
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <button class="main-btn w-50 m-auto"><span>Связаться с нами</span></button>
-                </div>
-            </div>
+<!--Main button-->
+        <div class="main-button-container">
+            <button class="main-btn w-100 m-auto"><span>Связаться с нами</span></button>
         </div>
         <!--Main button END-->
     </main>
