@@ -208,9 +208,15 @@ body {
                             STYLE DOWNARROW
  @mixin ==================================================================*/
 .wrap_arrow_down {
-  position: relative;
   text-decoration: none;
   color: #fff;
+<<<<<<< HEAD
+=======
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+>>>>>>> 338621b2f9ef32ccdb3538ce1ac8e17837c7d87d
   margin-bottom: 30px; }
   .wrap_arrow_down:hover {
     color: #fff;
@@ -219,7 +225,11 @@ body {
     border-bottom: 2px solid #fff;
     max-width: 50px;
     width: 100%;
+<<<<<<< HEAD
     padding: 3px 0 35px 0;
+=======
+    padding: 3px 0 18px 0;
+>>>>>>> 338621b2f9ef32ccdb3538ce1ac8e17837c7d87d
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -232,6 +242,17 @@ body {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
+<<<<<<< HEAD
+=======
+    -webkit-transition: all .3s ease-in 3s;
+    -o-transition: all .3s ease-in 3s;
+    transition: all .3s ease-in 3s;
+    -webkit-animation: bounce 2s infinite 2s;
+            animation: bounce 2s infinite 2s; }
+  .wrap_arrow_down img {
+    width: 36px;
+    margin: 0 auto;
+>>>>>>> 338621b2f9ef32ccdb3538ce1ac8e17837c7d87d
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s; }
@@ -258,10 +279,73 @@ body {
       transition: .3s; }
 
 /* ==================================================================
-                            STYLE DOWNARROW
+                           END STYLE DOWNARROW
  @mixin ==================================================================*/
 /* ==================================================================
-                            STYLES HOLINEY
+                            STYLE BOUNCE ANIMATION
+ @mixin ==================================================================*/
+/* ==================================================================
+                           END STYLE BOUNCE ANIMATION
+ @mixin ==================================================================*/
+/* ==================================================================
+                           STYLE SEARCH CONTAINER
+ @mixin ==================================================================*/
+.wrap_select_search {
+  max-width: 1530px;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .wrap_select_search .select_container {
+    width: 100%;
+    padding: 0 10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 10px 0; }
+    .wrap_select_search .select_container span {
+      -webkit-border-radius: 50px !important;
+              border-radius: 50px !important; }
+      .wrap_select_search .select_container span:focus {
+        -webkit-border-radius: 50px 50px 0 0 !important;
+                border-radius: 50px 50px 0 0 !important; }
+    .wrap_select_search .select_container .select2 {
+      width: 100% !important; }
+      .wrap_select_search .select_container .select2:focus {
+        -webkit-border-radius: 50px 50px 0 0 !important;
+                border-radius: 50px 50px 0 0 !important; }
+    .wrap_select_search .select_container input {
+      width: 100%;
+      -webkit-border-radius: 50px 50px 50px 0;
+              border-radius: 50px 50px 50px 0;
+      border: 2px solid #fff;
+      outline: none;
+      padding: 3px 8px; }
+
+/* ==================================================================
+                           END STYLE SEARCH CONTAINER
+ @mixin ==================================================================*/
+/* ==================================================================
+                           END STYLES HOLINEY
  @mixin ==================================================================*/
 /*====================================================================
                                 5. Main header

@@ -211,9 +211,11 @@ body
                             STYLE DOWNARROW
  ===================================================================*/
 .wrap_arrow_down
-  position: relative
+  // position: relative
   text-decoration: none
   color: $color-btn
+  animation-duration: 3s
+  animation-delay: 2s
   margin-bottom: 30px
   &:hover
     color: $color-btn
@@ -222,10 +224,27 @@ body
     border-bottom: 2px solid $color-btn
     max-width: 50px
     width: 100%
-    padding: 3px 0 35px 0
+    padding: 3px 0 18px 0
     display: flex
     justify-content: center
     align-items: center
+    transition: all .3s ease-in 3s
+    animation: bounce 2s infinite 2s
+  // &:before
+  //   position: absolute;
+  //   content: '|';
+  //   font-size: 42px;
+  //   top: -30px;
+  //   left: 43%; 
+  // &:after
+  //   position: absolute
+  //   content: '🠓'
+  //   transform: rotate(90deg);
+  //   font-size: 50px;
+  //   line-height: 28px;
+  img
+    width: 36px
+    margin: 0 auto
     transition: .3s
     &:before
       position: absolute
@@ -245,11 +264,83 @@ body
       margin: 0 auto
       transition: .3s
 /* ==================================================================
-                            STYLE DOWNARROW
+                           END STYLE DOWNARROW
  ===================================================================*/
 
+
 /* ==================================================================
-                            STYLES HOLINEY
+                            STYLE BOUNCE ANIMATION
+ ===================================================================*/
+
+
+// @keyframes bounce
+//   0%,
+//     100%,
+//     20%,
+//     50%,
+//     80%
+//     transform: translateY(0)
+//   40%
+//     transform: translateY(-10px)
+//   60%
+//     transform: translateY(-5px)
+
+
+/* ==================================================================
+                           END STYLE BOUNCE ANIMATION
+ ===================================================================*/
+
+
+
+/* ==================================================================
+                           STYLE SEARCH CONTAINER
+ ===================================================================*/
+
+
+
+.wrap_select_search
+  max-width: 1530px
+  width: 100%
+  margin: 0 auto
+  display: flex
+  justify-content: space-between
+  align-items: center
+  .select_container
+    width: 100%
+    padding: 0 10px
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 10px 0
+    span 
+      border-radius: 50px !important
+      &:focus
+        border-radius: 50px 50px 0 0 !important
+    .select2
+      width: 100% !important
+      &:focus
+        border-radius: 50px 50px 0 0 !important
+    input 
+      width: 100%
+      border-radius: 50px 50px 50px 0
+      border: 2px solid $color-btn
+      outline: none  
+      padding: 3px 8px
+    
+
+
+
+
+
+
+/* ==================================================================
+                           END STYLE SEARCH CONTAINER
+ ===================================================================*/
+
+
+
+/* ==================================================================
+                           END STYLES HOLINEY
  ===================================================================*/
 
 /*====================================================================
