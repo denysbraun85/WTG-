@@ -9,6 +9,8 @@ $(document).ready(function () {
         });
     });
 
-    $('.select_container select').select2();
+    $('.select_container select').select2({
+        'allowClear': true,
+    });
 
 });

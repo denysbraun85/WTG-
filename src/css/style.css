@@ -269,14 +269,8 @@ body {
     .wrap_select_search .select_container span {
       -webkit-border-radius: 50px !important;
               border-radius: 50px !important; }
-      .wrap_select_search .select_container span:focus {
-        -webkit-border-radius: 50px 50px 0 0 !important;
-                border-radius: 50px 50px 0 0 !important; }
     .wrap_select_search .select_container .select2 {
       width: 100% !important; }
-      .wrap_select_search .select_container .select2:focus {
-        -webkit-border-radius: 50px 50px 0 0 !important;
-                border-radius: 50px 50px 0 0 !important; }
     .wrap_select_search .select_container input {
       width: 100%;
       -webkit-border-radius: 50px 50px 50px 0;
