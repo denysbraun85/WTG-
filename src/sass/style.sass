@@ -47,6 +47,7 @@ $font-face-medium:  'Fira Sans medium'
   outline: none
 ul
   list-style: none
+  margin-bottom: 0
 a
   text-decoration: none
 img
@@ -74,6 +75,7 @@ $form-border-color: #e0e0e0
 body
   background: #ccc
   font-family: $font-face-regular
+  font-size: 15px
 
 /*---------------------------------Button----------------------------*/
 .main-btn
@@ -136,6 +138,19 @@ body
         width: 100%
         max-width: 110px
         padding: 15px 0
+    .navigation
+      width: 100%
+      ul
+        display: flex
+        justify-content: space-between
+        align-items: center
+        li
+          a
+           padding: 36px 22px
+           color: $color-btn
+           font-size: 22px
+           text-decoration: none
+           text-transform: uppercase
   .header-top
     background: $header-color-menu
     .language-container
