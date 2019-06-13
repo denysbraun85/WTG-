@@ -212,16 +212,24 @@ body
     .header-top
       background: $header-color-menu
       .language-container
-        p
-          width: 100%
-          max-width: 200px
-          margin-bottom: 5px
-          margin-left: auto
-          color: $form-border-color
-          border: 1px solid $form-border-color
+        display: flex
+        justify-content: center
+        align-items: center
+        .language_select
+          width: 100% !important
+          max-width: 200px !important
+          color: $select-search-color-text !important
+          border: 1px solid $form-border-color !important
           text-align: center
-          border-radius: 50px
-          margin-top: 5px
+          border-radius: 50px !important
+          padding: 5px !important
+          margin: 10px 0 !important
+          span
+            border-radius: 24px
+          .select2
+            border-radius: 24px
+          input 
+            display: none !important
   .main-button-container
     position: absolute
     left: 50%
@@ -230,6 +238,26 @@ body
     z-index: 5
     .main-btn
 
+
+// .select2-container--default .select2-search--dropdown .select2-search__field
+//   display: none !important
+
+
+// .select2-container--default .select2-selection--single .select2-selection__clear
+//   display: none !important
+
+
+// .select2-container--default.select2-container--focus .select2-selection
+//   border-width: 1px;
+//   border-radius: 24px;
+//   height: 40px;
+//   padding: 8px;
+//   border: 1px;
+//   margin: 10px 0;
+
+
+// .select2-container--default .select2-selection--single .select2-selection__arrow
+//   display: none
 
 /*====================================================================
                                     END
@@ -319,7 +347,7 @@ body
   .wrap_select_search
     max-width: 1700px;
     width: 100%
-    margin: 0 auto 500px
+    margin: 0 auto
     display: flex
     justify-content: space-between
     align-items: center
@@ -423,6 +451,23 @@ body
   &.select2-container--focus .select2-selection--multiple
     border-width: 1px
   .select2-selection--multiple
+    border-width: 1px
+
+
+.select2-container--default
+  .select2-results__option[aria-selected=true]
+    background-color: #fff
+  .select2-results__option--highlighted[aria-selected]
+    background-color: #eaeaeb
+    color: #272727
+  .select2-selection
+  &.select2-container--open.select2-container--below .select2-selection
+    border-radius: 20px 20px 0 0
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28)
+  &.select2-container--focus .select2-selection
+    border-width: 1px
+  .select2-selection
     border-width: 1px
 
 
