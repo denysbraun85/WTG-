@@ -335,16 +335,45 @@ body {
                              8. Video Section
  @mixin ====================================================================*/
 .section-video {
-  padding: 250px 0;
+  padding: 0;
   position: relative;
-  width: 100%;
   background-color: #eeeeee;
-  z-index: 1;
-  -webkit-clip-path: polygon(0 24%, 100% 0, 100% 78%, 0 100%);
-  clip-path: polygon(0 24%, 100% 0, 100% 78%, 0 100%); }
+  z-index: 1; }
+  .section-video:after {
+    background: inherit;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    -webkit-transform: skewY(-4deg);
+        -ms-transform: skewY(-4deg);
+            transform: skewY(-4deg);
+    -webkit-transform-origin: 100%;
+        -ms-transform-origin: 100%;
+            transform-origin: 100%;
+    z-index: -1; }
+  .section-video:before {
+    background: inherit;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    -webkit-transform: skewY(-4deg);
+        -ms-transform: skewY(-4deg);
+            transform: skewY(-4deg);
+    -webkit-transform-origin: 0%;
+        -ms-transform-origin: 0%;
+            transform-origin: 0%;
+    z-index: -1; }
   .section-video .content-video-section {
     background-color: #fff;
-    padding: 60px; }
+    padding: 60px 10px 60px 60px; }
     .section-video .content-video-section .subscribe-box .text-inform {
       color: #606060;
       margin-top: 30px; }
@@ -353,8 +382,28 @@ body {
     .section-video .content-video-section .subscribe-box button {
       margin-top: 80px;
       padding: 7px 10px; }
+      @media (max-width: 992px) {
+        .section-video .content-video-section .subscribe-box button {
+          margin: 40px auto; } }
       .section-video .content-video-section .subscribe-box button span {
         font-size: 15px; }
+  .section-video .video-box {
+    position: relative;
+    z-index: 1; }
+    .section-video .video-box:before {
+      position: absolute;
+      content: '';
+      bottom: -5%;
+      right: -5%;
+      width: 100%;
+      height: 100%;
+      background-color: #eeeeee;
+      -webkit-box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+              box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+      z-index: -1; }
+    .section-video .video-box iframe {
+      width: 100%;
+      z-index: 1; }
 
 /*====================================================================
                                    END
