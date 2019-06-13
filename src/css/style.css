@@ -78,6 +78,9 @@ h3 {
 p {
   margin-bottom: 0; }
 
+.no-padding {
+  padding: 0; }
+
 /*---------------------------------Max-width----------------------------*/
 .max-w-1700 {
   width: 100%;
@@ -96,7 +99,7 @@ p {
                                 4. Global
  @mixin ====================================================================*/
 body {
-  background: #ccc;
+  background: #fff;
   font-family: 'IBM Plex Sans regular', sans-serif;
   font-size: 15px; }
 
@@ -382,7 +385,7 @@ body {
     .section-video .content-video-section .subscribe-box button {
       margin-top: 80px;
       padding: 7px 10px; }
-      @media (max-width: 992px) {
+      @media only screen and (max-width: 992px) {
         .section-video .content-video-section .subscribe-box button {
           margin: 40px auto; } }
       .section-video .content-video-section .subscribe-box button span {
@@ -404,6 +407,63 @@ body {
     .section-video .video-box iframe {
       width: 100%;
       z-index: 1; }
+
+/*====================================================================
+                                   END
+ @mixin ====================================================================*/
+/*====================================================================
+                             9. Services Section
+ @mixin ====================================================================*/
+.section-services {
+  padding: 0;
+  margin-top: 80px;
+  -webkit-background-size: cover;
+          background-size: cover;
+  position: relative;
+  z-index: 1; }
+  .section-services:after {
+    background: url("../img/background/bg-services.jpg") center bottom;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 113%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    -webkit-transform: skewY(-4deg);
+        -ms-transform: skewY(-4deg);
+            transform: skewY(-4deg);
+    -webkit-transform-origin: 100%;
+        -ms-transform-origin: 100%;
+            transform-origin: 100%;
+    z-index: -1; }
+  .section-services .service-content-container {
+    padding: 150px 0 80px 0; }
+    .section-services .service-content-container .service-block {
+      opacity: 0.85;
+      background-color: #fff;
+      text-align: center;
+      padding: 0 30px 30px;
+      -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
+              box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
+      position: relative;
+      z-index: 2;
+      -webkit-transition: all 0.2s ease-in;
+      -o-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in; }
+      .section-services .service-content-container .service-block:hover {
+        opacity: 1;
+        -webkit-box-shadow: 0 70px 70px rgba(0, 0, 0, 0.2);
+                box-shadow: 0 70px 70px rgba(0, 0, 0, 0.2);
+        -webkit-transform: translate(0, -10px) scale(1.01);
+            -ms-transform: translate(0, -10px) scale(1.01);
+                transform: translate(0, -10px) scale(1.01);
+        z-index: 100; }
+      .section-services .service-content-container .service-block .block-icon {
+        padding: 50px 0; }
+        .section-services .service-content-container .service-block .block-icon i {
+          font-size: 60px;
+          color: #006aff; }
 
 /*====================================================================
                                    END
