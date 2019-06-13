@@ -251,7 +251,6 @@ body {
             width: 42px; }
     .main-section .main-header .header-top {
       background: #032fab; }
-<<<<<<< HEAD
       .main-section .main-header .header-top .language-container {
         display: -webkit-box;
         display: -webkit-flex;
@@ -283,19 +282,6 @@ body {
                     border-radius: 24px; }
           .main-section .main-header .header-top .language-container .language_select input {
             display: none !important; }
-=======
-      .main-section .main-header .header-top .language-container p {
-        width: 100%;
-        max-width: 150px;
-        margin-bottom: 3px;
-        margin-top: 3px;
-        margin-left: auto;
-        color: #e0e0e0;
-        border: 1px solid #e0e0e0;
-        text-align: center;
-        -webkit-border-radius: 50px;
-                border-radius: 50px; }
->>>>>>> 8952016a3404132f9842620596239e8de1d32513
   .main-section .main-button-container {
     position: absolute;
     left: 50%;
