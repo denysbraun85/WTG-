@@ -126,7 +126,10 @@ body
     transition: all .3s ease-in-out
   &:focus
     outline: none
-
+/*---------------------------------Max-width----------------------------*/
+.max-w-1700
+  width: 100%
+  max-width: 1700px
 /*====================================================================
                                     END
  =====================================================================*/
@@ -157,16 +160,19 @@ body
       background: $header-color
       .logo-box
         img
-          max-width: 110px
+          max-width: 65px
           padding: 15px 0
       .navigation
         overflow: hidden
         ul
+          margin-right: 15px
+          .home-page-dropdown-list
+            display: none
           li
             a
-             padding: 35px 22px
+             padding: 24px 15px
              color: $color-btn
-             font-size: 22px
+             font-size: 18px
              text-decoration: none
              text-transform: uppercase
              transition: all 0.3s ease-in
@@ -179,49 +185,64 @@ body
           width: 100%
           .navbar-toggle
             position: relative
-            width: 50px
-            height: 50px
+            width: 30px
+            height: 30px
             background: transparent
             &:hover
               cursor: pointer
+            &:focus
+              outline: none
             .icon-bar
               position: absolute
               width: 100%
               display: block
+              height: 3px
+              border-radius: 4px
+              background: #ffffff
+              transition: all 0.4s ease-in-out
+            .bar-one
+              transform-origin: 5%
+              top: 0
+            .bar-two
               top: 50%
               transform: translateY(-50%)
+            .bar-tree
+              top: 50%
+              transform: translateY(-50%)
+              right: 0
+            .bar-four
+              transform-origin: 5%
+              bottom: 0
+          .active-toggle
+            .bar-one
+              transform: rotate(45deg)
               height: 3px
-              background: #ffffff
-              &:before
-                content: ''
-                position: absolute
-                width: 100%
-                height: 3px
-                background: #ffffff
-                top: -15px
-                left: 0
-              &:after
-                content: ''
-                position: absolute
-                width: 100%
-                height: 3px
-                background: #ffffff
-                top: 15px
-                left: 0
-
+              width: 42px
+            .bar-two
+              transform: rotate(-45deg)
+              height: 3px
+              background-color: transparent
+            .bar-tree
+              transform: rotate(45deg)
+              height: 3px
+              background-color: transparent
+            .bar-four
+              transform: rotate(-45deg)
+              height: 3px
+              width: 42px
     .header-top
       background: $header-color-menu
       .language-container
         p
           width: 100%
-          max-width: 200px
-          margin-bottom: 5px
+          max-width: 150px
+          margin-bottom: 3px
+          margin-top: 3px
           margin-left: auto
           color: $form-border-color
           border: 1px solid $form-border-color
           text-align: center
           border-radius: 50px
-          margin-top: 5px
   .main-button-container
     position: absolute
     left: 50%
