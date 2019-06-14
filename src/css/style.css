@@ -738,11 +738,23 @@ body {
                            END STYLE SEARCH CONTAINER
  @mixin ==================================================================*/
 /* ==================================================================
+                           STYLE OBJECT CONTAINER
+ @mixin ==================================================================*/
+.section_object {
+  padding-bottom: 200px; }
+  .section_object .wrapper_object {
+    max-width: 1525px;
+    width: 100%;
+    margin: 0 auto; }
+
+/* ==================================================================
+                           END STYLE OBJECT CONTAINER
+ @mixin ==================================================================*/
+/* ==================================================================
                            STYLE 6 BENEFIT CONTAINER
  @mixin ==================================================================*/
 .section_benefit {
-  background: #fff;
-  padding-bottom: 200px; }
+  background: #fff; }
   .section_benefit .wrapper_left_back_benefit {
     background: -webkit-gradient(linear, left top, right top, color-stop(50%, #eeeeee), color-stop(52%, #ffffff));
     background: -webkit-linear-gradient(left, #eeeeee 50%, #ffffff 52%);
@@ -777,7 +789,7 @@ body {
         -webkit-justify-content: space-between;
             -ms-flex-pack: justify;
                 justify-content: space-between;
-        max-width: 964px;
+        max-width: 960px;
         width: 100%;
         margin-left: 0;
         background: #fff; }
@@ -805,7 +817,7 @@ body {
             font-size: 18px; }
           .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit .left_container_benefit .text_left_benefit p {
             margin-top: 50px;
-            font-size: 17px; }
+            font-size: 15px; }
   .section_benefit .wrapper_right_back_benedit {
     background: -webkit-gradient(linear, left top, right top, color-stop(50%, #ffffff), color-stop(50%, #eeeeee));
     background: -webkit-linear-gradient(left, #ffffff 50%, #eeeeee 50%);
@@ -840,7 +852,7 @@ body {
         -webkit-justify-content: space-between;
             -ms-flex-pack: justify;
                 justify-content: space-between;
-        max-width: 964px;
+        max-width: 960px;
         width: 100%;
         margin-right: 0;
         background: #fff; }
@@ -865,7 +877,7 @@ body {
             font-size: 18px; }
           .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit .right_container_benefit .text_right_benefit p {
             margin-top: 50px;
-            font-size: 17px; }
+            font-size: 15px; }
         .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit .right_container_benefit .wrapper_img_benefit {
           max-width: 260px;
           width: 100%; }
