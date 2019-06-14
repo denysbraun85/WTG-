@@ -5,6 +5,20 @@
  * 4. Global
  * 5. Main Section
  *    5.1 Main Header
+ * 6. Search
+ * 7. Objects section
+ * 8. Video section 1
+ * 9. Service section 1
+ *10. Advantages section
+ *11. Reason section
+ *12. Philosophy section
+ *13. Professionals section 1
+ *14. Stage section 1
+ *15. Statistic section
+ *16. Feedback section 1
+ *17. Contact form section
+ *18. Footer section
+
  @mixin ===============================END=================================*/
 /*====================================================================
                                1. Fonts
@@ -56,6 +70,22 @@ a {
 img {
   width: 100%; }
 
+h3 {
+  font-family: 'IBM Plex Sans medium', sans-serif;
+  font-size: 35px;
+  margin-bottom: 0; }
+
+p {
+  margin-bottom: 0; }
+
+.no-padding {
+  padding: 0; }
+
+/*---------------------------------Max-width----------------------------*/
+.max-w-1700 {
+  width: 100%;
+  max-width: 1700px; }
+
 /*====================================================================
                                     END
  @mixin ====================================================================*/
@@ -69,7 +99,7 @@ img {
                                 4. Global
  @mixin ====================================================================*/
 body {
-  background: #ccc;
+  background: #fff;
   font-family: 'IBM Plex Sans regular', sans-serif;
   font-size: 15px; }
 
@@ -129,10 +159,17 @@ body {
   .main-btn:focus {
     outline: none; }
 
-/*---------------------------------Max-width----------------------------*/
-.max-w-1700 {
-  width: 100%;
-  max-width: 1700px; }
+.red-btn {
+  text-transform: uppercase;
+  color: #606060;
+  max-width: 220px;
+  border: 2px solid #ff0000;
+  text-align: center;
+  padding: 10px 0px; }
+  .red-btn:hover:before {
+    background: #ff0000;
+    -webkit-box-shadow: 0 10px 30px rgba(0, 114, 255, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 114, 255, 0.3); }
 
 /*====================================================================
                                     END
@@ -296,6 +333,140 @@ body {
 
 /*====================================================================
                                     END
+ @mixin ====================================================================*/
+/*====================================================================
+                             8. Video Section
+ @mixin ====================================================================*/
+.section-video {
+  padding: 0;
+  position: relative;
+  background-color: #eeeeee;
+  z-index: 1; }
+  .section-video:after {
+    background: inherit;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    -webkit-transform: skewY(-4deg);
+        -ms-transform: skewY(-4deg);
+            transform: skewY(-4deg);
+    -webkit-transform-origin: 100%;
+        -ms-transform-origin: 100%;
+            transform-origin: 100%;
+    z-index: -1; }
+  .section-video:before {
+    background: inherit;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    -webkit-transform: skewY(-4deg);
+        -ms-transform: skewY(-4deg);
+            transform: skewY(-4deg);
+    -webkit-transform-origin: 0%;
+        -ms-transform-origin: 0%;
+            transform-origin: 0%;
+    z-index: -1; }
+  .section-video .content-video-section {
+    background-color: #fff;
+    padding: 60px 10px 60px 60px; }
+    .section-video .content-video-section .subscribe-box .text-inform {
+      color: #606060;
+      margin-top: 30px; }
+    .section-video .content-video-section .subscribe-box h3 {
+      color: #032fab; }
+    .section-video .content-video-section .subscribe-box button {
+      margin-top: 80px;
+      padding: 7px 10px; }
+      @media only screen and (max-width: 992px) {
+        .section-video .content-video-section .subscribe-box button {
+          margin: 40px auto; } }
+      .section-video .content-video-section .subscribe-box button span {
+        font-size: 15px; }
+  .section-video .video-box {
+    position: relative;
+    z-index: 1; }
+    .section-video .video-box:before {
+      position: absolute;
+      content: '';
+      bottom: -5%;
+      right: -5%;
+      width: 100%;
+      height: 100%;
+      background-color: #eeeeee;
+      -webkit-box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+              box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+      z-index: -1; }
+    .section-video .video-box iframe {
+      width: 100%;
+      z-index: 1; }
+
+/*====================================================================
+                                   END
+ @mixin ====================================================================*/
+/*====================================================================
+                             9. Services Section
+ @mixin ====================================================================*/
+.section-services {
+  padding: 0;
+  margin-top: 80px;
+  -webkit-background-size: cover;
+          background-size: cover;
+  position: relative;
+  z-index: 1; }
+  .section-services:after {
+    background: url("../img/background/bg-services.jpg") center bottom;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 113%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    -webkit-transform: skewY(-4deg);
+        -ms-transform: skewY(-4deg);
+            transform: skewY(-4deg);
+    -webkit-transform-origin: 100%;
+        -ms-transform-origin: 100%;
+            transform-origin: 100%;
+    z-index: -1; }
+  .section-services .service-content-container {
+    padding: 150px 0 80px 0; }
+    .section-services .service-content-container .service-block {
+      opacity: 0.85;
+      background-color: #fff;
+      text-align: center;
+      padding: 0 30px 30px;
+      -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
+              box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
+      position: relative;
+      z-index: 2;
+      -webkit-transition: all 0.2s ease-in;
+      -o-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in; }
+      .section-services .service-content-container .service-block:hover {
+        opacity: 1;
+        -webkit-box-shadow: 0 70px 70px rgba(0, 0, 0, 0.2);
+                box-shadow: 0 70px 70px rgba(0, 0, 0, 0.2);
+        -webkit-transform: translate(0, -10px) scale(1.01);
+            -ms-transform: translate(0, -10px) scale(1.01);
+                transform: translate(0, -10px) scale(1.01);
+        z-index: 100; }
+      .section-services .service-content-container .service-block .block-icon {
+        padding: 50px 0; }
+        .section-services .service-content-container .service-block .block-icon i {
+          font-size: 60px;
+          color: #006aff; }
+
+/*====================================================================
+                                   END
  @mixin ====================================================================*/
 /* ==================================================================
                             STYLES HOLINEY

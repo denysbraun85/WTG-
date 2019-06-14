@@ -5,6 +5,20 @@
  * 4. Global
  * 5. Main Section
  *    5.1 Main Header
+ * 6. Search
+ * 7. Objects section
+ * 8. Video section 1
+ * 9. Service section 1
+ *10. Advantages section
+ *11. Reason section
+ *12. Philosophy section
+ *13. Professionals section 1
+ *14. Stage section 1
+ *15. Statistic section
+ *16. Feedback section 1
+ *17. Contact form section
+ *18. Footer section
+
  ================================END=================================*/
 
 /*====================================================================
@@ -55,6 +69,18 @@ a
   text-decoration: none
 img
   width: 100%
+h3
+  font-family: 'IBM Plex Sans medium', sans-serif
+  font-size: 35px
+  margin-bottom: 0
+p
+  margin-bottom: 0
+.no-padding
+  padding: 0
+/*---------------------------------Max-width----------------------------*/
+.max-w-1700
+  width: 100%
+  max-width: 1700px
 /*====================================================================
                                     END
  =====================================================================*/
@@ -64,13 +90,21 @@ img
  =====================================================================*/
 $color-btn: #fff
 $color-btn-hover: #006aff
+$color-btn-red: #ff0000
 $main-btn-shadow: rgba(0, 114, 255, 0.3)
 $header-color: rgba(3, 47, 171, 0.5)
 $header-color-menu: #032fab
+$header-text-color: #032fab
 $form-border-color: #e0e0e0
 $select-search-color-text: #606060
 $border-search-color: #e0e0e0
 $bg-color-menu: #fff
+$bg-overlay-services: #0b0b0b
+$section-color-light: #eeeeee
+$section-color-white: #fff
+$color-text: #606060
+$box-shadow-main: 0 1px 6px 0 rgba(32,33,36,0.28)
+$box-shadow-services: 0px 0px 3px rgba(0, 0, 0, 0.15)
 /*====================================================================
                                     END
  =====================================================================*/
@@ -79,7 +113,7 @@ $bg-color-menu: #fff
                                 4. Global
  =====================================================================*/
 body
-  background: #ccc
+  background: $bg-color-menu
   font-family: 'IBM Plex Sans regular', sans-serif
   font-size: 15px
 
@@ -128,10 +162,17 @@ body
     transition: all .3s ease-in-out
   &:focus
     outline: none
-/*---------------------------------Max-width----------------------------*/
-.max-w-1700
-  width: 100%
-  max-width: 1700px
+.red-btn
+  text-transform: uppercase
+  color: $color-text
+  max-width: 220px
+  border: 2px solid $color-btn-red
+  text-align: center
+  padding: 10px 0px
+  &:hover
+    &:before
+      background: $color-btn-red
+      box-shadow: 0 10px 30px $main-btn-shadow
 /*====================================================================
                                     END
  =====================================================================*/
@@ -259,6 +300,9 @@ body
     transform: translateX(-50%)
     bottom: 30px
     z-index: 5
+/*====================================================================
+                                    END
+ =====================================================================*/
 
 
 // .select2-container--default .select2-search--dropdown .select2-search__field
@@ -281,12 +325,124 @@ body
 // .select2-container--default .select2-selection--single .select2-selection__arrow
 //   display: none
 
+
 /*====================================================================
-                                    END
+                             8. Video Section
+ =====================================================================*/
+.section-video
+  padding: 0
+  position: relative
+  background-color: $section-color-light
+  z-index: 1
+  &:after
+    background: inherit
+    bottom: 0
+    content: ''
+    display: block
+    height: 100%
+    left: 0
+    position: absolute
+    right: 0
+    transform: skewY(-4deg)
+    transform-origin: 100%
+    z-index: -1
+  &:before
+    background: inherit
+    bottom: 0
+    content: ''
+    display: block
+    height: 100%
+    position: absolute
+    right: 0
+    left: 0
+    transform: skewY(-4deg)
+    transform-origin: 0%
+    z-index: -1
+  .content-video-section
+    background-color: $section-color-white
+    padding: 60px 10px 60px 60px
+    .subscribe-box
+      .text-inform
+        color: $color-text
+        margin-top: 30px
+      h3
+        color: $header-text-color
+      button
+        margin-top: 80px
+        padding: 7px 10px
+        @media only screen and (max-width: 992px)
+          margin: 40px auto
+        span
+          font-size: 15px
+  .video-box
+    position: relative
+    z-index: 1
+    &:before
+      position: absolute
+      content: ''
+      bottom: -5%
+      right: -5%
+      width: 100%
+      height: 100%
+      background-color: $section-color-light
+      box-shadow: $box-shadow-main
+      z-index: -1
+    iframe
+      width: 100%
+      z-index: 1
+
+/*====================================================================
+                                   END
  =====================================================================*/
 
+/*====================================================================
+                             9. Services Section
+ =====================================================================*/
+.section-services
+  padding: 0
+  margin-top: 80px
+  background-size: cover
+  position: relative
+  z-index: 1
+  &:after
+    background: url("../img/background/bg-services.jpg") center bottom
+    bottom: 0
+    content: ''
+    display: block
+    height: 113%
+    left: 0
+    position: absolute
+    right: 0
+    transform: skewY(-4deg)
+    transform-origin: 100%
+    z-index: -1
+  .service-content-container
+    padding: 150px 0 80px 0
+    .service-block
+      opacity: 0.85
+      background-color: $bg-color-menu
+      text-align: center
+      padding: 0 30px 30px
+      box-shadow: $box-shadow-services
+      position: relative
+      z-index: 2
+      transition: all 0.2s ease-in
+      &:hover
+        opacity: 1
+        box-shadow: 0 70px 70px rgba(0, 0, 0, 0.2)
+        transform: translate(0, -10px) scale(1.01)
+        z-index: 100
+      .block-icon
+        padding: 50px 0
+        i
+          font-size: 60px
+          color: $color-btn-hover
 
 
+
+/*====================================================================
+                                   END
+ =====================================================================*/
 
 
 
@@ -346,8 +502,10 @@ body
     50%,
     80%
     transform: translateY(0)
+
   40%
     transform: translateY(-10px)
+
   60%
     transform: translateY(-5px)
 
@@ -485,7 +643,7 @@ body
   .select2-selection
   &.select2-container--open.select2-container--below .select2-selection
     border-radius: 20px 20px 0 0
-    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28)
     box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28)
   &.select2-container--focus .select2-selection
     border-width: 1px
