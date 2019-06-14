@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19722a5d-ae65-4ff2-ab51-78a7c2c5aaaf" name="Default" comment="add fonts">
-      <change afterPath="$PROJECT_DIR$/src/img/background/object.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/svg/area.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/svg/bath.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/svg/bed.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/svg/tosea.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/background/4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/background/4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/background/5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/background/5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/background/calculator.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/background/calculator.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/background/relax.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/background/relax.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/background/saveyourmoney.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/background/saveyourmoney.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/background/time.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/background/time.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sass/style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/style.sass" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -32,15 +19,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="498" column="4" lean-forward="true" selection-start-line="498" selection-start-column="4" selection-end-line="498" selection-end-column="4" />
+            <state relative-caret-position="472">
+              <caret line="502" column="4" selection-start-line="502" selection-start-column="4" selection-end-line="502" selection-end-column="4" />
               <folding>
                 <element signature="n#main#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#section#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#section#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#section#2;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#section#5;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#section#6;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#section#7;n#body#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -49,8 +36,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sass/style.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="462" column="22" lean-forward="true" selection-start-line="462" selection-start-column="22" selection-end-line="462" selection-end-column="22" />
+            <state relative-caret-position="2486">
+              <caret line="945" column="27" lean-forward="true" selection-start-line="945" selection-start-column="27" selection-end-line="945" selection-end-column="27" />
               <folding>
                 <element signature="e#7322#10558#0" />
               </folding>
@@ -239,7 +226,7 @@
       <workItem from="1560405986524" duration="9027000" />
       <workItem from="1560416625110" duration="17271000" />
       <workItem from="1560436079169" duration="1097000" />
-      <workItem from="1560492572858" duration="24835000" />
+      <workItem from="1560492572858" duration="25218000" />
     </task>
     <task id="LOCAL-00001" summary="fresh code">
       <created>1560240694312</created>
@@ -259,7 +246,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77647000" />
+    <option name="totallyTimeSpent" value="78030000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -395,8 +382,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sass/style.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="462" column="22" lean-forward="true" selection-start-line="462" selection-start-column="22" selection-end-line="462" selection-end-column="22" />
+        <state relative-caret-position="2486">
+          <caret line="945" column="27" lean-forward="true" selection-start-line="945" selection-start-column="27" selection-end-line="945" selection-end-column="27" />
           <folding>
             <element signature="e#7322#10558#0" />
           </folding>
@@ -405,15 +392,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="498" column="4" lean-forward="true" selection-start-line="498" selection-start-column="4" selection-end-line="498" selection-end-column="4" />
+        <state relative-caret-position="472">
+          <caret line="502" column="4" selection-start-line="502" selection-start-column="4" selection-end-line="502" selection-end-column="4" />
           <folding>
             <element signature="n#main#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#section#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#section#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#section#2;n#body#0;n#html#0;n#!!top" />
             <element signature="n#section#5;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#6;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#7;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
