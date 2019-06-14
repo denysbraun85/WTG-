@@ -45,6 +45,12 @@
   font-weight: 500;
   font-style: normal; }
 
+@font-face {
+  font-family: 'Lato Regular';
+  src: url("../fonts/Lato-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
 /*====================================================================
                                     END
  @mixin ====================================================================*/
@@ -551,9 +557,9 @@ body {
     100%,
     20%,
     50%,
-    80% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0); } }
+    80% { }
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
   40% {
     -webkit-transform: translateY(-10px);
             transform: translateY(-10px); }
@@ -565,9 +571,9 @@ body {
     100%,
     20%,
     50%,
-    80% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0); } }
+    80% { }
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
   40% {
     -webkit-transform: translateY(-10px);
             transform: translateY(-10px); }
@@ -753,6 +759,142 @@ body {
 
 /* ==================================================================
                            END STYLE SEARCH CONTAINER
+ @mixin ==================================================================*/
+/* ==================================================================
+                           STYLE 6 BENEFIT CONTAINER
+ @mixin ==================================================================*/
+.section_benefit {
+  background: #fff;
+  padding-bottom: 200px; }
+  .section_benefit .wrapper_left_back_benefit {
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #eeeeee), color-stop(52%, #ffffff));
+    background: -webkit-linear-gradient(left, #eeeeee 50%, #ffffff 52%);
+    background: -o-linear-gradient(left, #eeeeee 50%, #ffffff 52%);
+    background: linear-gradient(to right, #eeeeee 50%, #ffffff 52%); }
+    .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit {
+      max-width: 1220px;
+      width: 100%;
+      margin: 0 auto;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit .left_container_benefit {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: end;
+        -webkit-align-items: flex-end;
+            -ms-flex-align: end;
+                align-items: flex-end;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        max-width: 964px;
+        width: 100%;
+        margin-left: 0;
+        background: #fff; }
+        .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit .left_container_benefit .wrapper_img_benefit {
+          max-width: 260px;
+          width: 100%; }
+        .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit .left_container_benefit .text_left_benefit {
+          position: relative;
+          margin-left: 60px;
+          text-align: left;
+          z-index: 1;
+          padding-bottom: 10px; }
+          .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit .left_container_benefit .text_left_benefit .background_number_benefit {
+            position: absolute;
+            top: -90px;
+            left: -7px;
+            font-family: 'Lato Regular', sans-serif;
+            color: #eeeeee;
+            font-size: 130px;
+            font-weight: 900;
+            z-index: -1; }
+          .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit .left_container_benefit .text_left_benefit h4 {
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 18px; }
+          .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit .left_container_benefit .text_left_benefit p {
+            margin-top: 50px;
+            font-size: 17px; }
+  .section_benefit .wrapper_right_back_benedit {
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #ffffff), color-stop(50%, #eeeeee));
+    background: -webkit-linear-gradient(left, #ffffff 50%, #eeeeee 50%);
+    background: -o-linear-gradient(left, #ffffff 50%, #eeeeee 50%);
+    background: linear-gradient(to right, #ffffff 50%, #eeeeee 50%); }
+    .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit {
+      max-width: 1220px;
+      width: 100%;
+      margin: 0 auto;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit .right_container_benefit {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: end;
+        -webkit-align-items: flex-end;
+            -ms-flex-align: end;
+                align-items: flex-end;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        max-width: 964px;
+        width: 100%;
+        margin-right: 0;
+        background: #fff; }
+        .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit .right_container_benefit .text_right_benefit {
+          position: relative;
+          margin-right: 60px;
+          text-align: right;
+          z-index: 1;
+          padding-bottom: 10px; }
+          .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit .right_container_benefit .text_right_benefit .background_number_benefit {
+            position: absolute;
+            top: -90px;
+            right: -7px;
+            font-family: 'Lato Regular', sans-serif;
+            color: #eeeeee;
+            font-size: 130px;
+            font-weight: 900;
+            z-index: -1; }
+          .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit .right_container_benefit .text_right_benefit h4 {
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 18px; }
+          .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit .right_container_benefit .text_right_benefit p {
+            margin-top: 50px;
+            font-size: 17px; }
+        .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit .right_container_benefit .wrapper_img_benefit {
+          max-width: 260px;
+          width: 100%; }
+
+/* ==================================================================
+                           END STYLE 6 BENEFIT CONTAINER
  @mixin ==================================================================*/
 /* ==================================================================
                            END STYLES HOLINEY

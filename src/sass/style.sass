@@ -46,6 +46,12 @@
   font-weight: 500
   font-style: normal
 
+@font-face
+  font-family: 'Lato Regular'
+  src: url('../fonts/Lato-Regular.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
 $font-face-regular: 'IBM Plex Sans regular'
 $font-face-medium:  'IBM Plex Sans medium'
 /*====================================================================
@@ -574,14 +580,16 @@ body
 
 
 @keyframes bounce
-  0%
+  0%,
     100%,
     20%,
     50%,
     80%
-      transform: translateY(0)
+    transform: translateY(0)
+
   40%
     transform: translateY(-10px)
+
   60%
     transform: translateY(-5px)
 
@@ -747,6 +755,116 @@ body
 /* ==================================================================
                            END STYLE SEARCH CONTAINER
  ===================================================================*/
+
+
+
+
+
+
+
+/* ==================================================================
+                           STYLE 6 BENEFIT CONTAINER
+ ===================================================================*/
+
+.section_benefit
+  background: $bg-color-menu
+  padding-bottom: 200px
+  .wrapper_left_back_benefit
+    background: linear-gradient(to right, $section-color-light 50%,#ffffff 52%)
+    .wrapper_content_6_benefit
+      max-width: 1220px
+      width: 100%
+      margin: 0 auto
+      display: flex
+      justify-content: space-between
+      align-items: center
+      .left_container_benefit
+        display: flex
+        align-items: flex-end
+        justify-content: space-between
+        max-width: 964px
+        width: 100%
+        margin-left: 0
+        background: $color-btn
+        .wrapper_img_benefit
+          max-width: 260px
+          width: 100%
+        .text_left_benefit
+          position: relative
+          margin-left: 60px
+          text-align: left
+          z-index: 1
+          padding-bottom: 10px
+          .background_number_benefit
+            position: absolute
+            top: -90px
+            left: -7px
+            font-family: 'Lato Regular', sans-serif
+            color: $section-color-light
+            font-size: 130px
+            font-weight: 900
+            z-index: -1
+          h4
+            font-weight: 600
+            text-transform: uppercase
+            font-size: 18px
+          p 
+            margin-top: 50px
+            font-size: 17px;
+  .wrapper_right_back_benedit
+    background: linear-gradient(to right, #ffffff 50%,$section-color-light 50%)
+    .wrapper_content_6_benefit
+      max-width: 1220px
+      width: 100%
+      margin: 0 auto
+      display: flex
+      justify-content: flex-end
+      align-items: center
+      .right_container_benefit
+        display: flex
+        align-items: flex-end
+        justify-content: space-between
+        max-width: 964px
+        width: 100%
+        margin-right: 0
+        background: $color-btn
+        .text_right_benefit
+          position: relative
+          margin-right: 60px
+          text-align: right
+          z-index: 1
+          padding-bottom: 10px
+          .background_number_benefit
+            position: absolute
+            top: -90px
+            right: -7px
+            font-family: 'Lato Regular', sans-serif
+            color: $section-color-light
+            font-size: 130px
+            font-weight: 900
+            z-index: -1
+          h4
+            font-weight: 600
+            text-transform: uppercase
+            font-size: 18px
+          p
+            margin-top: 50px
+            font-size: 17px
+        .wrapper_img_benefit
+          max-width: 260px
+          width: 100%
+
+
+
+
+
+
+/* ==================================================================
+                           END STYLE 6 BENEFIT CONTAINER
+ ===================================================================*/
+
+
+
 
 
 
