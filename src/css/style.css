@@ -45,6 +45,12 @@
   font-weight: 500;
   font-style: normal; }
 
+@font-face {
+  font-family: 'Lato Regular';
+  src: url("../fonts/Lato-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
 /*====================================================================
                                     END
  @mixin ====================================================================*/
@@ -735,12 +741,13 @@ body {
                            STYLE 6 BENEFIT CONTAINER
  @mixin ==================================================================*/
 .section_benefit {
-  background: #fff; }
+  background: #fff;
+  padding-bottom: 200px; }
   .section_benefit .wrapper_left_back_benefit {
-    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #cccccc), color-stop(52%, #ffffff));
-    background: -webkit-linear-gradient(left, #cccccc 50%, #ffffff 52%);
-    background: -o-linear-gradient(left, #cccccc 50%, #ffffff 52%);
-    background: linear-gradient(to right, #cccccc 50%, #ffffff 52%); }
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #eeeeee), color-stop(52%, #ffffff));
+    background: -webkit-linear-gradient(left, #eeeeee 50%, #ffffff 52%);
+    background: -o-linear-gradient(left, #eeeeee 50%, #ffffff 52%);
+    background: linear-gradient(to right, #eeeeee 50%, #ffffff 52%); }
     .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit {
       max-width: 1220px;
       width: 100%;
@@ -781,21 +788,29 @@ body {
           position: relative;
           margin-left: 60px;
           text-align: left;
-          z-index: 2; }
+          z-index: 1;
+          padding-bottom: 10px; }
+          .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit .left_container_benefit .text_left_benefit .background_number_benefit {
+            position: absolute;
+            top: -90px;
+            left: -7px;
+            font-family: 'Lato Regular', sans-serif;
+            color: #eeeeee;
+            font-size: 130px;
+            font-weight: 900;
+            z-index: -1; }
           .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit .left_container_benefit .text_left_benefit h4 {
             font-weight: 600;
-            text-transform: uppercase; }
+            text-transform: uppercase;
+            font-size: 18px; }
           .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit .left_container_benefit .text_left_benefit p {
             margin-top: 50px;
             font-size: 17px; }
-
-.section_benefit {
-  background: #fff; }
   .section_benefit .wrapper_right_back_benedit {
-    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #ffffff), color-stop(50%, #cccccc));
-    background: -webkit-linear-gradient(left, #ffffff 50%, #cccccc 50%);
-    background: -o-linear-gradient(left, #ffffff 50%, #cccccc 50%);
-    background: linear-gradient(to right, #ffffff 50%, #cccccc 50%); }
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #ffffff), color-stop(50%, #eeeeee));
+    background: -webkit-linear-gradient(left, #ffffff 50%, #eeeeee 50%);
+    background: -o-linear-gradient(left, #ffffff 50%, #eeeeee 50%);
+    background: linear-gradient(to right, #ffffff 50%, #eeeeee 50%); }
     .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit {
       max-width: 1220px;
       width: 100%;
@@ -833,10 +848,21 @@ body {
           position: relative;
           margin-right: 60px;
           text-align: right;
-          z-index: 2; }
+          z-index: 1;
+          padding-bottom: 10px; }
+          .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit .right_container_benefit .text_right_benefit .background_number_benefit {
+            position: absolute;
+            top: -90px;
+            right: -7px;
+            font-family: 'Lato Regular', sans-serif;
+            color: #eeeeee;
+            font-size: 130px;
+            font-weight: 900;
+            z-index: -1; }
           .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit .right_container_benefit .text_right_benefit h4 {
             font-weight: 600;
-            text-transform: uppercase; }
+            text-transform: uppercase;
+            font-size: 18px; }
           .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit .right_container_benefit .text_right_benefit p {
             margin-top: 50px;
             font-size: 17px; }
