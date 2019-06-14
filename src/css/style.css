@@ -768,7 +768,152 @@ body {
   .section_object .wrapper_object {
     max-width: 1525px;
     width: 100%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 100px; }
+    .section_object .wrapper_object .wrapper_photo_info {
+      max-width: 1360px;
+      width: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      position: relative; }
+      .section_object .wrapper_object .wrapper_photo_info .info_object {
+        position: absolute;
+        background: #fff;
+        height: 410px;
+        max-width: 626px;
+        width: 100%;
+        right: 0; }
+        .section_object .wrapper_object .wrapper_photo_info .info_object:hover {
+          -webkit-box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+                  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28); }
+        .section_object .wrapper_object .wrapper_photo_info .info_object h4 {
+          position: absolute;
+          color: #606060;
+          font-size: 26px;
+          font-weight: 700;
+          text-transform: uppercase;
+          max-width: 305px;
+          width: 100%;
+          text-align: center;
+          -webkit-transform: translateX(-50%);
+              -ms-transform: translateX(-50%);
+                  transform: translateX(-50%);
+          left: 50%;
+          top: 50px; }
+        .section_object .wrapper_object .wrapper_photo_info .info_object .icons_info {
+          position: absolute;
+          max-width: 314px;
+          width: 100%;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+          -webkit-justify-content: space-between;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%);
+          left: 50%;
+          top: 50%; }
+          .section_object .wrapper_object .wrapper_photo_info .info_object .icons_info .text_img_info {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+                -ms-flex-align: center;
+                    align-items: center; }
+            .section_object .wrapper_object .wrapper_photo_info .info_object .icons_info .text_img_info img {
+              width: 36px; }
+            .section_object .wrapper_object .wrapper_photo_info .info_object .icons_info .text_img_info span {
+              margin-top: 15px;
+              color: #000000;
+              font-size: 13px;
+              font-weight: 300; }
+      .section_object .wrapper_object .wrapper_photo_info .price_object {
+        position: absolute;
+        color: #032fab;
+        font-size: 21px;
+        font-weight: 400;
+        border-bottom: 1px solid #e0e0e0;
+        border-top: 1px solid #e0e0e0;
+        max-width: 310px;
+        width: 100%;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        left: 50%;
+        bottom: 65px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        .section_object .wrapper_object .wrapper_photo_info .price_object span {
+          padding: 5px 0; }
+      .section_object .wrapper_object .wrapper_photo_info .blue-btn {
+        position: absolute;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        left: 50%;
+        bottom: 12px;
+        color: #606060;
+        max-width: 185px;
+        width: 100%;
+        border: 2px solid #e0e0e0;
+        text-align: center;
+        padding: 2px 0; }
+        .section_object .wrapper_object .wrapper_photo_info .blue-btn:active:hover:before {
+          background: #006aff; }
+        .section_object .wrapper_object .wrapper_photo_info .blue-btn:hover span {
+          color: #fff; }
+        .section_object .wrapper_object .wrapper_photo_info .blue-btn:hover:before {
+          background: #006aff; }
+    .section_object .wrapper_object .wrapper_photo_info_right {
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; }
+      .section_object .wrapper_object .wrapper_photo_info_right .info_object_right {
+        left: 0; }
 
 /* ==================================================================
                            END STYLE OBJECT CONTAINER
@@ -777,6 +922,7 @@ body {
                            STYLE 6 BENEFIT CONTAINER
  @mixin ==================================================================*/
 .section_benefit {
+  padding-top: 200px;
   background: #fff; }
   .section_benefit .wrapper_left_back_benefit {
     background: -webkit-gradient(linear, left top, right top, color-stop(50%, #eeeeee), color-stop(52%, #ffffff));
