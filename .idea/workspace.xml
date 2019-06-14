@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19722a5d-ae65-4ff2-ab51-78a7c2c5aaaf" name="Default" comment="add fonts">
+      <change afterPath="$PROJECT_DIR$/src/img/background/object.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/svg/area.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/svg/bath.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/svg/bed.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/svg/tosea.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/background/4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/background/4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/background/5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/background/5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/background/calculator.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/background/calculator.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/background/relax.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/background/relax.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/background/saveyourmoney.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/background/saveyourmoney.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/background/time.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/background/time.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sass/style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/style.sass" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -17,25 +29,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="324" column="53" lean-forward="true" selection-start-line="324" selection-start-column="53" selection-end-line="324" selection-end-column="53" />
+            <state relative-caret-position="532">
+              <caret line="498" column="4" lean-forward="true" selection-start-line="498" selection-start-column="4" selection-end-line="498" selection-end-column="4" />
               <folding>
-                <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#section#2;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#section#2;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#2;n#div#0;n#div#0;n#div#1;n#section#2;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#3;n#div#0;n#div#0;n#div#1;n#section#2;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#4;n#div#0;n#div#0;n#div#1;n#section#2;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#5;n#div#0;n#div#0;n#div#1;n#section#2;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#section#3;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#main#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#section#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#section#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#section#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#section#5;n#body#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sass/style.sass">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="266">
@@ -78,8 +89,8 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/../wtg24.com/public/index.php" />
         <option value="$PROJECT_DIR$/src/js/main.js" />
-        <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/src/sass/style.sass" />
+        <option value="$PROJECT_DIR$/src/index.html" />
       </list>
     </option>
   </component>
@@ -90,7 +101,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1481" />
     <option name="y" value="193" />
     <option name="width" value="1382" />
@@ -228,7 +239,7 @@
       <workItem from="1560405986524" duration="9027000" />
       <workItem from="1560416625110" duration="17271000" />
       <workItem from="1560436079169" duration="1097000" />
-      <workItem from="1560492572858" duration="24472000" />
+      <workItem from="1560492572858" duration="24835000" />
     </task>
     <task id="LOCAL-00001" summary="fresh code">
       <created>1560240694312</created>
@@ -248,7 +259,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77284000" />
+    <option name="totallyTimeSpent" value="77647000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -277,7 +288,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32993197" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32993197" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3911111" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3911111" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32993197" />
@@ -382,28 +393,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="324" column="53" lean-forward="true" selection-start-line="324" selection-start-column="53" selection-end-line="324" selection-end-column="53" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#section#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#section#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#div#0;n#div#0;n#div#1;n#section#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#3;n#div#0;n#div#0;n#div#1;n#section#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#4;n#div#0;n#div#0;n#div#1;n#section#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#5;n#div#0;n#div#0;n#div#1;n#section#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#section#3;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sass/style.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="462" column="22" lean-forward="true" selection-start-line="462" selection-start-column="22" selection-end-line="462" selection-end-column="22" />
           <folding>
             <element signature="e#7322#10558#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="498" column="4" lean-forward="true" selection-start-line="498" selection-start-column="4" selection-end-line="498" selection-end-column="4" />
+          <folding>
+            <element signature="n#main#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#5;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>

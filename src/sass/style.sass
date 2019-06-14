@@ -778,6 +778,121 @@ body
 
 
 
+/* ==================================================================
+                           STYLE OBJECT CONTAINER
+ ===================================================================*/
+
+.section_object
+  padding-bottom: 200px
+  .wrapper_object
+    max-width: 1525px
+    width: 100%
+    margin: 0 auto
+    display: flex
+    justify-content: center
+    align-items: center
+    padding-bottom: 100px
+    .wrapper_photo_info
+      max-width: 1360px
+      width: 100%
+      display: flex
+      align-items: center
+      position: relative
+      .info_object
+        position: absolute
+        background: $section-color-white
+        height: 410px
+        max-width: 626px
+        width: 100%
+        right: 0
+        &:hover
+          box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28)
+        h4
+          position: absolute
+          color: #606060;
+          font-size: 26px;
+          font-weight: 700;
+          text-transform: uppercase;
+          max-width: 305px
+          width: 100%
+          text-align: center
+          transform: translateX(-50%);
+          left: 50%
+          top: 50px
+        .icons_info
+          position: absolute
+          max-width: 314px
+          width: 100%
+          display: flex
+          justify-content: space-between
+          align-items: center
+          transform: translate(-50%, -50%);
+          left: 50%
+          top: 50%
+          .text_img_info 
+            display: flex
+            flex-direction: column
+            align-items: center
+            img
+              width: 36px
+            span
+              margin-top: 15px
+              color: #000000
+              font-size: 13px
+              font-weight: 300
+      .price_object
+        position: absolute
+        color: $header-text-color
+        font-size: 21px;
+        font-weight: 400;
+        border-bottom: 1px solid $border-search-color
+        border-top: 1px solid $border-search-color  
+        max-width: 310px
+        width: 100%  
+        transform: translate(-50%, -50%);
+        left: 50%
+        bottom: 65px
+        display: flex
+        justify-content: center
+        align-items: center
+        span
+          padding: 5px 0  
+      .blue-btn
+        position: absolute
+        transform: translate(-50%, -50%);
+        left: 50%
+        bottom: 12px
+        color: $color-text
+        max-width: 185px
+        width: 100%
+        border: 2px solid $border-search-color
+        text-align: center
+        padding: 2px 0
+        &:active
+          // box-shadow: 0 2px 20px rgba(168, 31, 35, 0.62)
+          &:hover
+            &:before
+              background: $color-btn-hover
+        &:hover
+          span
+            color: $color-btn
+          &:before
+            background: $color-btn-hover
+            // box-shadow: 0 4px 20px rgba(168, 31, 35, 0.62) 
+    .wrapper_photo_info_right
+      justify-content: flex-end            
+      .info_object_right
+        left: 0
+
+
+
+
+/* ==================================================================
+                           END STYLE OBJECT CONTAINER
+ ===================================================================*/
+
+
+
 
 
 /* ==================================================================
@@ -785,8 +900,8 @@ body
  ===================================================================*/
 
 .section_benefit
+  padding-top: 200px
   background: $bg-color-menu
-  padding-bottom: 200px
   .wrapper_left_back_benefit
     background: linear-gradient(to right, $section-color-light 50%,#ffffff 52%)
     .wrapper_content_6_benefit
@@ -800,7 +915,7 @@ body
         display: flex
         align-items: flex-end
         justify-content: space-between
-        max-width: 964px
+        max-width: 960px
         width: 100%
         margin-left: 0
         background: $color-btn
@@ -828,7 +943,7 @@ body
             font-size: 18px
           p 
             margin-top: 50px
-            font-size: 17px
+            font-size: 15px;
   .wrapper_right_back_benedit
     background: linear-gradient(to right, #ffffff 50%,$section-color-light 50%)
     .wrapper_content_6_benefit
@@ -842,7 +957,7 @@ body
         display: flex
         align-items: flex-end
         justify-content: space-between
-        max-width: 964px
+        max-width: 960px
         width: 100%
         margin-right: 0
         background: $color-btn
@@ -867,7 +982,7 @@ body
             font-size: 18px
           p
             margin-top: 50px
-            font-size: 17px
+            font-size: 15px
         .wrapper_img_benefit
           max-width: 260px
           width: 100%
