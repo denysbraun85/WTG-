@@ -1,4 +1,4 @@
-/*=============================COMPONENTS=============================
+/*=============================fOMPONENTS=============================
  * 1. Fonts
  * 2. Reset
  * 3. Colors
@@ -116,6 +116,7 @@ $color-text: #606060
 $color-text-white: #fff
 $box-shadow-main: 0 1px 6px 0 rgba(32,33,36,0.28)
 $box-shadow-services: 0px 0px 3px rgba(0, 0, 0, 0.15)
+$hover-object-img: #006aff80
 /*====================================================================
                                     END
  =====================================================================*/
@@ -798,6 +799,52 @@ body
       display: flex
       align-items: center
       position: relative
+      .photo_object
+        position: relative
+        max-width: 830px
+        width: 100% 
+        overflow: hidden
+        max-height: 490px
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        &:hover
+          .img_object
+            transform: scale(1.1)
+          .hover_img_object
+            opacity: 1
+            transform: scale(1.0)
+        .img_object
+          transition: 0.5s
+        .hover_img_object
+          opacity: 0
+          transform: scale(0.0)
+          position: absolute
+          background: $hover-object-img
+          width: 94%
+          height: 90.2%
+          top: 5%
+          left: 3%
+          // outline: 5px solid $color-text-white
+          // outline-offset: -20px
+          transition: 0.5s
+          .border_object_hover
+            position: absolute
+            width: 95%
+            height: 92.8%
+            left: 2.5%
+            top: 3.5%
+            border: 4px solid $section-color-white
+            display: flex
+            justify-content: center
+            align-items: center
+            .play_btn
+              width: 60px
+              opacity: 0.8
+              transition: 0.5s
+              &:hover
+                transform: scale(1.2)
       .info_object
         position: absolute
         background: $section-color-white
@@ -805,8 +852,10 @@ body
         max-width: 626px
         width: 100%
         right: 0
+        z-index: 1
+        transition: 0.5s
         &:hover
-          box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28)
+          box-shadow: 0 30px 40px rgba(0, 0, 0, 0.2);
         h4
           position: absolute
           color: #606060
@@ -868,6 +917,8 @@ body
         border: 2px solid $border-search-color
         text-align: center
         padding: 2px 0
+        span
+          transition: 0.5s
         &:active
           // box-shadow: 0 2px 20px rgba(168, 31, 35, 0.62)
           &:hover
@@ -996,6 +1047,94 @@ body
                            END STYLE 6 BENEFIT CONTAINER
  ===================================================================*/
 
+
+
+
+
+/* ==================================================================
+                           OUR PHILOSOPHY STYLES
+ ===================================================================*/
+
+
+.back_our_philosophy
+  background: url("../img/background/ourphilosophy.jpg")
+  background-size: contain
+  background-position: left center
+  background-repeat: no-repeat
+  z-index: -1
+  height: 786px
+  .wrap_info_philosophy
+    position: relative
+    width: 43%
+    background: $section-color-white
+    z-index: 1
+    margin-left: auto
+    height: 786px
+    .info_philosophy
+      position: absolute
+      z-index: 1
+      max-width: 1024px
+      width: 100%
+      height: 664px
+      top: 50%
+      left: 30% 
+      transform: translate(-50%, -50%)
+      background: #fffc
+      .wrap_text_philosophy
+        display: flex
+        align-items: left
+        flex-direction: column
+        padding: 35px 0 0 45px
+        text-align: left
+        h4
+          color: $color-btn-hover
+          text-transform: uppercase
+          font-size: 30px
+          font-weight: 400
+        .under_title_philosophy
+          color: $select-search-color-text
+          text-transform: uppercase
+          font-size: 20px
+          opacity: 0.8
+          padding-bottom: 15px
+        .info_philosophy_text
+          color: $select-search-color-text
+          font-size: 17px
+          opacity: 0.8
+          max-width: 615px
+          width: 100%
+          padding-bottom: 35px
+        ul
+          li
+            max-width: 868px
+            width: 100%
+            padding-bottom: 20px
+            color: $select-search-color-text
+            font-size: 17px
+            opacity: 0.8
+            &:before
+              content: '\f00c'
+              font-family: "Font Awesome 5 Free"
+              font-weight: 900
+              color: $color-btn-hover
+              padding-right: 15px
+        .info_philosophy_down_text
+          color: $select-search-color-text
+          font-size: 17px
+          opacity: 0.8
+          max-width: 640px
+          width: 100%
+          padding-top: 15px
+
+
+
+      
+
+
+
+/* ==================================================================
+                           END OUR PHILOSOPHY STYLES
+ ===================================================================*/
 
 
 
