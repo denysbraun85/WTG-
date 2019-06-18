@@ -975,7 +975,8 @@ body {
               opacity: 0.8;
               -webkit-transition: 0.5s;
               -o-transition: 0.5s;
-              transition: 0.5s; }
+              transition: 0.5s;
+              cursor: pointer; }
               .section_object .wrapper_object .wrapper_photo_info .photo_object .hover_img_object .border_object_hover .play_btn:hover {
                 -webkit-transform: scale(1.2);
                     -ms-transform: scale(1.2);
