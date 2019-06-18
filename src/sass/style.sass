@@ -818,13 +818,19 @@ body
     display: flex
     justify-content: center
     align-items: center
-    padding-bottom: 100px
+    padding: 100px 15px 0 15px
+    @media only screen and (max-width: 950px)
+      padding-bottom: 120px
     .wrapper_photo_info
       max-width: 1360px
       width: 100%
       display: flex
       align-items: center
       position: relative
+      @media only screen and (max-width: 950px)
+        max-width: 612px
+        width: 100%
+        margin: 0 auto
       .photo_object
         position: relative
         max-width: 830px
@@ -835,6 +841,12 @@ body
         display: flex
         justify-content: center
         align-items: center
+        @media only screen and (max-width: 1330px)
+          max-width: 700px
+          width: 100%
+          @media only screen and (max-width: 1070px)
+            max-width: 610px
+            width: 100%
         &:hover
           .img_object
             transform: scale(1.1)
@@ -881,6 +893,19 @@ body
         right: 0
         z-index: 1
         transition: 0.5s
+        @media only screen and (max-width: 1330px)
+          max-width: 600px
+          width: 100%
+          height: 390px
+          @media only screen and (max-width: 1070px)
+            max-width: 470px
+            width: 100%
+            height: 340px
+            @media only screen and (max-width: 950px)
+              bottom: -200px
+              left: 5.3%
+              max-width: 545px
+              width: 100%
         &:hover
           box-shadow: 0 30px 40px rgba(0, 0, 0, 0.2);
         h4
@@ -904,7 +929,9 @@ body
           align-items: center
           transform: translate(-50%, -50%)
           left: 50%
-          top: 50%
+          top: 50%  
+          @media only screen and (max-width: 1070px) 
+            padding-bottom: 10px         
           .text_img_info 
             display: flex
             flex-direction: column
@@ -961,6 +988,11 @@ body
       justify-content: flex-end            
       .info_object_right
         left: 0
+        @media only screen and (max-width: 950px)
+          bottom: -200px
+          left: 5.6%
+          max-width: 545px
+          width: 100%
 
 
 
@@ -978,10 +1010,9 @@ body
  ===================================================================*/
 
 .section_benefit
-  padding-top: 200px
   background: $bg-color-menu
   .wrapper_left_back_benefit
-    background: linear-gradient(to right, $section-color-light 50%,#ffffff 52%)
+    background: linear-gradient(to right, $section-color-light 50%,#ffffff 50%)
     .wrapper_content_6_benefit
       max-width: 1220px
       width: 100%
@@ -1092,7 +1123,7 @@ body
   height: 786px
   .wrap_info_philosophy
     position: relative
-    width: 43%
+    width: 45%
     background: $section-color-white
     z-index: 1
     margin-left: auto
