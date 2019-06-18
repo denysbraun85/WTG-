@@ -124,13 +124,16 @@ body {
   -webkit-border-radius: 50px 50px 50px 0;
           border-radius: 50px 50px 50px 0;
   outline: none;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; }
+  -webkit-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out; }
   .main-btn span {
     display: block;
     position: relative;
-    z-index: 1; }
+    z-index: 1;
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out; }
   .main-btn:hover {
     border: 2px solid transparent;
     cursor: pointer; }
@@ -202,9 +205,6 @@ body {
 .head-text-box {
   width: 100%;
   text-align: center;
-  -webkit-transform: rotate(4deg);
-      -ms-transform: rotate(4deg);
-          transform: rotate(4deg);
   margin: 40px 0 0 0;
   z-index: 100; }
   .head-text-box h2 {
@@ -417,99 +417,58 @@ body {
   .section-video .content-video-section {
     background-color: #fff;
     padding: 60px 10px 60px 60px; }
-    @media only screen and (max-width: 992px) {
+    @media only screen and (max-width: 1400px) {
       .section-video .content-video-section {
-        padding: 20px 0 40px 0; } }
-  @media only screen and (max-width: 992px) and (max-width: 576px) {
+        padding: 40px 10px 40px 40px; } }
+  @media only screen and (max-width: 1400px) and (max-width: 1350px) {
     .section-video .content-video-section {
-      padding: 10px 0 20px 0; } }
-    @media only screen and (max-width: 992px) {
-      .section-video .content-video-section .subscribe-box {
-        text-align: center;
-        padding: 10px; } }
+      padding: 30px 10px 30px 30px; } }
+  @media only screen and (max-width: 1400px) and (max-width: 1350px) and (max-width: 992px) {
+    .section-video .content-video-section {
+      padding: 30px; } }
+  @media only screen and (max-width: 1400px) and (max-width: 1350px) and (max-width: 992px) and (max-width: 768px) {
+    .section-video .content-video-section {
+      padding: 30px 0 0 0;
+      background: none; } }
     .section-video .content-video-section .subscribe-box .text-inform {
       color: #606060;
       margin-top: 30px; }
       @media only screen and (max-width: 992px) {
         .section-video .content-video-section .subscribe-box .text-inform {
-          margin-top: 10px;
-          font-size: 12px; } }
-  @media only screen and (max-width: 992px) and (max-width: 576px) {
-    .section-video .content-video-section .subscribe-box .text-inform {
-      margin-top: 5px; } }
+          display: none; } }
     .section-video .content-video-section .subscribe-box h3 {
       color: #032fab; }
       @media only screen and (max-width: 992px) {
         .section-video .content-video-section .subscribe-box h3 {
-          font-size: 25px; } }
-  @media only screen and (max-width: 992px) and (max-width: 576px) {
-    .section-video .content-video-section .subscribe-box h3 {
-      font-size: 18px; } }
+          font-size: 20px; } }
     .section-video .content-video-section .subscribe-box button {
       margin-top: 80px;
       padding: 7px 10px; }
       @media only screen and (max-width: 992px) {
         .section-video .content-video-section .subscribe-box button {
-          margin: 20px auto 20px; } }
+          margin: 60px auto auto; } }
+  @media only screen and (max-width: 992px) and (max-width: 768px) {
+    .section-video .content-video-section .subscribe-box button {
+      margin-top: 20px; } }
       .section-video .content-video-section .subscribe-box button span {
         font-size: 15px; }
-  .section-video .video-box {
+  .section-video .video-container {
     position: relative;
-    z-index: 1;
-    width: 100%;
-    height: 100%; }
-    .section-video .video-box:before {
+    z-index: 1; }
+    .section-video .video-container:before {
       position: absolute;
       content: '';
-      bottom: -6%;
-      right: -7%;
+      bottom: -9%;
+      right: -9%;
       width: 100%;
       height: 100%;
       background-color: #eeeeee;
       -webkit-box-shadow: 0 30px 40px rgba(0, 0, 0, 0.2);
               box-shadow: 0 30px 40px rgba(0, 0, 0, 0.2);
       z-index: -1; }
-      @media only screen and (max-width: 992px) {
-        .section-video .video-box:before {
-          right: 14%;
-          width: 60%; } }
-  @media only screen and (max-width: 992px) and (max-width: 929px) {
-    .section-video .video-box:before {
-      right: 16%;
-      width: 58%; } }
-  @media only screen and (max-width: 992px) and (max-width: 929px) and (max-width: 845px) {
-    .section-video .video-box:before {
-      right: 16%;
-      width: 58%; } }
-  @media only screen and (max-width: 992px) and (max-width: 929px) and (max-width: 845px) and (max-width: 634px) {
-    .section-video .video-box:before {
-      right: 16%;
-      width: 60%; } }
-  @media only screen and (max-width: 992px) and (max-width: 929px) and (max-width: 845px) and (max-width: 634px) and (max-width: 576px) {
-    .section-video .video-box:before {
-      right: 20%;
-      width: 51%; } }
-    .section-video .video-box iframe {
-      width: 100%;
-      z-index: 1; }
-    .section-video .video-box img {
-      width: 100%;
-      max-width: 600px;
-      height: 100%; }
-      @media only screen and (max-width: 992px) {
-        .section-video .video-box img {
-          display: -webkit-box;
-          display: -webkit-flex;
-          display: -ms-flexbox;
-          display: flex;
-          margin: auto;
-          max-width: 400px; } }
-  @media only screen and (max-width: 992px) and (max-width: 634px) {
-    .section-video .video-box img {
-      max-width: 300px; } }
-  @media only screen and (max-width: 992px) and (max-width: 634px) and (max-width: 576px) {
-    .section-video .video-box img {
-      max-width: 250px; } }
+      @media only screen and (max-width: 768px) {
+        .section-video .video-container:before {
+          display: none; } }
 
 /*====================================================================
                                    END
@@ -524,36 +483,39 @@ body {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  -webkit-transform: skewY(-4deg);
-      -ms-transform: skewY(-4deg);
-          transform: skewY(-4deg);
-  height: 100%; }
-  .section-services .bg-parallax {
-    -webkit-transform: skewY(4deg);
-        -ms-transform: skewY(4deg);
-            transform: skewY(4deg);
+  height: 100%;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background: url("../img/background/12.jpg") no-repeat fixed 60% 57%; }
+  .section-services:before {
+    content: '';
+    width: 100%;
+    height: 100%;
     position: absolute;
-    top: -20%;
-    right: 0;
-    bottom: -20%;
-    left: 0;
-    background: url(../img/background/bg-services.jpg) fixed center;
-    -webkit-background-size: cover;
-    background-size: cover;
-    z-index: -1; }
-    .section-services .bg-parallax .bg-overlay-container {
-      background-color: #232323;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      opacity: .3; }
+    top: -83%;
+    -webkit-transform-origin: left top;
+        -ms-transform-origin: left top;
+            transform-origin: left top;
+    -webkit-transform: skewY(-4deg);
+        -ms-transform: skewY(-4deg);
+            transform: skewY(-4deg);
+    background: #eee; }
+  .section-services:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #fff;
+    z-index: -1;
+    bottom: -100%;
+    -webkit-transform-origin: left bottom;
+        -ms-transform-origin: left bottom;
+            transform-origin: left bottom;
+    -webkit-transform: skewY(-4deg);
+        -ms-transform: skewY(-4deg);
+            transform: skewY(-4deg); }
   .section-services .service-content-container {
-    -webkit-transform: skewY(4deg);
-        -ms-transform: skewY(4deg);
-            transform: skewY(4deg);
-    padding: 80px 0;
+    padding-bottom: 150px;
     z-index: 100; }
     .section-services .service-content-container .service-block {
       opacity: 0.85;
@@ -581,6 +543,9 @@ body {
         .section-services .service-content-container .service-block .block-icon i {
           font-size: 60px;
           color: #006aff; }
+  .section-services .head-text-box {
+    padding-top: 140px;
+    padding-bottom: 30px; }
 
 /*====================================================================
                                    END
