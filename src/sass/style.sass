@@ -1,4 +1,4 @@
-/*=============================fOMPONENTS=============================
+/*=============================COMPONENTS=============================
  * 1. Fonts
  * 2. Reset
  * 3. Colors
@@ -7,8 +7,8 @@
  *    5.1 Main Header
  * 6. Search
  * 7. Objects section
- * 8. Video section 1
- * 9. Service section 1
+ * 8. Video section
+ * 9. Service section
  *10. Advantages section
  *11. Reason section
  *12. Philosophy section
@@ -378,7 +378,8 @@ body
                              8. Video Section
  =====================================================================*/
 .section-video
-  padding: 0
+  padding-top: 20px
+  padding-bottom: 0
   position: relative
   background-color: $section-color-light
   z-index: 1
@@ -408,17 +409,17 @@ body
     z-index: -1
   .content-video-section
     background-color: $section-color-white
-    padding: 60px 10px 60px 60px
-    @media only screen and (max-width: 1400px)
-      padding: 40px 10px 40px 40px
-      @media only screen and (max-width: 1350px)
-        padding: 30px 10px 30px 30px
-        @media only screen and (max-width: 992px)
-          padding: 30px
-          @media only screen and (max-width: 768px)
-            padding: 30px 0 0 0
-            background: none
+    padding: 60px 10px 100px 60px
+    position: relative
+    @media only screen and (max-width: 1200px)
+      padding: 30px 10px 80px 30px
+      @media only screen and (max-width: 992px)
+        padding: 30px 30px 150px 30px
+        @media only screen and (max-width: 768px)
+          padding: 30px 30px 90px 30px
     .subscribe-box
+      @media only screen and (max-width: 992px)
+        margin-bottom: 20px
       .text-inform
         color: $color-text
         margin-top: 30px
@@ -428,15 +429,23 @@ body
         color: $header-text-color
         @media only screen and (max-width: 992px)
           font-size: 20px
-      button
-        margin-top: 80px
-        padding: 7px 10px
+          text-align: center
+          @media only screen and (max-width: 576px)
+            font-size: 16px
+    button
+      position: absolute
+      bottom: 60px
+      left: 60px
+      margin-top: 80px
+      padding: 7px 10px
+      @media only screen and (max-width: 1200px)
+        bottom: 30px
+        left: 30px
         @media only screen and (max-width: 992px)
-          margin: 60px auto auto
-          @media only screen and (max-width: 768px)
-            margin-top: 20px
-        span
-          font-size: 15px
+          left: 50%
+          transform: translateX(-50%)
+      span
+        font-size: 15px
   .video-container
     position: relative
     z-index: 1
@@ -462,8 +471,6 @@ body
  =====================================================================*/
 .section-services
   padding: 0
-  margin-top: 68px
-  margin-bottom: 100px
   position: relative
   z-index: 1
   overflow: hidden
@@ -475,11 +482,12 @@ body
     width: 100%
     height: 100%
     position: absolute
-    //z-index: -1
     top: -83%
     transform-origin: left top
     transform: skewY(-4deg)
     background: #eee
+    @media only screen and (max-width: 768px)
+      top: -95%
   &:after
     content: ''
     width: 100%
@@ -491,8 +499,12 @@ body
     transform-origin: left bottom
     transform: skewY(-4deg)
   .service-content-container
-    padding-bottom: 150px
+    padding-bottom: 100px
+    margin-bottom: 150px
     z-index: 100
+    @media only screen and (max-width: 1200px)
+      padding-bottom: 120px
+      margin-bottom: 60px
     .service-block
       opacity: 0.85
       background-color: $bg-color-menu
@@ -514,65 +526,43 @@ body
           font-size: 60px
           color: $color-btn-hover
   .head-text-box
-    padding-top: 140px
+    padding-top: 160px
     padding-bottom: 30px
-
-//.section-services
-//  padding: 0
-//  margin-top: 68px
-//  margin-bottom: 100px
-//  position: relative
-//  z-index: 1
-//  overflow: hidden
-//  transform: skewY(-4deg)
-//  height: 100%
-//  .bg-parallax
-//    transform: skewY(4deg)
-//    position: absolute
-//    top: -20%
-//    right: 0
-//    bottom: -20%
-//    left: 0
-//    background: url(../img/background/bg-services.jpg) fixed center
-//    -webkit-background-size: cover
-//    background-size: cover
-//    z-index: -1
-//    .bg-overlay-container
-//      background-color: #232323
-//      position: absolute
-//      top: 0
-//      left: 0
-//      right: 0
-//      bottom: 0
-//      opacity: .3
-//  .service-content-container
-//    transform: skewY(4deg)
-//    padding: 80px 0
-//    z-index: 100
-//    .service-block
-//      opacity: 0.85
-//      background-color: $bg-color-menu
-//      text-align: center
-//      padding: 0 30px 30px
-//      box-shadow: $box-shadow-services
-//      position: relative
-//      z-index: 2
-//      transition: all 0.2s ease-in
-//      &:hover
-//        opacity: 1
-//        box-shadow: 0 70px 70px rgba(0, 0, 0, 0.2)
-//        transform: translate(0, -10px) scale(1.01)
-//        z-index: 100
-//        cursor: pointer
-//      .block-icon
-//        padding: 50px 0
-//        i
-//          font-size: 60px
-//          color: $color-btn-hover
+    @media only screen and (max-width: 1200px)
+      margin-top: 0
+      @media only screen and (max-width: 992px)
+        padding-top: 200px
+        @media only screen and (max-width: 768px)
+          padding-top: 100px
+  .main-button-container
+    position: absolute
+    bottom: 15%
+    left: 50%
+    transform: translateX(-50%)
+    @media only screen and (max-width: 1200px)
+      bottom: 10%
+      @media only screen and (max-width: 992px)
+        bottom: 8%
+        @media only screen and (max-width: 768px)
+          bottom: 5%
+    .blue-btn
+      @media only screen and (max-width: 992px)
+        padding: 10px 100px
+        @media only screen and (max-width: 768px)
+          padding: 10px 60px
+          @media only screen and (max-width: 576px)
+            padding: 10px 40px
 /*====================================================================
                                    END
  =====================================================================*/
 
+/*====================================================================
+                             13. Professionals Section
+ =====================================================================*/
+
+/*====================================================================
+                                   END
+ =====================================================================*/
 
 
 
@@ -907,7 +897,7 @@ body
               max-width: 545px
               width: 100%
         &:hover
-          box-shadow: 0 30px 40px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 30px 40px rgba(0, 0, 0, 0.2)
         h4
           position: absolute
           color: #606060
