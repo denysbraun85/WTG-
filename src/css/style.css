@@ -859,6 +859,55 @@ body {
                            END STYLE SEARCH CONTAINER
  @mixin ==================================================================*/
 /* ==================================================================
+                           STYLE OBJECT CONTAINER
+ @mixin ==================================================================*/
+.section_object .wrapper_objects .object_wrapper {
+  position: relative;
+  margin-bottom: 0;
+  border-right: .05556rem solid #e2e4eb;
+  border-bottom: .05556rem solid #e2e4eb;
+  overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: transform;
+  padding-left: 0;
+  padding-right: 0; }
+  .section_object .wrapper_objects .object_wrapper:before {
+    content: '';
+    display: block;
+    padding-top: 66%; }
+    .section_object .wrapper_objects .object_wrapper:before .not_hiden_info {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      height: 100%;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      height: 8.88889rem;
+      opacity: 0;
+      -webkit-transform: translate3d(0, 160px, 0);
+              transform: translate3d(0, 160px, 0);
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+      will-change: transform;
+      -webkit-transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+      -o-transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+      transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+      padding: 0 1.38889rem;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0; }
+
+/* ==================================================================
+                           END STYLE OBJECT CONTAINER
+ @mixin ==================================================================*/
+/* ==================================================================
                            STYLE 6 BENEFIT CONTAINER
  @mixin ==================================================================*/
 .section_benefit {
@@ -1212,7 +1261,7 @@ body {
         -webkit-flex-direction: column;
             -ms-flex-direction: column;
                 flex-direction: column;
-        padding: 35px 0 0 45px;
+        padding: 25px 0 0 45px;
         text-align: left; }
         @media only screen and (max-width: 1400px) {
           .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy {
@@ -1238,7 +1287,7 @@ body {
           text-transform: uppercase;
           font-size: 20px;
           opacity: 0.8;
-          padding-bottom: 15px; }
+          padding-bottom: 10px; }
           @media only screen and (max-width: 740px) {
             .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy .under_title_philosophy {
               margin: 0 auto;
@@ -1249,11 +1298,14 @@ body {
           opacity: 0.8;
           max-width: 615px;
           width: 100%;
-          padding-bottom: 35px; }
+          padding-bottom: 10px; }
+          @media only screen and (max-width: 1460px) {
+            .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy .info_philosophy_text {
+              font-size: 16px; } }
         .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy ul li {
           max-width: 868px;
           width: 100%;
-          padding-bottom: 20px;
+          padding-bottom: 10px;
           color: #606060;
           font-size: 17px;
           opacity: 0.8; }
@@ -1263,13 +1315,9 @@ body {
             font-weight: 900;
             color: #006aff;
             padding-right: 15px; }
-        .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy .info_philosophy_down_text {
-          color: #606060;
-          font-size: 17px;
-          opacity: 0.8;
-          max-width: 640px;
-          width: 100%;
-          padding-top: 15px; }
+          @media only screen and (max-width: 1560px) {
+            .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy ul li {
+              font-size: 16px; } }
 
 /* ==================================================================
                            END OUR PHILOSOPHY STYLES

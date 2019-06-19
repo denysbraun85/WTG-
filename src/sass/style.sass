@@ -799,6 +799,62 @@ body
 
 
 
+/* ==================================================================
+                           STYLE OBJECT CONTAINER
+ ===================================================================*/
+
+.section_object
+  .wrapper_objects
+    .object_wrapper
+      position: relative
+      margin-bottom: 0
+      border-right: .05556rem solid #e2e4eb
+      border-bottom: .05556rem solid #e2e4eb
+      overflow: hidden
+      -webkit-transform: translate3d(0,0,0)
+      transform: translate3d(0,0,0)
+      -webkit-backface-visibility: hidden
+      backface-visibility: hidden
+      will-change: transform
+      padding-left: 0
+      padding-right: 0
+      &:before
+        content: ''
+        display: block
+        padding-top: 66%
+        .not_hiden_info
+          display: flex
+          height: 100%
+          align-items: center
+          height: 8.88889rem
+          opacity: 0
+          transform: translate3d(0,160px,0)
+          backface-visibility: hidden
+          will-change: transform
+          transition: all .5s cubic-bezier(.785,.135,.15,.86)
+          padding: 0 1.38889rem
+          position: absolute
+          bottom: 0
+          left: 0
+          right: 0
+
+
+
+
+
+
+
+
+
+
+/* ==================================================================
+                           END STYLE OBJECT CONTAINER
+ ===================================================================*/
+
+
+
+
+
 
 
 
@@ -1056,7 +1112,7 @@ body
         display: flex
         align-items: left
         flex-direction: column
-        padding: 35px 0 0 45px
+        padding: 25px 0 0 45px
         text-align: left
         @media only screen and (max-width: 1400px)
           padding: 40px 0 40px 30px
@@ -1078,7 +1134,7 @@ body
           text-transform: uppercase
           font-size: 20px
           opacity: 0.8
-          padding-bottom: 15px
+          padding-bottom: 10px
           @media only screen and (max-width: 740px)
             margin: 0 auto 
             font-size: 16px
@@ -1088,12 +1144,14 @@ body
           opacity: 0.8
           max-width: 615px
           width: 100%
-          padding-bottom: 35px
+          padding-bottom: 10px
+          @media only screen and (max-width: 1460px)
+            font-size: 16px
         ul
           li
             max-width: 868px
             width: 100%
-            padding-bottom: 20px
+            padding-bottom: 10px
             color: $select-search-color-text
             font-size: 17px
             opacity: 0.8
@@ -1103,13 +1161,8 @@ body
               font-weight: 900
               color: $color-btn-hover
               padding-right: 15px
-        .info_philosophy_down_text
-          color: $select-search-color-text
-          font-size: 17px
-          opacity: 0.8
-          max-width: 640px
-          width: 100%
-          padding-top: 15px
+            @media only screen and (max-width: 1560px)
+              font-size: 16px
 
 
 
