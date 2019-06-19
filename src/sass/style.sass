@@ -7,10 +7,10 @@
  *    5.1 Main Header
  * 6. Search
  * 7. Objects section
- * 8. Video section
- * 9. Service section
+ * 8. Video section 1
+ * 9. Service section 1
  *10. Advantages section
- *11. Reason section
+ *11. Reason section 1
  *12. Philosophy section
  *13. Professionals section 1
  *14. Stage section 1
@@ -118,6 +118,7 @@ $box-shadow-main: 0 1px 6px 0 rgba(32,33,36,0.28)
 $box-shadow-services: 0px 0px 3px rgba(0, 0, 0, 0.15)
 $hover-object-img: #006aff80
 $border-adaptive-benefit: #B9B8B8
+$icons-color-reasons-section: #006aff
 /*====================================================================
                                     END
  =====================================================================*/
@@ -217,8 +218,8 @@ body
 .head-text-box
   width: 100%
   text-align: center
-  margin: 40px 0 0 0
   z-index: 100
+  margin-bottom: 100px
   h2
     color: $color-text-white
     text-transform: uppercase
@@ -379,35 +380,8 @@ body
                              8. Video Section
  =====================================================================*/
 .section-video
-  padding-top: 20px
-  padding-bottom: 0
   position: relative
   background-color: $section-color-light
-  z-index: 1
-  &:after
-    background: inherit
-    bottom: -20%
-    content: ''
-    display: block
-    height: 100%
-    left: 0
-    position: absolute
-    right: 0
-    transform: skewY(-4deg)
-    transform-origin: 100%
-    z-index: -1
-  &:before
-    background: inherit
-    bottom: 0
-    content: ''
-    display: block
-    height: 100%
-    position: absolute
-    right: 0
-    left: 0
-    transform: skewY(-4deg)
-    transform-origin: 0%
-    z-index: -1
   .content-video-section
     background-color: $section-color-white
     padding: 60px 10px 100px 60px
@@ -432,7 +406,7 @@ body
           font-size: 20px
           text-align: center
           @media only screen and (max-width: 576px)
-            font-size: 16px
+            font-size: 15px
     button
       position: absolute
       bottom: 60px
@@ -471,41 +445,14 @@ body
                              9. Services Section
  =====================================================================*/
 .section-services
-  padding: 0
   position: relative
-  z-index: 1
-  overflow: hidden
-  height: 100%
-  background-size: cover
-  background: url("../img/background/12.jpg") no-repeat fixed 60% 57%
-  &:before
-    content: ''
-    width: 100%
-    height: 100%
-    position: absolute
-    top: -83%
-    transform-origin: left top
-    transform: skewY(-4deg)
-    background: #eee
-    @media only screen and (max-width: 768px)
-      top: -95%
-  &:after
-    content: ''
-    width: 100%
-    height: 100%
-    position: absolute
-    background: #fff
-    z-index: -1
-    bottom: -100%
-    transform-origin: left bottom
-    transform: skewY(-4deg)
+  padding-bottom: 250px
+  @media only screen and (max-width: 992px)
+    padding-bottom: 200px
   .service-content-container
-    padding-bottom: 100px
-    margin-bottom: 150px
-    z-index: 100
-    @media only screen and (max-width: 1200px)
-      padding-bottom: 120px
-      margin-bottom: 60px
+    .no-padding
+      @media only screen and (max-width: 576px)
+        padding: 10px
     .service-block
       opacity: 0.85
       background-color: $bg-color-menu
@@ -527,14 +474,68 @@ body
           font-size: 60px
           color: $color-btn-hover
   .head-text-box
-    padding-top: 160px
-    padding-bottom: 30px
+    @media only screen and (max-width: 992px)
+      margin-bottom: 50px
+  .main-button-container
+    position: absolute
+    bottom: 10%
+    left: 50%
+    transform: translateX(-50%)
     @media only screen and (max-width: 1200px)
-      margin-top: 0
+      bottom: 10%
       @media only screen and (max-width: 992px)
-        padding-top: 200px
+        bottom: 8%
         @media only screen and (max-width: 768px)
-          padding-top: 100px
+          bottom: 5%
+          @media only screen and (max-width: 576px)
+            width: 70%
+    .blue-btn
+      @media only screen and (max-width: 992px)
+        padding: 10px 100px
+        @media only screen and (max-width: 768px)
+          padding: 10px 60px
+          @media only screen and (max-width: 576px)
+            padding: 10px 40px
+/*====================================================================
+                                   END
+ =====================================================================*/
+
+/*====================================================================
+                             11. Reasons Section
+ =====================================================================*/
+.section-reason
+  position: relative
+  background-size: cover
+  .head-text-box
+    h2
+      color: $header-text-color
+      font-family: 'IBM Plex Sans medium', sans-serif
+      font-size: 30px
+    .text-inform
+      color: $color-text
+      margin-top: 30px
+      font-size: 22px
+      text-transform: uppercase
+  .reasons-container
+    padding-bottom: 100px
+    margin-bottom: 150px
+    z-index: 100
+    margin-top: 130px
+    @media only screen and (max-width: 1200px)
+      padding-bottom: 120px
+      margin-bottom: 60px
+    .reason-item-box
+      padding: 30px 10px 60px 10px
+      text-align: left
+      i
+        color: $icons-color-reasons-section
+        font-size: 30px
+        border-bottom: 3px solid  $icons-color-reasons-section
+        padding: 0 9px 10px 9px
+        text-align: center
+      .text-inform
+        color: $color-text
+        margin-top: 25px
   .main-button-container
     position: absolute
     bottom: 15%
@@ -553,6 +554,8 @@ body
           padding: 10px 60px
           @media only screen and (max-width: 576px)
             padding: 10px 40px
+      span
+        text-transform: uppercase
 /*====================================================================
                                    END
  =====================================================================*/
