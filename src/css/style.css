@@ -527,9 +527,7 @@ body {
                              11. Reasons Section
  @mixin ====================================================================*/
 .section-reason {
-  position: relative;
-  -webkit-background-size: cover;
-          background-size: cover; }
+  position: relative; }
   .section-reason .head-text-box h2 {
     color: #032fab;
     font-family: 'IBM Plex Sans medium', sans-serif;
