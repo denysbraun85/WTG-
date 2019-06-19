@@ -798,201 +798,6 @@ body
 
 
 
-/* ==================================================================
-                           STYLE OBJECT CONTAINER
- ===================================================================*/
-
-.section_object
-  padding-bottom: 200px
-  .wrapper_object
-    max-width: 1525px
-    width: 100%
-    margin: 0 auto
-    display: flex
-    justify-content: center
-    align-items: center
-    padding: 100px 15px 0 15px
-    @media only screen and (max-width: 950px)
-      padding-bottom: 120px
-    .wrapper_photo_info
-      max-width: 1360px
-      width: 100%
-      display: flex
-      align-items: center
-      position: relative
-      @media only screen and (max-width: 950px)
-        max-width: 612px
-        width: 100%
-        margin: 0 auto
-      .photo_object
-        position: relative
-        max-width: 830px
-        width: 100% 
-        overflow: hidden
-        max-height: 490px
-        height: 100%
-        display: flex
-        justify-content: center
-        align-items: center
-        @media only screen and (max-width: 1330px)
-          max-width: 700px
-          width: 100%
-          @media only screen and (max-width: 1070px)
-            max-width: 610px
-            width: 100%
-        &:hover
-          .img_object
-            transform: scale(1.1)
-          .hover_img_object
-            opacity: 1
-            transform: scale(1.0)
-        .img_object
-          transition: 0.5s
-        .hover_img_object
-          opacity: 0
-          transform: scale(0.0)
-          position: absolute
-          background: $hover-object-img
-          width: 94%
-          height: 90.2%
-          top: 5%
-          left: 3%
-          // outline: 5px solid $color-text-white
-          // outline-offset: -20px
-          transition: 0.5s
-          .border_object_hover
-            position: absolute
-            width: 95%
-            height: 92.8%
-            left: 2.5%
-            top: 3.5%
-            border: 4px solid $section-color-white
-            display: flex
-            justify-content: center
-            align-items: center
-            .play_btn
-              width: 60px
-              opacity: 0.8
-              transition: 0.5s
-              cursor: pointer
-              &:hover
-                transform: scale(1.2)
-      .info_object
-        position: absolute
-        background: $section-color-white
-        height: 410px
-        max-width: 626px
-        width: 100%
-        right: 0
-        z-index: 1
-        transition: 0.5s
-        @media only screen and (max-width: 1330px)
-          max-width: 600px
-          width: 100%
-          height: 390px
-          @media only screen and (max-width: 1070px)
-            max-width: 470px
-            width: 100%
-            height: 340px
-            @media only screen and (max-width: 950px)
-              bottom: -200px
-              left: 5.3%
-              max-width: 545px
-              width: 100%
-        &:hover
-          box-shadow: 0 30px 40px rgba(0, 0, 0, 0.2)
-        h4
-          position: absolute
-          color: #606060
-          font-size: 26px
-          font-weight: 700
-          text-transform: uppercase
-          max-width: 305px
-          width: 100%
-          text-align: center
-          transform: translateX(-50%)
-          left: 50%
-          top: 50px
-        .icons_info
-          position: absolute
-          max-width: 314px
-          width: 100%
-          display: flex
-          justify-content: space-between
-          align-items: center
-          transform: translate(-50%, -50%)
-          left: 50%
-          top: 50%  
-          @media only screen and (max-width: 1070px) 
-            padding-bottom: 10px         
-          .text_img_info 
-            display: flex
-            flex-direction: column
-            align-items: center
-            img
-              width: 36px
-            span
-              margin-top: 15px
-              color: #000000
-              font-size: 13px
-              font-weight: 300
-      .price_object
-        position: absolute
-        color: $header-text-color
-        font-size: 21px
-        font-weight: 400
-        border-bottom: 1px solid $border-search-color
-        border-top: 1px solid $border-search-color  
-        max-width: 310px
-        width: 100%  
-        transform: translate(-50%, -50%)
-        left: 50%
-        bottom: 65px
-        display: flex
-        justify-content: center
-        align-items: center
-        span
-          padding: 5px 0  
-      .blue-btn
-        position: absolute
-        transform: translate(-50%, -50%)
-        left: 50%
-        bottom: 12px
-        color: $color-text
-        max-width: 185px
-        width: 100%
-        border: 2px solid $border-search-color
-        text-align: center
-        padding: 2px 0
-        span
-          transition: 0.5s
-        &:active
-          // box-shadow: 0 2px 20px rgba(168, 31, 35, 0.62)
-          &:hover
-            &:before
-              background: $color-btn-hover
-        &:hover
-          span
-            color: $color-btn
-          &:before
-            background: $color-btn-hover
-            // box-shadow: 0 4px 20px rgba(168, 31, 35, 0.62) 
-    .wrapper_photo_info_right
-      justify-content: flex-end            
-      .info_object_right
-        left: 0
-        @media only screen and (max-width: 950px)
-          bottom: -200px
-          left: 5.6%
-          max-width: 545px
-          width: 100%
-
-
-
-
-/* ==================================================================
-                           END STYLE OBJECT CONTAINER
- ===================================================================*/
 
 
 
@@ -1210,6 +1015,10 @@ body
       height: unset
       width: 100%
       margin: 0 auto
+      background-position: center
+      background-size: cover
+      @media only screen and (max-width: 740px)
+        background: black 
   .wrap_info_philosophy
     position: relative
     width: 45%
@@ -1222,7 +1031,6 @@ body
       margin: 0 auto
       background: #fffc
       height: unset
-      padding: 41px 0
     .info_philosophy
       position: absolute
       z-index: 1
@@ -1241,6 +1049,9 @@ body
         @media only screen and (max-width: 1190px)
           background: transparent
           width: 100%
+          padding-right: unset
+          @media only screen and (max-width: 740px)
+            background: #ffffff80
       .wrap_text_philosophy
         display: flex
         align-items: left
@@ -1251,17 +1062,26 @@ body
           padding: 40px 0 40px 30px
           @media only screen and (max-width: 1190px)
             margin: 0 auto
+            @media only screen and (max-width: 740px)
+              padding: 40px 20px
+              text-align: justify
         h4
           color: $color-btn-hover
           text-transform: uppercase
           font-size: 30px
           font-weight: 400
+          @media only screen and (max-width: 740px)
+            margin: 0 auto 
+            padding-bottom: 10px
         .under_title_philosophy
           color: $select-search-color-text
           text-transform: uppercase
           font-size: 20px
           opacity: 0.8
           padding-bottom: 15px
+          @media only screen and (max-width: 740px)
+            margin: 0 auto 
+            font-size: 16px
         .info_philosophy_text
           color: $select-search-color-text
           font-size: 17px
