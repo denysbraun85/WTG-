@@ -7,10 +7,10 @@
  *    5.1 Main Header
  * 6. Search
  * 7. Objects section
- * 8. Video section
- * 9. Service section
+ * 8. Video section 1
+ * 9. Service section 1
  *10. Advantages section
- *11. Reason section
+ *11. Reason section 1
  *12. Philosophy section
  *13. Professionals section 1
  *14. Stage section 1
@@ -205,8 +205,8 @@ body {
 .head-text-box {
   width: 100%;
   text-align: center;
-  margin: 40px 0 0 0;
-  z-index: 100; }
+  z-index: 100;
+  margin-bottom: 100px; }
   .head-text-box h2 {
     color: #fff;
     text-transform: uppercase; }
@@ -378,43 +378,8 @@ body {
                              8. Video Section
  @mixin ====================================================================*/
 .section-video {
-  padding-top: 20px;
-  padding-bottom: 0;
   position: relative;
-  background-color: #eeeeee;
-  z-index: 1; }
-  .section-video:after {
-    background: inherit;
-    bottom: -20%;
-    content: '';
-    display: block;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    -webkit-transform: skewY(-4deg);
-        -ms-transform: skewY(-4deg);
-            transform: skewY(-4deg);
-    -webkit-transform-origin: 100%;
-        -ms-transform-origin: 100%;
-            transform-origin: 100%;
-    z-index: -1; }
-  .section-video:before {
-    background: inherit;
-    bottom: 0;
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    left: 0;
-    -webkit-transform: skewY(-4deg);
-        -ms-transform: skewY(-4deg);
-            transform: skewY(-4deg);
-    -webkit-transform-origin: 0%;
-        -ms-transform-origin: 0%;
-            transform-origin: 0%;
-    z-index: -1; }
+  background-color: #eeeeee; }
   .section-video .content-video-section {
     background-color: #fff;
     padding: 60px 10px 100px 60px;
@@ -445,7 +410,7 @@ body {
           text-align: center; } }
   @media only screen and (max-width: 992px) and (max-width: 576px) {
     .section-video .content-video-section .subscribe-box h3 {
-      font-size: 16px; } }
+      font-size: 15px; } }
     .section-video .content-video-section button {
       position: absolute;
       bottom: 60px;
@@ -489,93 +454,46 @@ body {
                              9. Services Section
  @mixin ====================================================================*/
 .section-services {
-  padding: 0;
   position: relative;
-  z-index: 1;
-  overflow: hidden;
-  height: 100%;
-  -webkit-background-size: cover;
-          background-size: cover;
-  background: url("../img/background/12.jpg") no-repeat fixed 60% 57%; }
-  .section-services:before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: -83%;
-    -webkit-transform-origin: left top;
-        -ms-transform-origin: left top;
-            transform-origin: left top;
-    -webkit-transform: skewY(-4deg);
-        -ms-transform: skewY(-4deg);
-            transform: skewY(-4deg);
-    background: #eee; }
-    @media only screen and (max-width: 768px) {
-      .section-services:before {
-        top: -95%; } }
-  .section-services:after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: #fff;
-    z-index: -1;
-    bottom: -100%;
-    -webkit-transform-origin: left bottom;
-        -ms-transform-origin: left bottom;
-            transform-origin: left bottom;
-    -webkit-transform: skewY(-4deg);
-        -ms-transform: skewY(-4deg);
-            transform: skewY(-4deg); }
-  .section-services .service-content-container {
-    padding-bottom: 100px;
-    margin-bottom: 150px;
-    z-index: 100; }
-    @media only screen and (max-width: 1200px) {
-      .section-services .service-content-container {
-        padding-bottom: 120px;
-        margin-bottom: 60px; } }
-    .section-services .service-content-container .service-block {
-      opacity: 0.85;
-      background-color: #fff;
-      text-align: center;
-      padding: 0 30px 30px;
-      -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
-              box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
-      position: relative;
-      z-index: 2;
-      -webkit-transition: all 0.2s ease-in;
-      -o-transition: all 0.2s ease-in;
-      transition: all 0.2s ease-in; }
-      .section-services .service-content-container .service-block:hover {
-        opacity: 1;
-        -webkit-box-shadow: 0 70px 70px rgba(0, 0, 0, 0.2);
-                box-shadow: 0 70px 70px rgba(0, 0, 0, 0.2);
-        -webkit-transform: translate(0, -10px) scale(1.01);
-            -ms-transform: translate(0, -10px) scale(1.01);
-                transform: translate(0, -10px) scale(1.01);
-        z-index: 100;
-        cursor: pointer; }
-      .section-services .service-content-container .service-block .block-icon {
-        padding: 50px 0; }
-        .section-services .service-content-container .service-block .block-icon i {
-          font-size: 60px;
-          color: #006aff; }
-  .section-services .head-text-box {
-    padding-top: 160px;
-    padding-bottom: 30px; }
-    @media only screen and (max-width: 1200px) {
-      .section-services .head-text-box {
-        margin-top: 0; } }
-  @media only screen and (max-width: 1200px) and (max-width: 992px) {
+  padding-bottom: 250px; }
+  @media only screen and (max-width: 992px) {
+    .section-services {
+      padding-bottom: 200px; } }
+  @media only screen and (max-width: 576px) {
+    .section-services .service-content-container .no-padding {
+      padding: 10px; } }
+  .section-services .service-content-container .service-block {
+    opacity: 0.85;
+    background-color: #fff;
+    text-align: center;
+    padding: 0 30px 30px;
+    -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 2;
+    -webkit-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in; }
+    .section-services .service-content-container .service-block:hover {
+      opacity: 1;
+      -webkit-box-shadow: 0 70px 70px rgba(0, 0, 0, 0.2);
+              box-shadow: 0 70px 70px rgba(0, 0, 0, 0.2);
+      -webkit-transform: translate(0, -10px) scale(1.01);
+          -ms-transform: translate(0, -10px) scale(1.01);
+              transform: translate(0, -10px) scale(1.01);
+      z-index: 100;
+      cursor: pointer; }
+    .section-services .service-content-container .service-block .block-icon {
+      padding: 50px 0; }
+      .section-services .service-content-container .service-block .block-icon i {
+        font-size: 60px;
+        color: #006aff; }
+  @media only screen and (max-width: 992px) {
     .section-services .head-text-box {
-      padding-top: 200px; } }
-  @media only screen and (max-width: 1200px) and (max-width: 992px) and (max-width: 768px) {
-    .section-services .head-text-box {
-      padding-top: 100px; } }
+      margin-bottom: 50px; } }
   .section-services .main-button-container {
     position: absolute;
-    bottom: 15%;
+    bottom: 10%;
     left: 50%;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
@@ -589,6 +507,9 @@ body {
   @media only screen and (max-width: 1200px) and (max-width: 992px) and (max-width: 768px) {
     .section-services .main-button-container {
       bottom: 5%; } }
+  @media only screen and (max-width: 1200px) and (max-width: 992px) and (max-width: 768px) and (max-width: 576px) {
+    .section-services .main-button-container {
+      width: 70%; } }
     @media only screen and (max-width: 992px) {
       .section-services .main-button-container .blue-btn {
         padding: 10px 100px; } }
@@ -598,6 +519,74 @@ body {
   @media only screen and (max-width: 992px) and (max-width: 768px) and (max-width: 576px) {
     .section-services .main-button-container .blue-btn {
       padding: 10px 40px; } }
+
+/*====================================================================
+                                   END
+ @mixin ====================================================================*/
+/*====================================================================
+                             11. Reasons Section
+ @mixin ====================================================================*/
+.section-reason {
+  position: relative;
+  -webkit-background-size: cover;
+          background-size: cover; }
+  .section-reason .head-text-box h2 {
+    color: #032fab;
+    font-family: 'IBM Plex Sans medium', sans-serif;
+    font-size: 30px; }
+  .section-reason .head-text-box .text-inform {
+    color: #606060;
+    margin-top: 30px;
+    font-size: 22px;
+    text-transform: uppercase; }
+  .section-reason .reasons-container {
+    padding-bottom: 100px;
+    margin-bottom: 150px;
+    z-index: 100;
+    margin-top: 130px; }
+    @media only screen and (max-width: 1200px) {
+      .section-reason .reasons-container {
+        padding-bottom: 120px;
+        margin-bottom: 60px; } }
+    .section-reason .reasons-container .reason-item-box {
+      padding: 30px 10px 60px 10px;
+      text-align: left; }
+      .section-reason .reasons-container .reason-item-box i {
+        color: #006aff;
+        font-size: 30px;
+        border-bottom: 3px solid #006aff;
+        padding: 0 9px 10px 9px;
+        text-align: center; }
+      .section-reason .reasons-container .reason-item-box .text-inform {
+        color: #606060;
+        margin-top: 25px; }
+  .section-reason .main-button-container {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); }
+    @media only screen and (max-width: 1200px) {
+      .section-reason .main-button-container {
+        bottom: 10%; } }
+  @media only screen and (max-width: 1200px) and (max-width: 992px) {
+    .section-reason .main-button-container {
+      bottom: 8%; } }
+  @media only screen and (max-width: 1200px) and (max-width: 992px) and (max-width: 768px) {
+    .section-reason .main-button-container {
+      bottom: 5%; } }
+    @media only screen and (max-width: 992px) {
+      .section-reason .main-button-container .blue-btn {
+        padding: 10px 100px; } }
+  @media only screen and (max-width: 992px) and (max-width: 768px) {
+    .section-reason .main-button-container .blue-btn {
+      padding: 10px 60px; } }
+  @media only screen and (max-width: 992px) and (max-width: 768px) and (max-width: 576px) {
+    .section-reason .main-button-container .blue-btn {
+      padding: 10px 40px; } }
+    .section-reason .main-button-container .blue-btn span {
+      text-transform: uppercase; }
 
 /*====================================================================
                                    END
