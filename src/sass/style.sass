@@ -117,6 +117,7 @@ $color-text-white: #fff
 $box-shadow-main: 0 1px 6px 0 rgba(32,33,36,0.28)
 $box-shadow-services: 0px 0px 3px rgba(0, 0, 0, 0.15)
 $hover-object-img: #006aff80
+$border-adaptive-benefit: #B9B8B8
 /*====================================================================
                                     END
  =====================================================================*/
@@ -1010,6 +1011,9 @@ body
       display: flex
       justify-content: space-between
       align-items: center
+      .first_container_benefit
+        @media only screen and (max-width: 800px)
+          border-top: 1px solid $border-adaptive-benefit
       .left_container_benefit
         display: flex
         align-items: flex-end
@@ -1018,15 +1022,40 @@ body
         width: 100%
         margin-left: 0
         background: $color-btn
+        @media only screen and (max-width: 850px)
+          align-items: center
+          @media only screen and (max-width: 800px)
+            padding: 10px 0
+            border-bottom: 1px solid $border-adaptive-benefit
         .wrapper_img_benefit
           max-width: 260px
           width: 100%
+          min-height: 200px
+          max-height: 200px
+          height: 100%
+          display: flex
+          justify-content: center
+          align-items: center
+          @media only screen and (max-width: 970px)
+            min-height: 200px
+            @media only screen and (max-width: 830px)
+              display: none
+          .left_img
+            min-height: 200px
+            max-height: 200px
+            height: 100%
         .text_left_benefit
           position: relative
           margin-left: 60px
           text-align: left
           z-index: 1
           padding-bottom: 10px
+          @media only screen and (max-width: 970px)
+            padding-bottom: 0px
+            @media only screen and (max-width: 830px)
+              padding: 10px 30px
+              text-align: center
+              margin: 0 auto
           .background_number_benefit
             position: absolute
             top: -90px
@@ -1036,13 +1065,31 @@ body
             font-size: 130px
             font-weight: 900
             z-index: -1
+            @media only screen and (max-width: 970px)
+              font-size: 100px
+              top: -60px
+              @media only screen and (max-width: 830px)
+                font-size: 75px
+                top: -30px
+                right: 0
+                width: 100%
           h4
             font-weight: 600
             text-transform: uppercase
             font-size: 18px
+            @media only screen and (max-width: 850px)
+              font-size: 16px
+              @media only screen and (max-width: 830px)
+                font-size: 14px
           p 
             margin-top: 50px
             font-size: 15px
+            @media only screen and (max-width: 970px)
+              margin-top: 30px
+              @media only screen and (max-width: 850px)
+                font-size: 14px
+                @media only screen and (max-width: 830px)
+                  font-size: 12px
   .wrapper_right_back_benedit
     background: linear-gradient(to right, #ffffff 50%,$section-color-light 50%)
     .wrapper_content_6_benefit
@@ -1060,12 +1107,23 @@ body
         width: 100%
         margin-right: 0
         background: $color-btn
+        @media only screen and (max-width: 850px)
+          align-items: center
+          @media only screen and (max-width: 800px)
+            padding: 10px 0
+            border-bottom: 1px solid #B9B8B8 
         .text_right_benefit
           position: relative
           margin-right: 60px
           text-align: right
           z-index: 1
           padding-bottom: 10px
+          @media only screen and (max-width: 970px)
+            padding-bottom: 0px
+            @media only screen and (max-width: 830px)
+              padding: 10px 30px
+              text-align: center
+              margin: 0 auto
           .background_number_benefit
             position: absolute
             top: -90px
@@ -1075,16 +1133,49 @@ body
             font-size: 130px
             font-weight: 900
             z-index: -1
+            @media only screen and (max-width: 970px)
+              font-size: 100px
+              top: -60px
+              @media only screen and (max-width: 830px)
+                font-size: 75px
+                top: -35px
+                left: -5px
+                width: 100%
           h4
             font-weight: 600
             text-transform: uppercase
             font-size: 18px
+            @media only screen and (max-width: 850px)
+              font-size: 16px
+              @media only screen and (max-width: 830px)
+                font-size: 14px
           p
             margin-top: 50px
             font-size: 15px
+            @media only screen and (max-width: 970px)
+              margin-top: 30px
+              @media only screen and (max-width: 850px)
+                font-size: 14px
+                @media only screen and (max-width: 830px)
+                  font-size: 12px
         .wrapper_img_benefit
           max-width: 260px
           width: 100%
+          min-height: 200px
+          max-height: 200px
+          height: 100%
+          display: flex
+          justify-content: center
+          align-items: center
+          @media only screen and (max-width: 970px)
+            min-height: 200px
+            @media only screen and (max-width: 830px)
+              display: none
+          .right_img
+            min-height: 200px
+            max-height: 200px
+            height: 100%
+            
 
 
 
@@ -1111,6 +1202,12 @@ body
   background-repeat: no-repeat
   z-index: -1
   height: 786px
+  @media only screen and (max-width: 1400px)
+    height: unset
+    @media only screen and (max-width: 1190px)
+      height: unset
+      width: 100%
+      margin: 0 auto
   .wrap_info_philosophy
     position: relative
     width: 45%
@@ -1118,6 +1215,11 @@ body
     z-index: 1
     margin-left: auto
     height: 786px
+    @media only screen and (max-width: 1190px)
+      width: 100%
+      margin: 0 auto
+      background: #fffc
+      // height: unset
     .info_philosophy
       position: absolute
       z-index: 1
@@ -1128,12 +1230,24 @@ body
       left: 30% 
       transform: translate(-50%, -50%)
       background: #fffc
+      @media only screen and (max-width: 1400px)
+        position: static
+        transform: none
+        height: unset
+        padding-right: 15px
+        @media only screen and (max-width: 1190px)
+          background: transparent
+          width: 100%
       .wrap_text_philosophy
         display: flex
         align-items: left
         flex-direction: column
         padding: 35px 0 0 45px
         text-align: left
+        @media only screen and (max-width: 1400px)
+          padding: 40px 0 40px 30px
+          @media only screen and (max-width: 1190px)
+            margin: 0 auto
         h4
           color: $color-btn-hover
           text-transform: uppercase
