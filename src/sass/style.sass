@@ -112,6 +112,7 @@ $bg-color-menu: #fff
 $bg-overlay-services: #0b0b0b
 $section-color-light: #eeeeee
 $section-color-white: #fff
+$section-color-professionals: #efefef
 $color-text: #606060
 $color-text-white: #fff
 $box-shadow-main: 0 1px 6px 0 rgba(32,33,36,0.28)
@@ -214,15 +215,43 @@ body
     &:before
       background: rgba(255, 0, 0, 0.9)
       box-shadow: 0 4px 20px rgba(168, 31, 35, 0.62)
-
+/*---------------------------------Header of the section----------------------------*/
 .head-text-box
   width: 100%
   text-align: center
   z-index: 100
-  margin-bottom: 100px
+  margin-bottom: 50px
   h2
-    color: $color-text-white
+    font-family: 'IBM Plex Sans medium', sans-serif
+    color: $header-text-color
     text-transform: uppercase
+    font-size: 30px
+  .text-inform
+    color: $color-text
+    margin-top: 30px
+    font-size: 22px
+    text-transform: uppercase
+  /*---------------------------------Button container----------------------------*/
+.main-button-container
+  position: absolute
+  bottom: 10%
+  left: 50%
+  transform: translateX(-50%)
+  @media only screen and (max-width: 1200px)
+    bottom: 10%
+    @media only screen and (max-width: 992px)
+      bottom: 8%
+      @media only screen and (max-width: 768px)
+        bottom: 5%
+  .blue-btn
+    padding: 10px 100px
+    @media only screen and (max-width: 992px)
+      padding: 10px 100px
+      @media only screen and (max-width: 768px)
+        padding: 10px 60px
+        @media only screen and (max-width: 576px)
+          padding: 5px 10px
+          font-size: 12px
 /*====================================================================
                                     END
  =====================================================================*/
@@ -428,7 +457,7 @@ body
       position: absolute
       content: ''
       bottom: -9%
-      right: -9%
+      right: -7%
       width: 100%
       height: 100%
       background-color: $section-color-light
@@ -505,27 +534,49 @@ body
  =====================================================================*/
 .section-reason
   position: relative
-  .head-text-box
-    h2
-      color: $header-text-color
-      font-family: 'IBM Plex Sans medium', sans-serif
-      font-size: 30px
-    .text-inform
-      color: $color-text
-      margin-top: 30px
-      font-size: 22px
-      text-transform: uppercase
+  padding-bottom: 200px
+  h2
+    color: #fff
+  .text-inform
+    color: #f3f3f3
+  .overlay-container
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: rgba(0, 0, 0, 0.2)
+  .main-overlay
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 0
+    .bg-blocks
+      background: url("../img/background/blocks.png")
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 1
+  @media only screen and (max-width: 768px)
+    padding-bottom: 150px
   .reasons-container
-    padding-bottom: 100px
-    margin-bottom: 150px
-    z-index: 100
-    margin-top: 130px
-    @media only screen and (max-width: 1200px)
-      padding-bottom: 120px
-      margin-bottom: 60px
     .reason-item-box
-      padding: 30px 10px 60px 10px
+      padding: 20px
       text-align: left
+      background: rgba(255, 255, 255, 0.6)
+      margin-top: 25px
+      min-height: 200px
+      transition: all 0.3s ease
+      &:hover
+        background: rgba(255, 255, 255, 0.8)
+        cursor: pointer
+        box-shadow: rgba(255, 255, 255, 0.3) 0px 20px 20px
+      @media only screen and (max-width: 768px)
+        padding: 30px 10px
+        @media only screen and (max-width: 576px)
+          padding: 20px 10px
       i
         color: $icons-color-reasons-section
         font-size: 30px
@@ -533,28 +584,21 @@ body
         padding: 0 9px 10px 9px
         text-align: center
       .text-inform
-        color: $color-text
+        color: black
         margin-top: 25px
-  .main-button-container
-    position: absolute
-    bottom: 15%
-    left: 50%
-    transform: translateX(-50%)
-    @media only screen and (max-width: 1200px)
-      bottom: 10%
-      @media only screen and (max-width: 992px)
-        bottom: 8%
-        @media only screen and (max-width: 768px)
-          bottom: 5%
-    .blue-btn
-      @media only screen and (max-width: 992px)
-        padding: 10px 100px
-        @media only screen and (max-width: 768px)
-          padding: 10px 60px
-          @media only screen and (max-width: 576px)
-            padding: 10px 40px
       span
         text-transform: uppercase
+  .main-button-container
+    @media only screen and (max-width: 576px)
+      width: 70%
+    .blue-btn
+      @media only screen and (max-width: 992px)
+        padding: 10px 80px
+        @media only screen and (max-width: 768px)
+          padding: 10px 35px
+          @media only screen and (max-width: 576px)
+            padding: 10px 15px
+            font-size: 12px
 /*====================================================================
                                    END
  =====================================================================*/
@@ -562,7 +606,15 @@ body
 /*====================================================================
                              13. Professionals Section
  =====================================================================*/
+.section-professionals
+  position: relative
+  background: $section-color-professionals
+  .professionals-box
 
+  .main-button-container
+    &:hover
+      span
+        color: $color-btn
 /*====================================================================
                                    END
  =====================================================================*/

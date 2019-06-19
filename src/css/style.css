@@ -202,14 +202,52 @@ body {
     -webkit-box-shadow: 0 4px 20px rgba(168, 31, 35, 0.62);
             box-shadow: 0 4px 20px rgba(168, 31, 35, 0.62); }
 
+/*---------------------------------Header of the section----------------------------*/
 .head-text-box {
   width: 100%;
   text-align: center;
   z-index: 100;
-  margin-bottom: 100px; }
+  margin-bottom: 50px;
+  /*---------------------------------Button container----------------------------*/ }
   .head-text-box h2 {
-    color: #fff;
+    font-family: 'IBM Plex Sans medium', sans-serif;
+    color: #032fab;
+    text-transform: uppercase;
+    font-size: 30px; }
+  .head-text-box .text-inform {
+    color: #606060;
+    margin-top: 30px;
+    font-size: 22px;
     text-transform: uppercase; }
+
+.main-button-container {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%); }
+  @media only screen and (max-width: 1200px) {
+    .main-button-container {
+      bottom: 10%; } }
+  @media only screen and (max-width: 1200px) and (max-width: 992px) {
+    .main-button-container {
+      bottom: 8%; } }
+  @media only screen and (max-width: 1200px) and (max-width: 992px) and (max-width: 768px) {
+    .main-button-container {
+      bottom: 5%; } }
+  .main-button-container .blue-btn {
+    padding: 10px 100px; }
+    @media only screen and (max-width: 992px) {
+      .main-button-container .blue-btn {
+        padding: 10px 100px; } }
+  @media only screen and (max-width: 992px) and (max-width: 768px) {
+    .main-button-container .blue-btn {
+      padding: 10px 60px; } }
+  @media only screen and (max-width: 992px) and (max-width: 768px) and (max-width: 576px) {
+    .main-button-container .blue-btn {
+      padding: 5px 10px;
+      font-size: 12px; } }
 
 /*====================================================================
                                     END
@@ -436,7 +474,7 @@ body {
       position: absolute;
       content: '';
       bottom: -9%;
-      right: -9%;
+      right: -7%;
       width: 100%;
       height: 100%;
       background-color: #eeeeee;
@@ -527,64 +565,79 @@ body {
                              11. Reasons Section
  @mixin ====================================================================*/
 .section-reason {
-  position: relative; }
-  .section-reason .head-text-box h2 {
-    color: #032fab;
-    font-family: 'IBM Plex Sans medium', sans-serif;
-    font-size: 30px; }
-  .section-reason .head-text-box .text-inform {
-    color: #606060;
-    margin-top: 30px;
-    font-size: 22px;
-    text-transform: uppercase; }
-  .section-reason .reasons-container {
-    padding-bottom: 100px;
-    margin-bottom: 150px;
-    z-index: 100;
-    margin-top: 130px; }
-    @media only screen and (max-width: 1200px) {
-      .section-reason .reasons-container {
-        padding-bottom: 120px;
-        margin-bottom: 60px; } }
-    .section-reason .reasons-container .reason-item-box {
-      padding: 30px 10px 60px 10px;
-      text-align: left; }
-      .section-reason .reasons-container .reason-item-box i {
-        color: #006aff;
-        font-size: 30px;
-        border-bottom: 3px solid #006aff;
-        padding: 0 9px 10px 9px;
-        text-align: center; }
-      .section-reason .reasons-container .reason-item-box .text-inform {
-        color: #606060;
-        margin-top: 25px; }
-  .section-reason .main-button-container {
+  position: relative;
+  padding-bottom: 200px; }
+  .section-reason h2 {
+    color: #fff; }
+  .section-reason .text-inform {
+    color: #f3f3f3; }
+  .section-reason .overlay-container {
     position: absolute;
-    bottom: 15%;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%); }
-    @media only screen and (max-width: 1200px) {
-      .section-reason .main-button-container {
-        bottom: 10%; } }
-  @media only screen and (max-width: 1200px) and (max-width: 992px) {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2); }
+  .section-reason .main-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; }
+    .section-reason .main-overlay .bg-blocks {
+      background: url("../img/background/blocks.png");
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1; }
+  @media only screen and (max-width: 768px) {
+    .section-reason {
+      padding-bottom: 150px; } }
+  .section-reason .reasons-container .reason-item-box {
+    padding: 20px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.6);
+    margin-top: 25px;
+    min-height: 200px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    .section-reason .reasons-container .reason-item-box:hover {
+      background: rgba(255, 255, 255, 0.8);
+      cursor: pointer;
+      -webkit-box-shadow: rgba(255, 255, 255, 0.3) 0px 20px 20px;
+              box-shadow: rgba(255, 255, 255, 0.3) 0px 20px 20px; }
+    @media only screen and (max-width: 768px) {
+      .section-reason .reasons-container .reason-item-box {
+        padding: 30px 10px; } }
+  @media only screen and (max-width: 768px) and (max-width: 576px) {
+    .section-reason .reasons-container .reason-item-box {
+      padding: 20px 10px; } }
+    .section-reason .reasons-container .reason-item-box i {
+      color: #006aff;
+      font-size: 30px;
+      border-bottom: 3px solid #006aff;
+      padding: 0 9px 10px 9px;
+      text-align: center; }
+    .section-reason .reasons-container .reason-item-box .text-inform {
+      color: black;
+      margin-top: 25px; }
+    .section-reason .reasons-container .reason-item-box span {
+      text-transform: uppercase; }
+  @media only screen and (max-width: 576px) {
     .section-reason .main-button-container {
-      bottom: 8%; } }
-  @media only screen and (max-width: 1200px) and (max-width: 992px) and (max-width: 768px) {
-    .section-reason .main-button-container {
-      bottom: 5%; } }
-    @media only screen and (max-width: 992px) {
-      .section-reason .main-button-container .blue-btn {
-        padding: 10px 100px; } }
+      width: 70%; } }
+  @media only screen and (max-width: 992px) {
+    .section-reason .main-button-container .blue-btn {
+      padding: 10px 80px; } }
   @media only screen and (max-width: 992px) and (max-width: 768px) {
     .section-reason .main-button-container .blue-btn {
-      padding: 10px 60px; } }
+      padding: 10px 35px; } }
   @media only screen and (max-width: 992px) and (max-width: 768px) and (max-width: 576px) {
     .section-reason .main-button-container .blue-btn {
-      padding: 10px 40px; } }
-    .section-reason .main-button-container .blue-btn span {
-      text-transform: uppercase; }
+      padding: 10px 15px;
+      font-size: 12px; } }
 
 /*====================================================================
                                    END
@@ -592,6 +645,12 @@ body {
 /*====================================================================
                              13. Professionals Section
  @mixin ====================================================================*/
+.section-professionals {
+  position: relative;
+  background: #efefef; }
+  .section-professionals .main-button-container:hover span {
+    color: #fff; }
+
 /*====================================================================
                                    END
  @mixin ====================================================================*/

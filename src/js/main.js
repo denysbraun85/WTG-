@@ -47,7 +47,7 @@ $('.navbar-toggle').on('click', function () {
                          Parallax functions
  =====================================================================*/
 $('.parallax-services').parallax({imageSrc: '../img/background/bg-services.jpg'});
-$('.parallax-reasons').parallax({imageSrc: '../img/background/bg-reasons.jpg'});
+$('.parallax-reasons').parallax({imageSrc: '../img/background/reason-bg.jpg'});
 /*====================================================================
                                  End
  =====================================================================*/
