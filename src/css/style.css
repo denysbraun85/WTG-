@@ -1447,7 +1447,9 @@ body {
       .back_our_philosophy .wrap_info_philosophy {
         width: 100%;
         margin: 0 auto;
-        background: #fffc; } }
+        background: #fffc;
+        height: unset;
+        padding: 41px 0; } }
     .back_our_philosophy .wrap_info_philosophy .info_philosophy {
       position: absolute;
       z-index: 1;
