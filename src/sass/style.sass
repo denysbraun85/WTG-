@@ -856,7 +856,7 @@ body
  ===================================================================*/
 
 .section_object
-  .wrapper_objects
+  .row
     .object_wrapper
       &:before
         content: ''
@@ -875,26 +875,12 @@ body
       padding-left: 0
       padding-right: 0
       &:hover
-        .object_img_wrap
-          clip-path: inset(0 0 0 0)
         .object_list_hide_bottom
           opacity: 1
           transform: translate3d(0,0,0)
       .not_hiden_info
         display: flex
         height: 100%
-        // align-items: center
-        // height: 8.88889rem
-        // opacity: 0
-        // transform: translate3d(0,160px,0)
-        // backface-visibility: hidden
-        // will-change: transform
-        // transition: all .5s cubic-bezier(.785,.135,.15,.86)
-        // padding: 0 1.38889rem
-        // position: absolute
-        // bottom: 0
-        // left: 0
-        // right: 0
         flex-direction: column
         justify-content: flex-end
         color: #141414
@@ -920,8 +906,9 @@ body
           left: 0
           right: 0
           z-index: -1
-          transform: translate3d(0,0,0)
+          transform: translate3d(0, 0, 0)
           will-change: clip-path
+          clip-path: inset(1.11111rem 1.11111rem 7.77778rem 1.11111rem) 
           .object_img
             position: absolute
             width: 100%
@@ -959,6 +946,17 @@ body
         bottom: 0
         left: 0
         right: 0
+
+
+
+.object_wrapper
+  &:hover
+    .object_img_wrap
+      clip-path: inset(0 0 0 0)
+      opacity: 0.5
+      &:after
+        opacity: .83
+    
 
 
 

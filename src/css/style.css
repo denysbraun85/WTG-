@@ -920,7 +920,7 @@ body {
 /* ==================================================================
                            STYLE OBJECT CONTAINER
  @mixin ==================================================================*/
-.section_object .wrapper_objects .object_wrapper {
+.section_object .row .object_wrapper {
   position: relative;
   margin-bottom: 0;
   border-right: .05556rem solid #e2e4eb;
@@ -933,18 +933,15 @@ body {
   will-change: transform;
   padding-left: 0;
   padding-right: 0; }
-  .section_object .wrapper_objects .object_wrapper:before {
+  .section_object .row .object_wrapper:before {
     content: '';
     display: block;
     padding-top: 66%; }
-  .section_object .wrapper_objects .object_wrapper:hover .object_img_wrap {
-    -webkit-clip-path: inset(0 0 0 0);
-            clip-path: inset(0 0 0 0); }
-  .section_object .wrapper_objects .object_wrapper:hover .object_list_hide_bottom {
+  .section_object .row .object_wrapper:hover .object_list_hide_bottom {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0); }
-  .section_object .wrapper_objects .object_wrapper .not_hiden_info {
+  .section_object .row .object_wrapper .not_hiden_info {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -965,7 +962,7 @@ body {
     left: 0;
     right: 0;
     top: 0; }
-    .section_object .wrapper_objects .object_wrapper .not_hiden_info .object_img_wrap {
+    .section_object .row .object_wrapper .not_hiden_info .object_img_wrap {
       position: absolute;
       top: 0;
       bottom: 0;
@@ -974,8 +971,10 @@ body {
       z-index: -1;
       -webkit-transform: translate3d(0, 0, 0);
               transform: translate3d(0, 0, 0);
-      will-change: clip-path; }
-      .section_object .wrapper_objects .object_wrapper .not_hiden_info .object_img_wrap:after {
+      will-change: clip-path;
+      -webkit-clip-path: inset(1.11111rem 1.11111rem 7.77778rem 1.11111rem);
+              clip-path: inset(1.11111rem 1.11111rem 7.77778rem 1.11111rem); }
+      .section_object .row .object_wrapper .not_hiden_info .object_img_wrap:after {
         -webkit-transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
         -o-transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
         transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -987,14 +986,14 @@ body {
         content: '';
         background: #eff4f7;
         opacity: 0; }
-      .section_object .wrapper_objects .object_wrapper .not_hiden_info .object_img_wrap .object_img {
+      .section_object .row .object_wrapper .not_hiden_info .object_img_wrap .object_img {
         position: absolute;
         width: 100%;
         height: auto; }
-    .section_object .wrapper_objects .object_wrapper .not_hiden_info .object_name_list {
+    .section_object .row .object_wrapper .not_hiden_info .object_name_list {
       padding-left: 25px;
       padding-right: 25px; }
-      .section_object .wrapper_objects .object_wrapper .not_hiden_info .object_name_list .name_list_line_1 {
+      .section_object .row .object_wrapper .not_hiden_info .object_name_list .name_list_line_1 {
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -1009,7 +1008,7 @@ body {
                 align-items: center;
         font-size: .77778rem;
         color: rgba(15, 15, 15, 0.7); }
-      .section_object .wrapper_objects .object_wrapper .not_hiden_info .object_name_list h4 {
+      .section_object .row .object_wrapper .not_hiden_info .object_name_list h4 {
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -1028,9 +1027,9 @@ body {
         -webkit-transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
         -o-transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
         transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
-        .section_object .wrapper_objects .object_wrapper .not_hiden_info .object_name_list h4 span {
+        .section_object .row .object_wrapper .not_hiden_info .object_name_list h4 span {
           font-size: 1.11111rem; }
-  .section_object .wrapper_objects .object_wrapper .object_list_hide_bottom {
+  .section_object .row .object_wrapper .object_list_hide_bottom {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1054,6 +1053,13 @@ body {
     bottom: 0;
     left: 0;
     right: 0; }
+
+.object_wrapper:hover .object_img_wrap {
+  -webkit-clip-path: inset(0 0 0 0);
+          clip-path: inset(0 0 0 0);
+  opacity: 0.5; }
+  .object_wrapper:hover .object_img_wrap:after {
+    opacity: .83; }
 
 /* ==================================================================
                            END STYLE OBJECT CONTAINER
