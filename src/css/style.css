@@ -457,7 +457,7 @@ body {
   @media only screen and (max-width: 1200px) and (max-width: 992px) {
     .greetings-section {
       text-align: center; } }
-  .greetings-section:hover .team-photo-container:before {
+  .greetings-section:hover .greetings-container .team-photo-container:before {
     top: -35px; }
   .greetings-section .greetings-container {
     position: relative; }
