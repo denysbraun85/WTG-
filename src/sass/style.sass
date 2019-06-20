@@ -34,7 +34,6 @@
   font-weight: 300
   font-style: normal
 
-
 @font-face
   font-family: 'Montserrat-regular'
   src: url('../fonts/Montserrat-Regular.eot')
@@ -45,7 +44,6 @@
   font-weight: normal
   font-style: normal
 
-
 @font-face
   font-family: 'Montserrat-semibold'
   src: url('../fonts/Montserrat-SemiBold.eot')
@@ -55,11 +53,6 @@
   src: url('../fonts/Montserrat-SemiBold.ttf') format('truetype')
   font-weight: 600
   font-style: normal
-
-//
-//$font-face-regular: 'Montserrat Regular'
-//$font-face-light:  'Montserrat Light'
-//$font-face-semiBold: 'Montserrat SemiBold'
 /*====================================================================
                                     END
  =====================================================================*/
@@ -580,7 +573,7 @@ body
       &:hover
         background: rgba(255, 255, 255, 0.8)
         cursor: pointer
-        box-shadow: rgba(255, 255, 255, 0.3) 0 20px 20px
+        box-shadow: rgba(255, 255, 255, 0.3) 0px 20px 20px
       @media only screen and (max-width: 768px)
         padding: 30px 10px
         @media only screen and (max-width: 576px)
@@ -617,6 +610,8 @@ body
 .section-professionals
   position: relative
   background: $section-color-professionals
+  .professionals-box
+
   .main-button-container
     &:hover
       span
@@ -756,6 +751,7 @@ body
         height: 40px
         &:hover
           box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28)
+          box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28)
 
 
 
@@ -806,6 +802,7 @@ body
   &.select2-container--open.select2-container--below .select2-selection--multiple
     border-radius: 20px 20px 0 0
     box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28)
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28)
   &.select2-container--focus .select2-selection--multiple
     border-width: 1px
   .select2-selection--multiple
@@ -821,6 +818,7 @@ body
   .select2-selection
   &.select2-container--open.select2-container--below .select2-selection
     border-radius: 20px 20px 0 0
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28)
     box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28)
   &.select2-container--focus .select2-selection
     border-width: 1px
@@ -1047,7 +1045,7 @@ body
           z-index: 1
           padding-bottom: 10px
           @media only screen and (max-width: 970px)
-            padding-bottom: 0
+            padding-bottom: 0px
             @media only screen and (max-width: 830px)
               padding: 10px 30px
               text-align: center
@@ -1115,7 +1113,7 @@ body
           z-index: 1
           padding-bottom: 10px
           @media only screen and (max-width: 970px)
-            padding-bottom: 0
+            padding-bottom: 0px
             @media only screen and (max-width: 830px)
               padding: 10px 30px
               text-align: center
@@ -1192,8 +1190,10 @@ body
 
 
 .back_our_philosophy
+  background: url("../img/background/ourphilosophy.jpg")
   background-size: contain
-  background: url("../img/background/ourphilosophy.jpg") no-repeat left center
+  background-position: left center
+  background-repeat: no-repeat
   z-index: -1
   height: 730px
   @media only screen and (max-width: 1400px)
@@ -1245,7 +1245,7 @@ body
                 background: #ffffff80
       .wrap_text_philosophy
         display: flex
-        align-items: flex-start
+        align-items: left
         flex-direction: column
         padding: 30px 0 0 45px
         text-align: justify
