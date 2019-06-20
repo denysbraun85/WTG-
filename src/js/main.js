@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     $(function () {
-        $('.arrow_down').click(function () {
+        $('.arrow_down').on('click', function () {
             $('html, body').animate({
                 scrollTop: $('.wrap_arrow_down').offset().top + 80
             }, 'slow');
@@ -48,6 +48,22 @@ $('.navbar-toggle').on('click', function () {
  =====================================================================*/
 $('.parallax-services').parallax({imageSrc: '../img/background/bg-services.jpg'});
 $('.parallax-reasons').parallax({imageSrc: '../img/background/reason-bg.jpg'});
+/*====================================================================
+                                 End
+ =====================================================================*/
+
+/*====================================================================
+                         Sliders functions
+ =====================================================================*/
+$('.feedback-slider').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 5000
+});
 /*====================================================================
                                  End
  =====================================================================*/
