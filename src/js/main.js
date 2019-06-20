@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     $(function () {
-        $('.arrow_down').click(function () {
+        $('.arrow_down').on('click', function () {
             $('html, body').animate({
                 scrollTop: $('.wrap_arrow_down').offset().top + 80
             }, 'slow');

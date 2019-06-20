@@ -160,7 +160,7 @@ body
   &:hover
     border: 2px solid transparent
     cursor: pointer
-    span
+    //span
       //color: $color-btn
     &:before
       width: 102%
@@ -580,7 +580,7 @@ body
       &:hover
         background: rgba(255, 255, 255, 0.8)
         cursor: pointer
-        box-shadow: rgba(255, 255, 255, 0.3) 0px 20px 20px
+        box-shadow: rgba(255, 255, 255, 0.3) 0 20px 20px
       @media only screen and (max-width: 768px)
         padding: 30px 10px
         @media only screen and (max-width: 576px)
@@ -617,8 +617,6 @@ body
 .section-professionals
   position: relative
   background: $section-color-professionals
-  .professionals-box
-
   .main-button-container
     &:hover
       span
@@ -758,7 +756,6 @@ body
         height: 40px
         &:hover
           box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28)
-          box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28)
 
 
 
@@ -809,7 +806,6 @@ body
   &.select2-container--open.select2-container--below .select2-selection--multiple
     border-radius: 20px 20px 0 0
     box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28)
-    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28)
   &.select2-container--focus .select2-selection--multiple
     border-width: 1px
   .select2-selection--multiple
@@ -825,7 +821,6 @@ body
   .select2-selection
   &.select2-container--open.select2-container--below .select2-selection
     border-radius: 20px 20px 0 0
-    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28)
     box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28)
   &.select2-container--focus .select2-selection
     border-width: 1px
@@ -1052,7 +1047,7 @@ body
           z-index: 1
           padding-bottom: 10px
           @media only screen and (max-width: 970px)
-            padding-bottom: 0px
+            padding-bottom: 0
             @media only screen and (max-width: 830px)
               padding: 10px 30px
               text-align: center
@@ -1120,7 +1115,7 @@ body
           z-index: 1
           padding-bottom: 10px
           @media only screen and (max-width: 970px)
-            padding-bottom: 0px
+            padding-bottom: 0
             @media only screen and (max-width: 830px)
               padding: 10px 30px
               text-align: center
@@ -1197,10 +1192,8 @@ body
 
 
 .back_our_philosophy
-  background: url("../img/background/ourphilosophy.jpg")
   background-size: contain
-  background-position: left center
-  background-repeat: no-repeat
+  background: url("../img/background/ourphilosophy.jpg") no-repeat left center
   z-index: -1
   height: 730px
   @media only screen and (max-width: 1400px)
@@ -1252,7 +1245,7 @@ body
                 background: #ffffff80
       .wrap_text_philosophy
         display: flex
-        align-items: left
+        align-items: flex-start
         flex-direction: column
         padding: 30px 0 0 45px
         text-align: justify
