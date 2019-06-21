@@ -151,7 +151,7 @@ body {
   background: transparent;
   -webkit-border-radius: 50px 50px 50px 0;
           border-radius: 50px 50px 50px 0;
-  max-height: 40px;
+  max-height: 50px;
   height: 100%;
   outline: none;
   padding: 10px 0;
@@ -162,7 +162,7 @@ body {
     display: block;
     position: relative;
     font-size: 16px;
-    line-height: 18px;
+    line-height: 27px;
     z-index: 1;
     -webkit-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
@@ -290,7 +290,7 @@ body {
 
 .main-button-container {
   position: absolute;
-  max-height: 40px;
+  max-height: 50px;
   bottom: 10%;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -469,37 +469,65 @@ body {
 .greetings-section {
   overflow: hidden;
   background: #f8f8f8; }
-  @media only screen and (max-width: 1200px) {
-    .greetings-section {
-      padding-bottom: 180px; } }
-  @media only screen and (max-width: 1200px) and (max-width: 992px) {
+  @media only screen and (max-width: 991px) {
     .greetings-section {
       text-align: center; } }
   .greetings-section:hover .greetings-container .team-photo-container:before {
     top: -35px; }
   .greetings-section .greetings-container {
     position: relative; }
+    @media only screen and (max-width: 991px) {
+      .greetings-section .greetings-container {
+        padding-bottom: 120px; } }
+  @media only screen and (max-width: 991px) and (max-width: 575px) {
+    .greetings-section .greetings-container {
+      padding-bottom: 80px; } }
     .greetings-section .greetings-container .greetings-box {
       width: 100%; }
-      @media only screen and (max-width: 992px) {
+      @media only screen and (max-width: 991px) {
         .greetings-section .greetings-container .greetings-box {
           margin-bottom: 50px; } }
+  @media only screen and (max-width: 991px) and (max-width: 575px) {
+    .greetings-section .greetings-container .greetings-box {
+      margin-bottom: 30px; } }
       @media only screen and (max-width: 1200px) {
         .greetings-section .greetings-container .greetings-box .upper-head {
           font-size: 14px; } }
+  @media only screen and (max-width: 1200px) and (max-width: 575px) {
+    .greetings-section .greetings-container .greetings-box .upper-head {
+      font-size: 12px; } }
       @media only screen and (max-width: 1200px) {
         .greetings-section .greetings-container .greetings-box h3 {
           font-size: 24px; } }
+  @media only screen and (max-width: 1200px) and (max-width: 575px) {
+    .greetings-section .greetings-container .greetings-box h3 {
+      font-size: 20px; } }
       .greetings-section .greetings-container .greetings-box .text-inform {
-        line-height: 30px; }
+        line-height: 30px;
+        padding-bottom: 100px; }
         @media only screen and (max-width: 1200px) {
           .greetings-section .greetings-container .greetings-box .text-inform {
             font-size: 14px;
             line-height: 22px; } }
-      .greetings-section .greetings-container .greetings-box button {
-        position: absolute;
-        bottom: 0;
-        left: 0; }
+  @media only screen and (max-width: 1200px) and (max-width: 991px) {
+    .greetings-section .greetings-container .greetings-box .text-inform {
+      padding-bottom: 0; } }
+  @media only screen and (max-width: 1200px) and (max-width: 991px) and (max-width: 575px) {
+    .greetings-section .greetings-container .greetings-box .text-inform {
+      font-size: 12px; } }
+    .greetings-section .greetings-container button {
+      position: absolute;
+      bottom: 0;
+      left: 0; }
+      @media only screen and (max-width: 991px) {
+        .greetings-section .greetings-container button {
+          position: absolute;
+          left: 50%;
+          bottom: -5px;
+          -webkit-transform: translate(-50%);
+              -ms-transform: translate(-50%);
+                  transform: translate(-50%);
+          margin: auto; } }
     .greetings-section .greetings-container .team-photo-container {
       position: relative;
       display: block;
@@ -509,7 +537,7 @@ body {
       z-index: 1;
       -webkit-box-shadow: 8px 8px 30px rgba(0, 0, 0, 0.3);
               box-shadow: 8px 8px 30px rgba(0, 0, 0, 0.3); }
-      @media only screen and (max-width: 992px) {
+      @media only screen and (max-width: 991px) {
         .greetings-section .greetings-container .team-photo-container {
           max-width: 90%;
           margin: auto; } }
@@ -526,6 +554,9 @@ body {
         -webkit-transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
         -o-transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
         transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+        @media only screen and (max-width: 575px) {
+          .greetings-section .greetings-container .team-photo-container:before {
+            display: none; } }
 
 /*====================================================================
                                    END
@@ -583,8 +614,6 @@ body {
       -webkit-transform: translateX(-50%);
           -ms-transform: translateX(-50%);
               transform: translateX(-50%); } }
-      .section-video .content-video-section button span {
-        font-size: 15px; }
   .section-video .video-container {
     position: relative;
     z-index: 1; }
@@ -980,7 +1009,7 @@ body {
     margin: 0 15px 0 5px;
     vertical-align: middle; }
   .select2-results__option[aria-selected=true]:before {
-    font-family: fontAwesome;
+    font-family: fontAwesome, sans-serif;
     content: "\f00c";
     color: #fff;
     background-color: #006aff;
@@ -1037,8 +1066,6 @@ body {
   border-right: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0;
   top: -3px;
-  -webkit-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.08);
-          box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.08);
   -webkit-box-shadow: 0 4px 6px 0 rgba(32, 33, 36, 0.28);
           box-shadow: 0 4px 6px 0 rgba(32, 33, 36, 0.28); }
 
@@ -1658,7 +1685,7 @@ body {
             opacity: 0.8; }
             .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy ul li:before {
               content: '\f00c';
-              font-family: "Font Awesome 5 Free";
+              font-family: "Font Awesome 5 Free" ,sans-serif;
               font-weight: 900;
               color: #006aff;
               padding-right: 15px; }
