@@ -211,15 +211,23 @@ body
     outline: none
     box-shadow: none
 
+.color_black
+  color: black
+
 .btn-little
   max-width: 50px
   display: flex
   justify-content: center
   align-items: center
-  padding: 8px 0 10px 0
+  padding: 10px 0 10px 0
   &:hover
     .svg_color path
       fill: $color-btn !important
+      transition: fill .4s ease
+.btn-object
+  max-width: 250px
+  @media only screen and (max-width: 1440px)
+    max-width: 175px
 .btn-small
   max-width: 250px
 .btn-big
@@ -968,6 +976,42 @@ body
 
 
 
+.property_overview .single-item
+  position: relative
+  display: inline-block
+  margin-top: 100px
+  background: rgba(247, 247, 247, 0.5)
+  .content-box
+    position: relative
+    padding: 21px 10px 24px 10px
+    width: 170px
+    border: 1px solid #f7f7f7
+    text-align: center
+    transition: all 500ms ease
+  &:hover .content-box
+    background-color: rgba(0, 106, 255, 0.1)
+    cursor: pointer
+  .number
+    position: relative
+    font-size: 24px
+    line-height: 30px
+    font-family: 'Segoe UI', sans-serif
+    font-weight: 500
+    color: #222
+    margin-bottom: 23px
+  .icon-box
+    position: relative
+    margin-bottom: 15px
+    img
+      width: 30%
+    i:before
+      font-size: 36px
+      color: #006aff
+      margin: 0px
+
+
+
+
 
 /* ==================================================================
                            STYLE OBJECT CONTAINER
@@ -976,7 +1020,7 @@ body
 .section_object
   .row
     border-top: .05556rem solid #e2e4eb
-    .object_wrapper
+    .object_content
       &:before
         content: ''
         display: block
@@ -993,11 +1037,7 @@ body
       will-change: transform
       padding-left: 0
       padding-right: 0
-      &:hover
-        .object_list_hide_bottom
-          opacity: 1
-          transform: translate3d(0,0,0)
-      .not_hiden_info
+      .not_hidden_info
         display: flex
         height: 100%
         flex-direction: column
@@ -1046,6 +1086,12 @@ body
             padding-bottom: 10px
             span
               text-decoration: none
+            .hot_offer
+              border-radius: 50px 50px 50px 0
+              border: 1px solid red
+              background: red
+              padding: 0 9px
+              color: #ffffff
           .title_object
             display: flex
             justify-content: space-between
@@ -1064,27 +1110,31 @@ body
             span
               font-size: 1.38889rem
               font-weight: 400
-      .object_list_hide_bottom
+              color: black
+      .object_hidden_info
         display: flex
         align-items: center
         justify-content: space-between
         height: 8.88889rem
         opacity: 0
-        transform: translate3d(0,160px,0)
         backface-visibility: hidden
         will-change: transform
         transition: all .5s cubic-bezier(.785,.135,.15,.86)
-        padding: 0 1.38889rem
+        padding: 0.5rem 1.38889rem 0
         position: absolute
-        bottom: 0
-        left: 5px
-        right: 5px
-        .wrap_camera_play_obj
-          display: flex;
-          max-width: 110px;
-          width: 100%;
-          justify-content: space-between;
-          align-items: center;
+        left: 0
+        right: 0
+      .object_hidden_info_top
+        transform: translate3d(0,-160px,0)
+        top: 0
+        z-index: 1
+        .info_top
+          display: flex
+          justify-content: space-between
+          align-items: center
+          margin-left: auto
+          max-width: 120px
+          width: 100%
           .photocamera
             width: 22px
             height: 22px
@@ -1092,24 +1142,49 @@ body
           .play_button
             width: 20px
             height: 20px
-          .svg_color
-            transition: all 0.4s ease-in-out
+      .object_hidden_info_bottom
+        transform: translate3d(0,160px,0)
+        bottom: 0
+        .info_bottom
+          display: flex
+          justify-content: space-around
+          align-items: center
+          margin-right: auto
+          width: 55%
+          margin-top: 5px
+          .icons_object
+            display: flex
+            flex-direction: column
+            align-items: center
+            img
+              width: 35px
+            span
+              margin-top: 5px
+              font-size: 1rem
+              color: black
+
 
     
 
 
 
 .section_object
-  .object_wrapper
+  .object
     &:hover
-      .not_hiden_info
+      .not_hidden_info
         text-decoration: none
         .object_img_wrap
           clip-path: inset(0 0 0 0)
           &:after
-            opacity: .7
+            opacity: .8
         .object_name_list
           transform: translate3d(0,-6.11111rem,0)
+      .object_hidden_info
+        opacity: 1
+        transform: translate3d(0,0,0)
+      .object_hidden_info_top
+        transform: translate3d(0,0,0)
+
 
       
     
