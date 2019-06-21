@@ -102,7 +102,51 @@ $('.feedback-slider').slick({
     dots: false,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 5000
+    autoplaySpeed: 5000,
+    responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 2
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1
+            }
+        }
+    ]
+});
+
+$('.manager-slider').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: false,
+    // autoplay: true,
+    // autoplaySpeed: 5000,
+    responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 3
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2
+            }
+        },
+        {
+            breakpoint: 476,
+            settings: {
+                slidesToShow: 1
+            }
+        }
+    ]
 });
 /*====================================================================
                                  End

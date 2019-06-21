@@ -75,6 +75,8 @@ $section-color-greetings: #f8f8f8
 $bg-color-menu: #fff
 $bg-overlay-services: #0b0b0b
 $bg-overlay-feedback: #000000
+$bg-card-manager: #032fab
+$bg-card-shadow-box: rgba(31, 31, 31, 0.44)
 $header-color-menu: #032fab
 $header-color: rgba(3, 47, 171, 0.5)
 //text
@@ -93,6 +95,7 @@ $border-adaptive-benefit: #B9B8B8
 $border-search-color: #e0e0e0
 $form-border-color: #e0e0e0
 $border-team-photo: #ddd9d9
+$border-card-manager: rgba(0, 0, 0, 0.125)
 //icons
 $icons-color-reasons-section: #006aff
 $icons-quote-feedback: #006aff
@@ -115,17 +118,40 @@ a
   text-decoration: none
 img
   width: 100%
+h1
+  font-family: 'Montserrat-regular', sans-serif
+  font-size: 45px
+  margin-bottom: 0
+  @media only screen and (max-width: 1200px)
+    font-size: 40px
+    @media only screen and (max-width: 992px)
+      font-size: 30px
+      @media only screen and (max-width: 768px)
+        font-size: 20px
 h2
-  font-family: 'Montserrat-semibold', sans-serif
-  font-size: 26px
+  font-family: 'Montserrat-regular', sans-serif
+  font-size: 35px
   margin-bottom: 0
   text-align: center
+  text-transform: uppercase
+  @media only screen and (max-width: 1200px)
+    font-size: 30px
+    @media only screen and (max-width: 992px)
+      font-size: 25px
+      @media only screen and (max-width: 576px)
+        font-size: 18px
 h3
   color: $text-head
   font-family: 'Montserrat-semibold', sans-serif
-  font-size: 35px
+  font-size: 30px
   text-transform: capitalize
   margin: 30px 0
+  @media only screen and (max-width: 1200px)
+    font-size: 25px
+    @media only screen and (max-width: 992px)
+      font-size: 20px
+      @media only screen and (max-width: 576px)
+        font-size: 16px
 h4
   font-size: 30px
   text-align: center
@@ -135,6 +161,8 @@ h4
   text-transform: uppercase
 p
   color: $text-color-grey
+  margin-bottom: 0
+figure
   margin-bottom: 0
 .section
   padding: 100px 0
@@ -147,6 +175,11 @@ p
   text-transform: uppercase
   font-family: 'Montserrat-light', sans-serif
   color: $text-color-grey
+  margin-top: 20px
+  @media only screen and (max-width: 992px)
+    font-size: 16px
+    @media only screen and (max-width: 576px)
+      font-size: 14px
 .text-inform
   color: $text-color-grey
 /*---------------------------------Max-width----------------------------*/
@@ -284,14 +317,12 @@ body
   width: 100%
   text-align: center
   z-index: 100
-  margin-bottom: 50px
   h2
     color: $header-text-color
     text-transform: uppercase
-    font-size: 30px
   .text-inform
     color: $text-color-grey
-    margin-top: 30px
+    margin-top: 20px
     font-size: 22px
     text-transform: uppercase
   /*---------------------------------Button container----------------------------*/
@@ -307,24 +338,6 @@ body
       bottom: 8%
       @media only screen and (max-width: 768px)
         bottom: 5%
-  //.btn-big
-  //  padding: 10px 100px
-  //  @media only screen and (max-width: 992px)
-  //    padding: 10px 100px
-  //    @media only screen and (max-width: 768px)
-  //      padding: 10px 60px
-  //      @media only screen and (max-width: 576px)
-  //        padding: 5px 10px
-  //        font-size: 12px
-  //.btn-small
-  //  padding: 10px 100px
-  //  @media only screen and (max-width: 992px)
-  //    padding: 10px 100px
-  //    @media only screen and (max-width: 768px)
-  //      padding: 10px 60px
-  //      @media only screen and (max-width: 576px)
-  //        padding: 5px 10px
-  //        font-size: 12px
 /*====================================================================
                                     END
  =====================================================================*/
@@ -482,11 +495,6 @@ body
           font-size: 14px
           @media only screen and (max-width: 575px)
             font-size: 12px
-      h3
-        @media only screen and (max-width: 1200px)
-          font-size: 24px
-          @media only screen and (max-width: 575px)
-            font-size: 20px
       .text-inform
         line-height: 30px
         padding-bottom: 100px
@@ -551,6 +559,8 @@ body
         padding: 30px 30px 150px 30px
         @media only screen and (max-width: 768px)
           padding: 30px 30px 90px 30px
+          @media only screen and (max-width: 576px)
+            padding: 30px 15px 100px 15px
     .subscribe-box
       @media only screen and (max-width: 992px)
         margin-bottom: 20px
@@ -560,12 +570,12 @@ body
         @media only screen and (max-width: 992px)
           display: none
       h3
+        margin-top: 0
         color: $header-text-color
-        @media only screen and (max-width: 992px)
-          font-size: 20px
-          text-align: center
-          @media only screen and (max-width: 576px)
-            font-size: 15px
+        @media only screen and (max-width: 1200px)
+          font-size: 25px
+          @media only screen and (max-width: 992px)
+            text-align: center
     button
       position: absolute
       bottom: 60px
@@ -627,14 +637,12 @@ body
         cursor: pointer
       .block-icon
         padding: 50px 0
-        i
-          font-size: 60px
-          color: $color-btn-hover
+        img
+          max-width: 20%
   .head-text-box
     h2
-      color: $text-color-white
-    @media only screen and (max-width: 992px)
       margin-bottom: 50px
+      color: $text-color-white
   .main-button-container
     position: absolute
     bottom: 10%
@@ -655,20 +663,6 @@ body
           padding: 10px 60px
           @media only screen and (max-width: 576px)
             padding: 10px 40px
-/*====================================================================
-                                   END
- =====================================================================*/
-
-/*====================================================================
-                             13. Professionals Section
- =====================================================================*/
-.section-professionals
-  position: relative
-  background: $section-color-professionals
-  .main-button-container
-    &:hover
-      span
-        color: $color-btn
 /*====================================================================
                                    END
  =====================================================================*/
@@ -696,15 +690,13 @@ body
     right: 0
     bottom: 0
     opacity: .4
-  h4
+  h2
     color: $text-color-white
-    margin-bottom: 50px
   .feedback-slider
     overflow: hidden
     width: 100%
     .feedback-slider-box
       position: relative
-      //max-width: 350px
       width: 100%
       background: $bg-color-menu
       border: 2px solid $border-team-photo
@@ -712,6 +704,8 @@ body
       opacity: 0.85
       transition: all 0.5s cubic-bezier(.785,.135,.15,.86)
       margin: 50px 5px 80px 5px
+      @media only screen and (max-width: 1200px)
+        padding: 20px 10px
       &:hover
         opacity: 1
         box-shadow: 0 70px 70px rgba(0, 0, 0, 0.1)
@@ -745,15 +739,137 @@ body
         text-align: center
       img
         position: absolute
-        bottom: -30%
+        bottom: -25%
         left: 50%
         transform: translate(-50%)
         border-radius: 50%
         max-width: 30%
         border: 2px solid $border-team-photo
+        @media only screen and (max-width: 1200px)
+          bottom: -20%
+          @media only screen and (max-width: 992px)
+            bottom: -25%
+            @media only screen and (max-width: 768px)
+              max-width: 20%
+              bottom: -25%
+              @media only screen and (max-width: 470px)
+                bottom: -20%
+                @media only screen and (max-width: 420px)
+                  bottom: -18%
+                  @media only screen and (max-width: 380px)
+                    bottom: -15%
 /*====================================================================
                                    END
  =====================================================================*/
+
+/*====================================================================
+                             13. Professionals Section
+ =====================================================================*/
+.section-professionals
+  position: relative
+  background: $section-color-professionals
+  .manager-slider
+    width: 100%
+    max-width: 100%
+    padding: 50px 0 100px 0
+    .manager-card
+      position: relative
+      overflow: hidden
+      margin: 0 5px
+      border: 2px solid $border-card-manager
+      &:hover
+        .manager-social-contact
+          right: 0
+        .img-box
+          img
+            transform: scale(1.05)
+          .box-shadow
+            height: 100%
+            .contact-number-block
+              bottom: 100px
+        .card-bottom
+          background: $bg-card-manager
+          .manager-name
+            color: $text-color-white
+          .manager-position
+            color: $text-color-grey
+      .manager-social-contact
+        position: absolute
+        top: 0
+        right: -30px
+        display: flex
+        flex-direction: column
+        transition: all 0.5s ease
+        z-index: 5
+        li
+          position: relative
+          width: 30px
+          height: 30px
+          margin-bottom: 5px
+          background-color: $bg-card-manager
+          a
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            cursor: pointer
+            i
+              font-size: 15px
+              color: $text-color-white
+              transition: all 0.5s ease
+      .img-box
+        overflow: hidden
+        margin-bottom: 0
+        height: 100%
+        img
+          width: 100%
+          transform: scale(1)
+          transition: all 0.5s ease
+        .box-shadow
+          position: absolute
+          left: 0
+          right: 0
+          bottom: 0
+          background: linear-gradient(to top, #000, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0))
+          height: 0%
+          transition: all 0.5s ease
+          z-index: 0
+          .contact-number-block
+            position: absolute
+            bottom: -50px
+            display: flex
+            flex-direction: column
+            text-align: center
+            width: 100%
+            transition: all 0.5s ease
+            span
+              font-size: 15px
+              color: $text-color-white
+              width: 100%
+              text-align: center
+              i
+                font-size: 18px
+                color: $text-color-white
+      .card-bottom
+        padding: 10px
+        text-align: center
+        background: $bg-color-menu
+        transition: all 0.5s ease
+        z-index: 2
+        position: absolute
+        bottom: 0
+        width: 100%
+        .manager-name
+          font-family: 'Montserrat-semibold', sans-serif
+          transition: all 0.5s ease
+  .main-button-container
+    &:hover
+      span
+        color: $color-btn
+/*====================================================================
+                                   END
+ =====================================================================*/
+
 
 
 
