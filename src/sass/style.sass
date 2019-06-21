@@ -447,10 +447,8 @@ body
 .greetings-section
   overflow: hidden
   background: $section-color-greetings
-  @media only screen and (max-width: 1200px)
-    padding-bottom: 180px
-    @media only screen and (max-width: 992px)
-      text-align: center
+  @media only screen and (max-width: 991px)
+    text-align: center
   &:hover
     .greetings-container
       .team-photo-container
@@ -458,34 +456,46 @@ body
           top: -35px
   .greetings-container
     position: relative
+    @media only screen and (max-width: 991px)
+      padding-bottom: 120px
+      @media only screen and (max-width: 575px)
+        padding-bottom: 80px
     .greetings-box
       width: 100%
-      @media only screen and (max-width: 992px)
+      @media only screen and (max-width: 991px)
         margin-bottom: 50px
+        @media only screen and (max-width: 575px)
+          margin-bottom: 30px
       .upper-head
         @media only screen and (max-width: 1200px)
           font-size: 14px
+          @media only screen and (max-width: 575px)
+            font-size: 12px
       h3
         @media only screen and (max-width: 1200px)
           font-size: 24px
+          @media only screen and (max-width: 575px)
+            font-size: 20px
       .text-inform
         line-height: 30px
+        padding-bottom: 100px
         @media only screen and (max-width: 1200px)
           font-size: 14px
           line-height: 22px
-      button
+          @media only screen and (max-width: 991px)
+            padding-bottom: 0
+            @media only screen and (max-width: 575px)
+              font-size: 12px
+    button
+      position: absolute
+      bottom: 0
+      left: 0
+      @media only screen and (max-width: 991px)
         position: absolute
-        bottom: -40px
-        left: 0
-        margin-top: 20px
-        //@media only screen and (max-width: 1200px)
-        //  position: absolute
-        //  right: -25%
-        //  bottom: -40%
-        //  @media only screen and (max-width: 992px)
-        //    left: 50%
-        //    transform: translate(-50%)
-        //    bottom: -240%
+        left: 50%
+        bottom: -5px
+        transform: translate(-50%)
+        margin: auto
     .team-photo-container
       position: relative
       display: block
@@ -494,7 +504,7 @@ body
       width: 100%
       z-index: 1
       box-shadow: 8px 8px 30px rgba(0, 0, 0, 0.3)
-      @media only screen and (max-width: 992px)
+      @media only screen and (max-width: 991px)
         max-width: 90%
         margin: auto
       &:before
@@ -508,8 +518,8 @@ body
         border: 16px solid $border-team-photo
         z-index: -1
         transition: all 0.5s cubic-bezier(.785,.135,.15,.86)
-
-
+        @media only screen and (max-width: 575px)
+          display: none
 /*====================================================================
                                    END
  =====================================================================*/
@@ -730,8 +740,6 @@ body
         border-radius: 50%
         max-width: 30%
         border: 2px solid $border-team-photo
-
-
 /*====================================================================
                                    END
  =====================================================================*/
@@ -783,8 +791,6 @@ body
 /* ==================================================================
                             STYLE BOUNCE ANIMATION
  ===================================================================*/
-
-
 @keyframes bounce
   0%,
     100%,
@@ -798,8 +804,6 @@ body
 
   60%
     transform: translateY(-5px)
-
-
 /* ==================================================================
                            END STYLE BOUNCE ANIMATION
  ===================================================================*/
@@ -894,7 +898,7 @@ body
     margin: 0 15px 0 5px
     vertical-align: middle
   &[aria-selected=true]:before
-    font-family: fontAwesome
+    font-family: fontAwesome, sans-serif
     content: "\f00c"
     color: $color-btn
     background-color: $color-btn-hover
@@ -912,7 +916,6 @@ body
   .select2-results__option--highlighted[aria-selected]
     background-color: #eaeaeb
     color: #272727
-  .select2-selection--multiple
   &.select2-container--open.select2-container--below .select2-selection--multiple
     border-radius: 20px 20px 0 0
     box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28)
@@ -928,7 +931,6 @@ body
   .select2-results__option--highlighted[aria-selected]
     background-color: #eaeaeb
     color: #272727
-  .select2-selection
   &.select2-container--open.select2-container--below .select2-selection
     border-radius: 20px 20px 0 0
     box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28)
@@ -944,7 +946,7 @@ body
   border-right: 1px solid $border-search-color
   border-bottom: 1px solid $border-search-color
   top: -3px
-  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08)
+  //box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08)
   box-shadow: 0 4px 6px 0 rgba(32,33,36,0.28)
 
 
@@ -1429,7 +1431,7 @@ body
             opacity: 0.8
             &:before
               content: '\f00c'
-              font-family: "Font Awesome 5 Free"
+              font-family: "Font Awesome 5 Free" ,sans-serif
               font-weight: 900
               color: $color-btn-hover
               padding-right: 15px
