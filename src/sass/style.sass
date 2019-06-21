@@ -211,6 +211,13 @@ body
     outline: none
     box-shadow: none
 
+
+.btn-little
+  max-width: 50px
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  padding: 8px 0 10px 0
 .btn-small
   max-width: 250px
 .btn-big
@@ -965,106 +972,133 @@ body
  ===================================================================*/
 
 .section_object
-  .row
-    .object_wrapper
-      &:before
-        content: ''
-        display: block
-        padding-top: 66%
-      position: relative
-      margin-bottom: 0
-      border-right: .05556rem solid #e2e4eb
-      border-bottom: .05556rem solid #e2e4eb
-      overflow: hidden
-      -webkit-transform: translate3d(0,0,0)
-      transform: translate3d(0,0,0)
-      -webkit-backface-visibility: hidden
-      backface-visibility: hidden
-      will-change: transform
-      padding-left: 0
-      padding-right: 0
-      &:hover
-        .object_list_hide_bottom
-          opacity: 1
-          transform: translate3d(0,0,0)
-      .not_hiden_info
-        display: flex
-        height: 100%
-        flex-direction: column
-        justify-content: flex-end
-        color: #141414
-        position: absolute
-        width: 100%
-        left: 0
-        right: 0
-        top: 0
-        .object_img_wrap
-          &:after
-            transition: all .4s cubic-bezier(.785,.135,.15,.86)
-            position: absolute
-            top: 0
-            bottom: 0
-            left: 0
-            right: 0
-            content: ''
-            background: #eff4f7
-            opacity: 0
+  .object_wrapper
+    &:before
+      content: ''
+      display: block
+      padding-top: 66%
+    position: relative
+    margin-bottom: 0
+    border-right: .05556rem solid #e2e4eb
+    border-bottom: .05556rem solid #e2e4eb
+    overflow: hidden
+    -webkit-transform: translate3d(0,0,0)
+    transform: translate3d(0,0,0)
+    -webkit-backface-visibility: hidden
+    backface-visibility: hidden
+    will-change: transform
+    padding-left: 0
+    padding-right: 0
+    &:hover
+      .object_list_hide_bottom
+        opacity: 1
+        transform: translate3d(0,0,0)
+    .not_hiden_info
+      display: flex
+      height: 100%
+      flex-direction: column
+      justify-content: flex-end
+      color: #141414
+      position: absolute
+      width: 100%
+      left: 0
+      right: 0
+      top: 0
+      .object_img_wrap
+        &:after
+          transition: all .4s cubic-bezier(.785,.135,.15,.86)
           position: absolute
           top: 0
           bottom: 0
           left: 0
           right: 0
-          z-index: -1
-          transform: translate3d(0, 0, 0)
-          will-change: clip-path
-          clip-path: inset(1.11111rem 1.11111rem 7.77778rem 1.11111rem) 
-          .object_img
-            position: absolute
-            width: 100%
-            height: auto
-        .object_name_list
-          padding-left: 25px
-          padding-right: 25px
-          .name_list_line_1
-            display: flex
-            justify-content: space-between
-            align-items: center
-            font-size: .77778rem
-            color: rgba(15,15,15,.7)
-          h4
-            display: flex
-            justify-content: space-between
-            align-items: center
-            margin-bottom: .61111rem
-            font-family: 'Century Gothic',sans-serif
-            font-size: 1.38889rem
-            transition: all .5s cubic-bezier(.785,.135,.15,.86)
-            span
-              font-size: 1.11111rem
-      .object_list_hide_bottom
-        display: flex
-        align-items: center
-        height: 8.88889rem
-        opacity: 0
-        transform: translate3d(0,160px,0)
-        backface-visibility: hidden
-        will-change: transform
-        transition: all .5s cubic-bezier(.785,.135,.15,.86)
-        padding: 0 1.38889rem
+          content: ''
+          background: #eff4f7
+          opacity: 0
         position: absolute
+        top: 0
         bottom: 0
         left: 0
         right: 0
+        z-index: -1
+        transform: translate3d(0, 0, 0)
+        transition: all .4s cubic-bezier(.785,.135,.15,.86)
+        will-change: clip-path
+        clip-path: inset(1.11111rem 1.11111rem 7.77778rem 1.11111rem) 
+        .object_img
+          position: absolute
+          width: 100%
+          height: auto
+      .object_name_list
+        padding-left: 25px
+        padding-right: 25px
+        transition: all .4s cubic-bezier(.785,.135,.15,.86)
+        .name_list_line_1
+          display: flex
+          justify-content: space-between
+          align-items: center
+          font-size: 1rem
+          color: rgba(15,15,15,.7)
+          span
+            text-decoration: none
+        h4
+          display: flex
+          justify-content: space-between
+          align-items: center
+          margin-bottom: .1111rem
+          font-size: 1.38889rem
+          // transition: all .5s cubic-bezier(.785,.135,.15,.86)
+          padding-bottom: 25px
+          padding-top: 20px
+          font-weight: 400
+          span
+            font-size: 1.38889rem
+            font-weight: 400
+    .object_list_hide_bottom
+      display: flex
+      align-items: center
+      justify-content: space-between
+      height: 8.88889rem
+      opacity: 0
+      transform: translate3d(0,160px,0)
+      backface-visibility: hidden
+      will-change: transform
+      transition: all .5s cubic-bezier(.785,.135,.15,.86)
+      padding: 0 1.38889rem
+      position: absolute
+      bottom: 0
+      left: 5px
+      right: 5px
+      .wrap_camera_play_obj
+        display: flex;
+        max-width: 110px;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        .photocamera
+          width: 22px
+          padding-right: 3px
+        .play_button
+          width: 22px
+          padding-right: 2px
+          padding-left: 2px
+    
 
 
 
-.object_wrapper
-  &:hover
-    .object_img_wrap
-      clip-path: inset(0 0 0 0)
-      opacity: 0.5
-      &:after
-        opacity: .83
+.section_object
+  .object_wrapper
+    &:hover
+      .not_hiden_info
+        text-decoration: none
+        .object_img_wrap
+          clip-path: inset(0 0 0 0)
+          &:after
+            opacity: .7
+        .object_name_list
+          transform: translate3d(0,-6.11111rem,0)
+
+      
     
 
 
