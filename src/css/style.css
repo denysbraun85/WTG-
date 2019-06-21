@@ -151,7 +151,7 @@ body {
   background: transparent;
   -webkit-border-radius: 50px 50px 50px 0;
           border-radius: 50px 50px 50px 0;
-  max-height: 40px;
+  max-height: 50px;
   height: 100%;
   outline: none;
   padding: 10px 0;
@@ -162,7 +162,7 @@ body {
     display: block;
     position: relative;
     font-size: 16px;
-    line-height: 18px;
+    line-height: 27px;
     z-index: 1;
     -webkit-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
@@ -272,7 +272,7 @@ body {
 
 .main-button-container {
   position: absolute;
-  max-height: 40px;
+  max-height: 50px;
   bottom: 10%;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -480,8 +480,9 @@ body {
             line-height: 22px; } }
       .greetings-section .greetings-container .greetings-box button {
         position: absolute;
-        bottom: 0;
-        left: 0; }
+        bottom: -40px;
+        left: 0;
+        margin-top: 20px; }
     .greetings-section .greetings-container .team-photo-container {
       position: relative;
       display: block;
@@ -565,8 +566,6 @@ body {
       -webkit-transform: translateX(-50%);
           -ms-transform: translateX(-50%);
               transform: translateX(-50%); } }
-      .section-video .content-video-section button span {
-        font-size: 15px; }
   .section-video .video-container {
     position: relative;
     z-index: 1; }
