@@ -786,6 +786,9 @@ body {
     -webkit-transition: all 0.2s ease-in;
     -o-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in; }
+    @media only screen and (max-width: 1200px) {
+      .section-services .service-content-container .service-block {
+        min-height: 240px; } }
     .section-services .service-content-container .service-block:hover {
       opacity: 1;
       -webkit-box-shadow: 0 70px 70px rgba(0, 0, 0, 0.2);
@@ -799,6 +802,9 @@ body {
       padding: 50px 0; }
       .section-services .service-content-container .service-block .block-icon img {
         max-width: 20%; }
+    .section-services .service-content-container .service-block .block-content .text-inform {
+      font-size: 18px;
+      color: #000000; }
   .section-services .head-text-box h2 {
     margin-bottom: 50px;
     color: #fff; }
@@ -877,6 +883,9 @@ body {
       @media only screen and (max-width: 1200px) {
         .section-feedback .feedback-slider .feedback-slider-box {
           padding: 20px 10px; } }
+  @media only screen and (max-width: 1200px) and (max-width: 992px) {
+    .section-feedback .feedback-slider .feedback-slider-box {
+      opacity: 1; } }
       .section-feedback .feedback-slider .feedback-slider-box:hover {
         opacity: 1;
         -webkit-box-shadow: 0 70px 70px rgba(0, 0, 0, 0.1);
@@ -886,6 +895,13 @@ body {
                 transform: translate(0, -10px);
         z-index: 100;
         cursor: pointer; }
+        @media only screen and (max-width: 992px) {
+          .section-feedback .feedback-slider .feedback-slider-box:hover {
+            -webkit-box-shadow: none;
+                    box-shadow: none;
+            -webkit-transform: none;
+                -ms-transform: none;
+                    transform: none; } }
       .section-feedback .feedback-slider .feedback-slider-box .quote-wrapper {
         position: absolute;
         display: -webkit-box;
@@ -915,7 +931,8 @@ body {
             border-color: #006aff transparent transparent transparent; }
       .section-feedback .feedback-slider .feedback-slider-box p {
         padding: 60px 0 50px 0;
-        text-align: center; }
+        text-align: center;
+        font-size: 16px; }
       .section-feedback .feedback-slider .feedback-slider-box img {
         position: absolute;
         bottom: -25%;
@@ -984,7 +1001,7 @@ body {
       .section-professionals .manager-slider .manager-card .manager-social-contact {
         position: absolute;
         top: 0;
-        right: -30px;
+        right: -50px;
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -998,12 +1015,26 @@ body {
         -o-transition: all 0.5s ease;
         transition: all 0.5s ease;
         z-index: 5; }
+        @media (max-width: 1200px) {
+          .section-professionals .manager-slider .manager-card .manager-social-contact {
+            right: -40px; } }
+  @media (max-width: 1200px) and (max-width: 476px) {
+    .section-professionals .manager-slider .manager-card .manager-social-contact {
+      right: -50px; } }
         .section-professionals .manager-slider .manager-card .manager-social-contact li {
           position: relative;
-          width: 30px;
-          height: 30px;
+          width: 50px;
+          height: 50px;
           margin-bottom: 5px;
           background-color: #032fab; }
+          @media (max-width: 1200px) {
+            .section-professionals .manager-slider .manager-card .manager-social-contact li {
+              width: 40px;
+              height: 40px; } }
+  @media (max-width: 1200px) and (max-width: 476px) {
+    .section-professionals .manager-slider .manager-card .manager-social-contact li {
+      width: 50px;
+      height: 50px; } }
           .section-professionals .manager-slider .manager-card .manager-social-contact li a {
             position: absolute;
             top: 50%;
@@ -1011,9 +1042,16 @@ body {
             -webkit-transform: translate(-50%, -50%);
                 -ms-transform: translate(-50%, -50%);
                     transform: translate(-50%, -50%);
-            cursor: pointer; }
+            cursor: pointer;
+            line-height: 18px; }
+            @media (max-width: 1200px) {
+              .section-professionals .manager-slider .manager-card .manager-social-contact li a {
+                line-height: 16px; } }
+  @media (max-width: 1200px) and (max-width: 476px) {
+    .section-professionals .manager-slider .manager-card .manager-social-contact li a {
+      line-height: 18px; } }
             .section-professionals .manager-slider .manager-card .manager-social-contact li a i {
-              font-size: 15px;
+              font-size: 22px;
               color: #fff;
               -webkit-transition: all 0.5s ease;
               -o-transition: all 0.5s ease;

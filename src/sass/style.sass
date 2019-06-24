@@ -80,7 +80,7 @@ $bg-card-shadow-box: rgba(31, 31, 31, 0.44)
 $header-color-menu: #032fab
 $header-color: rgba(3, 47, 171, 0.5)
 //text
-$text-head: #000000
+$text-color-black: #000000
 $text-color-grey: #838181
 $text-color-white: #fff
 $header-text-color: #032fab
@@ -141,7 +141,7 @@ h2
       @media only screen and (max-width: 576px)
         font-size: 18px
 h3
-  color: $text-head
+  color: $text-color-black
   font-family: 'Montserrat-semibold', sans-serif
   font-size: 30px
   text-transform: capitalize
@@ -693,6 +693,8 @@ body
       position: relative
       z-index: 2
       transition: all 0.2s ease-in
+      @media only screen and (max-width: 1200px)
+        min-height: 240px
       &:hover
         opacity: 1
         box-shadow: 0 70px 70px rgba(0, 0, 0, 0.2)
@@ -703,6 +705,10 @@ body
         padding: 50px 0
         img
           max-width: 20%
+      .block-content
+        .text-inform
+          font-size: 18px
+          color: $text-color-black
   .head-text-box
     h2
       margin-bottom: 50px
@@ -770,12 +776,17 @@ body
       margin: 50px 5px 80px 5px
       @media only screen and (max-width: 1200px)
         padding: 20px 10px
+        @media only screen and (max-width: 992px)
+          opacity: 1
       &:hover
         opacity: 1
         box-shadow: 0 70px 70px rgba(0, 0, 0, 0.1)
         transform: translate(0, -10px)
         z-index: 100
         cursor: pointer
+        @media only screen and (max-width: 992px)
+          box-shadow: none
+          transform: none
       .quote-wrapper
         position: absolute
         display: flex
@@ -801,6 +812,7 @@ body
       p
         padding: 60px 0 50px 0
         text-align: center
+        font-size: 16px
       img
         position: absolute
         bottom: -25%
@@ -860,25 +872,40 @@ body
       .manager-social-contact
         position: absolute
         top: 0
-        right: -30px
+        right: -50px
         display: flex
         flex-direction: column
         transition: all 0.5s ease
         z-index: 5
+        @media (max-width: 1200px)
+          right: -40px
+          @media (max-width: 476px)
+            right: -50px
         li
           position: relative
-          width: 30px
-          height: 30px
+          width: 50px
+          height: 50px
           margin-bottom: 5px
           background-color: $bg-card-manager
+          @media (max-width: 1200px)
+            width: 40px
+            height: 40px
+            @media (max-width: 476px)
+              width: 50px
+              height: 50px
           a
             position: absolute
             top: 50%
             left: 50%
             transform: translate(-50%, -50%)
             cursor: pointer
+            line-height: 18px
+            @media (max-width: 1200px)
+              line-height: 16px
+              @media (max-width: 476px)
+                line-height: 18px
             i
-              font-size: 15px
+              font-size: 22px
               color: $text-color-white
               transition: all 0.5s ease
       .img-box
