@@ -1917,9 +1917,13 @@ body {
           width: 22px;
           height: 22px;
           margin-right: 2px; }
-        .section_object .row .object_content .object_hidden_info_top .info_top .play_button {
+        .section_object .row .object_content .object_hidden_info_top .info_top .custom-btn-obj .play_button {
           width: 20px;
           height: 20px; }
+          @media only screen and (max-width: 400px) {
+            .section_object .row .object_content .object_hidden_info_top .info_top .custom-btn-obj .play_button {
+              width: 16px;
+              height: 16px; } }
     .section_object .row .object_content .object_hidden_info_bottom {
       -webkit-transform: translate3d(0, 160px, 0);
               transform: translate3d(0, 160px, 0);
@@ -2317,18 +2321,17 @@ body {
           background-size: contain;
   z-index: -1;
   height: 730px; }
-  @media only screen and (max-width: 1400px) {
+  @media only screen and (max-width: 1300px) {
     .back_our_philosophy {
       height: unset; } }
-  @media only screen and (max-width: 1400px) and (max-width: 1190px) {
+  @media only screen and (max-width: 1300px) and (max-width: 992px) {
     .back_our_philosophy {
-      height: unset;
       width: 100%;
       margin: 0 auto;
       background-position: center;
       -webkit-background-size: cover;
               background-size: cover; } }
-  @media only screen and (max-width: 1400px) and (max-width: 1190px) and (max-width: 740px) {
+  @media only screen and (max-width: 1300px) and (max-width: 992px) and (max-width: 576px) {
     .back_our_philosophy {
       background: black; } }
   .back_our_philosophy .wrap_info_philosophy {
@@ -2338,7 +2341,7 @@ body {
     z-index: 1;
     margin-left: auto;
     height: 730px; }
-    @media only screen and (max-width: 1190px) {
+    @media only screen and (max-width: 992px) {
       .back_our_philosophy .wrap_info_philosophy {
         width: 100%;
         margin: 0 auto;
@@ -2349,33 +2352,34 @@ body {
       z-index: 1;
       max-width: 1024px;
       width: 100%;
-      height: 600px;
       top: 50%;
       left: 22%;
       -webkit-transform: translate(-50%, -50%);
           -ms-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
-      background: #fffc; }
-      @media only screen and (max-width: 2040px) {
+              transform: translate(-50%, -50%); }
+      @media only screen and (max-width: 1300px) {
         .back_our_philosophy .wrap_info_philosophy .info_philosophy {
-          height: 640px; } }
-  @media only screen and (max-width: 2040px) and (max-width: 1850px) {
-    .back_our_philosophy .wrap_info_philosophy .info_philosophy {
-      height: 670px; } }
-  @media only screen and (max-width: 2040px) and (max-width: 1850px) and (max-width: 1400px) {
-    .back_our_philosophy .wrap_info_philosophy .info_philosophy {
-      position: static;
-      -webkit-transform: none;
-          -ms-transform: none;
-              transform: none;
-      height: unset;
-      padding-right: 15px; } }
-  @media only screen and (max-width: 2040px) and (max-width: 1850px) and (max-width: 1400px) and (max-width: 1190px) {
+          position: static;
+          -webkit-transform: none;
+              -ms-transform: none;
+                  transform: none;
+          height: unset;
+          padding-right: 15px; } }
+  @media only screen and (max-width: 1300px) and (max-width: 992px) {
     .back_our_philosophy .wrap_info_philosophy .info_philosophy {
       background: transparent;
       width: 100%;
-      padding-right: unset; } }
-  @media only screen and (max-width: 2040px) and (max-width: 1850px) and (max-width: 1400px) and (max-width: 1190px) and (max-width: 740px) {
+      margin: 0 auto;
+      padding-right: unset;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
+  @media only screen and (max-width: 1300px) and (max-width: 992px) and (max-width: 576px) {
     .back_our_philosophy .wrap_info_philosophy .info_philosophy {
       background: #ffffff80; } }
       .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy {
@@ -2392,38 +2396,45 @@ body {
         -webkit-flex-direction: column;
             -ms-flex-direction: column;
                 flex-direction: column;
-        padding: 30px 0 0 45px;
-        text-align: justify; }
-        @media only screen and (max-width: 1400px) {
+        padding: 30px 0 18px 45px;
+        text-align: justify;
+        background: #fffc; }
+        @media only screen and (max-width: 992px) {
           .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy {
-            padding: 15px 0 40px 30px; } }
-  @media only screen and (max-width: 1400px) and (max-width: 1190px) {
+            margin: 0 auto;
+            padding: 40px 30px;
+            background: transparent; } }
+  @media only screen and (max-width: 992px) and (max-width: 576px) {
     .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy {
-      margin: 0 auto;
-      padding: 40px 0 40px 30px; } }
-  @media only screen and (max-width: 1400px) and (max-width: 1190px) and (max-width: 740px) {
-    .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy {
-      padding: 40px 20px;
-      text-align: justify; } }
+      padding: 40px 20px; } }
         .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy h4 {
           color: #006aff;
           text-transform: uppercase;
           font-size: 30px;
-          font-weight: 400; }
-          @media only screen and (max-width: 740px) {
+          font-weight: 400;
+          text-align: left; }
+          @media only screen and (max-width: 1300px) {
             .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy h4 {
-              margin: 0 auto;
-              padding-bottom: 10px; } }
+              font-size: 28px; } }
+  @media only screen and (max-width: 1300px) and (max-width: 576px) {
+    .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy h4 {
+      margin: 0 auto;
+      padding-bottom: 10px;
+      text-align: center; } }
         .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy .under_title_philosophy {
           color: #606060;
           text-transform: uppercase;
           font-size: 20px;
           opacity: 0.8;
           padding-bottom: 10px; }
-          @media only screen and (max-width: 740px) {
+          @media only screen and (max-width: 1300px) {
             .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy .under_title_philosophy {
-              margin: 0 auto;
-              font-size: 16px; } }
+              font-size: 19px; } }
+  @media only screen and (max-width: 1300px) and (max-width: 576px) {
+    .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy .under_title_philosophy {
+      margin: 0 auto;
+      font-size: 16px;
+      text-align: center; } }
         .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy .info_philosophy_text {
           color: #606060;
           font-size: 17px;
@@ -2431,13 +2442,13 @@ body {
           max-width: 880px;
           width: 100%;
           padding-bottom: 10px; }
-          @media only screen and (max-width: 1460px) {
+          @media only screen and (max-width: 1300px) {
             .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy .info_philosophy_text {
               font-size: 16px; } }
         .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy ul {
           padding-left: 15px; }
           .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy ul li {
-            max-width: 868px;
+            max-width: 870px;
             width: 100%;
             padding-bottom: 10px;
             color: #606060;
@@ -2449,7 +2460,7 @@ body {
               font-weight: 900;
               color: #006aff;
               padding-right: 15px; }
-            @media only screen and (max-width: 1560px) {
+            @media only screen and (max-width: 1300px) {
               .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy ul li {
                 font-size: 16px; } }
 
