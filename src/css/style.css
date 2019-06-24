@@ -340,10 +340,14 @@ body {
     -webkit-transition: fill .4s ease;
     -o-transition: fill .4s ease;
     transition: fill .4s ease; }
-  @media only screen and (max-width: 1140px) {
+  @media only screen and (max-width: 1400px) {
     .btn-little {
       max-width: 40px;
       padding: 5px 0; } }
+  @media only screen and (max-width: 1400px) and (max-width: 400px) {
+    .btn-little {
+      max-width: 33px;
+      padding: 1px 0; } }
 
 .btn-small {
   max-width: 250px; }
@@ -1623,8 +1627,8 @@ body {
         -o-transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
         transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
         will-change: clip-path;
-        -webkit-clip-path: inset(15px 15px 100px 15px);
-                clip-path: inset(15px 15px 100px 15px); }
+        -webkit-clip-path: inset(15px 15px 95px 15px);
+                clip-path: inset(15px 15px 95px 15px); }
         .section_object .row .object_content .not_hidden_info .object_img_wrap:after {
           -webkit-transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
           -o-transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -1664,9 +1668,15 @@ body {
           font-size: 14px;
           color: rgba(15, 15, 15, 0.7);
           padding-bottom: 10px; }
+          @media only screen and (max-width: 400px) {
+            .section_object .row .object_content .not_hidden_info .object_name_list .name_list_line_1 {
+              padding-bottom: 5px; } }
           .section_object .row .object_content .not_hidden_info .object_name_list .name_list_line_1 span {
             text-decoration: none;
             font-size: 14px; }
+            @media only screen and (max-width: 1400px) {
+              .section_object .row .object_content .not_hidden_info .object_name_list .name_list_line_1 span {
+                font-size: 12px; } }
           .section_object .row .object_content .not_hidden_info .object_name_list .name_list_line_1 .hot_offer {
             -webkit-border-radius: 50px 50px 50px 0;
                     border-radius: 50px 50px 50px 0;
@@ -1674,9 +1684,13 @@ body {
             background: red;
             padding: 0 15px 1px;
             color: #ffffff; }
-            @media only screen and (max-width: 1140px) {
+            @media only screen and (max-width: 1400px) {
               .section_object .row .object_content .not_hidden_info .object_name_list .name_list_line_1 .hot_offer {
                 padding: 0 10px 1px; } }
+  @media only screen and (max-width: 1400px) and (max-width: 400px) {
+    .section_object .row .object_content .not_hidden_info .object_name_list .name_list_line_1 .hot_offer {
+      padding: 0 5px 0;
+      line-height: 16px; } }
         .section_object .row .object_content .not_hidden_info .object_name_list .title_object {
           display: -webkit-box;
           display: -webkit-flex;
@@ -1700,16 +1714,22 @@ body {
             overflow: hidden;
             text-align: left;
             font-size: 20px; }
-            @media only screen and (max-width: 1140px) {
+            @media only screen and (max-width: 1400px) {
               .section_object .row .object_content .not_hidden_info .object_name_list .title_object h4 {
                 font-size: 17px; } }
+  @media only screen and (max-width: 1400px) and (max-width: 1400px) {
+    .section_object .row .object_content .not_hidden_info .object_name_list .title_object h4 {
+      font-size: 16px; } }
           .section_object .row .object_content .not_hidden_info .object_name_list .title_object span {
             font-weight: 400;
             color: black;
             font-size: 20px; }
-            @media only screen and (max-width: 1140px) {
+            @media only screen and (max-width: 1400px) {
               .section_object .row .object_content .not_hidden_info .object_name_list .title_object span {
                 font-size: 17px; } }
+  @media only screen and (max-width: 1400px) and (max-width: 1400px) {
+    .section_object .row .object_content .not_hidden_info .object_name_list .title_object span {
+      font-size: 14px; } }
     .section_object .row .object_content .object_hidden_info {
       display: -webkit-box;
       display: -webkit-flex;
@@ -1735,9 +1755,12 @@ body {
       position: absolute;
       left: 0;
       right: 0; }
-      @media only screen and (max-width: 1140px) {
+      @media only screen and (max-width: 1400px) {
         .section_object .row .object_content .object_hidden_info {
           height: 70px; } }
+  @media only screen and (max-width: 1400px) and (max-width: 400px) {
+    .section_object .row .object_content .object_hidden_info {
+      height: 60px; } }
     .section_object .row .object_content .object_hidden_info_top {
       -webkit-transform: translate3d(0, -160px, 0);
               transform: translate3d(0, -160px, 0);
@@ -1759,10 +1782,19 @@ body {
         margin-left: auto;
         max-width: 120px;
         width: 100%; }
-        @media only screen and (max-width: 1140px) {
+        @media only screen and (max-width: 1400px) {
           .section_object .row .object_content .object_hidden_info_top .info_top {
             max-width: 100px; } }
-        .section_object .row .object_content .object_hidden_info_top .info_top .photocamera {
+  @media only screen and (max-width: 1400px) and (max-width: 400px) {
+    .section_object .row .object_content .object_hidden_info_top .info_top {
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; } }
+        @media only screen and (max-width: 400px) {
+          .section_object .row .object_content .object_hidden_info_top .info_top .camera_btn {
+            display: none; } }
+        .section_object .row .object_content .object_hidden_info_top .info_top .camera_btn .photocamera {
           width: 22px;
           height: 22px;
           margin-right: 2px; }
@@ -1774,6 +1806,9 @@ body {
               transform: translate3d(0, 160px, 0);
       bottom: 0;
       padding-bottom: 33px; }
+      @media only screen and (max-width: 400px) {
+        .section_object .row .object_content .object_hidden_info_bottom {
+          padding-bottom: 12px; } }
       .section_object .row .object_content .object_hidden_info_bottom .info_bottom {
         display: -webkit-box;
         display: -webkit-flex;
@@ -1792,9 +1827,12 @@ body {
         width: 100%;
         margin-top: 5px;
         margin-right: 25px; }
-        @media only screen and (max-width: 1140px) {
+        @media only screen and (max-width: 1400px) {
           .section_object .row .object_content .object_hidden_info_bottom .info_bottom {
             max-width: 210px; } }
+  @media only screen and (max-width: 1400px) and (max-width: 1400px) {
+    .section_object .row .object_content .object_hidden_info_bottom .info_bottom {
+      max-width: 170px; } }
         .section_object .row .object_content .object_hidden_info_bottom .info_bottom .icons_object {
           display: -webkit-box;
           display: -webkit-flex;
@@ -1811,26 +1849,40 @@ body {
                   align-items: center; }
           .section_object .row .object_content .object_hidden_info_bottom .info_bottom .icons_object img {
             width: 35px; }
+            @media only screen and (max-width: 1400px) {
+              .section_object .row .object_content .object_hidden_info_bottom .info_bottom .icons_object img {
+                width: 30px; } }
           .section_object .row .object_content .object_hidden_info_bottom .info_bottom .icons_object span {
             margin-top: 5px;
             font-size: 12px;
             color: black; }
+            @media only screen and (max-width: 1400px) {
+              .section_object .row .object_content .object_hidden_info_bottom .info_bottom .icons_object span {
+                font-size: 10px; } }
       .section_object .row .object_content .object_hidden_info_bottom .btn-small {
         max-width: 175px; }
-        @media only screen and (max-width: 1140px) {
+        @media only screen and (max-width: 1400px) {
           .section_object .row .object_content .object_hidden_info_bottom .btn-small {
             max-width: 140px; } }
+  @media only screen and (max-width: 1400px) and (max-width: 400px) {
+    .section_object .row .object_content .object_hidden_info_bottom .btn-small {
+      max-width: 125px; } }
       .section_object .row .object_content .object_hidden_info_bottom .custom-btn {
         max-height: 40px;
         padding: 0; }
+        @media only screen and (max-width: 400px) {
+          .section_object .row .object_content .object_hidden_info_bottom .custom-btn {
+            max-height: 30px; } }
         .section_object .row .object_content .object_hidden_info_bottom .custom-btn:hover:before {
           width: 112% !important; }
         .section_object .row .object_content .object_hidden_info_bottom .custom-btn span {
-          font-size: 14px;
-          line-height: unset; }
-          @media only screen and (max-width: 1140px) {
+          font-size: 14px; }
+          @media only screen and (max-width: 1400px) {
             .section_object .row .object_content .object_hidden_info_bottom .custom-btn span {
               font-size: 12px; } }
+  @media only screen and (max-width: 1400px) and (max-width: 400px) {
+    .section_object .row .object_content .object_hidden_info_bottom .custom-btn span {
+      font-size: 11px; } }
 
 .section_object .object:hover .not_hidden_info {
   text-decoration: none; }
@@ -1842,9 +1894,12 @@ body {
   .section_object .object:hover .not_hidden_info .object_name_list {
     -webkit-transform: translate3d(0, -90px, 0);
             transform: translate3d(0, -90px, 0); }
-    @media only screen and (max-width: 1140px) {
+    @media only screen and (max-width: 1400px) {
       .section_object .object:hover .not_hidden_info .object_name_list {
         margin-bottom: 5px; } }
+  @media only screen and (max-width: 1400px) and (max-width: 400px) {
+    .section_object .object:hover .not_hidden_info .object_name_list {
+      margin-bottom: -20px; } }
 
 .section_object .object:hover .object_hidden_info {
   opacity: 1;
