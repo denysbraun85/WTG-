@@ -1146,6 +1146,12 @@ body {
                 transform-style: preserve-3d;
         -webkit-perspective: 1000px;
                 perspective: 1000px; } }
+    @media (max-width: 576px) {
+      .section-reason .reason-box,
+      .section-reason .reason-box-inside {
+        max-width: 370px;
+        margin-left: auto;
+        margin-right: auto; } }
     .section-reason .reason-box .reason-box-front-side,
     .section-reason .reason-box .reason-box-back-side,
     .section-reason .reason-box-inside .reason-box-front-side,
@@ -1211,6 +1217,21 @@ body {
         -webkit-transition: all .4s ease-out;
         -o-transition: all .4s ease-out;
         transition: all .4s ease-out; }
+        @media (max-width: 768px) {
+          .section-reason .reason-box .reason-box-front-side .reason-box-content,
+          .section-reason .reason-box .reason-box-back-side .reason-box-content,
+          .section-reason .reason-box-inside .reason-box-front-side .reason-box-content,
+          .section-reason .reason-box-inside .reason-box-back-side .reason-box-content {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            text-align: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+                -ms-flex-align: center;
+                    align-items: center; } }
         .section-reason .reason-box .reason-box-front-side .reason-box-content h6,
         .section-reason .reason-box .reason-box-back-side .reason-box-content h6,
         .section-reason .reason-box-inside .reason-box-front-side .reason-box-content h6,
@@ -1237,6 +1258,12 @@ body {
             .section-reason .reason-box-inside .reason-box-front-side .reason-box-content p,
             .section-reason .reason-box-inside .reason-box-back-side .reason-box-content p {
               color: #fff; } }
+  @media (max-width: 992px) and (max-width: 768px) {
+    .section-reason .reason-box .reason-box-front-side .reason-box-content p,
+    .section-reason .reason-box .reason-box-back-side .reason-box-content p,
+    .section-reason .reason-box-inside .reason-box-front-side .reason-box-content p,
+    .section-reason .reason-box-inside .reason-box-back-side .reason-box-content p {
+      font-size: 14px; } }
         .section-reason .reason-box .reason-box-front-side .reason-box-content a,
         .section-reason .reason-box .reason-box-back-side .reason-box-content a,
         .section-reason .reason-box-inside .reason-box-front-side .reason-box-content a,
@@ -1254,6 +1281,12 @@ body {
             .section-reason .reason-box-inside .reason-box-back-side .reason-box-content a {
               font-size: 20px;
               color: #6ca1f5; } }
+  @media (max-width: 992px) and (max-width: 768px) {
+    .section-reason .reason-box .reason-box-front-side .reason-box-content a,
+    .section-reason .reason-box .reason-box-back-side .reason-box-content a,
+    .section-reason .reason-box-inside .reason-box-front-side .reason-box-content a,
+    .section-reason .reason-box-inside .reason-box-back-side .reason-box-content a {
+      font-size: 15px; } }
           .section-reason .reason-box .reason-box-front-side .reason-box-content a:before,
           .section-reason .reason-box .reason-box-back-side .reason-box-content a:before,
           .section-reason .reason-box-inside .reason-box-front-side .reason-box-content a:before,
