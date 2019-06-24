@@ -1020,7 +1020,38 @@ body
         pointer-events: none
         min-height: 270px
         h6
-          margin-bottom: 0
+          font-size: 30px
+          margin-bottom: 20px
+        span
+          font-size: 25px
+          border: 1px solid #FFFFFF
+          border-radius: 2px
+          width: auto
+          padding: 2px 10px
+        p
+          margin-bottom: 20px
+          color: lighten($text-color-black,80%)
+        a
+          position: relative
+          text-decoration: none
+          color: lighten($header-text-color, 20%)
+          transition: all 0.5s ease
+          width: auto
+          &:before
+            position: absolute
+            content: ''
+            bottom: 0
+            left: 0
+            height: 2px
+            background: lighten($header-text-color, 30%)
+            width: 0%
+            transition: all 0.5s ease
+          &:hover
+            color: lighten($header-text-color, 30%)
+            &:before
+              width: 100%
+
+
         //@media (min-width: 1400px)
         //  min-height: 360px
         //  @media (min-width: 992px)
@@ -1341,7 +1372,7 @@ body
     i:before
       font-size: 36px
       color: #006aff
-      margin: 0px
+      margin: 0
 
 
 
@@ -1494,7 +1525,6 @@ body
           display: flex
           justify-content: space-between
           align-items: center
-          margin-right: auto
           max-width: 300px
           width: 100%
           margin-top: 5px
