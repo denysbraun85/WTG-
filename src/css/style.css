@@ -340,6 +340,10 @@ body {
     -webkit-transition: fill .4s ease;
     -o-transition: fill .4s ease;
     transition: fill .4s ease; }
+  @media only screen and (max-width: 1140px) {
+    .btn-little {
+      max-width: 40px;
+      padding: 5px 0; } }
 
 .btn-small {
   max-width: 250px; }
@@ -1708,6 +1712,9 @@ body {
             background: red;
             padding: 0 15px 1px;
             color: #ffffff; }
+            @media only screen and (max-width: 1140px) {
+              .section_object .row .object_content .not_hidden_info .object_name_list .name_list_line_1 .hot_offer {
+                padding: 0 10px 1px; } }
         .section_object .row .object_content .not_hidden_info .object_name_list .title_object {
           display: -webkit-box;
           display: -webkit-flex;
@@ -1731,10 +1738,16 @@ body {
             overflow: hidden;
             text-align: left;
             font-size: 20px; }
+            @media only screen and (max-width: 1140px) {
+              .section_object .row .object_content .not_hidden_info .object_name_list .title_object h4 {
+                font-size: 17px; } }
           .section_object .row .object_content .not_hidden_info .object_name_list .title_object span {
             font-weight: 400;
             color: black;
             font-size: 20px; }
+            @media only screen and (max-width: 1140px) {
+              .section_object .row .object_content .not_hidden_info .object_name_list .title_object span {
+                font-size: 17px; } }
     .section_object .row .object_content .object_hidden_info {
       display: -webkit-box;
       display: -webkit-flex;
@@ -1760,6 +1773,9 @@ body {
       position: absolute;
       left: 0;
       right: 0; }
+      @media only screen and (max-width: 1140px) {
+        .section_object .row .object_content .object_hidden_info {
+          height: 70px; } }
     .section_object .row .object_content .object_hidden_info_top {
       -webkit-transform: translate3d(0, -160px, 0);
               transform: translate3d(0, -160px, 0);
@@ -1781,6 +1797,9 @@ body {
         margin-left: auto;
         max-width: 120px;
         width: 100%; }
+        @media only screen and (max-width: 1140px) {
+          .section_object .row .object_content .object_hidden_info_top .info_top {
+            max-width: 100px; } }
         .section_object .row .object_content .object_hidden_info_top .info_top .photocamera {
           width: 22px;
           height: 22px;
@@ -1811,6 +1830,9 @@ body {
         width: 100%;
         margin-top: 5px;
         margin-right: 25px; }
+        @media only screen and (max-width: 1140px) {
+          .section_object .row .object_content .object_hidden_info_bottom .info_bottom {
+            max-width: 210px; } }
         .section_object .row .object_content .object_hidden_info_bottom .info_bottom .icons_object {
           display: -webkit-box;
           display: -webkit-flex;
@@ -1831,26 +1853,11 @@ body {
             margin-top: 5px;
             font-size: 12px;
             color: black; }
-            .section_object .row .object_content .object_hidden_info_bottom .info_bottom .icons_object span .media_hidden_text {
-              margin: 0;
-              padding: 0; }
-              @media only screen and (max-width: 1200px) {
-                .section_object .row .object_content .object_hidden_info_bottom .info_bottom .icons_object span .media_hidden_text {
-                  display: none; } }
-  @media only screen and (max-width: 1200px) and (max-width: 992px) {
-    .section_object .row .object_content .object_hidden_info_bottom .info_bottom .icons_object span .media_hidden_text {
-      display: inline-block; } }
-  @media only screen and (max-width: 1200px) and (max-width: 992px) and (max-width: 768px) {
-    .section_object .row .object_content .object_hidden_info_bottom .info_bottom .icons_object span .media_hidden_text {
-      display: none; } }
-  @media only screen and (max-width: 1200px) and (max-width: 992px) and (max-width: 768px) and (max-width: 576px) {
-    .section_object .row .object_content .object_hidden_info_bottom .info_bottom .icons_object span .media_hidden_text {
-      display: inline-block; } }
-  @media only screen and (max-width: 1200px) and (max-width: 992px) and (max-width: 768px) and (max-width: 576px) and (max-width: 400px) {
-    .section_object .row .object_content .object_hidden_info_bottom .info_bottom .icons_object span .media_hidden_text {
-      display: none; } }
       .section_object .row .object_content .object_hidden_info_bottom .btn-small {
         max-width: 175px; }
+        @media only screen and (max-width: 1140px) {
+          .section_object .row .object_content .object_hidden_info_bottom .btn-small {
+            max-width: 140px; } }
       .section_object .row .object_content .object_hidden_info_bottom .custom-btn {
         max-height: 40px;
         padding: 0; }
@@ -1859,9 +1866,9 @@ body {
         .section_object .row .object_content .object_hidden_info_bottom .custom-btn span {
           font-size: 14px;
           line-height: unset; }
-
-.color_black {
-  color: black; }
+          @media only screen and (max-width: 1140px) {
+            .section_object .row .object_content .object_hidden_info_bottom .custom-btn span {
+              font-size: 12px; } }
 
 .section_object .object:hover .not_hidden_info {
   text-decoration: none; }
@@ -1873,6 +1880,9 @@ body {
   .section_object .object:hover .not_hidden_info .object_name_list {
     -webkit-transform: translate3d(0, -90px, 0);
             transform: translate3d(0, -90px, 0); }
+    @media only screen and (max-width: 1140px) {
+      .section_object .object:hover .not_hidden_info .object_name_list {
+        margin-bottom: 5px; } }
 
 .section_object .object:hover .object_hidden_info {
   opacity: 1;
@@ -1882,6 +1892,9 @@ body {
 .section_object .object:hover .object_hidden_info_top {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0); }
+
+.color_black {
+  color: black; }
 
 /* ==================================================================
                            END STYLE OBJECT CONTAINER

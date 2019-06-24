@@ -317,8 +317,13 @@ body
     .svg_color path
       fill: $color-btn !important
       transition: fill .4s ease
+  @media only screen and (max-width: 1140px)
+    max-width: 40px
+    padding: 5px 0
+
 .btn-small
   max-width: 250px
+
 .btn-big
   max-width: 550px
   @media only screen and (max-width: 576px)
@@ -1423,6 +1428,8 @@ body
               background: red
               padding: 0 15px 1px
               color: #ffffff
+              @media only screen and (max-width: 1140px)
+                padding: 0 10px 1px
           .title_object
             display: flex
             justify-content: space-between
@@ -1436,10 +1443,14 @@ body
               overflow: hidden
               text-align: left
               font-size: 20px
+              @media only screen and (max-width: 1140px)
+                font-size: 17px
             span
               font-weight: 400
               color: black
               font-size: 20px
+              @media only screen and (max-width: 1140px)
+                font-size: 17px
       .object_hidden_info
         display: flex
         align-items: center
@@ -1453,6 +1464,8 @@ body
         position: absolute
         left: 0
         right: 0
+        @media only screen and (max-width: 1140px)
+          height: 70px
       .object_hidden_info_top
         transform: translate3d(0,-160px,0)
         top: 0
@@ -1464,6 +1477,8 @@ body
           margin-left: auto
           max-width: 120px
           width: 100%
+          @media only screen and (max-width: 1140px)
+            max-width: 100px
           .photocamera
             width: 22px
             height: 22px
@@ -1484,6 +1499,8 @@ body
           width: 100%
           margin-top: 5px
           margin-right: 25px
+          @media only screen and (max-width: 1140px)
+            max-width: 210px
           .icons_object
             display: flex
             flex-direction: column
@@ -1494,21 +1511,10 @@ body
               margin-top: 5px
               font-size: 12px
               color: black
-              .media_hidden_text
-                margin: 0
-                padding: 0
-                @media only screen and (max-width: 1200px)
-                  display: none
-                  @media only screen and (max-width: 992px)
-                    display: inline-block
-                    @media only screen and (max-width: 768px)
-                      display: none
-                      @media only screen and (max-width: 576px)
-                        display: inline-block
-                        @media only screen and (max-width: 400px)
-                          display: none
         .btn-small
           max-width: 175px
+          @media only screen and (max-width: 1140px)
+            max-width: 140px
         .custom-btn
           max-height: 40px
           padding: 0
@@ -1518,15 +1524,9 @@ body
           span
             font-size: 14px
             line-height: unset
+            @media only screen and (max-width: 1140px)
+              font-size: 12px
             
-
-
-
-.color_black
-  color: black
-
-
-
 .section_object
   .object
     &:hover
@@ -1538,11 +1538,16 @@ body
             opacity: .8
         .object_name_list
           transform: translate3d(0,-90px,0)
+          @media only screen and (max-width: 1140px)
+            margin-bottom: 5px
       .object_hidden_info
         opacity: 1
         transform: translate3d(0,0,0)
       .object_hidden_info_top
         transform: translate3d(0,0,0)
+
+.color_black
+  color: black
 
 
       
