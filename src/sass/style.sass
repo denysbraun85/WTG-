@@ -1430,6 +1430,20 @@ body
         left: 0
         right: 0
         top: 0
+        .play_object
+          position: absolute
+          transform: translate(-50%, -50%)
+          left: 46%
+          top: 40%
+          max-width: 50px
+          width: 100%
+          opacity: 0
+          transition: all .4s cubic-bezier(.785,.135,.15,.86)
+          transform: translateY(-500%)
+          @media only screen and (max-width: 768px)
+            max-width: 40px
+            @media only screen and (max-width: 440px)
+              max-width: 30px
         .object_img_wrap
           &:after
             transition: all .4s cubic-bezier(.785,.135,.15,.86)
@@ -1450,7 +1464,9 @@ body
           transform: translate3d(0, 0, 0)
           transition: all .4s cubic-bezier(.785,.135,.15,.86)
           will-change: clip-path
-          clip-path: inset(15px 15px 95px 15px) 
+          clip-path: inset(15px 15px 100px 15px) 
+          @media only screen and (max-width: 400px)
+            clip-path: inset(15px 15px 70px 15px)
           .object_img
             position: absolute
             width: 100%
@@ -1458,33 +1474,35 @@ body
         .object_name_list
           padding-left: 25px
           padding-right: 25px
-          margin-bottom: 25px
+          margin-bottom: 20px
           transition: all .4s cubic-bezier(.785,.135,.15,.86)
+          @media only screen and (max-width: 400px)
+            margin-bottom: 12px
           .name_list_line_1
             display: flex
             justify-content: space-between
             align-items: center
             font-size: 14px
             color: rgba(15,15,15,.7)
-            padding-bottom: 10px
-            @media only screen and (max-width: 400px)
-              padding-bottom: 5px
+            padding-bottom: 5px
             span
               text-decoration: none
               font-size: 14px
               @media only screen and (max-width: 1400px)
                 font-size: 12px
+                @media only screen and (max-width: 360px)
+                  font-size: 11
             .hot_offer
               border-radius: 50px 50px 50px 0
               border: 1px solid red
               background: red
               padding: 0 15px 1px
               color: #ffffff
+              line-height: 16px
               @media only screen and (max-width: 1400px)
                 padding: 0 10px 1px
                 @media only screen and (max-width: 400px)
                   padding: 0 5px 0
-                  line-height: 16px
           .title_object
             display: flex
             justify-content: space-between
@@ -1500,16 +1518,20 @@ body
               font-size: 20px
               @media only screen and (max-width: 1400px)
                 font-size: 17px
-                @media only screen and (max-width: 1400px)
+                @media only screen and (max-width: 400px)
                   font-size: 16px 
+                  @media only screen and (max-width: 360px)
+                    font-size: 14px
             span
               font-weight: 400
               color: black
               font-size: 20px
               @media only screen and (max-width: 1400px)
                 font-size: 17px
-                @media only screen and (max-width: 1400px)
+                @media only screen and (max-width: 400px)
                   font-size: 14px
+                  @media only screen and (max-width: 360px)
+                    font-size: 13px
       .object_hidden_info
         display: flex
         align-items: center
@@ -1527,6 +1549,8 @@ body
           height: 70px
           @media only screen and (max-width: 400px)
             height: 60px
+            @media only screen and (max-width: 360px)
+              height: 50px
       .object_hidden_info_top
         transform: translate3d(0,-160px,0)
         top: 0
@@ -1562,6 +1586,8 @@ body
         padding-bottom: 33px
         @media only screen and (max-width: 400px)
           padding-bottom: 12px
+          @media only screen and (max-width: 360px)
+            padding-bottom: 10px
         .info_bottom
           display: flex
           justify-content: space-between
@@ -1572,7 +1598,7 @@ body
           margin-right: 25px
           @media only screen and (max-width: 1400px)
             max-width: 210px
-            @media only screen and (max-width: 1400px)
+            @media only screen and (max-width: 400px)
               max-width: 170px
           .icons_object
             display: flex
@@ -1582,23 +1608,31 @@ body
               width: 35px
               @media only screen and (max-width: 1400px)
                 width: 30px
+                @media only screen and (max-width: 360px)
+                  width: 20px
             span
               margin-top: 5px
               font-size: 12px
               color: black
               @media only screen and (max-width: 1400px)
                 font-size: 10px
+                @media only screen and (max-width: 360px)
+                  font-size: 9px
         .btn-small
           max-width: 175px
           @media only screen and (max-width: 1400px)
             max-width: 140px
             @media only screen and (max-width: 400px)
               max-width: 125px
+              @media only screen and (max-width: 360px)
+                max-width: 105px
         .custom-btn
           max-height: 40px
           padding: 0
           @media only screen and (max-width: 400px)
             max-height: 30px
+            @media only screen and (max-width: 360px)
+              max-height: 25px
           &:hover
             &:before
               width: 112% !important
@@ -1608,12 +1642,22 @@ body
               font-size: 12px
               @media only screen and (max-width: 400px)
                 font-size: 11px
+                @media only screen and (max-width: 360px)
+                  font-size: 10px
+                  line-height: unset
          
 .section_object
   .object
     &:hover
       .not_hidden_info
         text-decoration: none
+        .play_object
+          opacity: 1
+          transform: translateY(0)
+          @media only screen and (max-width: 440px)
+            transform: translateY(-50%)
+          &:hover
+            transform: scale(1.2)
         .object_img_wrap
           clip-path: inset(0 0 0 0)
           &:after
@@ -1624,6 +1668,8 @@ body
             margin-bottom: 5px
             @media only screen and (max-width: 400px)
               margin-bottom: -20px
+              @media only screen and (max-width: 360px)
+                margin-bottom: -35px
       .object_hidden_info
         opacity: 1
         transform: translate3d(0,0,0)
@@ -1869,7 +1915,7 @@ body
   background: url("../img/background/ourphilosophy.jpg") no-repeat left center
   background-size: contain
   z-index: -1
-  height: 730px
+  height: 740px
   @media only screen and (max-width: 1300px)
     height: unset
     @media only screen and (max-width: 992px)
@@ -1885,7 +1931,7 @@ body
     background: $section-color-white
     z-index: 1
     margin-left: auto
-    height: 730px
+    height: 740px
     @media only screen and (max-width: 992px)
       width: 100%
       margin: 0 auto
@@ -1897,7 +1943,7 @@ body
       max-width: 1024px
       width: 100%
       top: 50%
-      left: 22% 
+      left: 15% 
       transform: translate(-50%, -50%)
       @media only screen and (max-width: 1300px)
         position: static
