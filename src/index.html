@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="js/slick/slick-theme.css">
     <link rel="stylesheet" href="js/select-2/css/select2.min.css">
     <link rel="stylesheet" href="js/jquery-background-video-master/jquery.background-video.css">
+    <link rel="stylesheet" href="js/jBox-1.0.3/dist/jBox.all.min.css">
     <!--  Main styles -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -39,71 +40,53 @@
 
         <!--Main Header-->
         <header class="main-header">
-            <div class="header-top">
-                <div class="container-fluid max-w-1700">
+                <div class="container-fluid">
                     <div class="row">
-                        <div class="col-lg-2 offset-lg-10 col-md-2 offset-md-10">
-                            <div class="language-container">
-                                <!--                                <select name="language " id="">-->
-                                <!--                                   <option value=""></option>-->
-                                <!--                                    <option value=""></option>-->
-                                <!--                                    <option value=""></option>-->
-                                <!--                                    <option value=""></option>-->
-                                <!--                                    <option value=""></option>-->
-                                <!--                                    <option value=""></option>-->
-                                <!--                                 </select>-->
-                                <!-- <p>English</p> -->
-                                <!-- <i class="fas fa-angle-down"></i> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="header-bottom">
-                <div class="container-fluid max-w-1700">
-                    <div class="row">
-                        <div class="col-md-1">
+                        <div class="col-md-2">
                             <div class="logo-box">
                                 <a href="#"><img class="w-100" src="img/logo/logo-white.svg" alt="logo"></a>
                             </div>
                         </div>
-                        <div class="col-md-11">
-                            <nav class="navigation d-flex align-items-center h-100 w-100">
-                                <div class="navbar-header d-flex align-items-center h-100">
-                                    <!-- Toggle Button -->
-<!--                                    <button class="navbar-toggle">-->
-<!--                                        <span class="icon-bar bar-one"></span>-->
-<!--                                        <span class="icon-bar bar-two"></span>-->
-<!--                                        <span class="icon-bar bar-tree"></span>-->
-<!--                                        <span class="icon-bar bar-four"></span>-->
-<!--                                    </button>-->
-                                    <!-- Toggle Button END-->
-                                </div>
-                                <!-- Main navigation menu -->
-                                <ul class="d-flex justify-content-end align-items-center h-100">
-                                    <li>
-                                        <a href="#">Home</a>
-                                        <ul class="home-page-dropdown-list">
-                                            <li><a href="#">Testing item</a></li>
-                                            <li><a href="#">Testing item</a></li>
-                                            <li><a href="#">Testing item</a></li>
-                                            <li><a href="#">Testing item</a></li>
-                                            <li><a href="#">Testing item</a></li>
-                                        </ul>
-                                    </li>
+                        <div class="col-md-10">
+                            <nav class="navigation d-flex align-items-center justify-content-md-end h-100 w-100">
 
-                                    <li><a href="#">Properties</a></li>
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#">Contact</a></li>
-                                </ul>
-                                <!-- Main navigation menu END-->
+                                    <!-- Main navigation menu -->
+                                    <ul class="menu d-flex justify-content-end align-items-center h-100">
+                                        <li><a href="#">О нас</a></li>
+                                        <li><a href="#">Недвижимость</a></li>
+                                        <li><a href="#">Услуги</a></li>
+                                        <li><a href="#">Этапы сотрудничества</a></li>
+                                        <li><a href="#">Отзывы</a></li>
+                                        <li><a href="#">Контакты</a></li>
+                                    </ul>
+                                    <!-- Main navigation menu END-->
+                                    <div class="call-block">
+                                        <span class="phone-contact">+ 34 611 058266</span>
+                                        <button class="custom-btn btn-small btn-white-blue">
+                                            <span>Перезвоните мне</span></button>
+                                    </div>
+
+
                             </nav>
                         </div>
                     </div>
                 </div>
-            </div>
         </header>
+
         <!--Main Header END-->
+
+<!--Main Modal Menu-->
+        <div id="main-menu-modal">
+            <div class="underlay-box">
+                <p class="underlay-text">wtg spain</p>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+
+                </div>
+            </div>
+        </div>
+<!--Main Modal Menu END-->
 
         <!--Main button-->
         <div class="main-button-container w-100 h-100">
@@ -129,6 +112,15 @@
         <!--Main Content END-->
     </main>
     <!--Main END-->
+
+    <!--Toggle Button-->
+    <button class="nav-bar-toggle" id="menu-open-btn">
+        <span class="icon-bar bar-one"></span>
+        <span class="icon-bar bar-two"></span>
+        <span class="icon-bar bar-tree"></span>
+        <span class="icon-bar bar-four"></span>
+    </button>
+    <!--Toggle Button END-->
 
     <!--Search Section-->
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 background_search_container">
@@ -1352,6 +1344,7 @@
     <script src="js/select-2/js/select2.min.js"></script>
     <script src="js/parallax.min.js"></script>
     <script src="js/jquery-background-video-master/jquery.background-video.js"></script>
+    <script src="js/jBox-1.0.3/dist/jBox.all.min.js"></script>
     <!--  Main js  -->
     <script src="js/main.js"></script>
 </body>

@@ -71,7 +71,7 @@ $(document).ready(function () {
 /*====================================================================
                          Toggle menu function
  =====================================================================*/
-$('.navbar-toggle').on('click', function () {
+$('.nav-bar-toggle').on('click', function () {
     $(this).toggleClass('active-toggle');
     console.log('alert');
 });
@@ -159,6 +159,35 @@ $('.video-bg').bgVideo({
     pauseAfter: 0,
     fadeIn: 0,
     showPausePlay: false
+});
+/*====================================================================
+                                 End
+ =====================================================================*/
+
+/*====================================================================
+                        Scroll Down Menu Fix
+ =====================================================================*/
+$(function() {
+    $(window).on("scroll", function() {
+        if($(window).scrollTop() > 50) {
+            $(".main-header").addClass("scroll-down-menu");
+        } else {
+            $(".main-header").removeClass("scroll-down-menu");
+        }
+    });
+});
+/*====================================================================
+                                 End
+ =====================================================================*/
+
+/*====================================================================
+                      Show And Hide Main Menu Modal
+ =====================================================================*/
+$('#menu-open-btn').on('click', function () {
+    $('#main-menu-modal').toggleClass('menu-active');
+    // $(this).toggleClass('fix-btn');
+    // $("body").toggleClass("fixed");
+    // $("body").toggleClass("fix-btn");
 });
 /*====================================================================
                                  End
