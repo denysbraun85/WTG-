@@ -102,6 +102,12 @@ $border-card-manager: rgba(0, 0, 0, 0.125)
 //icons
 $icons-color-reasons-section: #006aff
 $icons-quote-feedback: #006aff
+
+%center
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
 /*====================================================================
                                     END
  =====================================================================*/
@@ -267,50 +273,9 @@ figure
 
 
 .custom-btn-circle
-  display: block
-  position: relative
-  width: 100%
-  font-size: 16px
-  text-align: center
-  text-transform: uppercase
-  background: transparent
-  border-radius: 50px 50px 50px 0
-  max-height: 50px
-  height: 100%
-  outline: none
-  padding: 10px 0
-  transition: all 0.1s ease-in-out
-  span
-    display: block
-    position: relative
-    font-size: 16px
-    line-height: 27px
-    z-index: 1
-    transition: all 0.4s ease-in-out
   &:hover
-    border: 2px solid transparent
-    cursor: pointer
     &:before
       width: 110%
-      height: 112%
-      border-radius: 50px 50px 50px 0
-  &:before
-    display: block
-    content: ""
-    position: absolute
-    z-index: 0
-    top: 50%
-    height: 80%
-    width: 50%
-    left: 50%
-    transform: translate(-50%,-50%)
-    border: 2px solid transparent
-    background: transparent
-    border-radius: 50px
-    transition: all .3s ease-in-out
-  &:focus
-    outline: none
-    box-shadow: none
 
 
 .btn-little
@@ -2241,15 +2206,7 @@ figure
         width: 50px
         height: 50px
         transform: translateY(-40%)
-        margin-right: 3px
-
-
-
-%center
-	position: absolute
-	top: 50%
-	left: 50%
-	transform: translate(-50%, -50%)  
+        margin-right: 3px  
 
 .animation_plane
 	padding: 0
@@ -2258,7 +2215,7 @@ figure
 	&::after, &::before
 		box-sizing: inherit
 
-// animations
+
 @keyframes icon-animation
 	0%
 		transform: rotate(0deg) scale(1)
@@ -2269,7 +2226,7 @@ figure
 	100%
 		transform: rotate(-360deg) scale(1)
 
-// animation related classes
+
 .icon-wrapper-animation
 	animation: icon-animation 1.5s linear
 	transition: color 0.4s ease
@@ -2305,6 +2262,10 @@ figure
     bottom: 8px
     
 
+.form_wrap
+  .custom-btn
+    span
+      transition: none !important
 
 
 body
