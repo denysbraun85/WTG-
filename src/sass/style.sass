@@ -263,7 +263,7 @@ body
     box-shadow: none
 
 
-.custom-btn-obj
+.custom-btn-circle
   display: block
   position: relative
   width: 100%
@@ -1440,6 +1440,20 @@ body
       will-change: transform
       padding-left: 0
       padding-right: 0
+      .play_object
+        position: absolute
+        z-index: 3
+        left: 47%
+        top: 40%
+        max-width: 50px
+        width: 100%
+        opacity: 0
+        transition: all .4s cubic-bezier(.785,.135,.15,.86)
+        transform: translateY(-500%)
+        @media only screen and (max-width: 768px)
+          max-width: 40px
+          @media only screen and (max-width: 440px)
+            max-width: 30px
       .not_hidden_info
         display: flex
         height: 100%
@@ -1451,20 +1465,6 @@ body
         left: 0
         right: 0
         top: 0
-        .play_object
-          position: absolute
-          transform: translate(-50%, -50%)
-          left: 46%
-          top: 40%
-          max-width: 50px
-          width: 100%
-          opacity: 0
-          transition: all .4s cubic-bezier(.785,.135,.15,.86)
-          transform: translateY(-500%)
-          @media only screen and (max-width: 768px)
-            max-width: 40px
-            @media only screen and (max-width: 440px)
-              max-width: 30px
         .object_img_wrap
           &:after
             transition: all .4s cubic-bezier(.785,.135,.15,.86)
@@ -1568,10 +1568,14 @@ body
         right: 0
         @media only screen and (max-width: 1400px)
           height: 70px
-          @media only screen and (max-width: 400px)
+          @media only screen and (max-width: 992px)
             height: 60px
-            @media only screen and (max-width: 360px)
-              height: 50px
+            @media only screen and (max-width: 768px)
+              height: 70px
+              @media only screen and (max-width: 400px)
+                height: 60px
+                @media only screen and (max-width: 360px)
+                  height: 50px
       .object_hidden_info_top
         transform: translate3d(0,-160px,0)
         top: 0
@@ -1594,7 +1598,7 @@ body
               width: 22px
               height: 22px
               margin-right: 2px
-          .custom-btn-obj 
+          .custom-btn-circle 
             .play_button
               width: 20px
               height: 20px
@@ -1605,10 +1609,14 @@ body
         transform: translate3d(0,160px,0)
         bottom: 0
         padding-bottom: 33px
-        @media only screen and (max-width: 400px)
-          padding-bottom: 12px
-          @media only screen and (max-width: 360px)
-            padding-bottom: 10px
+        @media only screen and (max-width: 992px)
+          padding-bottom: 15px
+          @media only screen and (max-width: 768px)
+            padding-bottom: 30px
+            @media only screen and (max-width: 400px)
+              padding-bottom: 12px
+              @media only screen and (max-width: 360px)
+                padding-bottom: 10px
         .info_bottom
           display: flex
           justify-content: space-between
@@ -1670,15 +1678,24 @@ body
 .section_object
   .object
     &:hover
+      .play_object
+        opacity: 1
+        transform: translateY(0)
+        @media only screen and (max-width: 1600px)
+          transform: translateY(-50%)
+          max-width: 45px
+          @media only screen and (max-width: 1300px)
+            transform: translateY(-70%)
+            @media only screen and (max-width: 1200px)
+              transform: translateY(0)
+              @media only screen and (max-width: 992px)
+                transform: translateY(-70%)
+                @media only screen and (max-width: 768px)
+                  transform: translateY(0)
+                  @media only screen and (max-width: 440px)
+                    transform: translateY(-50%)
       .not_hidden_info
         text-decoration: none
-        .play_object
-          opacity: 1
-          transform: translateY(0)
-          @media only screen and (max-width: 440px)
-            transform: translateY(-50%)
-          &:hover
-            transform: scale(1.2)
         .object_img_wrap
           clip-path: inset(0 0 0 0)
           &:after
@@ -1687,10 +1704,14 @@ body
           transform: translate3d(0,-90px,0)
           @media only screen and (max-width: 1400px)
             margin-bottom: 5px
-            @media only screen and (max-width: 400px)
+            @media only screen and (max-width: 992px)
               margin-bottom: -20px
-              @media only screen and (max-width: 360px)
-                margin-bottom: -35px
+              @media only screen and (max-width: 768px)
+                margin-bottom: 5px
+                @media only screen and (max-width: 400px)
+                  margin-bottom: -20px
+                  @media only screen and (max-width: 360px)
+                    margin-bottom: -35px
       .object_hidden_info
         opacity: 1
         transform: translate3d(0,0,0)
@@ -1701,32 +1722,10 @@ body
   color: black
 
 
-      
-    
-
-
-
-
-          
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ==================================================================
                            END STYLE OBJECT CONTAINER
  ===================================================================*/
-
-
-
 
 
 
@@ -2045,16 +2044,134 @@ body
               font-size: 16px
 
 
-
-      
-
-
-
 /* ==================================================================
                            END OUR PHILOSOPHY STYLES
  ===================================================================*/
 
 
+
+
+
+
+
+/* ==================================================================
+                           QUESTION FORM STYLES
+ ===================================================================*/
+
+.section_questions
+  background: url("../img/background/map.png") no-repeat center fixed
+  background-size: contain
+  .form_wrap
+    box-shadow: 0 26px 161px rgba(0, 0, 0, 0.39)
+    position: relative
+    background: #ffffff
+    #form_question
+      display: flex
+      flex-direction: column
+      padding: 55px 15px 40px 15px 
+      .input_question
+        max-width: 480px
+        width: 100%
+        margin: 0 auto
+        border-radius: 30px
+        border: 1px solid #f5f5f5
+        background-color: #fcfcfc
+        padding: 10px 30px
+        margin-bottom: 15px
+        font-size: 13px
+        border: 1px solid transparent
+        transition: 0.25s
+        &:hover
+          border-color: $color-btn-hover
+      .textarea_question
+        min-height: 120px
+        max-height: 120px
+        height: 100%
+        resize: none
+    .custom-btn-circle
+      position: absolute
+      bottom: -37px
+      right: 75px
+      padding: 35px 0
+      max-width: 74px
+      background: #ffffff
+      .send_question
+        width: 50px
+        height: 50px
+        transform: translateY(-40%)
+        margin-right: 3px
+
+
+
+%center
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)  
+
+.animation_plane
+	padding: 0
+	margin: 0
+	box-sizing: inherit
+	&::after, &::before
+		box-sizing: inherit
+
+// animations
+@keyframes icon-animation
+	0%
+		transform: rotate(0deg) scale(1)
+	33%
+		transform: rotate(-120deg) scale(4) translate(100px, 150px)
+	66%
+		transform: rotate(-240deg) scale(4) translate(50px, 50px)
+	100%
+		transform: rotate(-360deg) scale(1)
+
+// animation related classes
+.icon-wrapper-animation
+	animation: icon-animation 1.5s linear
+	transition: color 0.4s ease
+	color: $color-btn-hover
+	
+
+.send-button
+  @extend %center
+
+
+// corpus
+.icon-wrapper
+  position: absolute
+  right: 2px
+  bottom: 0
+  width: 74px
+  height: 74px	
+  border-radius: 50%	
+  color: $color-btn-hover
+  .icon_send_question
+    position: absolute
+    transition: color 0.4s ease
+  .icon-1
+    transform: rotate(15deg)
+    opacity: 1
+    font-size: 50px
+    left: 9px
+    bottom: 11px
+  .icon-2
+    opacity: 0
+    font-size: 54px
+    left: 12px
+    bottom: 8px
+    
+
+
+
+body
+  overflow-x: auto
+
+
+/* ==================================================================
+                           END QUESTION FORM STYLES
+ ===================================================================*/
 
 
 
