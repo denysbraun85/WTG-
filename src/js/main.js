@@ -239,6 +239,7 @@ $(function() {
  =====================================================================*/
 $('#menu-open-btn').on('click', function () {
     $('#main-menu-modal').toggleClass('menu-active');
+    $('#menu-container').toggleClass('menu-active');
     // $(this).toggleClass('fix-btn');
     // $("body").toggleClass("fixed");
     // $("body").toggleClass("fix-btn");
