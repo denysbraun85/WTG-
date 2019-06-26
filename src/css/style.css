@@ -59,6 +59,14 @@
 /*====================================================================
                                 2. Colors
  @mixin ====================================================================*/
+.send-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+
 /*====================================================================
                                     END
  @mixin ====================================================================*/
@@ -265,63 +273,8 @@ figure {
     -webkit-box-shadow: none;
             box-shadow: none; }
 
-.custom-btn-circle {
-  display: block;
-  position: relative;
-  width: 100%;
-  font-size: 16px;
-  text-align: center;
-  text-transform: uppercase;
-  background: transparent;
-  -webkit-border-radius: 50px 50px 50px 0;
-          border-radius: 50px 50px 50px 0;
-  max-height: 50px;
-  height: 100%;
-  outline: none;
-  padding: 10px 0;
-  -webkit-transition: all 0.1s ease-in-out;
-  -o-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out; }
-  .custom-btn-circle span {
-    display: block;
-    position: relative;
-    font-size: 16px;
-    line-height: 27px;
-    z-index: 1;
-    -webkit-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out; }
-  .custom-btn-circle:hover {
-    border: 2px solid transparent;
-    cursor: pointer; }
-    .custom-btn-circle:hover:before {
-      width: 110%;
-      height: 112%;
-      -webkit-border-radius: 50px 50px 50px 0;
-              border-radius: 50px 50px 50px 0; }
-  .custom-btn-circle:before {
-    display: block;
-    content: "";
-    position: absolute;
-    z-index: 0;
-    top: 50%;
-    height: 80%;
-    width: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    border: 2px solid transparent;
-    background: transparent;
-    -webkit-border-radius: 50px;
-            border-radius: 50px;
-    -webkit-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out; }
-  .custom-btn-circle:focus {
-    outline: none;
-    -webkit-box-shadow: none;
-            box-shadow: none; }
+.custom-btn-circle:hover:before {
+  width: 110%; }
 
 .btn-little {
   max-width: 50px;
@@ -2787,14 +2740,6 @@ figure {
                 transform: translateY(-40%);
         margin-right: 3px; }
 
-.send-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); }
-
 .animation_plane {
   padding: 0;
   margin: 0;
@@ -2867,6 +2812,11 @@ figure {
     font-size: 54px;
     left: 12px;
     bottom: 8px; }
+
+.form_wrap .custom-btn span {
+  -webkit-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important; }
 
 body {
   overflow-x: auto; }
