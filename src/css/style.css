@@ -59,7 +59,7 @@
 /*====================================================================
                                 2. Colors
  @mixin ====================================================================*/
-.send-button {
+#main-menu-modal .underlay-box, .section-professionals .manager-slider .manager-card .manager-social-contact li a, .send-button {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -531,12 +531,6 @@ figure {
   transition: all 0.5s ease;
   background: #fff; }
   #main-menu-modal .underlay-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
     z-index: -1;
     width: 100%;
     margin: auto; }
@@ -1121,12 +1115,6 @@ figure {
       width: 50px;
       height: 50px; } }
           .section-professionals .manager-slider .manager-card .manager-social-contact li a {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-                -ms-transform: translate(-50%, -50%);
-                    transform: translate(-50%, -50%);
             cursor: pointer;
             line-height: 18px; }
             @media (max-width: 1200px) {
@@ -2252,276 +2240,45 @@ figure {
                            END STYLE OBJECT CONTAINER
  @mixin ==================================================================*/
 /* ==================================================================
+                           STYLE DISCOUNT
+ @mixin ==================================================================*/
+.section_discount {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffffff), color-stop(50%, #f8f8f8));
+  background: -webkit-linear-gradient(top, #ffffff 50%, #f8f8f8 50%);
+  background: -o-linear-gradient(top, #ffffff 50%, #f8f8f8 50%);
+  background: linear-gradient(to bottom, #ffffff 50%, #f8f8f8 50%); }
+  .section_discount .background_discount {
+    height: 100vh;
+    background: url("../img/background/movehouse.png");
+    overflow: hidden;
+    -webkit-background-size: 105% 105%;
+            background-size: 105%;
+    background-repeat: no-repeat;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .section_discount .background_discount .info_discount {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+
+/* ==================================================================
+                          END STYLE DISCOUNT
+ @mixin ==================================================================*/
+/* ==================================================================
                            STYLE 6 BENEFIT CONTAINER
  @mixin ==================================================================*/
-.section_benefit {
-  background: #fff; }
-  .section_benefit .wrapper_left_back_benefit {
-    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #eeeeee), color-stop(50%, #ffffff));
-    background: -webkit-linear-gradient(left, #eeeeee 50%, #ffffff 50%);
-    background: -o-linear-gradient(left, #eeeeee 50%, #ffffff 50%);
-    background: linear-gradient(to right, #eeeeee 50%, #ffffff 50%); }
-    .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit {
-      max-width: 1220px;
-      width: 100%;
-      margin: 0 auto;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-          -ms-flex-align: center;
-              align-items: center; }
-      @media only screen and (max-width: 800px) {
-        .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit .first_container_benefit {
-          border-top: 1px solid #B9B8B8; } }
-      .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit .left_container_benefit {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: end;
-        -webkit-align-items: flex-end;
-            -ms-flex-align: end;
-                align-items: flex-end;
-        -webkit-box-pack: justify;
-        -webkit-justify-content: space-between;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
-        max-width: 960px;
-        width: 100%;
-        margin-left: 0;
-        background: #fff; }
-        @media only screen and (max-width: 850px) {
-          .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit .left_container_benefit {
-            -webkit-box-align: center;
-            -webkit-align-items: center;
-                -ms-flex-align: center;
-                    align-items: center; } }
-  @media only screen and (max-width: 850px) and (max-width: 800px) {
-    .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit .left_container_benefit {
-      padding: 10px 0;
-      border-bottom: 1px solid #B9B8B8; } }
-        .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit .left_container_benefit .wrapper_img_benefit {
-          max-width: 260px;
-          width: 100%;
-          min-height: 200px;
-          max-height: 200px;
-          height: 100%;
-          display: -webkit-box;
-          display: -webkit-flex;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-pack: center;
-          -webkit-justify-content: center;
-              -ms-flex-pack: center;
-                  justify-content: center;
-          -webkit-box-align: center;
-          -webkit-align-items: center;
-              -ms-flex-align: center;
-                  align-items: center; }
-          @media only screen and (max-width: 970px) {
-            .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit .left_container_benefit .wrapper_img_benefit {
-              min-height: 200px; } }
-  @media only screen and (max-width: 970px) and (max-width: 830px) {
-    .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit .left_container_benefit .wrapper_img_benefit {
-      display: none; } }
-          .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit .left_container_benefit .wrapper_img_benefit .left_img {
-            min-height: 200px;
-            max-height: 200px;
-            height: 100%; }
-        .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit .left_container_benefit .text_left_benefit {
-          position: relative;
-          margin-left: 60px;
-          text-align: left;
-          z-index: 1;
-          padding-bottom: 10px; }
-          @media only screen and (max-width: 970px) {
-            .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit .left_container_benefit .text_left_benefit {
-              padding-bottom: 0; } }
-  @media only screen and (max-width: 970px) and (max-width: 830px) {
-    .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit .left_container_benefit .text_left_benefit {
-      padding: 10px 30px;
-      text-align: center;
-      margin: 0 auto; } }
-          .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit .left_container_benefit .text_left_benefit .background_number_benefit {
-            position: absolute;
-            top: -90px;
-            left: -7px;
-            font-family: 'Lato Regular', sans-serif;
-            color: #eeeeee;
-            font-size: 130px;
-            font-weight: 900;
-            z-index: -1; }
-            @media only screen and (max-width: 970px) {
-              .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit .left_container_benefit .text_left_benefit .background_number_benefit {
-                font-size: 100px;
-                top: -60px; } }
-  @media only screen and (max-width: 970px) and (max-width: 830px) {
-    .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit .left_container_benefit .text_left_benefit .background_number_benefit {
-      font-size: 75px;
-      top: -30px;
-      right: 0;
-      width: 100%; } }
-          .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit .left_container_benefit .text_left_benefit h4 {
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 18px; }
-            @media only screen and (max-width: 850px) {
-              .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit .left_container_benefit .text_left_benefit h4 {
-                font-size: 16px; } }
-  @media only screen and (max-width: 850px) and (max-width: 830px) {
-    .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit .left_container_benefit .text_left_benefit h4 {
-      font-size: 14px; } }
-          .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit .left_container_benefit .text_left_benefit p {
-            margin-top: 40px;
-            font-size: 15px; }
-            @media only screen and (max-width: 970px) {
-              .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit .left_container_benefit .text_left_benefit p {
-                margin-top: 30px; } }
-  @media only screen and (max-width: 970px) and (max-width: 850px) {
-    .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit .left_container_benefit .text_left_benefit p {
-      font-size: 14px; } }
-  @media only screen and (max-width: 970px) and (max-width: 850px) and (max-width: 830px) {
-    .section_benefit .wrapper_left_back_benefit .wrapper_content_6_benefit .left_container_benefit .text_left_benefit p {
-      font-size: 12px; } }
-  .section_benefit .wrapper_right_back_benedit {
-    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #ffffff), color-stop(50%, #eeeeee));
-    background: -webkit-linear-gradient(left, #ffffff 50%, #eeeeee 50%);
-    background: -o-linear-gradient(left, #ffffff 50%, #eeeeee 50%);
-    background: linear-gradient(to right, #ffffff 50%, #eeeeee 50%); }
-    .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit {
-      max-width: 1220px;
-      width: 100%;
-      margin: 0 auto;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: end;
-      -webkit-justify-content: flex-end;
-          -ms-flex-pack: end;
-              justify-content: flex-end;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-          -ms-flex-align: center;
-              align-items: center; }
-      .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit .right_container_benefit {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: end;
-        -webkit-align-items: flex-end;
-            -ms-flex-align: end;
-                align-items: flex-end;
-        -webkit-box-pack: justify;
-        -webkit-justify-content: space-between;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
-        max-width: 960px;
-        width: 100%;
-        margin-right: 0;
-        background: #fff; }
-        @media only screen and (max-width: 850px) {
-          .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit .right_container_benefit {
-            -webkit-box-align: center;
-            -webkit-align-items: center;
-                -ms-flex-align: center;
-                    align-items: center; } }
-  @media only screen and (max-width: 850px) and (max-width: 800px) {
-    .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit .right_container_benefit {
-      padding: 10px 0;
-      border-bottom: 1px solid #B9B8B8; } }
-        .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit .right_container_benefit .text_right_benefit {
-          position: relative;
-          margin-right: 60px;
-          text-align: right;
-          z-index: 1;
-          padding-bottom: 10px; }
-          @media only screen and (max-width: 970px) {
-            .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit .right_container_benefit .text_right_benefit {
-              padding-bottom: 0; } }
-  @media only screen and (max-width: 970px) and (max-width: 830px) {
-    .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit .right_container_benefit .text_right_benefit {
-      padding: 10px 30px;
-      text-align: center;
-      margin: 0 auto; } }
-          .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit .right_container_benefit .text_right_benefit .background_number_benefit {
-            position: absolute;
-            top: -90px;
-            right: -7px;
-            font-family: 'Lato Regular', sans-serif;
-            color: #eeeeee;
-            font-size: 130px;
-            font-weight: 900;
-            z-index: -1; }
-            @media only screen and (max-width: 970px) {
-              .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit .right_container_benefit .text_right_benefit .background_number_benefit {
-                font-size: 100px;
-                top: -60px; } }
-  @media only screen and (max-width: 970px) and (max-width: 830px) {
-    .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit .right_container_benefit .text_right_benefit .background_number_benefit {
-      font-size: 75px;
-      top: -35px;
-      left: -5px;
-      width: 100%; } }
-          .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit .right_container_benefit .text_right_benefit h4 {
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 18px; }
-            @media only screen and (max-width: 850px) {
-              .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit .right_container_benefit .text_right_benefit h4 {
-                font-size: 16px; } }
-  @media only screen and (max-width: 850px) and (max-width: 830px) {
-    .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit .right_container_benefit .text_right_benefit h4 {
-      font-size: 14px; } }
-          .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit .right_container_benefit .text_right_benefit p {
-            margin-top: 40px;
-            font-size: 15px; }
-            @media only screen and (max-width: 970px) {
-              .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit .right_container_benefit .text_right_benefit p {
-                margin-top: 30px; } }
-  @media only screen and (max-width: 970px) and (max-width: 850px) {
-    .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit .right_container_benefit .text_right_benefit p {
-      font-size: 14px; } }
-  @media only screen and (max-width: 970px) and (max-width: 850px) and (max-width: 830px) {
-    .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit .right_container_benefit .text_right_benefit p {
-      font-size: 12px; } }
-        .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit .right_container_benefit .wrapper_img_benefit {
-          max-width: 260px;
-          width: 100%;
-          min-height: 200px;
-          max-height: 200px;
-          height: 100%;
-          display: -webkit-box;
-          display: -webkit-flex;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-pack: center;
-          -webkit-justify-content: center;
-              -ms-flex-pack: center;
-                  justify-content: center;
-          -webkit-box-align: center;
-          -webkit-align-items: center;
-              -ms-flex-align: center;
-                  align-items: center; }
-          @media only screen and (max-width: 970px) {
-            .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit .right_container_benefit .wrapper_img_benefit {
-              min-height: 200px; } }
-  @media only screen and (max-width: 970px) and (max-width: 830px) {
-    .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit .right_container_benefit .wrapper_img_benefit {
-      display: none; } }
-          .section_benefit .wrapper_right_back_benedit .wrapper_content_6_benefit .right_container_benefit .wrapper_img_benefit .right_img {
-            min-height: 200px;
-            max-height: 200px;
-            height: 100%; }
-
 /* ==================================================================
                            END STYLE 6 BENEFIT CONTAINER
  @mixin ==================================================================*/
@@ -2533,7 +2290,7 @@ figure {
   -webkit-background-size: contain;
           background-size: contain;
   z-index: -1;
-  height: 740px; }
+  height: 739px; }
   @media only screen and (max-width: 1300px) {
     .back_our_philosophy {
       height: unset; } }
@@ -2553,13 +2310,18 @@ figure {
     background: #fff;
     z-index: 1;
     margin-left: auto;
-    height: 740px; }
-    @media only screen and (max-width: 992px) {
+    height: 741px;
+    top: -1px; }
+    @media only screen and (max-width: 1300px) {
       .back_our_philosophy .wrap_info_philosophy {
-        width: 100%;
-        margin: 0 auto;
-        background: #fffc;
-        height: unset; } }
+        height: unset;
+        top: unset;
+        width: 52%; } }
+  @media only screen and (max-width: 1300px) and (max-width: 992px) {
+    .back_our_philosophy .wrap_info_philosophy {
+      width: 100%;
+      margin: 0 auto;
+      background: #fffc; } }
     .back_our_philosophy .wrap_info_philosophy .info_philosophy {
       position: absolute;
       z-index: 1;
@@ -2575,9 +2337,7 @@ figure {
           position: static;
           -webkit-transform: none;
               -ms-transform: none;
-                  transform: none;
-          height: unset;
-          padding-right: 15px; } }
+                  transform: none; } }
   @media only screen and (max-width: 1300px) and (max-width: 992px) {
     .back_our_philosophy .wrap_info_philosophy .info_philosophy {
       background: transparent;
@@ -2612,24 +2372,37 @@ figure {
         padding: 30px 0 18px 45px;
         text-align: justify;
         background: #fffc; }
-        @media only screen and (max-width: 992px) {
+        @media only screen and (max-width: 1600px) {
           .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy {
-            margin: 0 auto;
-            padding: 40px 30px;
-            background: transparent; } }
-  @media only screen and (max-width: 992px) and (max-width: 576px) {
+            padding: 20px 0 8px 45px; } }
+  @media only screen and (max-width: 1600px) and (max-width: 1300px) {
     .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy {
-      padding: 40px 20px; } }
+      padding: 20px 15px 8px 20px; } }
+  @media only screen and (max-width: 1600px) and (max-width: 1300px) and (max-width: 992px) {
+    .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy {
+      margin: 0 auto;
+      padding: 40px 30px 30px;
+      background: transparent; } }
+  @media only screen and (max-width: 1600px) and (max-width: 1300px) and (max-width: 992px) and (max-width: 576px) {
+    .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy {
+      padding: 40px 20px;
+      text-align: unset; } }
         .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy h4 {
           color: #006aff;
           text-transform: uppercase;
           font-size: 30px;
           font-weight: 400;
-          text-align: left; }
-          @media only screen and (max-width: 1300px) {
+          text-align: left;
+          padding-bottom: 5px; }
+          @media only screen and (max-width: 1600px) {
             .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy h4 {
-              font-size: 28px; } }
-  @media only screen and (max-width: 1300px) and (max-width: 576px) {
+              padding-bottom: 8px;
+              font-size: 25px; } }
+  @media only screen and (max-width: 1600px) and (max-width: 1300px) {
+    .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy h4 {
+      padding-bottom: 10px;
+      text-align: center; } }
+  @media only screen and (max-width: 1600px) and (max-width: 1300px) and (max-width: 576px) {
     .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy h4 {
       margin: 0 auto;
       padding-bottom: 10px;
@@ -2640,10 +2413,13 @@ figure {
           font-size: 20px;
           opacity: 0.8;
           padding-bottom: 10px; }
-          @media only screen and (max-width: 1300px) {
+          @media only screen and (max-width: 1600px) {
             .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy .under_title_philosophy {
-              font-size: 19px; } }
-  @media only screen and (max-width: 1300px) and (max-width: 576px) {
+              font-size: 18px; } }
+  @media only screen and (max-width: 1600px) and (max-width: 1300px) {
+    .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy .under_title_philosophy {
+      margin: 0 auto; } }
+  @media only screen and (max-width: 1600px) and (max-width: 1300px) and (max-width: 576px) {
     .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy .under_title_philosophy {
       margin: 0 auto;
       font-size: 16px;
@@ -2655,9 +2431,9 @@ figure {
           max-width: 880px;
           width: 100%;
           padding-bottom: 10px; }
-          @media only screen and (max-width: 1300px) {
+          @media only screen and (max-width: 1600px) {
             .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy .info_philosophy_text {
-              font-size: 16px; } }
+              font-size: 15px; } }
         .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy ul {
           padding-left: 15px; }
           .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy ul li {
@@ -2673,9 +2449,9 @@ figure {
               font-weight: 900;
               color: #006aff;
               padding-right: 15px; }
-            @media only screen and (max-width: 1300px) {
+            @media only screen and (max-width: 1600px) {
               .back_our_philosophy .wrap_info_philosophy .info_philosophy .wrap_text_philosophy ul li {
-                font-size: 16px; } }
+                font-size: 15px; } }
 
 /* ==================================================================
                            END OUR PHILOSOPHY STYLES

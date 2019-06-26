@@ -480,10 +480,7 @@ figure
   transition: all 0.5s ease
   background: $section-color-white
   .underlay-box
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
+    @extend %center
     z-index: -1
     width: 100%
     margin: auto
@@ -978,10 +975,7 @@ figure
               width: 50px
               height: 50px
           a
-            position: absolute
-            top: 50%
-            left: 50%
-            transform: translate(-50%, -50%)
+            @extend %center
             cursor: pointer
             line-height: 18px
             @media (max-width: 1200px)
@@ -1833,186 +1827,212 @@ figure
 
 
 
+/* ==================================================================
+                           STYLE DISCOUNT
+ ===================================================================*/
+
+
+.section_discount
+  background: linear-gradient(to bottom, #ffffff 50%,#f8f8f8 50%)
+  .background_discount
+    height: 100vh
+    background: url("../img/background/movehouse.png")
+    overflow: hidden
+    background-size: 105%
+    background-repeat: no-repeat
+    display: flex
+    align-items: center
+    .info_discount
+      display: flex
+      flex-direction: column
+
+
+
+/* ==================================================================
+                          END STYLE DISCOUNT
+ ===================================================================*/
+
+
 
 /* ==================================================================
                            STYLE 6 BENEFIT CONTAINER
  ===================================================================*/
 
-.section_benefit
-  background: $bg-color-menu
-  .wrapper_left_back_benefit
-    background: linear-gradient(to right, $section-color-light 50%,#ffffff 50%)
-    .wrapper_content_6_benefit
-      max-width: 1220px
-      width: 100%
-      margin: 0 auto
-      display: flex
-      justify-content: space-between
-      align-items: center
-      .first_container_benefit
-        @media only screen and (max-width: 800px)
-          border-top: 1px solid $border-adaptive-benefit
-      .left_container_benefit
-        display: flex
-        align-items: flex-end
-        justify-content: space-between
-        max-width: 960px
-        width: 100%
-        margin-left: 0
-        background: $color-btn
-        @media only screen and (max-width: 850px)
-          align-items: center
-          @media only screen and (max-width: 800px)
-            padding: 10px 0
-            border-bottom: 1px solid $border-adaptive-benefit
-        .wrapper_img_benefit
-          max-width: 260px
-          width: 100%
-          min-height: 200px
-          max-height: 200px
-          height: 100%
-          display: flex
-          justify-content: center
-          align-items: center
-          @media only screen and (max-width: 970px)
-            min-height: 200px
-            @media only screen and (max-width: 830px)
-              display: none
-          .left_img
-            min-height: 200px
-            max-height: 200px
-            height: 100%
-        .text_left_benefit
-          position: relative
-          margin-left: 60px
-          text-align: left
-          z-index: 1
-          padding-bottom: 10px
-          @media only screen and (max-width: 970px)
-            padding-bottom: 0
-            @media only screen and (max-width: 830px)
-              padding: 10px 30px
-              text-align: center
-              margin: 0 auto
-          .background_number_benefit
-            position: absolute
-            top: -90px
-            left: -7px
-            font-family: 'Lato Regular', sans-serif
-            color: $section-color-light
-            font-size: 130px
-            font-weight: 900
-            z-index: -1
-            @media only screen and (max-width: 970px)
-              font-size: 100px
-              top: -60px
-              @media only screen and (max-width: 830px)
-                font-size: 75px
-                top: -30px
-                right: 0
-                width: 100%
-          h4
-            font-weight: 600
-            text-transform: uppercase
-            font-size: 18px
-            @media only screen and (max-width: 850px)
-              font-size: 16px
-              @media only screen and (max-width: 830px)
-                font-size: 14px
-          p
-            margin-top: 40px
-            font-size: 15px
-            @media only screen and (max-width: 970px)
-              margin-top: 30px
-              @media only screen and (max-width: 850px)
-                font-size: 14px
-                @media only screen and (max-width: 830px)
-                  font-size: 12px
-  .wrapper_right_back_benedit
-    background: linear-gradient(to right, #ffffff 50%,$section-color-light 50%)
-    .wrapper_content_6_benefit
-      max-width: 1220px
-      width: 100%
-      margin: 0 auto
-      display: flex
-      justify-content: flex-end
-      align-items: center
-      .right_container_benefit
-        display: flex
-        align-items: flex-end
-        justify-content: space-between
-        max-width: 960px
-        width: 100%
-        margin-right: 0
-        background: $color-btn
-        @media only screen and (max-width: 850px)
-          align-items: center
-          @media only screen and (max-width: 800px)
-            padding: 10px 0
-            border-bottom: 1px solid #B9B8B8
-        .text_right_benefit
-          position: relative
-          margin-right: 60px
-          text-align: right
-          z-index: 1
-          padding-bottom: 10px
-          @media only screen and (max-width: 970px)
-            padding-bottom: 0
-            @media only screen and (max-width: 830px)
-              padding: 10px 30px
-              text-align: center
-              margin: 0 auto
-          .background_number_benefit
-            position: absolute
-            top: -90px
-            right: -7px
-            font-family: 'Lato Regular', sans-serif
-            color: $section-color-light
-            font-size: 130px
-            font-weight: 900
-            z-index: -1
-            @media only screen and (max-width: 970px)
-              font-size: 100px
-              top: -60px
-              @media only screen and (max-width: 830px)
-                font-size: 75px
-                top: -35px
-                left: -5px
-                width: 100%
-          h4
-            font-weight: 600
-            text-transform: uppercase
-            font-size: 18px
-            @media only screen and (max-width: 850px)
-              font-size: 16px
-              @media only screen and (max-width: 830px)
-                font-size: 14px
-          p
-            margin-top: 40px
-            font-size: 15px
-            @media only screen and (max-width: 970px)
-              margin-top: 30px
-              @media only screen and (max-width: 850px)
-                font-size: 14px
-                @media only screen and (max-width: 830px)
-                  font-size: 12px
-        .wrapper_img_benefit
-          max-width: 260px
-          width: 100%
-          min-height: 200px
-          max-height: 200px
-          height: 100%
-          display: flex
-          justify-content: center
-          align-items: center
-          @media only screen and (max-width: 970px)
-            min-height: 200px
-            @media only screen and (max-width: 830px)
-              display: none
-          .right_img
-            min-height: 200px
-            max-height: 200px
-            height: 100%
+// .section_benefit
+//   background: $bg-color-menu
+//   .wrapper_left_back_benefit
+//     background: linear-gradient(to right, $section-color-light 50%,#ffffff 50%)
+//     .wrapper_content_6_benefit
+//       max-width: 1220px
+//       width: 100%
+//       margin: 0 auto
+//       display: flex
+//       justify-content: space-between
+//       align-items: center
+//       .first_container_benefit
+//         @media only screen and (max-width: 800px)
+//           border-top: 1px solid $border-adaptive-benefit
+//       .left_container_benefit
+//         display: flex
+//         align-items: flex-end
+//         justify-content: space-between
+//         max-width: 960px
+//         width: 100%
+//         margin-left: 0
+//         background: $color-btn
+//         @media only screen and (max-width: 850px)
+//           align-items: center
+//           @media only screen and (max-width: 800px)
+//             padding: 10px 0
+//             border-bottom: 1px solid $border-adaptive-benefit
+//         .wrapper_img_benefit
+//           max-width: 260px
+//           width: 100%
+//           min-height: 200px
+//           max-height: 200px
+//           height: 100%
+//           display: flex
+//           justify-content: center
+//           align-items: center
+//           @media only screen and (max-width: 970px)
+//             min-height: 200px
+//             @media only screen and (max-width: 830px)
+//               display: none
+//           .left_img
+//             min-height: 200px
+//             max-height: 200px
+//             height: 100%
+//         .text_left_benefit
+//           position: relative
+//           margin-left: 60px
+//           text-align: left
+//           z-index: 1
+//           padding-bottom: 10px
+//           @media only screen and (max-width: 970px)
+//             padding-bottom: 0
+//             @media only screen and (max-width: 830px)
+//               padding: 10px 30px
+//               text-align: center
+//               margin: 0 auto
+//           .background_number_benefit
+//             position: absolute
+//             top: -90px
+//             left: -7px
+//             font-family: 'Lato Regular', sans-serif
+//             color: $section-color-light
+//             font-size: 130px
+//             font-weight: 900
+//             z-index: -1
+//             @media only screen and (max-width: 970px)
+//               font-size: 100px
+//               top: -60px
+//               @media only screen and (max-width: 830px)
+//                 font-size: 75px
+//                 top: -30px
+//                 right: 0
+//                 width: 100%
+//           h4
+//             font-weight: 600
+//             text-transform: uppercase
+//             font-size: 18px
+//             @media only screen and (max-width: 850px)
+//               font-size: 16px
+//               @media only screen and (max-width: 830px)
+//                 font-size: 14px
+//           p
+//             margin-top: 40px
+//             font-size: 15px
+//             @media only screen and (max-width: 970px)
+//               margin-top: 30px
+//               @media only screen and (max-width: 850px)
+//                 font-size: 14px
+//                 @media only screen and (max-width: 830px)
+//                   font-size: 12px
+//   .wrapper_right_back_benedit
+//     background: linear-gradient(to right, #ffffff 50%,$section-color-light 50%)
+//     .wrapper_content_6_benefit
+//       max-width: 1220px
+//       width: 100%
+//       margin: 0 auto
+//       display: flex
+//       justify-content: flex-end
+//       align-items: center
+//       .right_container_benefit
+//         display: flex
+//         align-items: flex-end
+//         justify-content: space-between
+//         max-width: 960px
+//         width: 100%
+//         margin-right: 0
+//         background: $color-btn
+//         @media only screen and (max-width: 850px)
+//           align-items: center
+//           @media only screen and (max-width: 800px)
+//             padding: 10px 0
+//             border-bottom: 1px solid #B9B8B8
+//         .text_right_benefit
+//           position: relative
+//           margin-right: 60px
+//           text-align: right
+//           z-index: 1
+//           padding-bottom: 10px
+//           @media only screen and (max-width: 970px)
+//             padding-bottom: 0
+//             @media only screen and (max-width: 830px)
+//               padding: 10px 30px
+//               text-align: center
+//               margin: 0 auto
+//           .background_number_benefit
+//             position: absolute
+//             top: -90px
+//             right: -7px
+//             font-family: 'Lato Regular', sans-serif
+//             color: $section-color-light
+//             font-size: 130px
+//             font-weight: 900
+//             z-index: -1
+//             @media only screen and (max-width: 970px)
+//               font-size: 100px
+//               top: -60px
+//               @media only screen and (max-width: 830px)
+//                 font-size: 75px
+//                 top: -35px
+//                 left: -5px
+//                 width: 100%
+//           h4
+//             font-weight: 600
+//             text-transform: uppercase
+//             font-size: 18px
+//             @media only screen and (max-width: 850px)
+//               font-size: 16px
+//               @media only screen and (max-width: 830px)
+//                 font-size: 14px
+//           p
+//             margin-top: 40px
+//             font-size: 15px
+//             @media only screen and (max-width: 970px)
+//               margin-top: 30px
+//               @media only screen and (max-width: 850px)
+//                 font-size: 14px
+//                 @media only screen and (max-width: 830px)
+//                   font-size: 12px
+//         .wrapper_img_benefit
+//           max-width: 260px
+//           width: 100%
+//           min-height: 200px
+//           max-height: 200px
+//           height: 100%
+//           display: flex
+//           justify-content: center
+//           align-items: center
+//           @media only screen and (max-width: 970px)
+//             min-height: 200px
+//             @media only screen and (max-width: 830px)
+//               display: none
+//           .right_img
+//             min-height: 200px
+//             max-height: 200px
+//             height: 100%
 
 
 
@@ -2037,7 +2057,7 @@ figure
   background: url("../img/background/ourphilosophy.jpg") no-repeat left center
   background-size: contain
   z-index: -1
-  height: 740px
+  height: 739px
   @media only screen and (max-width: 1300px)
     height: unset
     @media only screen and (max-width: 992px)
@@ -2053,12 +2073,16 @@ figure
     background: $section-color-white
     z-index: 1
     margin-left: auto
-    height: 740px
-    @media only screen and (max-width: 992px)
-      width: 100%
-      margin: 0 auto
-      background: #fffc
+    height: 741px
+    top: -1px
+    @media only screen and (max-width: 1300px)
       height: unset
+      top: unset
+      width: 52%
+      @media only screen and (max-width: 992px)
+        width: 100%
+        margin: 0 auto
+        background: #fffc
     .info_philosophy
       position: absolute
       z-index: 1
@@ -2070,8 +2094,6 @@ figure
       @media only screen and (max-width: 1300px)
         position: static
         transform: none
-        height: unset
-        padding-right: 15px
         @media only screen and (max-width: 992px)
           background: transparent
           width: 100%
@@ -2088,36 +2110,48 @@ figure
         padding: 30px 0 18px 45px
         text-align: justify
         background: #fffc
-        @media only screen and (max-width: 992px)
-          margin: 0 auto
-          padding: 40px 30px
-          background: transparent
-          @media only screen and (max-width: 576px)
-            padding: 40px 20px
+        @media only screen and (max-width: 1600px)
+          padding: 20px 0 8px 45px
+          @media only screen and (max-width: 1300px)
+            padding: 20px 15px 8px 20px
+            @media only screen and (max-width: 992px)
+              margin: 0 auto
+              padding: 40px 30px 30px
+              background: transparent
+              @media only screen and (max-width: 576px)
+                padding: 40px 20px
+                text-align: unset
         h4
           color: $color-btn-hover
           text-transform: uppercase
           font-size: 30px
           font-weight: 400
           text-align: left
-          @media only screen and (max-width: 1300px)
-            font-size: 28px
-            @media only screen and (max-width: 576px)
-              margin: 0 auto 
+          padding-bottom: 5px
+          @media only screen and (max-width: 1600px)
+            padding-bottom: 8px
+            font-size: 25px
+            @media only screen and (max-width: 1300px)
               padding-bottom: 10px
               text-align: center
+              @media only screen and (max-width: 576px)
+                margin: 0 auto 
+                padding-bottom: 10px
+                text-align: center
         .under_title_philosophy
           color: $select-search-color-text
           text-transform: uppercase
           font-size: 20px
           opacity: 0.8
           padding-bottom: 10px
-          @media only screen and (max-width: 1300px)
-            font-size: 19px
-            @media only screen and (max-width: 576px)
-              margin: 0 auto 
-              font-size: 16px
-              text-align: center
+          @media only screen and (max-width: 1600px)
+            font-size: 18px
+            @media only screen and (max-width: 1300px)
+              margin: 0 auto
+              @media only screen and (max-width: 576px)
+                margin: 0 auto 
+                font-size: 16px
+                text-align: center
         .info_philosophy_text
           color: $select-search-color-text
           font-size: 17px
@@ -2125,8 +2159,8 @@ figure
           max-width: 880px
           width: 100%
           padding-bottom: 10px
-          @media only screen and (max-width: 1300px)
-            font-size: 16px
+          @media only screen and (max-width: 1600px)
+            font-size: 15px
         ul
           padding-left: 15px
           li
@@ -2142,8 +2176,8 @@ figure
               font-weight: 900
               color: $color-btn-hover
               padding-right: 15px
-            @media only screen and (max-width: 1300px)
-              font-size: 16px
+            @media only screen and (max-width: 1600px)
+              font-size: 15px
 
 
 /* ==================================================================
@@ -2203,13 +2237,13 @@ figure
         transform: translateY(-40%)
         margin-right: 3px  
 
+ 
 .animation_plane
 	padding: 0
 	margin: 0
 	box-sizing: inherit
 	&::after, &::before
 		box-sizing: inherit
-
 
 @keyframes icon-animation
 	0%
@@ -2221,18 +2255,14 @@ figure
 	100%
 		transform: rotate(-360deg) scale(1)
 
-
 .icon-wrapper-animation
 	animation: icon-animation 1.5s linear
 	transition: color 0.4s ease
 	color: $color-btn-hover
 	
-
 .send-button
   @extend %center
 
-
-// corpus
 .icon-wrapper
   position: absolute
   right: 2px
@@ -2256,12 +2286,10 @@ figure
     left: 12px
     bottom: 8px
     
-
 .form_wrap
   .custom-btn
     span
       transition: none !important
-
 
 body
   overflow-x: auto

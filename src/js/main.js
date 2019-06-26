@@ -207,7 +207,7 @@ $(() => {
     $iWrapper.on(animationEvent(), e => {
         if (e.originalEvent.animationName == 'icon-animation') {
             $iWrapper.removeClass('icon-wrapper-animation');
-            setTimeout(reset, 1200);
+            setTimeout(reset, 5000);
         }
     });
 
@@ -221,9 +221,9 @@ $(() => {
 /*====================================================================
                         Scroll Down Menu Fix
  =====================================================================*/
-$(function() {
-    $(window).on("scroll", function() {
-        if($(window).scrollTop() > 50) {
+$(function () {
+    $(window).on("scroll", function () {
+        if ($(window).scrollTop() > 50) {
             $(".main-header").addClass("scroll-down-menu");
         } else {
             $(".main-header").removeClass("scroll-down-menu");
@@ -243,6 +243,18 @@ $('#menu-open-btn').on('click', function () {
     // $("body").toggleClass("fixed");
     // $("body").toggleClass("fix-btn");
 });
+/*====================================================================
+                                 End
+ =====================================================================*/
+
+/*====================================================================
+                      Mousemove background discount
+ =====================================================================*/
+$('.background_discount').mousemove(function (e) {
+    var moveX = (e.pageX * -1 / 30);
+    // var moveY = (e.pageY * -1 / 30);
+    $(this).css('background-position', moveX + 'px ')
+})
 /*====================================================================
                                  End
  =====================================================================*/
