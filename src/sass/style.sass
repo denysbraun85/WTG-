@@ -72,11 +72,13 @@ $section-color-light: #eeeeee
 $section-color-white: #fff
 $section-color-professionals: #efefef
 $section-color-greetings: #f8f8f8
+//background
 $bg-color-menu: #fff
 $bg-overlay-services: #0b0b0b
 $bg-overlay-feedback: #000000
 $bg-card-manager: #032fab
 $bg-card-shadow-box: rgba(31, 31, 31, 0.44)
+$bg-main-menu: rgba(3, 47, 171, 0.8)
 $header-color-menu: #032fab
 $header-color: rgba(3, 47, 171, 0.5)
 //text
@@ -107,6 +109,10 @@ $icons-quote-feedback: #006aff
 /*====================================================================
                                 3. Reset
  =====================================================================*/
+body
+  background: $bg-color-menu
+  font-family: 'Montserrat-regular', sans-serif
+  font-size: 15px
 *
   margin: 0
   padding: 0
@@ -200,7 +206,6 @@ figure
       font-size: 14px
 .text-inform
   color: $text-color-grey
-/*---------------------------------Max-width----------------------------*/
 .max-w-1700
   width: 100%
   max-width: 1700px
@@ -211,11 +216,9 @@ figure
 /*====================================================================
                                 4. Global
  =====================================================================*/
-body
-  background: $bg-color-menu
-  font-family: 'Montserrat-regular', sans-serif
-  font-size: 15px
-/*---------------------------------Button----------------------------*/
+/*-------------------------------------------------------------------------------------
+                                         Button
+  ------------------------------------------------------------------------------------*/
 .custom-btn
   display: block
   position: relative
@@ -379,7 +382,9 @@ body
     &:before
       background: $color-btn-hover
       box-shadow: 0 10px 30px $main-btn-shadow
-/*---------------------------------Header of the section----------------------------*/
+/*-------------------------------------------------------------------------------------
+                                   Header of the section-
+  ------------------------------------------------------------------------------------*/
 .head-text-box
   width: 100%
   text-align: center
@@ -392,7 +397,9 @@ body
     margin-top: 20px
     font-size: 22px
     text-transform: uppercase
-  /*---------------------------------Button container----------------------------*/
+/*-------------------------------------------------------------------------------------
+                                     Button Container
+  ------------------------------------------------------------------------------------*/
 .main-button-container
   position: absolute
   max-height: 50px
@@ -405,6 +412,138 @@ body
       bottom: 8%
       @media only screen and (max-width: 768px)
         bottom: 5%
+/*-------------------------------------------------------------------------------------
+                                  Scroll Down Menu Fix
+  ------------------------------------------------------------------------------------*/
+.scroll-down-menu
+  background: $bg-main-menu !important
+#menu-open-btn
+  z-index: 999
+/*-------------------------------------------------------------------------------------
+                         Navigation Toggle Button (Hamburger)
+  ------------------------------------------------------------------------------------*/
+.nav-bar-toggle
+  position: fixed
+  top: 20px
+  right: 20px
+  width: 50px
+  height: 50px
+  background: $color-btn-hover
+  border-radius: 50px 50px 50px 0
+  &:hover
+    cursor: pointer
+  &:focus
+    outline: none
+  .icon-bar
+    position: absolute
+    width: 50%
+    display: block
+    height: 3px
+    border-radius: 4px
+    background: #ffffff
+    left: 50%
+    transform: translate(-50%)
+    transition: all 0.4s ease-in-out
+  .bar-one
+    transform-origin: 5%
+    top: 36%
+  .bar-two
+    top: 50%
+    left: 50%
+    transform: translateX(-50%, -50%)
+  .bar-tree
+    top: 50%
+    left: 50%
+    transform: translateX(-50%, -50%)
+  .bar-four
+    transform-origin: 5%
+    bottom: 30%
+.active-toggle
+  .bar-one
+    transform: rotate(45deg)
+    height: 3px
+    width: 25px
+    top: 34%
+    left: 32%
+  .bar-two
+    transform: rotate(-45deg)
+    height: 3px
+    width: 25px
+    left: 26%
+    top: 50%
+    background-color: transparent
+  .bar-tree
+    transform: rotate(45deg)
+    height: 3px
+    top: 50%
+    width: 25px
+    left: 26%
+    background-color: transparent
+  .bar-four
+    transform: rotate(-45deg)
+    height: 3px
+    width: 25px
+    left: 32%
+    top: 66%
+  .main-button-container
+    bottom: 30px
+    z-index: 20
+/*-------------------------------------------------------------------------------------
+                                           Scroll
+  ------------------------------------------------------------------------------------*/
+::-webkit-scrollbar
+  width: 15px
+
+::-webkit-scrollbar-track
+  background: #f1f1f1
+
+::-webkit-scrollbar-thumb
+  background: lighten($header-text-color, 20%)
+
+::-webkit-scrollbar-thumb:hover
+  background: $icons-color-reasons-section
+/*-------------------------------------------------------------------------------------
+                                  Menu Main Modal Window
+  ------------------------------------------------------------------------------------*/
+#main-menu-modal
+  display: block
+  position: fixed
+  width: 0
+  right: 0
+  height: 100vh
+  z-index: 22
+  transition: all 0.5s ease
+  background: $section-color-white
+  .underlay-box
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: -1
+    width: 100%
+    margin: auto
+    .underlay-text
+      position: fixed
+      right: 0
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      color: $text-color-white
+      text-transform: uppercase
+      letter-spacing: 10px
+      font-family: 'Montserrat SemiBold', sans-serif
+      font-size: 300px
+      text-shadow: 2px 2px 2px #ccc
+      width: 100%
+      text-align: center
+      white-space: nowrap
+.menu-active
+  transition: all 0.5s ease
+  width: 100% !important
+//.fixed
+//  overflow: hidden
+//.fix-btn
+//  right: 35px
 /*====================================================================
                                     END
  =====================================================================*/
@@ -453,108 +592,55 @@ body
     h1
       color: $text-color-white
       z-index: 20
-
   .main-header
-    position: relative
-    z-index: 20
-    .header-bottom
-      //background: $header-color
-      .logo-box
-        img
-          max-width: 65px
-          padding: 15px 0
-      .navigation
-        overflow: hidden
-        ul
-          margin-right: 15px
-          .home-page-dropdown-list
-            display: none
-          li
-            a
-             padding: 24px 15px
-             color: $color-btn
-             font-size: 18px
-             text-decoration: none
-             text-transform: uppercase
-             transition: all 0.3s ease-in
-             &:hover
-               color: $color-btn-hover
-               background: $bg-color-menu
-               cursor: pointer
-        .navbar-header
-          display: block
-          width: 100%
-          .navbar-toggle
-            position: relative
-            width: 30px
-            height: 30px
-            background: transparent
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    background: transparent
+    transition: all 0.5s ease
+    z-index: 21
+    .logo-box
+      margin: 0 0 0 35px
+      padding: 15px 0
+      img
+        max-width: 110px
+    .navigation
+      overflow: hidden
+      padding-right: 35px
+      .menu
+        margin-right: 70px
+        li
+          a
+            padding: 40px 10px
+            color: $color-btn
+            font-size: 15px
+            text-decoration: none
+            text-transform: uppercase
+            transition: all 0.3s ease-in
             &:hover
+              color: $color-btn-hover
+              background: $bg-color-menu
               cursor: pointer
-            &:focus
-              outline: none
-            .icon-bar
-              position: absolute
-              width: 100%
-              display: block
-              height: 3px
-              border-radius: 4px
-              background: #ffffff
-              transition: all 0.4s ease-in-out
-            .bar-one
-              transform-origin: 5%
-              top: 0
-            .bar-two
-              top: 50%
-              transform: translateY(-50%)
-            .bar-tree
-              top: 50%
-              transform: translateY(-50%)
-              right: 0
-            .bar-four
-              transform-origin: 5%
-              bottom: 0
-          .active-toggle
-            .bar-one
-              transform: rotate(45deg)
-              height: 3px
-              width: 42px
-            .bar-two
-              transform: rotate(-45deg)
-              height: 3px
-              background-color: transparent
-            .bar-tree
-              transform: rotate(45deg)
-              height: 3px
-              background-color: transparent
-            .bar-four
-              transform: rotate(-45deg)
-              height: 3px
-              width: 42px
-    .header-top
-      //background: $header-color-menu
-      .language-container
+      .call-block
         display: flex
-        justify-content: center
         align-items: center
-        .language_select
-          width: 100% !important
-          max-width: 200px !important
-          color: $select-search-color-text !important
-          border: 1px solid $form-border-color !important
-          text-align: center
-          border-radius: 50px !important
-          padding: 5px !important
-          margin: 10px 0 !important
+        justify-content: space-between
+        max-width: 380px
+        width: 100%
+        margin-right: 50px
+        button
+          padding: 5px 0 4px 0
+          max-height: 40px
           span
-            border-radius: 24px
-          .select2
-            border-radius: 24px
-          input
-            display: none !important
-  .main-button-container
-    bottom: 30px
-    z-index: 20
+            font-size: 14px
+            line-height: 24px
+        .phone-contact
+          width: 100%
+          color: $text-color-white
+          font-size: 18px
+          &:hover
+            cursor: pointer
 /*====================================================================
                                     END
  =====================================================================*/
@@ -869,7 +955,7 @@ body
  =====================================================================*/
 
 /*====================================================================
-                             13. Professionals Section
+                        13. Professionals Section
  =====================================================================*/
 .section-professionals
   position: relative
@@ -955,7 +1041,7 @@ body
           right: 0
           bottom: 0
           background: linear-gradient(to top, #000, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0))
-          height: 0%
+          height: 0
           transition: all 0.5s ease
           z-index: 0
           .contact-number-block
@@ -1003,6 +1089,7 @@ body
   .reason-box,
   .reason-box-inside
     max-height: 270px
+    z-index: 1
     @media (min-width: 992px)
       .reason-box-inside
         position: relative
@@ -1030,7 +1117,7 @@ body
           top: 50%
           left: 50%
           transform: translate(-50%,-50%)
-          min-width: 101%
+          //min-width: 101%
           min-height: 100%
           @media (max-width: 992px)
             opacity: 0.4
@@ -1050,10 +1137,10 @@ body
           text-align: center
           align-items: center
         h6
-          font-size: 30px
+          font-size: 25px
           margin-bottom: 20px
         span
-          font-size: 25px
+          font-size: 18px
           padding: 2px 10px
         p
           color: lighten($text-color-black,80%)
@@ -1078,7 +1165,7 @@ body
             left: 0
             height: 2px
             background: lighten($header-text-color, 30%)
-            width: 0%
+            width: 0
             transition: all 0.5s ease
             @media (max-width: 992px)
               background: #6ca1f5
@@ -1094,12 +1181,9 @@ body
           width: 100%
           pointer-events: auto
 
-
 .reason-box-front-side
   @media (max-width: 992px)
     display: none !important
-
-.reason-box-front-side
   @media (min-width: 992px)
     display: block
     position: absolute
@@ -1133,28 +1217,81 @@ body
 
 .reason-box
   &:hover
+    z-index: 20
     @media (min-width: 992px)
       .reason-box-front-side
         transform: rotateY(-180deg)
       .reason-box-back-side
         transform: rotateY(0deg)
 
-//        Scroll styles
-
-::-webkit-scrollbar
-  width: 15px
-
-::-webkit-scrollbar-track
-  background: #f1f1f1
-
-::-webkit-scrollbar-thumb
-  background: lighten($header-text-color, 20%)
-
-::-webkit-scrollbar-thumb:hover
-  background: $icons-color-reasons-section
 /*====================================================================
                                    END
  =====================================================================*/
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================================================================================================
+  =============================================================================================================================================================
+  =============================================================================================================================================================
+  =============================================================================================================================================================
+  =============================================================================================================================================================
+  =============================================================================================================================================================
+  =============================================================================================================================================================
+  =============================================================================================================================================================
+  =============================================================================================================================================================
+  =============================================================================================================================================================
+  =============================================================================================================================================================
+  =============================================================================================================================================================
+  =============================================================================================================================================================
+  =============================================================================================================================================================
+  =============================================================================================================================================================
+  =============================================================================================================================================================
+  =============================================================================================================================================================
+  =============================================================================================================================================================
+  =============================================================================================================================================================
+  =============================================================================================================================================================
+  =============================================================================================================================================================
+  =============================================================================================================================================================
+  =============================================================================================================================================================
+  =============================================================================================================================================================
+  =============================================================================================================================================================
+  =============================================================================================================================================================
+  =============================================================================================================================================================
+  =============================================================================================================================================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1512,7 +1649,7 @@ body
               @media only screen and (max-width: 1400px)
                 font-size: 12px
                 @media only screen and (max-width: 360px)
-                  font-size: 11
+                  font-size: 11px
             .hot_offer
               border-radius: 50px 50px 50px 0
               border: 1px solid red
