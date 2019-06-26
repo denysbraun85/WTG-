@@ -255,7 +255,30 @@ $('.background_discount').mousemove(function (e) {
     var moveX = (e.pageX * -1 / 30);
     // var moveY = (e.pageY * -1 / 30);
     $(this).css('background-position', moveX + 'px ')
-})
+});
+/*====================================================================
+                                 End
+ =====================================================================*/
+
+/*====================================================================
+                             Scroll Spy
+ =====================================================================*/
+$(document).ready(function(){
+    $(document).ready(function(){
+        $('body').scrollspy({target: ".navigation", offset: 50});
+        $("#navigation a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function(){
+                    window.location.hash = hash;
+                });
+            }
+        });
+    });
+});
 /*====================================================================
                                  End
  =====================================================================*/
