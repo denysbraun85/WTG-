@@ -604,6 +604,8 @@ figure {
       width: 100%;
       text-align: center;
       white-space: nowrap; }
+  #main-menu-modal .menu-container {
+    position: fixed; }
 
 .menu-active {
   -webkit-transition: all 0.5s ease;
