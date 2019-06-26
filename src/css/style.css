@@ -65,6 +65,11 @@
 /*====================================================================
                                 3. Reset
  @mixin ====================================================================*/
+body {
+  background: #fff;
+  font-family: 'Montserrat-regular', sans-serif;
+  font-size: 15px; }
+
 * {
   margin: 0;
   padding: 0;
@@ -189,7 +194,6 @@ figure {
 .text-inform {
   color: #838181; }
 
-/*---------------------------------Max-width----------------------------*/
 .max-w-1700 {
   width: 100%;
   max-width: 1700px; }
@@ -200,12 +204,9 @@ figure {
 /*====================================================================
                                 4. Global
  @mixin ====================================================================*/
-body {
-  background: #fff;
-  font-family: 'Montserrat-regular', sans-serif;
-  font-size: 15px; }
-
-/*---------------------------------Button----------------------------*/
+/*-------------------------------------------------------------------------------------
+                                         Button
+  ------------------------------------------------------------------------------------*/
 .custom-btn {
   display: block;
   position: relative;
@@ -405,12 +406,13 @@ body {
     -webkit-box-shadow: 0 10px 30px rgba(0, 114, 255, 0.3);
             box-shadow: 0 10px 30px rgba(0, 114, 255, 0.3); }
 
-/*---------------------------------Header of the section----------------------------*/
+/*-------------------------------------------------------------------------------------
+                                   Header of the section-
+  ------------------------------------------------------------------------------------*/
 .head-text-box {
   width: 100%;
   text-align: center;
-  z-index: 100;
-  /*---------------------------------Button container----------------------------*/ }
+  z-index: 100; }
   .head-text-box h2 {
     color: #032fab;
     text-transform: uppercase; }
@@ -420,6 +422,9 @@ body {
     font-size: 22px;
     text-transform: uppercase; }
 
+/*-------------------------------------------------------------------------------------
+                                     Button Container
+  ------------------------------------------------------------------------------------*/
 .main-button-container {
   position: absolute;
   max-height: 50px;
@@ -438,12 +443,173 @@ body {
     .main-button-container {
       bottom: 5%; } }
 
-/*---------------------------------Scroll Down Menu Fix----------------------------*/
+/*-------------------------------------------------------------------------------------
+                                  Scroll Down Menu Fix
+  ------------------------------------------------------------------------------------*/
 .scroll-down-menu {
   background: rgba(3, 47, 171, 0.8) !important; }
 
 #menu-open-btn {
   z-index: 999; }
+
+/*-------------------------------------------------------------------------------------
+                         Navigation Toggle Button (Hamburger)
+  ------------------------------------------------------------------------------------*/
+.nav-bar-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: #006aff;
+  -webkit-border-radius: 50px 50px 50px 0;
+          border-radius: 50px 50px 50px 0; }
+  .nav-bar-toggle:hover {
+    cursor: pointer; }
+  .nav-bar-toggle:focus {
+    outline: none; }
+  .nav-bar-toggle .icon-bar {
+    position: absolute;
+    width: 50%;
+    display: block;
+    height: 3px;
+    -webkit-border-radius: 4px;
+            border-radius: 4px;
+    background: #ffffff;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out; }
+  .nav-bar-toggle .bar-one {
+    -webkit-transform-origin: 5%;
+        -ms-transform-origin: 5%;
+            transform-origin: 5%;
+    top: 36%; }
+  .nav-bar-toggle .bar-two {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%, -50%);
+        -ms-transform: translateX(-50%, -50%);
+            transform: translateX(-50%, -50%); }
+  .nav-bar-toggle .bar-tree {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%, -50%);
+        -ms-transform: translateX(-50%, -50%);
+            transform: translateX(-50%, -50%); }
+  .nav-bar-toggle .bar-four {
+    -webkit-transform-origin: 5%;
+        -ms-transform-origin: 5%;
+            transform-origin: 5%;
+    bottom: 30%; }
+
+.active-toggle .bar-one {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  height: 3px;
+  width: 25px;
+  top: 34%;
+  left: 32%; }
+
+.active-toggle .bar-two {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  height: 3px;
+  width: 25px;
+  left: 26%;
+  top: 50%;
+  background-color: transparent; }
+
+.active-toggle .bar-tree {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  height: 3px;
+  top: 50%;
+  width: 25px;
+  left: 26%;
+  background-color: transparent; }
+
+.active-toggle .bar-four {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  height: 3px;
+  width: 25px;
+  left: 32%;
+  top: 66%; }
+
+.active-toggle .main-button-container {
+  bottom: 30px;
+  z-index: 20; }
+
+/*-------------------------------------------------------------------------------------
+                                           Scroll
+  ------------------------------------------------------------------------------------*/
+::-webkit-scrollbar {
+  width: 15px; }
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; }
+
+::-webkit-scrollbar-thumb {
+  background: #1954fb; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #006aff; }
+
+/*-------------------------------------------------------------------------------------
+                                  Menu Main Modal Window
+  ------------------------------------------------------------------------------------*/
+#main-menu-modal {
+  display: block;
+  position: fixed;
+  width: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 22;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background: #fff; }
+  #main-menu-modal .underlay-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: -1;
+    width: 100%;
+    margin: auto; }
+    #main-menu-modal .underlay-box .underlay-text {
+      position: fixed;
+      right: 0;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 10px;
+      font-family: 'Montserrat SemiBold', sans-serif;
+      font-size: 300px;
+      text-shadow: 2px 2px 2px #ccc;
+      width: 100%;
+      text-align: center;
+      white-space: nowrap; }
+
+.menu-active {
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  width: 100% !important; }
 
 /*====================================================================
                                     END
@@ -553,144 +719,6 @@ body {
           font-size: 18px; }
           .main-section .main-header .navigation .call-block .phone-contact:hover {
             cursor: pointer; }
-
-.nav-bar-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  background: #006aff;
-  -webkit-border-radius: 50px 50px 50px 0;
-          border-radius: 50px 50px 50px 0; }
-  .nav-bar-toggle:hover {
-    cursor: pointer; }
-  .nav-bar-toggle:focus {
-    outline: none; }
-  .nav-bar-toggle .icon-bar {
-    position: absolute;
-    width: 50%;
-    display: block;
-    height: 3px;
-    -webkit-border-radius: 4px;
-            border-radius: 4px;
-    background: #ffffff;
-    left: 50%;
-    -webkit-transform: translate(-50%);
-        -ms-transform: translate(-50%);
-            transform: translate(-50%);
-    -webkit-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out; }
-  .nav-bar-toggle .bar-one {
-    -webkit-transform-origin: 5%;
-        -ms-transform-origin: 5%;
-            transform-origin: 5%;
-    top: 36%; }
-  .nav-bar-toggle .bar-two {
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translateX(-50%, -50%);
-        -ms-transform: translateX(-50%, -50%);
-            transform: translateX(-50%, -50%); }
-  .nav-bar-toggle .bar-tree {
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translateX(-50%, -50%);
-        -ms-transform: translateX(-50%, -50%);
-            transform: translateX(-50%, -50%); }
-  .nav-bar-toggle .bar-four {
-    -webkit-transform-origin: 5%;
-        -ms-transform-origin: 5%;
-            transform-origin: 5%;
-    bottom: 30%; }
-
-.active-toggle .bar-one {
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-  height: 3px;
-  width: 25px;
-  top: 34%;
-  left: 32%; }
-
-.active-toggle .bar-two {
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  height: 3px;
-  width: 25px;
-  left: 26%;
-  top: 50%;
-  background-color: transparent; }
-
-.active-toggle .bar-tree {
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-  height: 3px;
-  top: 50%;
-  width: 25px;
-  left: 26%;
-  background-color: transparent; }
-
-.active-toggle .bar-four {
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  height: 3px;
-  width: 25px;
-  left: 32%;
-  top: 66%; }
-
-.active-toggle .main-button-container {
-  bottom: 30px;
-  z-index: 20; }
-
-#main-menu-modal {
-  display: block;
-  position: fixed;
-  width: 0;
-  right: 0;
-  height: 100vh;
-  z-index: 22;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  background: #fff; }
-  #main-menu-modal .underlay-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    z-index: -1;
-    width: 100%;
-    margin: auto; }
-    #main-menu-modal .underlay-box .underlay-text {
-      position: fixed;
-      right: 0;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
-      color: #fff;
-      text-transform: uppercase;
-      letter-spacing: 10px;
-      font-family: 'Montserrat SemiBold', sans-serif;
-      font-size: 300px;
-      text-shadow: 2px 2px 2px #ccc;
-      width: 100%;
-      text-align: center;
-      white-space: nowrap; }
-
-.menu-active {
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  width: 100% !important; }
 
 /*====================================================================
                                     END
@@ -1070,7 +1098,7 @@ body {
                                    END
  @mixin ====================================================================*/
 /*====================================================================
-                             13. Professionals Section
+                        13. Professionals Section
  @mixin ====================================================================*/
 .section-professionals {
   position: relative;
@@ -1181,7 +1209,7 @@ body {
           background: -webkit-linear-gradient(bottom, #000, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
           background: -o-linear-gradient(bottom, #000, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
           background: linear-gradient(to top, #000, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
-          height: 0%;
+          height: 0;
           -webkit-transition: all 0.5s ease;
           -o-transition: all 0.5s ease;
           transition: all 0.5s ease;
@@ -1398,7 +1426,7 @@ body {
             left: 0;
             height: 2px;
             background: #4b79fc;
-            width: 0%;
+            width: 0;
             -webkit-transition: all 0.5s ease;
             -o-transition: all 0.5s ease;
             transition: all 0.5s ease; }
@@ -1485,21 +1513,37 @@ body {
       -webkit-transform: rotateY(0deg);
               transform: rotateY(0deg); } }
 
-::-webkit-scrollbar {
-  width: 15px; }
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1; }
-
-::-webkit-scrollbar-thumb {
-  background: #1954fb; }
-
-::-webkit-scrollbar-thumb:hover {
-  background: #006aff; }
-
 /*====================================================================
                                    END
  @mixin ====================================================================*/
+/*=============================================================================================================================================================
+  @mixin ============================================================================================================================================================
+  @mixin ============================================================================================================================================================
+  @mixin ============================================================================================================================================================
+  @mixin ============================================================================================================================================================
+  @mixin ============================================================================================================================================================
+  @mixin ============================================================================================================================================================
+  @mixin ============================================================================================================================================================
+  @mixin ============================================================================================================================================================
+  @mixin ============================================================================================================================================================
+  @mixin ============================================================================================================================================================
+  @mixin ============================================================================================================================================================
+  @mixin ============================================================================================================================================================
+  @mixin ============================================================================================================================================================
+  @mixin ============================================================================================================================================================
+  @mixin ============================================================================================================================================================
+  @mixin ============================================================================================================================================================
+  @mixin ============================================================================================================================================================
+  @mixin ============================================================================================================================================================
+  @mixin ============================================================================================================================================================
+  @mixin ============================================================================================================================================================
+  @mixin ============================================================================================================================================================
+  @mixin ============================================================================================================================================================
+  @mixin ============================================================================================================================================================
+  @mixin ============================================================================================================================================================
+  @mixin ============================================================================================================================================================
+  @mixin ============================================================================================================================================================
+  @mixin ============================================================================================================================================================*/
 /* ==================================================================
                             STYLES HOLINEY
  @mixin ==================================================================*/
