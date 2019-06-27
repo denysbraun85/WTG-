@@ -31,7 +31,16 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
 gulp.task('scripts', function() {
     return gulp.src([ // Берем все необходимые библиотеки
         'src/libs/jquery/dist/jquery.min.js', // Берем jQuery
-        'src/libs/magnific-popup/dist/jquery.magnific-popup.min.js' // Берем Magnific Popup
+        'src/libs/magnific-popup/dist/jquery.magnific-popup.min.js', // Берем Magnific Popup
+        'src/libs/slick/slick.min.js', // Берем Slick
+        'src/libs/bootstrap-4.1.3-dist/js/bootstrap.bundle.min.js', // Берем Bootstrap Bundle
+        'src/libs/bootstrap-4.1.3-dist/js/bootstrap.min.js', // Берем Bootstrap 4.1.3
+        'src/libs/select-2/js/select2.min.js', // Берем Select-2
+        'src/libs/select-2/js/select2.min.js', // Берем Select-2
+        'src/libs/parallax.min.js', // Берем Parallax
+        'src/libs/compiled/parallax.min.js', // Берем Parallax
+        'src/libs/jBox-1.0.3/dist/jBox.all.min.js', // Берем jBox Modal
+        'src/libs/jquery-background-video-master/jquery.background-video.js' // Берем jquery-background-video-master
     ])
         .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
         .pipe(uglify()) // Сжимаем JS файл

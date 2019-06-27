@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19722a5d-ae65-4ff2-ab51-78a7c2c5aaaf" name="Default" comment="add fonts">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sass/style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/style.sass" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,7 +67,7 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="build" type="js.build_tools.gulp" temporary="true">
+    <configuration name="build" type="js.build_tools.gulp">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <gulpfile>$PROJECT_DIR$/gulpfile.js</gulpfile>
@@ -114,7 +114,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gulp.js.default" />
-        <item itemvalue="Gulp.js.build" />
         <item itemvalue="Gulp.js.watch" />
         <item itemvalue="Gulp.js.clear" />
       </list>
@@ -150,7 +149,8 @@
       <workItem from="1561356579835" duration="51832000" />
       <workItem from="1561528973789" duration="449000" />
       <workItem from="1561529498198" duration="30440000" />
-      <workItem from="1561615397839" duration="12174000" />
+      <workItem from="1561615397839" duration="19837000" />
+      <workItem from="1561638767421" duration="1904000" />
     </task>
     <task id="LOCAL-00001" summary="fresh code">
       <created>1560240694312</created>
