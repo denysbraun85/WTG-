@@ -10,7 +10,7 @@
  * 8. Video section 1
  * 9. Service section 1
  *10. Advantages section
- *11. Reason section 1
+ *11. cities section 1
  *12. Philosophy section
  *13. Professionals section 1
  *14. Stage section 1
@@ -419,7 +419,7 @@ figure
 .main-button-container
   position: absolute
   max-height: 50px
-  bottom: 10%
+  bottom: 30px
   left: 50%
   transform: translateX(-50%)
   z-index: 2
@@ -429,6 +429,15 @@ figure
       bottom: 8%
       @media only screen and (max-width: 768px)
         bottom: 5%
+        @media only screen and (max-width: 576px)
+          width: 70%
+  .blue-btn
+    @media only screen and (max-width: 992px)
+      padding: 10px 100px
+      @media only screen and (max-width: 768px)
+        padding: 10px 60px
+        @media only screen and (max-width: 576px)
+          padding: 10px 40px
 /*-------------------------------------------------------------------------------------
                                   Scroll Down Menu Fix
   ------------------------------------------------------------------------------------*/
@@ -769,7 +778,7 @@ figure
       z-index: 1
   .video-bg
     z-index: 0
-    @media only screen and (max-width: 992px)
+    @media only screen and (max-width: 768px)
       display: none
   .main-content
     position: absolute
@@ -828,19 +837,49 @@ figure
         @media only screen and (max-width: 992px)
           display: none !important
         li
+          //a
+          //  padding: 40px 10px
+          //  color: $color-btn
+          //  font-size: 15px
+          //  text-decoration: none
+          //  text-transform: uppercase
+          //  transition: all 0.3s ease-in
+          //  @media only screen and (max-width: 1200px)
+          //    font-size: 12px
+          //  &:hover
+          //    color: $color-btn-hover
+          //    background: $bg-color-menu
+          //    cursor: pointer
           a
-            padding: 40px 10px
-            color: $color-btn
-            font-size: 15px
-            text-decoration: none
-            text-transform: uppercase
-            transition: all 0.3s ease-in
-            @media only screen and (max-width: 1200px)
-              font-size: 12px
+            position: relative
+            z-index: 1
+            font-family: 'Montserrat Semibold', sans-serif
+            padding: 5px 0
+            margin: 15px 30px
+            font-size: 18px
+            color: $text-color-white
+            background-image: linear-gradient(to right, $text-color-white, $text-color-white 50%, black 50%)
+            background-size: 200% 100%
+            background-position: -100%
+            -webkit-background-clip: text
+            transition: all 0.3s ease-in-out
+            @media only screen and (max-width: 1400px)
+              margin: 15px 15px
+            &:before
+              display: block
+              content: ''
+              width: 0
+              height: 2px
+              left: 0
+              bottom: -3px
+              z-index: 0
+              position: absolute
+              background: $text-color-white
+              transition: all 0.3s ease-in-out
             &:hover
-              color: $color-btn-hover
-              background: $bg-color-menu
-              cursor: pointer
+              background-position: 0
+              &:before
+                width: 100%
       .call-block
         display: flex
         align-items: center
@@ -972,6 +1011,7 @@ figure
 .section-services
   position: relative
   padding-bottom: 250px
+  z-index: 2
   @media only screen and (max-width: 992px)
     padding-bottom: 200px
   .service-content-container
@@ -1004,8 +1044,8 @@ figure
           font-size: 18px
           color: $text-color-black
   .head-text-box
-    h2
-      margin-bottom: 50px
+    h3
+      margin-top: 0
       color: $text-color-white
   .main-button-container
     position: absolute
@@ -1054,7 +1094,8 @@ figure
     right: 0
     bottom: 0
     opacity: .4
-  h2
+  h3
+    margin: 0
     color: $text-color-white
   .feedback-slider
     overflow: hidden
@@ -1137,10 +1178,12 @@ figure
  =====================================================================*/
 .section-professionals
   position: relative
-  background: $section-color-professionals
+  background: $section-color-light
   .head-text-box
+    h3
+      margin: 0
     .upper-head
-      margin-top: 20px
+      margin-top: 30px
   .manager-slider
     width: 100%
     max-width: 100%
@@ -1248,6 +1291,7 @@ figure
           font-family: 'Montserrat-semibold', sans-serif
           transition: all 0.5s ease
   .main-button-container
+    bottom: 10%
     &:hover
       span
         color: $color-btn
@@ -1258,15 +1302,15 @@ figure
  /*====================================================================
                               Cities Section
  =====================================================================*/
-.section-reason
-  background: $section-color-greetings
+.section-cities
+  background: $section-color-light
   overflow: hidden
-  .reason-box,
-  .reason-box-inside
+  .cities-box,
+  .cities-box-inside
     max-height: 270px
     z-index: 1
     @media (min-width: 992px)
-      .reason-box-inside
+      .cities-box-inside
         position: relative
         transform-style: preserve-3d
         perspective: 1000px
@@ -1274,21 +1318,21 @@ figure
       max-width: 370px
       margin-left: auto
       margin-right: auto
-    .reason-box-front-side,
-    .reason-box-back-side
+    .cities-box-front-side,
+    .cities-box-back-side
       background: #333
       @media (min-width: 992px)
         overflow: visible
         transform-style: preserve-3d
         transition: transform .7s cubic-bezier(.4,.2,.2,1)
         backface-visibility: hidden
-      .reason-box-img-wrapper
+      .cities-box-img-wrapper
         top: 0
         right: 0
         bottom: 0
         left: 0
         overflow: hidden
-        .reason-box-img
+        .cities-box-img
           top: 50%
           left: 50%
           transform: translate(-50%,-50%)
@@ -1296,7 +1340,7 @@ figure
           min-height: 100%
           @media (max-width: 992px)
             opacity: 0.4
-      .reason-box-content
+      .cities-box-content
         overflow: hidden
         z-index: 1
         padding: 50px 40px
@@ -1356,7 +1400,7 @@ figure
           width: 100%
           pointer-events: auto
 
-.reason-box-front-side
+.cities-box-front-side
   @media (max-width: 992px)
     display: none !important
   @media (min-width: 992px)
@@ -1369,7 +1413,7 @@ figure
     width: 100%
     transform: rotateY(0deg)
     z-index: 1
-    .reason-box-content
+    .cities-box-content
       position: absolute
       top: 0
       left: 0
@@ -1378,25 +1422,25 @@ figure
       z-index: 2
       *
         opacity: 1
-    .reason-box-img
+    .cities-box-img
       opacity: .35
 
-.reason-box-back-side
+.cities-box-back-side
   position: relative
   overflow: hidden
   @media (min-width: 992px)
     transform: rotateY(180deg)
     opacity: 1
-    .reason-box-img
+    .cities-box-img
       opacity: .05
 
-.reason-box
+.cities-box
   &:hover
     z-index: 20
     @media (min-width: 992px)
-      .reason-box-front-side
+      .cities-box-front-side
         transform: rotateY(-180deg)
-      .reason-box-back-side
+      .cities-box-back-side
         transform: rotateY(0deg)
 
 /*====================================================================
@@ -1991,7 +2035,7 @@ figure
  ===================================================================*/
 
 .section_discount
-  background: linear-gradient(to bottom, #ffffff 50%,#f8f8f8 50%)
+  background: $section-color-white
   position: relative
   margin-bottom: -3px
   overflow: hidden
@@ -2049,7 +2093,6 @@ figure
                            OUR PHILOSOPHY STYLES
  ===================================================================*/
 
-
 .back_our_philosophy
   background: url("../img/background/ourphilosophy.jpg") no-repeat left center
   background-size: contain
@@ -2063,7 +2106,7 @@ figure
       background-position: center
       background-size: cover
       @media only screen and (max-width: 576px)
-        background: black 
+        background: black
   .wrap_info_philosophy
     position: relative
     width: 45%
@@ -2088,7 +2131,7 @@ figure
       max-width: 1024px
       width: 100%
       top: 50%
-      left: 15% 
+      left: 15%
       transform: translate(-50%, -50%)
       @media only screen and (max-width: 1300px)
         position: static
@@ -2137,7 +2180,7 @@ figure
               padding-bottom: 10px
               text-align: center
               @media only screen and (max-width: 576px)
-                margin: 0 auto 
+                margin: 0 auto
                 padding-bottom: 10px
                 text-align: center
         .under_title_philosophy
@@ -2151,7 +2194,7 @@ figure
             @media only screen and (max-width: 1300px)
               margin: 0 auto
               @media only screen and (max-width: 576px)
-                margin: 0 auto 
+                margin: 0 auto
                 font-size: 16px
                 text-align: center
         .info_philosophy_text
