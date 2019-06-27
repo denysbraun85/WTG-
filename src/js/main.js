@@ -250,16 +250,19 @@ $('#menu-open-btn').on('click', function () {
 /*====================================================================
                              Scroll Spy
  =====================================================================*/
-$(document).ready(function(){
-    $(document).ready(function(){
-        $('body').scrollspy({target: ".navigation", offset: 50});
-        $("#navigation a").on('click', function(event) {
+$(document).ready(function () {
+    $(document).ready(function () {
+        $('body').scrollspy({
+            target: ".navigation",
+            offset: 50
+        });
+        $("#navigation a").on('click', function (event) {
             if (this.hash !== "") {
                 event.preventDefault();
                 var hash = this.hash;
                 $('html, body').animate({
                     scrollTop: $(hash).offset().top
-                }, 800, function(){
+                }, 800, function () {
                     window.location.hash = hash;
                 });
             }
@@ -270,5 +273,78 @@ $(document).ready(function(){
                                  End
  =====================================================================*/
 
+
+
+/*====================================================================
+                                 Parallax Discount
+ =====================================================================*/
+
 var scene = document.getElementById('scene');
 var parallaxInstance = new Parallax(scene);
+
+/*====================================================================
+                                 End
+ =====================================================================*/
+
+
+
+/*====================================================================
+                                 Vertical Timeline
+ =====================================================================*/
+
+$(function () {
+
+    window.sr = ScrollReveal();
+
+    if ($(window).width() < 768) {
+
+        if ($('.timeline-content').hasClass('js--fadeInLeft')) {
+            $('.timeline-content').removeClass('js--fadeInLeft').addClass('js--fadeInRight');
+        }
+
+        sr.reveal('.js--fadeInRight', {
+            origin: 'right',
+            distance: '300px',
+            easing: 'ease-in-out',
+            duration: 800,
+        });
+
+    } else {
+
+        sr.reveal('.js--fadeInLeft', {
+            origin: 'left',
+            distance: '300px',
+            easing: 'ease-in-out',
+            duration: 800,
+        });
+
+        sr.reveal('.js--fadeInRight', {
+            origin: 'right',
+            distance: '300px',
+            easing: 'ease-in-out',
+            duration: 800,
+        });
+
+    }
+
+    sr.reveal('.js--fadeInLeft', {
+        origin: 'left',
+        distance: '300px',
+        easing: 'ease-in-out',
+        duration: 800,
+    });
+
+    sr.reveal('.js--fadeInRight', {
+        origin: 'right',
+        distance: '300px',
+        easing: 'ease-in-out',
+        duration: 800,
+    });
+
+
+});
+
+
+/*====================================================================
+                                 End
+ =====================================================================*/
