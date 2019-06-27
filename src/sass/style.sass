@@ -506,7 +506,7 @@ figure
   height: 100vh
   z-index: 22
   transition: all 0.5s ease
-  background: $section-color-white
+  background: #eff4f7
   overflow-x: hidden
   overflow-y: hidden
   white-space: nowrap
@@ -515,7 +515,7 @@ figure
     z-index: -1
     width: 100%
     margin: auto
-    opacity: 0.4
+    //opacity: 0.4
     .underlay-text
       position: fixed
       right: 0
@@ -527,10 +527,12 @@ figure
       letter-spacing: 10px
       font-family: 'Montserrat SemiBold', sans-serif
       font-size: 300px
-      text-shadow: 10px 5px 10px #bfbfbf
+      font-weight: 700
+      text-shadow: 20px 10px 30px #f2f5f9
       width: 100%
       text-align: center
       white-space: nowrap
+      opacity: 0.7
   .menu-container
     display: block
     .menu-full
@@ -796,8 +798,7 @@ figure
           max-height: 30px
           max-width: 140px
           border-width: 1px
-          animation-duration: 5s
-          animation-iteration-count: infinite
+
           @media only screen and (max-width: 500px)
             padding: 0
             max-height: 30px
@@ -812,6 +813,21 @@ figure
             @media only screen and (max-width: 500px)
               font-size: 10px
               line-height: 19px
+        .shake
+          animation: shake 0.9s linear both infinite
+
+
+          @keyframes shake
+            10%, 90%
+              transform: translate3d(-2px, 0, 0)
+            20%, 80%
+              transform: translate3d(3px, 0, 0)
+            30%, 50%, 70%
+              transform: translate3d(-5px, 0, 0)
+            40%, 60%
+              transform: translate3d(5px, 0, 0)
+
+
         .phone-contact
           width: 100%
           color: $text-color-white

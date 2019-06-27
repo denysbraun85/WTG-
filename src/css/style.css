@@ -569,15 +569,14 @@ figure {
   -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  background: #fff;
+  background: #eff4f7;
   overflow-x: hidden;
   overflow-y: hidden;
   white-space: nowrap; }
   #main-menu-modal .underlay-box {
     z-index: -1;
     width: 100%;
-    margin: auto;
-    opacity: 0.4; }
+    margin: auto; }
     #main-menu-modal .underlay-box .underlay-text {
       position: fixed;
       right: 0;
@@ -591,10 +590,12 @@ figure {
       letter-spacing: 10px;
       font-family: 'Montserrat SemiBold', sans-serif;
       font-size: 300px;
-      text-shadow: 10px 5px 10px #bfbfbf;
+      font-weight: 700;
+      text-shadow: 20px 10px 30px #f2f5f9;
       width: 100%;
       text-align: center;
-      white-space: nowrap; }
+      white-space: nowrap;
+      opacity: 0.7; }
   #main-menu-modal .menu-container {
     display: block; }
     #main-menu-modal .menu-container .menu-full {
@@ -911,11 +912,7 @@ figure {
           padding: 5px 0 4px 0;
           max-height: 30px;
           max-width: 140px;
-          border-width: 1px;
-          -webkit-animation-duration: 5s;
-                  animation-duration: 5s;
-          -webkit-animation-iteration-count: infinite;
-                  animation-iteration-count: infinite; }
+          border-width: 1px; }
           @media only screen and (max-width: 500px) {
             .main-section .main-header .navigation .call-block button {
               padding: 0;
@@ -933,6 +930,37 @@ figure {
               .main-section .main-header .navigation .call-block button span {
                 font-size: 10px;
                 line-height: 19px; } }
+        .main-section .main-header .navigation .call-block .shake {
+          -webkit-animation: shake 0.9s linear both infinite;
+                  animation: shake 0.9s linear both infinite; }
+
+@-webkit-keyframes shake {
+  10%, 90% {
+    -webkit-transform: translate3d(-2px, 0, 0);
+            transform: translate3d(-2px, 0, 0); }
+  20%, 80% {
+    -webkit-transform: translate3d(3px, 0, 0);
+            transform: translate3d(3px, 0, 0); }
+  30%, 50%, 70% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+            transform: translate3d(-5px, 0, 0); }
+  40%, 60% {
+    -webkit-transform: translate3d(5px, 0, 0);
+            transform: translate3d(5px, 0, 0); } }
+
+@keyframes shake {
+  10%, 90% {
+    -webkit-transform: translate3d(-2px, 0, 0);
+            transform: translate3d(-2px, 0, 0); }
+  20%, 80% {
+    -webkit-transform: translate3d(3px, 0, 0);
+            transform: translate3d(3px, 0, 0); }
+  30%, 50%, 70% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+            transform: translate3d(-5px, 0, 0); }
+  40%, 60% {
+    -webkit-transform: translate3d(5px, 0, 0);
+            transform: translate3d(5px, 0, 0); } }
         .main-section .main-header .navigation .call-block .phone-contact {
           width: 100%;
           color: #fff;
