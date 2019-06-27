@@ -428,18 +428,26 @@ figure
     transition: all 0.4s ease-in-out
   .bar-one
     transform-origin: 5%
-    top: 36%
+    top: 34%
+    @media only screen and (max-width: 576px)
+      top: 13px
   .bar-two
     top: 50%
     left: 50%
     transform: translateX(-50%, -50%)
+    @media only screen and (max-width: 576px)
+      top: 19px
   .bar-tree
     top: 50%
     left: 50%
     transform: translateX(-50%, -50%)
+    @media only screen and (max-width: 576px)
+      top: 19px
   .bar-four
     transform-origin: 5%
-    bottom: 30%
+    bottom: 28%
+    @media only screen and (max-width: 576px)
+      bottom: 12px
 .active-toggle
   .bar-one
     transform: rotate(45deg)
@@ -449,6 +457,7 @@ figure
     left: 32%
     @media only screen and (max-width: 576px)
       width: 19px
+      top: 32%
   .bar-two
     transform: rotate(-45deg)
     height: 3px
@@ -458,6 +467,7 @@ figure
     background-color: transparent
     @media only screen and (max-width: 576px)
       width: 19px
+      top: 19px
   .bar-tree
     transform: rotate(45deg)
     height: 3px
@@ -467,6 +477,7 @@ figure
     background-color: transparent
     @media only screen and (max-width: 576px)
       width: 19px
+      top: 19px
   .bar-four
     transform: rotate(-45deg)
     height: 3px
@@ -475,6 +486,7 @@ figure
     top: 66%
     @media only screen and (max-width: 576px)
       width: 19px
+      bottom: 12px
   .main-button-container
     bottom: 30px
     z-index: 20
@@ -814,20 +826,8 @@ figure
               font-size: 10px
               line-height: 19px
         .shake
-          animation: shake 0.9s linear both infinite
-
-
-          @keyframes shake
-            10%, 90%
-              transform: translate3d(-2px, 0, 0)
-            20%, 80%
-              transform: translate3d(3px, 0, 0)
-            30%, 50%, 70%
-              transform: translate3d(-5px, 0, 0)
-            40%, 60%
-              transform: translate3d(5px, 0, 0)
-
-
+          animation: shake 5s linear both infinite
+          animation-delay: 1s
         .phone-contact
           width: 100%
           color: $text-color-white
@@ -836,6 +836,34 @@ figure
             display: none
           &:hover
             cursor: pointer
+
+
+@keyframes shake
+  1%
+    transform: translate3d(-2px, 0, 0)
+  2%
+    transform: translate3d(3px, 0, 0)
+  3%
+    transform: translate3d(-5px, 0, 0)
+  4%
+    transform: translate3d(5px, 0, 0)
+  5%
+    transform: translate3d(-5px, 0, 0)
+  6%
+    transform: translate3d(3px, 0, 0)
+  7%
+    transform: translate3d(-2px, 0, 0)
+  8%
+    transform: translate3d(0, 0, 0)
+
+//1%, 19%
+            //  transform: translate3d(-2px, 0, 0)
+            //2%, 18%
+            //  transform: translate3d(3px, 0, 0)
+            //3%, 15%, 17%
+            //  transform: translate3d(-5px, 0, 0)
+            //4%, 16%
+            //  transform: translate3d(5px, 0, 0)
 /*====================================================================
                                     END
  =====================================================================*/

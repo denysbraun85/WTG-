@@ -454,24 +454,36 @@ figure {
     -webkit-transform-origin: 5%;
         -ms-transform-origin: 5%;
             transform-origin: 5%;
-    top: 36%; }
+    top: 34%; }
+    @media only screen and (max-width: 576px) {
+      .nav-bar-toggle .bar-one {
+        top: 13px; } }
   .nav-bar-toggle .bar-two {
     top: 50%;
     left: 50%;
     -webkit-transform: translateX(-50%, -50%);
         -ms-transform: translateX(-50%, -50%);
             transform: translateX(-50%, -50%); }
+    @media only screen and (max-width: 576px) {
+      .nav-bar-toggle .bar-two {
+        top: 19px; } }
   .nav-bar-toggle .bar-tree {
     top: 50%;
     left: 50%;
     -webkit-transform: translateX(-50%, -50%);
         -ms-transform: translateX(-50%, -50%);
             transform: translateX(-50%, -50%); }
+    @media only screen and (max-width: 576px) {
+      .nav-bar-toggle .bar-tree {
+        top: 19px; } }
   .nav-bar-toggle .bar-four {
     -webkit-transform-origin: 5%;
         -ms-transform-origin: 5%;
             transform-origin: 5%;
-    bottom: 30%; }
+    bottom: 28%; }
+    @media only screen and (max-width: 576px) {
+      .nav-bar-toggle .bar-four {
+        bottom: 12px; } }
 
 .active-toggle .bar-one {
   -webkit-transform: rotate(45deg);
@@ -483,7 +495,8 @@ figure {
   left: 32%; }
   @media only screen and (max-width: 576px) {
     .active-toggle .bar-one {
-      width: 19px; } }
+      width: 19px;
+      top: 32%; } }
 
 .active-toggle .bar-two {
   -webkit-transform: rotate(-45deg);
@@ -496,7 +509,8 @@ figure {
   background-color: transparent; }
   @media only screen and (max-width: 576px) {
     .active-toggle .bar-two {
-      width: 19px; } }
+      width: 19px;
+      top: 19px; } }
 
 .active-toggle .bar-tree {
   -webkit-transform: rotate(45deg);
@@ -509,7 +523,8 @@ figure {
   background-color: transparent; }
   @media only screen and (max-width: 576px) {
     .active-toggle .bar-tree {
-      width: 19px; } }
+      width: 19px;
+      top: 19px; } }
 
 .active-toggle .bar-four {
   -webkit-transform: rotate(-45deg);
@@ -521,7 +536,8 @@ figure {
   top: 66%; }
   @media only screen and (max-width: 576px) {
     .active-toggle .bar-four {
-      width: 19px; } }
+      width: 19px;
+      bottom: 12px; } }
 
 .active-toggle .main-button-container {
   bottom: 30px;
@@ -931,36 +947,10 @@ figure {
                 font-size: 10px;
                 line-height: 19px; } }
         .main-section .main-header .navigation .call-block .shake {
-          -webkit-animation: shake 0.9s linear both infinite;
-                  animation: shake 0.9s linear both infinite; }
-
-@-webkit-keyframes shake {
-  10%, 90% {
-    -webkit-transform: translate3d(-2px, 0, 0);
-            transform: translate3d(-2px, 0, 0); }
-  20%, 80% {
-    -webkit-transform: translate3d(3px, 0, 0);
-            transform: translate3d(3px, 0, 0); }
-  30%, 50%, 70% {
-    -webkit-transform: translate3d(-5px, 0, 0);
-            transform: translate3d(-5px, 0, 0); }
-  40%, 60% {
-    -webkit-transform: translate3d(5px, 0, 0);
-            transform: translate3d(5px, 0, 0); } }
-
-@keyframes shake {
-  10%, 90% {
-    -webkit-transform: translate3d(-2px, 0, 0);
-            transform: translate3d(-2px, 0, 0); }
-  20%, 80% {
-    -webkit-transform: translate3d(3px, 0, 0);
-            transform: translate3d(3px, 0, 0); }
-  30%, 50%, 70% {
-    -webkit-transform: translate3d(-5px, 0, 0);
-            transform: translate3d(-5px, 0, 0); }
-  40%, 60% {
-    -webkit-transform: translate3d(5px, 0, 0);
-            transform: translate3d(5px, 0, 0); } }
+          -webkit-animation: shake 5s linear both infinite;
+                  animation: shake 5s linear both infinite;
+          -webkit-animation-delay: 1s;
+                  animation-delay: 1s; }
         .main-section .main-header .navigation .call-block .phone-contact {
           width: 100%;
           color: #fff;
@@ -970,6 +960,58 @@ figure {
               display: none; } }
           .main-section .main-header .navigation .call-block .phone-contact:hover {
             cursor: pointer; }
+
+@-webkit-keyframes shake {
+  1% {
+    -webkit-transform: translate3d(-2px, 0, 0);
+            transform: translate3d(-2px, 0, 0); }
+  2% {
+    -webkit-transform: translate3d(3px, 0, 0);
+            transform: translate3d(3px, 0, 0); }
+  3% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+            transform: translate3d(-5px, 0, 0); }
+  4% {
+    -webkit-transform: translate3d(5px, 0, 0);
+            transform: translate3d(5px, 0, 0); }
+  5% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+            transform: translate3d(-5px, 0, 0); }
+  6% {
+    -webkit-transform: translate3d(3px, 0, 0);
+            transform: translate3d(3px, 0, 0); }
+  7% {
+    -webkit-transform: translate3d(-2px, 0, 0);
+            transform: translate3d(-2px, 0, 0); }
+  8% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); } }
+
+@keyframes shake {
+  1% {
+    -webkit-transform: translate3d(-2px, 0, 0);
+            transform: translate3d(-2px, 0, 0); }
+  2% {
+    -webkit-transform: translate3d(3px, 0, 0);
+            transform: translate3d(3px, 0, 0); }
+  3% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+            transform: translate3d(-5px, 0, 0); }
+  4% {
+    -webkit-transform: translate3d(5px, 0, 0);
+            transform: translate3d(5px, 0, 0); }
+  5% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+            transform: translate3d(-5px, 0, 0); }
+  6% {
+    -webkit-transform: translate3d(3px, 0, 0);
+            transform: translate3d(3px, 0, 0); }
+  7% {
+    -webkit-transform: translate3d(-2px, 0, 0);
+            transform: translate3d(-2px, 0, 0); }
+  8% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); } }
 
 /*====================================================================
                                     END
