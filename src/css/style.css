@@ -59,6 +59,12 @@
 /*====================================================================
                                 2. Colors
  @mixin ====================================================================*/
+/*====================================================================
+                                    END
+ @mixin ====================================================================*/
+/*====================================================================
+                                    Var
+ @mixin ====================================================================*/
 #main-menu-modal .underlay-box, .section-professionals .manager-slider .manager-card .manager-social-contact li a, .send-button {
   position: absolute;
   top: 50%;
@@ -66,6 +72,109 @@
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); }
+
+/*====================================================================
+                                    END
+ @mixin ====================================================================*/
+/*====================================================================
+                                 Animation
+ @mixin ====================================================================*/
+@-webkit-keyframes shake {
+  1% {
+    -webkit-transform: translate3d(-2px, 0, 0);
+            transform: translate3d(-2px, 0, 0); }
+  2% {
+    -webkit-transform: translate3d(3px, 0, 0);
+            transform: translate3d(3px, 0, 0); }
+  3% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+            transform: translate3d(-5px, 0, 0); }
+  4% {
+    -webkit-transform: translate3d(5px, 0, 0);
+            transform: translate3d(5px, 0, 0); }
+  5% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+            transform: translate3d(-5px, 0, 0); }
+  6% {
+    -webkit-transform: translate3d(3px, 0, 0);
+            transform: translate3d(3px, 0, 0); }
+  7% {
+    -webkit-transform: translate3d(-2px, 0, 0);
+            transform: translate3d(-2px, 0, 0); }
+  8% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); } }
+@keyframes shake {
+  1% {
+    -webkit-transform: translate3d(-2px, 0, 0);
+            transform: translate3d(-2px, 0, 0); }
+  2% {
+    -webkit-transform: translate3d(3px, 0, 0);
+            transform: translate3d(3px, 0, 0); }
+  3% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+            transform: translate3d(-5px, 0, 0); }
+  4% {
+    -webkit-transform: translate3d(5px, 0, 0);
+            transform: translate3d(5px, 0, 0); }
+  5% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+            transform: translate3d(-5px, 0, 0); }
+  6% {
+    -webkit-transform: translate3d(3px, 0, 0);
+            transform: translate3d(3px, 0, 0); }
+  7% {
+    -webkit-transform: translate3d(-2px, 0, 0);
+            transform: translate3d(-2px, 0, 0); }
+  8% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); } }
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  20% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  40% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px); }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  60% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px); }
+  80% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  20% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  40% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px); }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  60% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px); }
+  80% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
 
 /*====================================================================
                                     END
@@ -828,7 +937,12 @@ figure {
       left: 0;
       z-index: 1; }
   .main-section .video-bg {
-    z-index: 0; }
+    z-index: 0;
+    width: 100%;
+    height: 100%; }
+    @media only screen and (max-width: 992px) {
+      .main-section .video-bg {
+        display: none; } }
   .main-section .main-content {
     position: absolute;
     bottom: 30%;
@@ -969,58 +1083,6 @@ figure {
               display: none; } }
           .main-section .main-header .navigation .call-block .phone-contact:hover {
             cursor: pointer; }
-
-@-webkit-keyframes shake {
-  1% {
-    -webkit-transform: translate3d(-2px, 0, 0);
-            transform: translate3d(-2px, 0, 0); }
-  2% {
-    -webkit-transform: translate3d(3px, 0, 0);
-            transform: translate3d(3px, 0, 0); }
-  3% {
-    -webkit-transform: translate3d(-5px, 0, 0);
-            transform: translate3d(-5px, 0, 0); }
-  4% {
-    -webkit-transform: translate3d(5px, 0, 0);
-            transform: translate3d(5px, 0, 0); }
-  5% {
-    -webkit-transform: translate3d(-5px, 0, 0);
-            transform: translate3d(-5px, 0, 0); }
-  6% {
-    -webkit-transform: translate3d(3px, 0, 0);
-            transform: translate3d(3px, 0, 0); }
-  7% {
-    -webkit-transform: translate3d(-2px, 0, 0);
-            transform: translate3d(-2px, 0, 0); }
-  8% {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0); } }
-
-@keyframes shake {
-  1% {
-    -webkit-transform: translate3d(-2px, 0, 0);
-            transform: translate3d(-2px, 0, 0); }
-  2% {
-    -webkit-transform: translate3d(3px, 0, 0);
-            transform: translate3d(3px, 0, 0); }
-  3% {
-    -webkit-transform: translate3d(-5px, 0, 0);
-            transform: translate3d(-5px, 0, 0); }
-  4% {
-    -webkit-transform: translate3d(5px, 0, 0);
-            transform: translate3d(5px, 0, 0); }
-  5% {
-    -webkit-transform: translate3d(-5px, 0, 0);
-            transform: translate3d(-5px, 0, 0); }
-  6% {
-    -webkit-transform: translate3d(3px, 0, 0);
-            transform: translate3d(3px, 0, 0); }
-  7% {
-    -webkit-transform: translate3d(-2px, 0, 0);
-            transform: translate3d(-2px, 0, 0); }
-  8% {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0); } }
 
 /*====================================================================
                                     END
@@ -1783,6 +1845,9 @@ figure {
   padding: 3px 0 8px 0;
   max-width: 50px;
   z-index: 20; }
+  @media only screen and (max-width: 992px) {
+    .wrap_arrow_down {
+      display: none; } }
   .wrap_arrow_down:hover {
     color: #fff;
     text-decoration: none; }
@@ -1814,41 +1879,6 @@ figure {
 
 /* ==================================================================
                            END STYLE DOWNARROW
- @mixin ==================================================================*/
-/* ==================================================================
-                            STYLE BOUNCE ANIMATION
- @mixin ==================================================================*/
-@-webkit-keyframes bounce {
-  0% {
-    100%,
-    20%,
-    50%,
-    80% { }
-    -webkit-transform: translateY(0);
-            transform: translateY(0); }
-  40% {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px); }
-  60% {
-    -webkit-transform: translateY(-5px);
-            transform: translateY(-5px); } }
-@keyframes bounce {
-  0% {
-    100%,
-    20%,
-    50%,
-    80% { }
-    -webkit-transform: translateY(0);
-            transform: translateY(0); }
-  40% {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px); }
-  60% {
-    -webkit-transform: translateY(-5px);
-            transform: translateY(-5px); } }
-
-/* ==================================================================
-                           END STYLE BOUNCE ANIMATION
  @mixin ==================================================================*/
 /* ==================================================================
                            STYLE SEARCH CONTAINER
@@ -2529,7 +2559,6 @@ figure {
       width: 100%;
       margin-bottom: 35px;
       color: #fff;
-      text-shadow: rgba(255, 255, 255, 0.6);
       text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.6); }
     .section_discount .info_discount #form_discount {
       max-width: 650px;
@@ -2758,7 +2787,6 @@ figure {
       .section_questions .form_wrap #form_question .input_question {
         max-width: 480px;
         width: 100%;
-        margin: 0 auto;
         -webkit-border-radius: 30px;
                 border-radius: 30px;
         border: 1px solid #f5f5f5;
