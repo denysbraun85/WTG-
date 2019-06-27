@@ -108,12 +108,58 @@ $facebook-color: #3b5999
 $youtube-color: #55acee
 $instagram-color: #0077b5
 $twitter-color: #dd4b39
+/*====================================================================
+                                    END
+ =====================================================================*/
 
+/*====================================================================
+                                    Var
+ =====================================================================*/
 %center
-	position: absolute
-	top: 50%
-	left: 50%
-	transform: translate(-50%, -50%)
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+/*====================================================================
+                                    END
+ =====================================================================*/
+
+/*====================================================================
+                                 Animation
+ =====================================================================*/
+@keyframes shake
+  1%
+    transform: translate3d(-2px, 0, 0)
+  2%
+    transform: translate3d(3px, 0, 0)
+  3%
+    transform: translate3d(-5px, 0, 0)
+  4%
+    transform: translate3d(5px, 0, 0)
+  5%
+    transform: translate3d(-5px, 0, 0)
+  6%
+    transform: translate3d(3px, 0, 0)
+  7%
+    transform: translate3d(-2px, 0, 0)
+  8%
+    transform: translate3d(0, 0, 0)
+
+@keyframes bounce
+  0%
+    transform: translateY(0)
+  20%
+    transform: translateY(0)
+  40%
+    transform: translateY(-10px)
+  50%
+    transform: translateY(0)
+  60%
+    transform: translateY(-5px)
+  80%
+    transform: translateY(0)
+  100%
+    transform: translateY(0)
 /*====================================================================
                                     END
  =====================================================================*/
@@ -722,6 +768,10 @@ figure
       z-index: 1
   .video-bg
     z-index: 0
+    width: 100%
+    height: 100%
+    @media only screen and (max-width: 992px)
+      display: none
   .main-content
     position: absolute
     bottom: 30%
@@ -835,24 +885,6 @@ figure
           &:hover
             cursor: pointer
 
-
-@keyframes shake
-  1%
-    transform: translate3d(-2px, 0, 0)
-  2%
-    transform: translate3d(3px, 0, 0)
-  3%
-    transform: translate3d(-5px, 0, 0)
-  4%
-    transform: translate3d(5px, 0, 0)
-  5%
-    transform: translate3d(-5px, 0, 0)
-  6%
-    transform: translate3d(3px, 0, 0)
-  7%
-    transform: translate3d(-2px, 0, 0)
-  8%
-    transform: translate3d(0, 0, 0)
 /*====================================================================
                                     END
  =====================================================================*/
@@ -1462,6 +1494,8 @@ figure
   padding: 3px 0 8px 0
   max-width: 50px
   z-index: 20
+  @media only screen and (max-width: 992px)
+    display: none
   &:hover
     color: $color-btn
     text-decoration: none
@@ -1479,27 +1513,6 @@ figure
 
 /* ==================================================================
                            END STYLE DOWNARROW
- ===================================================================*/
-
-
-/* ==================================================================
-                            STYLE BOUNCE ANIMATION
- ===================================================================*/
-@keyframes bounce
-  0%,
-    100%,
-    20%,
-    50%,
-    80%
-    transform: translateY(0)
-
-  40%
-    transform: translateY(-10px)
-
-  60%
-    transform: translateY(-5px)
-/* ==================================================================
-                           END STYLE BOUNCE ANIMATION
  ===================================================================*/
 
 
@@ -2004,7 +2017,7 @@ figure
       width: 100%
       margin-bottom: 35px
       color: $color-btn
-      text-shadow: rgba(white, 0.6)
+      //text-shadow: rgba(white, 0.6)
       text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.6)
     #form_discount
       max-width: 650px
@@ -2175,7 +2188,6 @@ figure
 /* ==================================================================
                            QUESTION FORM STYLES
  ===================================================================*/
-
 .section_questions
   background: url("../img/background/map.png") no-repeat center fixed
   background-size: contain
@@ -2190,7 +2202,7 @@ figure
       .input_question
         max-width: 480px
         width: 100%
-        margin: 0 auto
+        //margin: 0 auto
         border-radius: 30px
         border: 1px solid #f5f5f5
         background-color: #fcfcfc
