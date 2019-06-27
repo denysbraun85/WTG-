@@ -605,13 +605,19 @@ figure {
       text-transform: uppercase;
       letter-spacing: 10px;
       font-family: 'Montserrat SemiBold', sans-serif;
-      font-size: 300px;
+      font-size: 16vw;
       font-weight: 700;
       text-shadow: 20px 10px 30px #f2f5f9;
       width: 100%;
       text-align: center;
       white-space: nowrap;
       opacity: 0.7; }
+      @media only screen and (max-width: 992px) {
+        #main-menu-modal .underlay-box .underlay-text {
+          font-size: 38vw; } }
+      @media only screen and (max-width: 992px) {
+        #main-menu-modal .underlay-box .underlay-text .word {
+          display: none; } }
   #main-menu-modal .menu-container {
     display: block; }
     #main-menu-modal .menu-container .menu-full {
@@ -642,6 +648,9 @@ figure {
         -webkit-transition: all 0.3s ease-in-out;
         -o-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out; }
+        @media only screen and (max-width: 1400px) {
+          #main-menu-modal .menu-container .menu-full li a {
+            margin: 15px 15px; } }
         #main-menu-modal .menu-container .menu-full li a:before {
           display: block;
           content: '';
@@ -1021,7 +1030,7 @@ figure {
  @mixin ====================================================================*/
 .greetings-section {
   overflow: hidden;
-  background: #f8f8f8; }
+  background: #eff4f7; }
   @media only screen and (max-width: 991px) {
     .greetings-section {
       text-align: center; } }
@@ -1104,83 +1113,6 @@ figure {
         @media only screen and (max-width: 575px) {
           .greetings-section .greetings-container .team-photo-container:before {
             display: none; } }
-
-/*====================================================================
-                                   END
- @mixin ====================================================================*/
-/*====================================================================
-                             8. Video Section
- @mixin ====================================================================*/
-.section-video {
-  position: relative;
-  background-color: #eeeeee; }
-  .section-video .content-video-section {
-    background-color: #fff;
-    padding: 60px 10px 100px 60px;
-    position: relative; }
-    @media only screen and (max-width: 1200px) {
-      .section-video .content-video-section {
-        padding: 30px 10px 80px 30px; } }
-  @media only screen and (max-width: 1200px) and (max-width: 992px) {
-    .section-video .content-video-section {
-      padding: 30px 30px 150px 30px; } }
-  @media only screen and (max-width: 1200px) and (max-width: 992px) and (max-width: 768px) {
-    .section-video .content-video-section {
-      padding: 30px 30px 90px 30px; } }
-  @media only screen and (max-width: 1200px) and (max-width: 992px) and (max-width: 768px) and (max-width: 576px) {
-    .section-video .content-video-section {
-      padding: 30px 15px 100px 15px; } }
-    @media only screen and (max-width: 992px) {
-      .section-video .content-video-section .subscribe-box {
-        margin-bottom: 20px; } }
-    .section-video .content-video-section .subscribe-box .text-inform {
-      color: #838181;
-      margin-top: 30px; }
-      @media only screen and (max-width: 992px) {
-        .section-video .content-video-section .subscribe-box .text-inform {
-          display: none; } }
-    .section-video .content-video-section .subscribe-box h3 {
-      margin-top: 0;
-      color: #032fab; }
-      @media only screen and (max-width: 1200px) {
-        .section-video .content-video-section .subscribe-box h3 {
-          font-size: 25px; } }
-  @media only screen and (max-width: 1200px) and (max-width: 992px) {
-    .section-video .content-video-section .subscribe-box h3 {
-      text-align: center; } }
-    .section-video .content-video-section button {
-      position: absolute;
-      bottom: 60px;
-      left: 60px;
-      margin-top: 80px;
-      padding: 7px 10px; }
-      @media only screen and (max-width: 1200px) {
-        .section-video .content-video-section button {
-          bottom: 30px;
-          left: 30px; } }
-  @media only screen and (max-width: 1200px) and (max-width: 992px) {
-    .section-video .content-video-section button {
-      left: 50%;
-      -webkit-transform: translateX(-50%);
-          -ms-transform: translateX(-50%);
-              transform: translateX(-50%); } }
-  .section-video .video-container {
-    position: relative;
-    z-index: 1; }
-    .section-video .video-container:before {
-      position: absolute;
-      content: '';
-      bottom: -9%;
-      right: -7%;
-      width: 100%;
-      height: 100%;
-      background-color: #eeeeee;
-      -webkit-box-shadow: 0 30px 40px rgba(0, 0, 0, 0.2);
-              box-shadow: 0 30px 40px rgba(0, 0, 0, 0.2);
-      z-index: -1; }
-      @media only screen and (max-width: 768px) {
-        .section-video .video-container:before {
-          display: none; } }
 
 /*====================================================================
                                    END
@@ -1549,7 +1481,7 @@ figure {
                                    END
  @mixin ====================================================================*/
 /*====================================================================
-                              Reason Section
+                              Cities Section
  @mixin ====================================================================*/
 .section-reason {
   background: #f8f8f8;
@@ -2089,41 +2021,6 @@ figure {
 /* ==================================================================
                            END STYLE SEARCH CONTAINER
  @mixin ==================================================================*/
-.property_overview .single-item {
-  position: relative;
-  display: inline-block;
-  margin-top: 100px;
-  background: rgba(247, 247, 247, 0.5); }
-  .property_overview .single-item .content-box {
-    position: relative;
-    padding: 21px 10px 24px 10px;
-    width: 170px;
-    border: 1px solid #f7f7f7;
-    text-align: center;
-    -webkit-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-    transition: all 500ms ease; }
-  .property_overview .single-item:hover .content-box {
-    background-color: rgba(0, 106, 255, 0.1);
-    cursor: pointer; }
-  .property_overview .single-item .number {
-    position: relative;
-    font-size: 24px;
-    line-height: 30px;
-    font-family: 'Segoe UI', sans-serif;
-    font-weight: 500;
-    color: #222;
-    margin-bottom: 23px; }
-  .property_overview .single-item .icon-box {
-    position: relative;
-    margin-bottom: 15px; }
-    .property_overview .single-item .icon-box img {
-      width: 30%; }
-    .property_overview .single-item .icon-box i:before {
-      font-size: 36px;
-      color: #006aff;
-      margin: 0; }
-
 /* ==================================================================
                            STYLE OBJECT CONTAINER
  @mixin ==================================================================*/
@@ -2660,12 +2557,6 @@ figure {
 
 /* ==================================================================
                           END STYLE DISCOUNT
- @mixin ==================================================================*/
-/* ==================================================================
-                           STYLE 6 BENEFIT CONTAINER
- @mixin ==================================================================*/
-/* ==================================================================
-                           END STYLE 6 BENEFIT CONTAINER
  @mixin ==================================================================*/
 /* ==================================================================
                            OUR PHILOSOPHY STYLES

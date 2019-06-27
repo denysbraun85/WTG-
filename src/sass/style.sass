@@ -68,7 +68,7 @@ $color-btn-black: #000000
 //select
 $select-search-color-text: #606060
 //section background
-$section-color-light: #eeeeee
+$section-color-light: #eff4f7
 $section-color-white: #fff
 $section-color-professionals: #efefef
 $section-color-greetings: #f8f8f8
@@ -280,12 +280,10 @@ figure
     outline: none
     box-shadow: none
 
-
 .custom-btn-circle
   &:hover
     &:before
       width: 110%
-
 
 .btn-little
   max-width: 50px
@@ -306,12 +304,10 @@ figure
 
 .btn-small
   max-width: 250px
-
 .btn-big
   max-width: 550px
   @media only screen and (max-width: 576px)
     max-width: 80%
-
 .btn-red
   color: $text-color-grey
   border: 2px solid $color-btn-red
@@ -495,13 +491,10 @@ figure
   ------------------------------------------------------------------------------------*/
 ::-webkit-scrollbar
   width: 15px
-
 ::-webkit-scrollbar-track
   background: #f1f1f1
-
 ::-webkit-scrollbar-thumb
   background: lighten($header-text-color, 20%)
-
 ::-webkit-scrollbar-thumb:hover
   background: $icons-color-reasons-section
 /*-------------------------------------------------------------------------------------
@@ -538,13 +531,18 @@ figure
       text-transform: uppercase
       letter-spacing: 10px
       font-family: 'Montserrat SemiBold', sans-serif
-      font-size: 300px
+      font-size: 16vw
       font-weight: 700
       text-shadow: 20px 10px 30px #f2f5f9
       width: 100%
       text-align: center
       white-space: nowrap
       opacity: 0.7
+      @media only screen and (max-width: 992px)
+        font-size: 38vw
+      .word
+        @media only screen and (max-width: 992px)
+          display: none
   .menu-container
     display: block
     .menu-full
@@ -564,6 +562,8 @@ figure
           background-position: -100%
           -webkit-background-clip: text
           transition: all 0.3s ease-in-out
+          @media only screen and (max-width: 1400px)
+            margin: 15px 15px
           &:before
             display: block
             content: ''
@@ -690,11 +690,9 @@ figure
             z-index: 5
             max-width: 40%
 
-
 .menu-active
   transition: all 0.5s ease
   width: 100% !important
-
 //.fixed
 //  overflow: hidden
 //.fix-btn
@@ -855,15 +853,6 @@ figure
     transform: translate3d(-2px, 0, 0)
   8%
     transform: translate3d(0, 0, 0)
-
-//1%, 19%
-            //  transform: translate3d(-2px, 0, 0)
-            //2%, 18%
-            //  transform: translate3d(3px, 0, 0)
-            //3%, 15%, 17%
-            //  transform: translate3d(-5px, 0, 0)
-            //4%, 16%
-            //  transform: translate3d(5px, 0, 0)
 /*====================================================================
                                     END
  =====================================================================*/
@@ -873,7 +862,7 @@ figure
  =====================================================================*/
 .greetings-section
   overflow: hidden
-  background: $section-color-greetings
+  background: $section-color-light
   @media only screen and (max-width: 991px)
     text-align: center
   &:hover
@@ -942,71 +931,6 @@ figure
         transition: all 0.5s cubic-bezier(.785,.135,.15,.86)
         @media only screen and (max-width: 575px)
           display: none
-/*====================================================================
-                                   END
- =====================================================================*/
-
-/*====================================================================
-                             8. Video Section
- =====================================================================*/
-.section-video
-  position: relative
-  background-color: $section-color-light
-  .content-video-section
-    background-color: $section-color-white
-    padding: 60px 10px 100px 60px
-    position: relative
-    @media only screen and (max-width: 1200px)
-      padding: 30px 10px 80px 30px
-      @media only screen and (max-width: 992px)
-        padding: 30px 30px 150px 30px
-        @media only screen and (max-width: 768px)
-          padding: 30px 30px 90px 30px
-          @media only screen and (max-width: 576px)
-            padding: 30px 15px 100px 15px
-    .subscribe-box
-      @media only screen and (max-width: 992px)
-        margin-bottom: 20px
-      .text-inform
-        color: $text-color-grey
-        margin-top: 30px
-        @media only screen and (max-width: 992px)
-          display: none
-      h3
-        margin-top: 0
-        color: $header-text-color
-        @media only screen and (max-width: 1200px)
-          font-size: 25px
-          @media only screen and (max-width: 992px)
-            text-align: center
-    button
-      position: absolute
-      bottom: 60px
-      left: 60px
-      margin-top: 80px
-      padding: 7px 10px
-      @media only screen and (max-width: 1200px)
-        bottom: 30px
-        left: 30px
-        @media only screen and (max-width: 992px)
-          left: 50%
-          transform: translateX(-50%)
-  .video-container
-    position: relative
-    z-index: 1
-    &:before
-      position: absolute
-      content: ''
-      bottom: -9%
-      right: -7%
-      width: 100%
-      height: 100%
-      background-color: $section-color-light
-      box-shadow: 0 30px 40px rgba(0, 0, 0, 0.2)
-      z-index: -1
-      @media only screen and (max-width: 768px)
-        display: none
-
 /*====================================================================
                                    END
  =====================================================================*/
@@ -1301,7 +1225,7 @@ figure
  =====================================================================*/
 
  /*====================================================================
-                              Reason Section
+                              Cities Section
  =====================================================================*/
 .section-reason
   background: $section-color-greetings
@@ -1732,47 +1656,6 @@ figure
                            END STYLE SEARCH CONTAINER
  ===================================================================*/
 
-
-
-
-
-.property_overview .single-item
-  position: relative
-  display: inline-block
-  margin-top: 100px
-  background: rgba(247, 247, 247, 0.5)
-  .content-box
-    position: relative
-    padding: 21px 10px 24px 10px
-    width: 170px
-    border: 1px solid #f7f7f7
-    text-align: center
-    transition: all 500ms ease
-  &:hover .content-box
-    background-color: rgba(0, 106, 255, 0.1)
-    cursor: pointer
-  .number
-    position: relative
-    font-size: 24px
-    line-height: 30px
-    font-family: 'Segoe UI', sans-serif
-    font-weight: 500
-    color: #222
-    margin-bottom: 23px
-  .icon-box
-    position: relative
-    margin-bottom: 15px
-    img
-      width: 30%
-    i:before
-      font-size: 36px
-      color: #006aff
-      margin: 0
-
-
-
-
-
 /* ==================================================================
                            STYLE OBJECT CONTAINER
  ===================================================================*/
@@ -2146,202 +2029,6 @@ figure
 /* ==================================================================
                           END STYLE DISCOUNT
  ===================================================================*/
-
-
-
-/* ==================================================================
-                           STYLE 6 BENEFIT CONTAINER
- ===================================================================*/
-
-// .section_benefit
-//   background: $bg-color-menu
-//   .wrapper_left_back_benefit
-//     background: linear-gradient(to right, $section-color-light 50%,#ffffff 50%)
-//     .wrapper_content_6_benefit
-//       max-width: 1220px
-//       width: 100%
-//       margin: 0 auto
-//       display: flex
-//       justify-content: space-between
-//       align-items: center
-//       .first_container_benefit
-//         @media only screen and (max-width: 800px)
-//           border-top: 1px solid $border-adaptive-benefit
-//       .left_container_benefit
-//         display: flex
-//         align-items: flex-end
-//         justify-content: space-between
-//         max-width: 960px
-//         width: 100%
-//         margin-left: 0
-//         background: $color-btn
-//         @media only screen and (max-width: 850px)
-//           align-items: center
-//           @media only screen and (max-width: 800px)
-//             padding: 10px 0
-//             border-bottom: 1px solid $border-adaptive-benefit
-//         .wrapper_img_benefit
-//           max-width: 260px
-//           width: 100%
-//           min-height: 200px
-//           max-height: 200px
-//           height: 100%
-//           display: flex
-//           justify-content: center
-//           align-items: center
-//           @media only screen and (max-width: 970px)
-//             min-height: 200px
-//             @media only screen and (max-width: 830px)
-//               display: none
-//           .left_img
-//             min-height: 200px
-//             max-height: 200px
-//             height: 100%
-//         .text_left_benefit
-//           position: relative
-//           margin-left: 60px
-//           text-align: left
-//           z-index: 1
-//           padding-bottom: 10px
-//           @media only screen and (max-width: 970px)
-//             padding-bottom: 0
-//             @media only screen and (max-width: 830px)
-//               padding: 10px 30px
-//               text-align: center
-//               margin: 0 auto
-//           .background_number_benefit
-//             position: absolute
-//             top: -90px
-//             left: -7px
-//             font-family: 'Lato Regular', sans-serif
-//             color: $section-color-light
-//             font-size: 130px
-//             font-weight: 900
-//             z-index: -1
-//             @media only screen and (max-width: 970px)
-//               font-size: 100px
-//               top: -60px
-//               @media only screen and (max-width: 830px)
-//                 font-size: 75px
-//                 top: -30px
-//                 right: 0
-//                 width: 100%
-//           h4
-//             font-weight: 600
-//             text-transform: uppercase
-//             font-size: 18px
-//             @media only screen and (max-width: 850px)
-//               font-size: 16px
-//               @media only screen and (max-width: 830px)
-//                 font-size: 14px
-//           p
-//             margin-top: 40px
-//             font-size: 15px
-//             @media only screen and (max-width: 970px)
-//               margin-top: 30px
-//               @media only screen and (max-width: 850px)
-//                 font-size: 14px
-//                 @media only screen and (max-width: 830px)
-//                   font-size: 12px
-//   .wrapper_right_back_benedit
-//     background: linear-gradient(to right, #ffffff 50%,$section-color-light 50%)
-//     .wrapper_content_6_benefit
-//       max-width: 1220px
-//       width: 100%
-//       margin: 0 auto
-//       display: flex
-//       justify-content: flex-end
-//       align-items: center
-//       .right_container_benefit
-//         display: flex
-//         align-items: flex-end
-//         justify-content: space-between
-//         max-width: 960px
-//         width: 100%
-//         margin-right: 0
-//         background: $color-btn
-//         @media only screen and (max-width: 850px)
-//           align-items: center
-//           @media only screen and (max-width: 800px)
-//             padding: 10px 0
-//             border-bottom: 1px solid #B9B8B8
-//         .text_right_benefit
-//           position: relative
-//           margin-right: 60px
-//           text-align: right
-//           z-index: 1
-//           padding-bottom: 10px
-//           @media only screen and (max-width: 970px)
-//             padding-bottom: 0
-//             @media only screen and (max-width: 830px)
-//               padding: 10px 30px
-//               text-align: center
-//               margin: 0 auto
-//           .background_number_benefit
-//             position: absolute
-//             top: -90px
-//             right: -7px
-//             font-family: 'Lato Regular', sans-serif
-//             color: $section-color-light
-//             font-size: 130px
-//             font-weight: 900
-//             z-index: -1
-//             @media only screen and (max-width: 970px)
-//               font-size: 100px
-//               top: -60px
-//               @media only screen and (max-width: 830px)
-//                 font-size: 75px
-//                 top: -35px
-//                 left: -5px
-//                 width: 100%
-//           h4
-//             font-weight: 600
-//             text-transform: uppercase
-//             font-size: 18px
-//             @media only screen and (max-width: 850px)
-//               font-size: 16px
-//               @media only screen and (max-width: 830px)
-//                 font-size: 14px
-//           p
-//             margin-top: 40px
-//             font-size: 15px
-//             @media only screen and (max-width: 970px)
-//               margin-top: 30px
-//               @media only screen and (max-width: 850px)
-//                 font-size: 14px
-//                 @media only screen and (max-width: 830px)
-//                   font-size: 12px
-//         .wrapper_img_benefit
-//           max-width: 260px
-//           width: 100%
-//           min-height: 200px
-//           max-height: 200px
-//           height: 100%
-//           display: flex
-//           justify-content: center
-//           align-items: center
-//           @media only screen and (max-width: 970px)
-//             min-height: 200px
-//             @media only screen and (max-width: 830px)
-//               display: none
-//           .right_img
-//             min-height: 200px
-//             max-height: 200px
-//             height: 100%
-
-
-
-
-
-
-
-/* ==================================================================
-                           END STYLE 6 BENEFIT CONTAINER
- ===================================================================*/
-
-
-
-
 
 /* ==================================================================
                            OUR PHILOSOPHY STYLES
