@@ -239,7 +239,6 @@ $(function () {
  =====================================================================*/
 $('#menu-open-btn').on('click', function () {
     $('#main-menu-modal').toggleClass('menu-active');
-    $('#menu-container').toggleClass('menu-active');
     // $(this).toggleClass('fix-btn');
     // $("body").toggleClass("fixed");
     // $("body").toggleClass("fix-btn");
@@ -251,11 +250,14 @@ $('#menu-open-btn').on('click', function () {
 /*====================================================================
                       Mousemove background discount
  =====================================================================*/
-$('.background_discount').mousemove(function (e) {
-    var moveX = (e.pageX * -1 / 30);
-    // var moveY = (e.pageY * -1 / 30);
-    $(this).css('background-position', moveX + 'px ')
-})
+// $('.background_discount').mousemove(function (e) {
+//     var moveX = (e.pageX * -1 / 30);
+//     // var moveY = (e.pageY * -1 / 30);
+//     $(this).css('background-position', moveX + 'px ')
+// })
 /*====================================================================
                                  End
  =====================================================================*/
+
+var scene = document.getElementById('scene');
+var parallaxInstance = new Parallax(scene);

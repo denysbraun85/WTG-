@@ -649,21 +649,19 @@
 
     <!--Exclusive Discount Section-->
     <section class="section_discount">
-        <div class="background_discount">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="offset-lg-1 col-lg-5">
-                        <div class="info_discount">
-                            <h4>Хотите получить эксплюзивную скидку на недвижимость?</h4>
-                            <form id="form_discount" class="inputs_discount">
-                                <input type="text" placeholder="Введите Ваше имя">
-                                <input type="number" placeholder="Введите Ваш телефон">
-                            </form>
-                            <button class="" form="info_discount" type="submit" value="submit"> <span></span> </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <ul class="background_discount" id="scene">
+            <li id="parallax_discount_context" data-depth="0.05"><img src="./img/background/movehouse1.png" alt=""></li>
+            <li id="parallax_discount_house" data-depth="0.1"><img src="./img/background/movehouse2.png" alt=""></li>
+        </ul>
+
+        <div class="info_discount">
+            <h4>Хотите получить эксплюзивную скидку на недвижимость?</h4>
+            <form id="form_discount" class="inputs_discount">
+                <input type="text" placeholder="Введите Ваше имя">
+                <input type="text" placeholder="Введите Ваш телефон">
+            </form>
+            <button class="m-auto custom-btn btn-big btn-white-blue" form="form_discount" type="submit" value="submit">
+                <span>Хочу эксклюзивную скидку</span> </button>
         </div>
     </section>
     <!--Exclusive Discount Section END-->
@@ -1506,8 +1504,7 @@
                             <textarea class="input_question textarea_question" name=""
                                 placeholder="Введите Ваш коментарий"></textarea>
                         </form>
-                        <button class="custom-btn custom-btn-circle btn-little btn-blue animation_plane"
-                            form="form_question" type="submit" value="submit">
+                        <button class="custom-btn custom-btn-circle btn-little btn-blue animation_plane">
                             <span>
                                 <div class="send-button">
                                     <span class="icon-wrapper">
@@ -1544,6 +1541,7 @@
     <script src="js/jquery-background-video-master/jquery.background-video.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-1/dist/ionicons.js"></script>
     <script src="js/jBox-1.0.3/dist/jBox.all.min.js"></script>
+    <script src="js/compiled/parallax.min.js"></script>
     <!--  Main js  -->
     <script src="js/main.js"></script>
 </body>
