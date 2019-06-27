@@ -104,6 +104,10 @@ $border-card-manager: rgba(0, 0, 0, 0.125)
 $icons-color-reasons-section: #006aff
 $icons-quote-feedback: #006aff
 $icon-color-white: #fff
+$facebook-color: #3b5999
+$youtube-color: #55acee
+$instagram-color: #0077b5
+$twitter-color: #dd4b39
 
 %center
 	position: absolute
@@ -118,6 +122,7 @@ $icon-color-white: #fff
                                 3. Reset
  =====================================================================*/
 body
+
   background: $bg-color-menu
   font-family: 'Montserrat-regular', sans-serif
   font-size: 15px
@@ -400,6 +405,13 @@ figure
   height: 50px
   background: $color-btn-hover
   border-radius: 50px 50px 50px 0
+  @media only screen and (max-width: 992px)
+    top: 10px
+    @media only screen and (max-width: 576px)
+      width: 40px
+      height: 40px
+      @media only screen and (max-width: 500px)
+        top: 5px
   &:hover
     cursor: pointer
   &:focus
@@ -435,6 +447,8 @@ figure
     width: 25px
     top: 34%
     left: 32%
+    @media only screen and (max-width: 576px)
+      width: 19px
   .bar-two
     transform: rotate(-45deg)
     height: 3px
@@ -442,6 +456,8 @@ figure
     left: 26%
     top: 50%
     background-color: transparent
+    @media only screen and (max-width: 576px)
+      width: 19px
   .bar-tree
     transform: rotate(45deg)
     height: 3px
@@ -449,12 +465,16 @@ figure
     width: 25px
     left: 26%
     background-color: transparent
+    @media only screen and (max-width: 576px)
+      width: 19px
   .bar-four
     transform: rotate(-45deg)
     height: 3px
     width: 25px
     left: 32%
     top: 66%
+    @media only screen and (max-width: 576px)
+      width: 19px
   .main-button-container
     bottom: 30px
     z-index: 20
@@ -486,7 +506,7 @@ figure
   height: 100vh
   z-index: 22
   transition: all 0.5s ease
-  background: $section-color-white
+  background: #eff4f7
   overflow-x: hidden
   overflow-y: hidden
   white-space: nowrap
@@ -495,6 +515,7 @@ figure
     z-index: -1
     width: 100%
     margin: auto
+    //opacity: 0.4
     .underlay-text
       position: fixed
       right: 0
@@ -506,10 +527,12 @@ figure
       letter-spacing: 10px
       font-family: 'Montserrat SemiBold', sans-serif
       font-size: 300px
-      text-shadow: 2px 2px 2px #ccc
+      font-weight: 700
+      text-shadow: 20px 10px 30px #f2f5f9
       width: 100%
       text-align: center
       white-space: nowrap
+      opacity: 0.7
   .menu-container
     display: block
     .menu-full
@@ -533,7 +556,7 @@ figure
             display: block
             content: ''
             width: 0
-            height: 3px
+            height: 2px
             left: 0
             bottom: -3px
             z-index: 0
@@ -551,7 +574,10 @@ figure
             a
               font-size: 15px
               color: $text-color-grey
+              background-image: linear-gradient(to right, $text-color-grey, $text-color-grey 50%, $text-color-white 50%)
               padding: 0
+              &:before
+                background: $text-color-grey
   .social-links-container
     position: absolute
     bottom: 10%
@@ -568,7 +594,7 @@ figure
           height: 60px
           text-align: center
           line-height: 63px
-          background: #949494
+          background: #bfbfbf
           border-radius: 50%
           font-size: 30px
           color: $icon-color-white
@@ -591,7 +617,7 @@ figure
             text-shadow: 0 0 5px $hover-object-img
             background: $icon-color-white
             &:before
-              transform: scale(1.1)
+              transform: scale(1.05)
               box-shadow: 0 0 15px $hover-object-img
   .lang-container
     position: absolute
@@ -610,23 +636,23 @@ figure
           border-radius: 50%
           position: relative
           overflow: hidden
-          border: 1px solid #ccc
+          border: 1px solid #bfbfbf
           z-index: 1
           &:nth-child(1)
             &:before
-              background: #3b5999
+              background: #bfbfbf
           &:nth-child(2)
             &:before
-              background: #3b5999
+              background: #bfbfbf
           &:nth-child(3)
             &:before
-              background: #3b5999
+              background: #bfbfbf
           &:nth-child(4)
             &:before
-              background: #3b5999
+              background: #bfbfbf
           &:nth-child(5)
             &:before
-              background: #3b5999
+              background: #bfbfbf
           &:before
             content: ""
             position: absolute
@@ -720,13 +746,28 @@ figure
     .logo-box
       margin: 0 0 0 35px
       padding: 15px 0
+      @media only screen and (max-width: 992px)
+        margin: 0
       img
         max-width: 110px
+        @media only screen and (max-width: 992px)
+          max-width: 70px
     .navigation
       overflow: hidden
       padding-right: 35px
+      @media only screen and (max-width: 992px)
+        padding-right: 160px
+        @media only screen and (max-width: 768px)
+          padding-right: 125px
+          @media only screen and (max-width: 576px)
+            padding-right: 92px
+            @media only screen and (max-width: 500px)
+              padding-right: 60px
+
       .menu
-        margin-right: 70px
+        margin-right: 40px
+        @media only screen and (max-width: 992px)
+          display: none !important
         li
           a
             padding: 40px 10px
@@ -735,6 +776,8 @@ figure
             text-decoration: none
             text-transform: uppercase
             transition: all 0.3s ease-in
+            @media only screen and (max-width: 1200px)
+              font-size: 12px
             &:hover
               color: $color-btn-hover
               background: $bg-color-menu
@@ -743,19 +786,54 @@ figure
         display: flex
         align-items: center
         justify-content: space-between
-        max-width: 380px
+        max-width: 310px
         width: 100%
         margin-right: 50px
+        @media only screen and (max-width: 1200px)
+          max-width: 145px
+          @media only screen and (max-width: 992px)
+            margin: auto
         button
           padding: 5px 0 4px 0
-          max-height: 40px
+          max-height: 30px
+          max-width: 140px
+          border-width: 1px
+
+          @media only screen and (max-width: 500px)
+            padding: 0
+            max-height: 30px
+            max-width: 130px
+          &:hover
+            animation-play-state: paused
           span
-            font-size: 14px
-            line-height: 24px
+            width: auto
+            font-size: 12px
+            line-height: 18px
+            text-transform: capitalize
+            @media only screen and (max-width: 500px)
+              font-size: 10px
+              line-height: 19px
+        .shake
+          animation: shake 0.9s linear both infinite
+
+
+          @keyframes shake
+            10%, 90%
+              transform: translate3d(-2px, 0, 0)
+            20%, 80%
+              transform: translate3d(3px, 0, 0)
+            30%, 50%, 70%
+              transform: translate3d(-5px, 0, 0)
+            40%, 60%
+              transform: translate3d(5px, 0, 0)
+
+
         .phone-contact
           width: 100%
           color: $text-color-white
           font-size: 18px
+          @media only screen and (max-width: 1200px)
+            display: none
           &:hover
             cursor: pointer
 /*====================================================================

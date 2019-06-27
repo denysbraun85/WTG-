@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="js/jquery-background-video-master/jquery.background-video.css">
     <link href="https://unpkg.com/ionicons@4.5.10-1/dist/css/ionicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="js/jBox-1.0.3/dist/jBox.all.min.css">
+    <link rel="stylesheet" href="css/animate.css">
     <!--  Main styles -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -43,31 +44,31 @@
         <header class="main-header">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-sm-2 col-2">
                         <div class="logo-box">
                             <a href="#"><img class="w-100" src="img/logo/logo-white.svg" alt="logo"></a>
                         </div>
                     </div>
-                    <div class="col-md-10">
-                        <nav class="navigation d-flex align-items-center justify-content-md-end h-100 w-100">
+                    <div class="col-md-10 col-sm-10 col-10">
+                        <nav class="navigation d-flex align-items-center justify-content-md-end h-100 w-100" id="navigation">
 
                             <!-- Main navigation menu -->
                             <ul class="menu d-flex justify-content-end align-items-center h-100">
-                                <li><a href="#">О нас</a></li>
-                                <li><a href="#">Недвижимость</a></li>
-                                <li><a href="#">Услуги</a></li>
-                                <li><a href="#">Этапы сотрудничества</a></li>
-                                <li><a href="#">Отзывы</a></li>
-                                <li><a href="#">Контакты</a></li>
+                                <li><a href="#greetings-section">О нас</a></li>
+                                <li><a href="#section_object">Недвижимость</a></li>
+                                <li><a href="#section_discount">Услуги</a></li>
+                                <li><a href="#section-feedback">Отзывы</a></li>
+                                <li><a href="#section_questions">Контакты</a></li>
                             </ul>
                             <!-- Main navigation menu END-->
+                            <!-- Call Block -->
                             <div class="call-block">
                                 <span class="phone-contact">+ 34 611 058266</span>
-                                <button class="custom-btn btn-small btn-white-blue">
-                                    <span>Перезвоните мне</span></button>
+                                <button class="custom-btn btn-small btn-white-blue shake">
+                                    <span>Перезвоните мне</span>
+                                </button>
                             </div>
-
-
+                            <!-- Call Block END-->
                         </nav>
                     </div>
                 </div>
@@ -141,19 +142,19 @@
             </div>
             <div class="social-links-container">
                 <ul>
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" title="Youtube"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
                 </ul>
             </div>
             <div class="lang-container">
                 <ul>
-                    <li><a href="#"><img src="img/svg/flags/britain.svg" alt="flag"></a></li>
-                    <li><a href="#"><img src="img/svg/flags/spain.svg" alt="flag"></a></li>
-                    <li><a href="#"><img src="img/svg/flags/germany.svg" alt="flag"></a></li>
-                    <li><a href="#"><img src="img/svg/flags/russia.svg" alt="flag"></a></li>
-                    <li><a href="#"><img src="img/svg/flags/france.svg" alt="flag"></a></li>
+                    <li><a href="#" title="English"><img src="img/svg/flags/britain.svg" alt="flag"></a></li>
+                    <li><a href="#" title="Spain"><img src="img/svg/flags/spain.svg" alt="flag"></a></li>
+                    <li><a href="#" title="Germany"><img src="img/svg/flags/germany.svg" alt="flag"></a></li>
+                    <li><a href="#" title="Russian"><img src="img/svg/flags/russia.svg" alt="flag"></a></li>
+                    <li><a href="#" title="France"><img src="img/svg/flags/france.svg" alt="flag"></a></li>
                 </ul>
             </div>
         </div>
@@ -270,7 +271,7 @@
     <!--Search Section END-->
 
     <!--Greetings Section-->
-    <section class="section greetings-section">
+    <section class="section greetings-section" id="greetings-section">
         <div class="container-fluid max-w-1700">
             <div class="greetings-container">
                 <div class="row">
@@ -301,7 +302,7 @@
     <!--Greetings Section END-->
 
     <!--Object Section-->
-    <section class="section section_object w-100">
+    <section class="section section_object w-100" id="section_object">
         <div class="container">
             <div class="row border-none">
                 <div class="col-md-12">
@@ -941,9 +942,8 @@
     </section>
     <!--Cities Section END-->
 
-
     <!--Services Section-->
-    <section class="section section-services parallax-services" data-parallax="scroll"
+    <section class="section section-services parallax-services" id="section-services" data-parallax="scroll"
         data-image-src="img/background/bg-services.jpg">
         <!--Section Head Text-->
         <div class="head-text-box">
@@ -1030,9 +1030,6 @@
     </section>
     <!--Services Section END-->
 
-
-
-
     <!--Our Philosophy Section-->
     <section class="section">
         <div class="back_our_philosophy">
@@ -1068,7 +1065,7 @@
     <!--Our Philosophy Section END-->
 
     <!--Feedback Section-->
-    <section class="section section-feedback">
+    <section class="section section-feedback" id="section-feedback">
         <div class="parallax-bg">
             <div class="overlay-bg"></div>
         </div>
@@ -1117,7 +1114,7 @@
     <!--Feedback Section END-->
 
     <!--Professionals Section-->
-    <section class="section section-professionals">
+    <section class="section section-professionals" id="section-professionals">
         <!--Section Head Text-->
         <div class="head-text-box">
             <div class="container">
@@ -1491,8 +1488,7 @@
 
 
     <!--Questions Section-->
-
-    <section class="section section_questions">
+    <section class="section section_questions" id="section_questions">
         <div class="container">
             <div class="row">
                 <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 offset-md-1 col-md-10">
@@ -1523,7 +1519,6 @@
             </div>
         </div>
     </section>
-
     <!--Questions Section END-->
 
 
