@@ -1720,7 +1720,7 @@ figure
   padding-bottom: 50px !important
   .row
     border-top: 1px solid #e2e4eb
-    .btn-blue
+    .btn-big
       margin-top: 70px !important
     .object_content
       &:before
@@ -2074,7 +2074,7 @@ figure
         max-width: 310px
         width: 100%
         border-radius: 50px
-        padding: 18px 30px
+        padding: 13px 30px
         margin: 0 auto
         border: 1px solid transparent
         transition: 0.25s
@@ -2278,6 +2278,12 @@ figure
         height: 50px
         transform: translateY(-40%)
         margin-right: 3px  
+    .custom-btn
+      &:hover
+        &:before
+          height: 112%
+      &:before
+        height: 50%
 
 
  
@@ -2349,51 +2355,85 @@ body
  ===================================================================*/
 
 
-$primary: #3F51B5
-$dark-primary: #303F9F
-$light-primary: #C5CAE9
-$text: #FFFFFF
-$primary-text: #212121
-$secondary-text: #757575
-$accent: #FF4081
 
-.timeline_img
-  position: relative
-  &::before
-    content: ''
-    background: #3f51b5
-    width: 5px
-    height: 210px
-    position: absolute
-    left: -68%
-    top: 8px
-    transform: rotate3d(1, 1, 1, 45deg)
-
-.timeline_item
-  width: 100%
-  &:nth-child(even) .timeline_img
-    left: 51%
+.section_timeline
+  .timeline_wrap 
+    max-width: 800px
+    width: 100%
+    margin: 0 auto
+    position: relative
+    display: flex
+    justify-content: space-between
     &:before
-      transform: rotate3d(1, 1, 1, -45deg)
-      left: 230%
-  &:nth-child(even) .timeline_content
-    float: right
-    margin-right: -35px
-    .timeline_title_svg
-      margin-left: auto
-      flex-direction: row-reverse
-      .timeline_title
-        border-left: none
-        border-right: 3px solid #006aff
-        padding-left: 0
-        padding-right: 28px
-        h4
-          text-align: right
-        span
-          text-align: right
-    blockquote
+      content: ''
+      background: #eeeeee
+      width: 5px
+      height: 85%
+      position: absolute
+      left: 50%
+      transform: translate(-50%, 9%)
+    
+
+
+.left_timeline_containers
+  width: 44%
+
+
+
+.right_timeline_containers
+  margin-top: 92px
+  width: 44%
+  .timelane_container
+    margin-left: auto
+    &:before
+      left: -58px
+      right: unset
+    .wrap_content_timelane_cont
       text-align: right
-    &::after
+      &:after
+        border-width: 20px 20px 20px 0
+        border-color: transparent #eeeeee transparent transparent
+        left: -20px
+      .title_timeline_container
+        flex-direction: row-reverse
+        margin-left: auto
+        div
+          border-left: none
+          padding-left: 0
+          padding-right: 25px
+          border-right: 3px solid #006aff
+          h4
+            text-align: right
+          span
+            text-align: right
+
+
+
+.timelane_container
+  &:before
+    content: ''
+    border-radius: 50%
+    border: 4px solid #006aff
+    position: absolute
+    padding: 6px
+    background: #eeeeee
+    top: 44%
+    left: unset
+    right: -58px
+    transition: 0.25s
+
+
+.timelane_container
+  width: 100%
+  background-color: #eeeeee
+  position: relative
+  margin-bottom: 50px
+  &:last-child
+    margin-bottom: 0
+  .wrap_content_timelane_cont
+    padding: 8px 20px
+    text-align: left
+    &:after
       content: ''
       position: absolute
       transform: translateY(-50%)
@@ -2401,138 +2441,70 @@ $accent: #FF4081
       width: 0
       height: 0
       top: 50%
-      left: -30px
-      border-width: 30px 30px 30px 0
-      border-color: transparent #f5f5f5 transparent transparent
-  &::after
-    content: ''
-    display: block
-    clear: both
-
-.timeline_content
-  position: relative
-  width: 45%
-  padding: 10px 20px 10px
-  border-radius: 4px
-  background: #f5f5f5
-  box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.3)
-  transform: translateY(-47px)
-  margin-left: -35px
-  &::after
-    content: ''
-    position: absolute
-    transform: translateY(-50%)
-    border-style: solid
-    width: 0
-    height: 0
-    top: 50%
-    right: -30px
-    border-width: 30px 0 30px 30px
-    border-color: transparent transparent transparent #f5f5f5
-
-.timeline_img
-  width: 30px
-  height: 30px
-  background: #3f51b5
-  border-radius: 50%
-  position: absolute
-  left: 49%
-  margin-top: 25px
-  margin-left: -15px
-
-.timeline
-  a
-    background: #3f51b5
-    color: #fff
-    padding: 8px 20px
-    text-transform: uppercase
-    font-size: 14px
-    margin-bottom: 20px
-    margin-top: 10px
-    display: inline-block
-    border-radius: 2px
-    box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.6)
-    &:hover, &:active, &:focus
-      background: #32408f
-      color: #fff
-      text-decoration: none
-
-// .timeline_card
-//   padding: 0 !important
-//   p
-//     padding: 0 20px
-//   a
-//     margin-left: 20px
-
-.timeline_item .timeline_img_header
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4))
-  background-size: cover
-
-// .timeline_img_header
-//   height: 200px
-//   position: relative
-//   margin-bottom: 20px
-//   h2
-//     color: #fff
-//     position: absolute
-//     bottom: 5px
-//     left: 20px
-
-.timeline_content
-  .timeline_title_svg
-    display: flex
-    align-items: center
-    justify-content: space-between
-    max-width: 215px
-    width: 100%
-    margin: 10px 20px
-    .timeline_svg
-      width: 40px
-    .timeline_title
-      border-left: 3px solid #006aff
-      padding-left: 28px
-      h4
-        text-align: left
-      span
-        text-align: left
+      right: -20px
+      border-width: 20px 0 20px 20px
+      border-color: transparent transparent transparent #eeeeee
+      transition: 0.25s
+    .title_timeline_container
+      max-width: 220px
+      width: 100%
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding-bottom: 5px
+      img
+        width: 35px
+      div
+        padding: 3px 0 3px 25px
+        border-left: 3px solid #006aff
+        h4
+          font-size: 14px
+          text-transform: none
+          font-weight: bold
+          opacity: 0.8
+          text-align: left
+          padding-bottom: 5px
+        span
+          color: #606060
+          font-size: 14px
+          text-transform: uppercase
+          opacity: 0.8
+          text-align: left
+    .info_timelane_container
+      font-size: 12px
+      font-weight: 400
+      color: #606060
 
 
-blockquote
-  margin: 10px 0
-  color: #757575
-  border-left-color: #3f51b5
-  padding: 0 20px
 
-// .date
-//   background: #ff4081
-//   display: inline-block
-//   color: #fff
-//   padding: 10px
-//   position: absolute
-//   top: 0
-//   right: 0
+.timelane_container
+  transition: 0.25s
+  &:hover
+    box-shadow: 0px 20px 35px 5px rgba(0, 0, 0, 0.2)
+    background: #ffffff
+    cursor: pointer
+    transform: translate(5px, 0)
+    &:before
+      background: #006aff
+      transform: translate(-5px, 0)
+    .wrap_content_timelane_cont
+      &:after
+        border-color: transparent transparent transparent #ffffff
 
-@media screen and (max-width: 768px)
-  .timeline
-    &::before, .timeline_img
-      left: 50px
-    .timeline_content
-      max-width: 100%
-      width: auto
-      margin-left: 70px
-    .timeline_item
-      &:nth-child(even) .timeline_content
-        float: none
-      &:nth-child(odd) .timeline_content::after
-        content: ''
-        position: absolute
-        border-style: solid
-        width: 0
-        height: 0
-        top: 30px
-        left: -15px
-        border-width: 10px 15px 10px 0
-        border-color: transparent #f5f5f5 transparent transparent
+
+
+.right_timeline_containers    
+  .timelane_container
+    &:hover
+      transform: translate(-5px, 0)
+      &:before
+        background: #006aff
+        transform: translate(5px, 0)
+      .wrap_content_timelane_cont
+        &:after
+          border-color: transparent #ffffff transparent transparent
+
+      
 
 
 /* ==================================================================
