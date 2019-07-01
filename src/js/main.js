@@ -73,7 +73,6 @@ $(document).ready(function () {
  =====================================================================*/
 $('.nav-bar-toggle').on('click', function () {
     $(this).toggleClass('active-toggle');
-    console.log('alert');
 });
 /*====================================================================
                                  End
@@ -88,6 +87,15 @@ $('.parallax-services').parallax({
 $('.parallax-reasons').parallax({
     imageSrc: '../img/background/reason-bg.jpg'
 });
+
+// $('.wrapper-section').mousemove(function(e){
+//     var moveX = (e.pageX * 1 / 105 + 750);
+//     var moveY = (e.pageY * 1 / 50);
+//     $(this).css('background-position', moveX + 'px ' + moveY + 'px')
+// });
+
+var  parallaxBg = document.getElementById('parallax-bg');
+var parallaxInstance = new Parallax(parallaxBg);
 /*====================================================================
                                  End
  =====================================================================*/
@@ -148,6 +156,42 @@ $('.manager-slider').slick({
 });
 /*====================================================================
                                  End
+ =====================================================================*/
+
+/*====================================================================
+                         Counter function
+ =====================================================================*/
+var a = 0;
+$(window).on('scroll', function() {
+    var oTop = $('.count-container').offset().top - window.innerHeight;
+
+    if (a === 0 && $(window).scrollTop() > oTop) {
+        $('.value').each(function() {
+            var $this = $(this),
+                countTo = $this.attr('data-count');
+            $({
+                countNum: $this.text()
+            }).animate({
+                    countNum: countTo
+                },
+
+                {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function() {
+                        $this.text(Math.floor(this.countNum) + " " + "+");
+                    },
+                    complete: function() {
+                        $this.text(this.countNum + " " + "+");
+                        //alert('finished');
+                    }
+                });
+        });
+        a = 1;
+    }
+});
+/*====================================================================
+                                   END
  =====================================================================*/
 
 /*====================================================================
@@ -225,8 +269,12 @@ $(function () {
     $(window).on("scroll", function () {
         if ($(window).scrollTop() > 50) {
             $(".main-header").addClass("scroll-down-menu");
+            $(".logo-box").css("max-width", "80px");
+            $(".nav-bar-toggle").addClass("scroll-down-active");
         } else {
             $(".main-header").removeClass("scroll-down-menu");
+            $(".logo-box").css("max-width", "110px");
+            $(".nav-bar-toggle").removeClass("scroll-down-active");
         }
     });
 });
@@ -273,8 +321,6 @@ $(document).ready(function () {
                                  End
  =====================================================================*/
 
-
-
 /*====================================================================
                                  Parallax Discount
  =====================================================================*/
@@ -285,8 +331,6 @@ var parallaxInstance = new Parallax(scene);
 /*====================================================================
                                  End
  =====================================================================*/
-
-
 
 /*====================================================================
                                  Vertical Timeline
