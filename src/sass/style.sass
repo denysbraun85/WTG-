@@ -465,11 +465,12 @@ figure
   @media only screen and (max-width: 992px)
     top: 10px
     right: 10px
-    //@media only screen and (max-width: 576px)
-    //  width: 40px
-    //  height: 40px
-    //  @media only screen and (max-width: 500px)
-    //    top: 5px
+    @media only screen and (max-width: 576px)
+      width: 40px
+      height: 40px
+      @media only screen and (max-width: 500px)
+        top: 5px
+        right: 5px
   &:hover
     cursor: pointer
   &:focus
@@ -487,25 +488,25 @@ figure
   .bar-one
     transform-origin: 5%
     top: 34%
-    //@media only screen and (max-width: 576px)
-    //  top: 13px
+    @media only screen and (max-width: 576px)
+      top: 13px
   .bar-two
     top: 50%
     left: 50%
     transform: translateX(-50%, -50%)
-    //@media only screen and (max-width: 576px)
-    //  top: 19px
+    @media only screen and (max-width: 576px)
+      top: 19px
   .bar-tree
     top: 50%
     left: 50%
     transform: translateX(-50%, -50%)
-    //@media only screen and (max-width: 576px)
-    //  top: 19px
+    @media only screen and (max-width: 576px)
+      top: 19px
   .bar-four
     transform-origin: 5%
     bottom: 28%
-    //@media only screen and (max-width: 576px)
-    //  bottom: 12px
+    @media only screen and (max-width: 576px)
+      bottom: 12px
 .active-toggle
   .bar-one
     transform: rotate(45deg)
@@ -513,9 +514,9 @@ figure
     width: 25px
     top: 34%
     left: 32%
-    //@media only screen and (max-width: 576px)
-    //  width: 19px
-    //  top: 32%
+    @media only screen and (max-width: 576px)
+      width: 19px
+      top: 32%
   .bar-two
     transform: rotate(-45deg)
     height: 3px
@@ -523,9 +524,9 @@ figure
     left: 26%
     top: 50%
     background-color: transparent
-    //@media only screen and (max-width: 576px)
-    //  width: 19px
-    //  top: 19px
+    @media only screen and (max-width: 576px)
+      width: 19px
+      top: 19px
   .bar-tree
     transform: rotate(45deg)
     height: 3px
@@ -533,18 +534,18 @@ figure
     width: 25px
     left: 26%
     background-color: transparent
-    //@media only screen and (max-width: 576px)
-    //  width: 19px
-    //  top: 19px
+    @media only screen and (max-width: 576px)
+      width: 19px
+      top: 19px
   .bar-four
     transform: rotate(-45deg)
     height: 3px
     width: 25px
     left: 32%
     top: 66%
-    //@media only screen and (max-width: 576px)
-    //  width: 19px
-    //  top: 63%
+    @media only screen and (max-width: 576px)
+      width: 19px
+      top: 63%
   .main-button-container
     bottom: 30px
     z-index: 20
@@ -606,11 +607,26 @@ figure
         @media only screen and (max-width: 992px)
           display: none
   .menu-container
-    display: block
-    .menu-full
-      display: flex
-      justify-content: center
+    //display: block
+    //.menu-full
+    display: flex
+    justify-content: center
+    @media only screen and (max-width: 768px)
+      flex-direction: column
+      align-items: center
+      text-align: center
+    .menu-column
+      width: 33.33%
+      @media only screen and (max-width: 768px)
+        width: 100%
+      .lang
+        display: none
+        @media only screen and (max-width: 768px)
+          display: block
       li
+        margin-top: 10px
+        @media only screen and (max-width: 576px)
+          margin-top: 5px
         a
           position: relative
           z-index: 1
@@ -626,6 +642,18 @@ figure
           transition: all 0.3s ease-in-out
           @media only screen and (max-width: 1400px)
             margin: 15px 15px
+            @media only screen and (max-width: 768px)
+              font-size: 15px
+              @media only screen and (max-width: 576px)
+                font-size: 12px
+          .arrow-dropdown
+            @media only screen and (min-width: 768px)
+              display: none
+            @media only screen and (max-width: 768px)
+              font-size: 11px
+              margin-left: 5px
+              @media only screen and (max-width: 576px)
+                font-size: 8px
           &:before
             display: block
             content: ''
@@ -643,14 +671,21 @@ figure
               width: 100%
         .menu-full-down
           margin-top: 20px
+          transition: all 0.3s ease-in-out
+          @media only screen and (max-width: 768px)
+            display: none
           li
             margin-bottom: 5px
+            @media only screen and (max-width: 576px)
+              margin-bottom: 2px
             a
               font-size: 13px
               font-family: 'Montserrat-light', sans-serif
               color: $text-color-grey
               background-image: linear-gradient(to right, $text-color-grey, $text-color-grey 50%, $text-color-white 50%)
               padding: 0
+              @media only screen and (max-width: 576px)
+                font-size: 10px
               &:before
                 background: $text-color-grey
   .social-links-container
@@ -658,8 +693,16 @@ figure
     bottom: 10%
     left: 50%
     transform: translate(-50%)
+    @media only screen and (max-width: 768px)
+      width: 100%
+    @media only screen and (max-width: 576px)
+      bottom: 5%
     ul
       display: flex
+      @media only screen and (max-width: 768px)
+        width: 100%
+        display: flex
+        justify-content: space-around
       li
         margin: 0 10px
         a
@@ -675,6 +718,8 @@ figure
           padding: 0 10px
           color: $icon-color-default
           transition: all .5s ease
+          @media only screen and (max-width: 576px)
+            font-size: 20px
         .facebook
           &:hover
             i
@@ -717,6 +762,8 @@ figure
     top: 50%
     transform: translateY(-50%)
     z-index: 21
+    @media only screen and (max-width: 768px)
+      display: none
     ul
       li
         margin: 5px 0
@@ -759,6 +806,11 @@ figure
 .menu-active
   transition: all 0.5s ease
   width: 100% !important
+.dropdown-menu-active
+  display: block !important
+  transition: all 0.5s ease
+.display-none
+  display: none !important
 //.fixed
 //  overflow: hidden
 //.fix-btn
@@ -836,6 +888,8 @@ figure
         max-width: 110px
         @media only screen and (max-width: 992px)
           width: 70px !important
+          @media only screen and (max-width: 576px)
+            width: 50px !important
     .navigation
       overflow: hidden
       padding-right: 35px
@@ -847,7 +901,8 @@ figure
             padding-right: 92px
             @media only screen and (max-width: 500px)
               padding-right: 60px
-
+              @media only screen and (max-width: 500px)
+                padding-right: 20px
       .menu
         margin-right: 40px
         @media only screen and (max-width: 992px)
@@ -912,8 +967,7 @@ figure
           max-height: 30px
           max-width: 140px
           border-width: 1px
-
-          @media only screen and (max-width: 500px)
+          @media only screen and (max-width: 576px)
             padding: 0
             max-height: 30px
             max-width: 130px
@@ -924,7 +978,7 @@ figure
             font-size: 12px
             line-height: 18px
             text-transform: capitalize
-            @media only screen and (max-width: 500px)
+            @media only screen and (max-width: 576px)
               font-size: 10px
               line-height: 19px
         .shake
@@ -1049,19 +1103,27 @@ figure
         width: 80px
         height: 80px
         background-color: #fff
-        //border-radius: 50%
+        border-radius: 50%
         transition: all 0.5s ease
         opacity: 0.8
         @extend %center
-        span
-          padding-left: 3px
-          color: $color-btn-hover
-          background: 0 0
-          will-change: transform
-          z-index: 1
+        //span
+        //  padding-left: 3px
+        //  color: $color-btn-hover
+        //  background: 0 0
+        //  will-change: transform
+        //  z-index: 1
+        //  @extend %center
+        //  font-size: 25px
+        //  transition: all 0.5s ease
+        .svg_color
           @extend %center
-          font-size: 25px
-          transition: all 0.5s ease
+          max-width: 40px
+          padding-left: 5px
+        &:hover
+          .svg_color path
+             fill: $color-btn !important
+             transition: fill .5s ease
         &:before,
         &:after
           position: absolute
@@ -1078,6 +1140,7 @@ figure
           transition: all .5s ease
         &:after
           background: #fff
+          transition: all .5s ease
         &:hover
           background-color: $color-btn-hover
           cursor: pointer
@@ -1086,8 +1149,8 @@ figure
             transform: scale(1.3)
           &:after
             background-color: $color-btn-hover
-          span
-            color: $text-color-white
+          //span
+          //  color: $text-color-white
     .count-container
       display: flex
       flex-direction: column
@@ -1132,7 +1195,6 @@ figure
           width: 75%
           margin: auto
           display: block
-
 
 /*====================================================================
                                    END
