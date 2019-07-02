@@ -809,8 +809,6 @@ figure
 .dropdown-menu-active
   display: block !important
   transition: all 0.5s ease
-.display-none
-  display: none !important
 //.fixed
 //  overflow: hidden
 //.fix-btn
@@ -1090,6 +1088,9 @@ figure
     .head-text-box
       margin-bottom: 20px
       text-align: left
+      @media only screen and (max-width: 992px)
+        position: absolute
+        top: 50px
       h3
         margin: 0 auto 20px
         font-size: 25px
@@ -1158,6 +1159,8 @@ figure
       width: 100%
       .count-item
         margin-bottom: 50px
+        @media only screen and (max-width: 992px)
+          margin-bottom: 20px
         .count-box
           display: flex
           span
@@ -1179,14 +1182,20 @@ figure
               bottom: 13px
               left: 0
               background: #006aff
-          .description
-            font-size: 15px
+        .description
+          font-size: 15px
+          @media only screen and (max-width: 992px)
+            display: none
     .layer-wrap
       position: absolute
       top: 0
       left: 35%
       transform: translate3d(-50%,-50%,0)
       z-index: -1
+      @media only screen and (max-width: 1200px)
+        left: 25%
+        @media only screen and (max-width: 992px)
+          display: none
       .layer
         position: absolute
         top: 50%
@@ -1196,6 +1205,15 @@ figure
           width: 75%
           margin: auto
           display: block
+  .head-text-box-hidden
+    display: none
+    @media only screen and (max-width: 992px)
+      display: block
+      text-align: center
+      h3
+        font-size: 25px
+        margin-top: 0
+        margin-bottom: 30px
 
 /*====================================================================
                                    END

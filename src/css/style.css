@@ -990,9 +990,6 @@ figure {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease; }
 
-.display-none {
-  display: none !important; }
-
 /*====================================================================
                                     END
  @mixin ====================================================================*/
@@ -1275,6 +1272,10 @@ figure {
     .section-video-count-property .wrapper-section .head-text-box {
       margin-bottom: 20px;
       text-align: left; }
+      @media only screen and (max-width: 992px) {
+        .section-video-count-property .wrapper-section .head-text-box {
+          position: absolute;
+          top: 50px; } }
       .section-video-count-property .wrapper-section .head-text-box h3 {
         margin: 0 auto 20px;
         font-size: 25px; }
@@ -1348,6 +1349,9 @@ figure {
       width: 100%; }
       .section-video-count-property .wrapper-section .count-container .count-item {
         margin-bottom: 50px; }
+        @media only screen and (max-width: 992px) {
+          .section-video-count-property .wrapper-section .count-container .count-item {
+            margin-bottom: 20px; } }
         .section-video-count-property .wrapper-section .count-container .count-item .count-box {
           display: -webkit-box;
           display: -webkit-flex;
@@ -1372,8 +1376,11 @@ figure {
               bottom: 13px;
               left: 0;
               background: #006aff; }
-          .section-video-count-property .wrapper-section .count-container .count-item .count-box .description {
-            font-size: 15px; }
+        .section-video-count-property .wrapper-section .count-container .count-item .description {
+          font-size: 15px; }
+          @media only screen and (max-width: 992px) {
+            .section-video-count-property .wrapper-section .count-container .count-item .description {
+              display: none; } }
     .section-video-count-property .wrapper-section .layer-wrap {
       position: absolute;
       top: 0;
@@ -1381,6 +1388,12 @@ figure {
       -webkit-transform: translate3d(-50%, -50%, 0);
               transform: translate3d(-50%, -50%, 0);
       z-index: -1; }
+      @media only screen and (max-width: 1200px) {
+        .section-video-count-property .wrapper-section .layer-wrap {
+          left: 25%; } }
+  @media only screen and (max-width: 1200px) and (max-width: 992px) {
+    .section-video-count-property .wrapper-section .layer-wrap {
+      display: none; } }
       .section-video-count-property .wrapper-section .layer-wrap .layer {
         position: absolute;
         top: 50%;
@@ -1391,6 +1404,16 @@ figure {
           width: 75%;
           margin: auto;
           display: block; }
+  .section-video-count-property .head-text-box-hidden {
+    display: none; }
+    @media only screen and (max-width: 992px) {
+      .section-video-count-property .head-text-box-hidden {
+        display: block;
+        text-align: center; }
+        .section-video-count-property .head-text-box-hidden h3 {
+          font-size: 25px;
+          margin-top: 0;
+          margin-bottom: 30px; } }
 
 /*====================================================================
                                    END

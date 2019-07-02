@@ -301,13 +301,35 @@ $('.link').on('click', function (e) {
         $ul.removeClass('dropdown-menu-active');
     }
 });
-// Close the dropdown if the user clicks outside of it
-$(document).mouseup(function(e) {
-    var $target = $(e.target);
-    if ($target.closest(".link").length === 0) {
-        $(this).next().toggleClass("dropdown-menu-active");
+
+//
+// $(document).on('click', function(e) {
+//     $('.link').not($(this).has($(e.target)))
+//         .next('ul')
+//         .removeClass('dropdown-menu-active');
+// });
+// // Close the dropdown if the user clicks outside of it
+// $(document).mouseup(function(e) {
+//     var $target = $(e.target);
+//     if ($target.closest(".link").length === 0) {
+//         $(this).next().toggleClass("dropdown-menu-active");
+//     }
+// });
+//
+// // Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+    if (!event.target.matches('.link')) {
+
+        var dropdowns = document.getElementsByClassName("menu-full-down");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('dropdown-menu-active')) {
+                openDropdown.classList.remove('dropdown-menu-active');
+            }
+        }
     }
-});
+}
 /*====================================================================
                                  End
  =====================================================================*/
