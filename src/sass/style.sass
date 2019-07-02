@@ -953,7 +953,7 @@ figure
     text-align: center
   &:hover
     .greetings-container
-      .team-photo-container
+      .photo_border_animation
         &:before
           top: -35px
   .greetings-container
@@ -993,30 +993,30 @@ figure
         bottom: -5px
         transform: translate(-50%)
         margin: auto
-    .team-photo-container
-      position: relative
-      display: block
-      margin-left: auto
-      max-width: 90%
-      width: 100%
-      z-index: 1
-      box-shadow: 8px 8px 30px rgba(0, 0, 0, 0.3)
-      @media only screen and (max-width: 991px)
-        max-width: 90%
-        margin: auto
-      &:before
-        position: absolute
-        content: ''
-        width: 100%
-        height: 100%
-        top: 35px
-        right: 43px
-        background: transparent
-        border: 16px solid $border-team-photo
-        z-index: -1
-        transition: all 0.5s cubic-bezier(.785,.135,.15,.86)
-        @media only screen and (max-width: 575px)
-          display: none
+    // .team-photo-container
+    //   position: relative
+    //   display: block
+    //   margin-left: auto
+    //   max-width: 90%
+    //   width: 100%
+    //   z-index: 1
+    //   box-shadow: 8px 8px 30px rgba(0, 0, 0, 0.3)
+    //   @media only screen and (max-width: 991px)
+    //     max-width: 90%
+    //     margin: auto
+    //   &:before
+    //     position: absolute
+    //     content: '' 
+    //     width: 100%
+    //     height: 100%
+    //     top: 35px
+    //     right: 43px
+    //     background: transparent
+    //     border: 16px solid $border-team-photo
+    //     z-index: -1
+    //     transition: all 0.5s cubic-bezier(.785,.135,.15,.86)
+    //     @media only screen and (max-width: 575px)
+    //       display: none
 /*====================================================================
                                    END
  =====================================================================*/
@@ -2068,15 +2068,7 @@ figure
       .object_hidden_info_bottom
         transform: translate3d(0,160px,0)
         bottom: 0
-        padding-bottom: 33px
-        @media only screen and (max-width: 992px)
-          padding-bottom: 15px
-          @media only screen and (max-width: 768px)
-            padding-bottom: 30px
-            @media only screen and (max-width: 400px)
-              padding-bottom: 12px
-              @media only screen and (max-width: 360px)
-                padding-bottom: 10px
+        padding-bottom: 10px
         .info_bottom
           display: flex
           justify-content: space-between
@@ -2162,12 +2154,13 @@ figure
             opacity: .8
         .object_name_list
           transform: translate3d(0,-90px,0)
+          margin-bottom: 0
           @media only screen and (max-width: 1400px)
-            margin-bottom: 5px
+            margin-bottom: -15px
             @media only screen and (max-width: 992px)
               margin-bottom: -20px
               @media only screen and (max-width: 768px)
-                margin-bottom: 5px
+                margin-bottom: -15px
                 @media only screen and (max-width: 400px)
                   margin-bottom: -20px
                   @media only screen and (max-width: 360px)
@@ -2416,7 +2409,7 @@ figure
         border-radius: 30px
         border: 1px solid #f5f5f5
         background-color: #fcfcfc
-        padding: 10px 30px
+        padding: 15px 30px
         margin-bottom: 15px
         font-size: 13px
         transition: 0.25s
@@ -2515,97 +2508,134 @@ body
                           STYLE VERTICAL TIMELINE
  ===================================================================*/
 
-
-
 .section_timeline
-  .timeline_wrap 
-    max-width: 800px
-    width: 100%
-    margin: 0 auto
-    position: relative
-    display: flex
-    justify-content: space-between
-    &:before
-      content: ''
-      background: #eeeeee
-      width: 5px
-      height: 85%
-      position: absolute
-      left: 50%
-      transform: translate(-50%, 9%)
+  .row
+    &:hover
+      .photo_border_animation
+        &:before
+          top: -35px
+    .timeline_wrap 
+      max-width: 840px
+      width: 100%
+      margin: 0 auto
+      position: relative
+      display: flex
+      justify-content: space-between
+      @media only screen and (max-width: 768px)
+        flex-direction: column
+      &:before
+        content: ''
+        background: #eeeeee
+        width: 5px
+        height: 79%
+        position: absolute
+        left: 50%
+        transform: translate(-50%, 9%)
+        @media only screen and (max-width: 768px)
+          left: 0
+          height: 89%
+          transform: translate(-50%, 6%)
+          
     
-
+.section_timeline
+  .photo_border_animation
+    @media only screen and (max-width: 991px)
+      display: none
 
 .left_timeline_containers
-  width: 44%
-
-
+  width: 50%
+  @media only screen and (max-width: 768px)
+    width: 99%
 
 .right_timeline_containers
-  margin-top: 92px
-  width: 44%
-  .timelane_container
+  width: 50%
+  margin-top: 82px
+  @media only screen and (max-width: 1348px)
+    margin-top: 92px
+    @media only screen and (max-width: 991px)
+      margin-top: 82px
+      @media only screen and (max-width: 768px)
+        width: 99%
+        margin-top: 0
+  .wrap_timelane_container
     margin-left: auto
     &:before
-      left: -58px
+      left: -10px
       right: unset
-    .wrap_content_timelane_cont
-      text-align: right
-      &:after
-        border-width: 20px 20px 20px 0
-        border-color: transparent #eeeeee transparent transparent
-        left: -20px
-      .title_timeline_container
-        flex-direction: row-reverse
-        margin-left: auto
-        div
-          border-left: none
-          padding-left: 0
-          padding-right: 25px
-          border-right: 3px solid #006aff
-          h4
-            text-align: right
-          span
-            text-align: right
-
-
-
-.timelane_container
+    .timelane_container
+      margin-left: auto
+      .wrap_content_timelane_cont
+        text-align: right
+        &:after
+          border-width: 20px 20px 20px 0
+          border-color: transparent #eeeeee transparent transparent
+          left: -30px
+          transform: translate(50%, -50%)
+        .title_timeline_container
+          flex-direction: row-reverse
+          margin-left: auto
+          div
+            border-left: none
+            padding-left: 0
+            padding-right: 25px
+            border-right: 3px solid #006aff
+            h4
+              text-align: right
+            span
+              text-align: right
+  
+.wrap_timelane_container
+  width: 100%
+  margin-bottom: 50px
+  position: relative
+  @media only screen and (max-width: 768px)
+    margin-bottom: 10px
   &:before
     content: ''
     border-radius: 50%
     border: 4px solid #006aff
     position: absolute
+    transform: translateY(-50%)
     padding: 6px
     background: #eeeeee
-    top: 44%
+    top: 50%
     left: unset
-    right: -58px
+    right: -10px
     transition: 0.25s
-
+    @media only screen and (max-width: 768px)
+      left: -10px
+      right: unset
 
 .timelane_container
-  width: 100%
+  width: 88%
   background-color: #eeeeee
-  position: relative
-  margin-bottom: 50px
-  &:last-child
-    margin-bottom: 0
+  @media only screen and (max-width: 768px)
+    margin-left: auto
+    width: 90%
   .wrap_content_timelane_cont
-    padding: 8px 20px
+    padding: 5px 10px
     text-align: left
+    position: relative
+    @media only screen and (max-width: 768px)
+      text-align: right
     &:after
       content: ''
       position: absolute
-      transform: translateY(-50%)
+      transform: translate(-50%, -50%)
       border-style: solid
       width: 0
       height: 0
       top: 50%
-      right: -20px
+      right: -30px
       border-width: 20px 0 20px 20px
       border-color: transparent transparent transparent #eeeeee
       transition: 0.25s
+      @media only screen and (max-width: 768px)
+        transform: translate(50%, -50%)
+        border-width: 20px 20px 20px 0
+        border-color: transparent #eeeeee transparent transparent
+        left: -30px
+        right: unset
     .title_timeline_container
       max-width: 220px
       width: 100%
@@ -2613,11 +2643,19 @@ body
       justify-content: space-between
       align-items: center
       padding-bottom: 5px
+      @media only screen and (max-width: 768px)
+        flex-direction: row-reverse
+        margin-left: auto
       img
         width: 35px
       div
         padding: 3px 0 3px 25px
         border-left: 3px solid #006aff
+        @media only screen and (max-width: 768px)
+          border-left: none
+          padding-left: 0
+          padding-right: 25px
+          border-right: 3px solid #006aff
         h4
           font-size: 14px
           text-transform: none
@@ -2625,12 +2663,16 @@ body
           opacity: 0.8
           text-align: left
           padding-bottom: 5px
+          @media only screen and (max-width: 768px)
+            text-align: right
         span
           color: #606060
           font-size: 14px
           text-transform: uppercase
           opacity: 0.8
           text-align: left
+          @media only screen and (max-width: 768px)
+            text-align: right
     .info_timelane_container
       font-size: 12px
       font-weight: 400
@@ -2638,35 +2680,60 @@ body
 
 
 
+.wrap_timelane_container
+  &:hover
+    &:before
+      background: #006aff
+
 .timelane_container
   transition: 0.25s
   &:hover
     box-shadow: 0px 20px 35px 5px rgba(0, 0, 0, 0.2)
     background: #ffffff
     cursor: pointer
-    transform: translate(5px, 0)
-    &:before
-      background: #006aff
-      transform: translate(-5px, 0)
     .wrap_content_timelane_cont
       &:after
         border-color: transparent transparent transparent #ffffff
-
-
+        cursor: pointer
+        @media only screen and (max-width: 768px)
+          border-color: transparent #ffffff transparent transparent
 
 .right_timeline_containers    
   .timelane_container
     &:hover
-      transform: translate(-5px, 0)
       &:before
         background: #006aff
-        transform: translate(5px, 0)
       .wrap_content_timelane_cont
         &:after
           border-color: transparent #ffffff transparent transparent
+          cursor: pointer
 
-      
 
+
+.photo_border_animation
+  position: relative
+  display: block
+  margin-left: auto
+  max-width: 90%
+  width: 100%
+  z-index: 1
+  box-shadow: 8px 8px 30px rgba(0, 0, 0, 0.3)
+  @media only screen and (max-width: 991px)
+    max-width: 90%
+    margin: auto
+  &:before
+    position: absolute
+    content: '' 
+    width: 100%
+    height: 100%
+    top: 35px
+    right: 43px
+    background: transparent
+    border: 16px solid $border-team-photo
+    z-index: -1
+    transition: all 0.5s cubic-bezier(.785,.135,.15,.86)
+    @media only screen and (max-width: 575px)
+      display: none
 
 /* ==================================================================
                          END STYLE VERTICAL TIMELINE
