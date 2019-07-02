@@ -1,72 +1,71 @@
 $(document).ready(function () {
 
-    /*====================================================================
-                                 Script for change SVG color
+/*====================================================================
+                    Script for change SVG color
  =====================================================================*/
+$(function changeSVG() {
+    $('img.svg_color').each(function () {
+        var $img = $(this);
+        var imgID = $img.attr('id');
+        var imgClass = $img.attr('class');
+        var imgURL = $img.attr('src');
 
+        $.get(imgURL, function (data) {
+            var $svg = $(data).find('svg');
+            if (typeof imgID !== 'undefined') {
+                $svg = $svg.attr('id', imgID);
+            }
+            if (typeof imgClass !== 'undefined') {
+                $svg = $svg.attr('class', imgClass + ' replaced-svg');
+            }
+            $svg = $svg.removeAttr('xmlns:a');
+            if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+                $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+            }
+            $img.replaceWith($svg);
+        }, 'xml');
 
-    $(function changeSVG() {
-        $('img.svg_color').each(function () {
-            var $img = $(this);
-            var imgID = $img.attr('id');
-            var imgClass = $img.attr('class');
-            var imgURL = $img.attr('src');
-
-            $.get(imgURL, function (data) {
-                var $svg = $(data).find('svg');
-                if (typeof imgID !== 'undefined') {
-                    $svg = $svg.attr('id', imgID);
-                }
-                if (typeof imgClass !== 'undefined') {
-                    $svg = $svg.attr('class', imgClass + ' replaced-svg');
-                }
-                $svg = $svg.removeAttr('xmlns:a');
-                if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-                    $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-                }
-                $img.replaceWith($svg);
-            }, 'xml');
-
-        });
     });
-
-
-    /*====================================================================
-                                     End
-     =====================================================================*/
-
-
-    $(function () {
-        $('.arrow_down').on('click', function () {
-            $('html, body').animate({
-                scrollTop: $('.wrap_arrow_down').offset().top + 80
-            }, 'slow');
-            return false;
-        });
+});
+/*====================================================================
+                                    End
+=====================================================================*/
+/*====================================================================
+                                 Select 2
+=====================================================================*/
+$(function () {
+    $('.arrow_down').on('click', function () {
+        $('html, body').animate({
+            scrollTop: $('.wrap_arrow_down').offset().top + 80
+        }, 'slow');
+        return false;
     });
-
-    $('.language_select').select2({
-        'allowClear': true
-    });
-
-    $(".js-select2").select2({
-        closeOnSelect: false,
-        allowHtml: true,
-        allowClear: true,
-        tags: true
-    });
-
-    $(".js-select2").on('click', function () {
-        if ($('.select2-container--open .select2-dropdown--below').show) {
-            $('.select2-container--default, .select2-selection--multiple').is(":hover").css({
-                '-webkit-box-shadow': 'none',
-                '-moz-box-shadow': 'none',
-                'box-shadow': 'none'
-            });
-        }
-    })
 });
 
+$('.language_select').select2({
+    'allowClear': true
+});
+
+$(".js-select2").select2({
+    closeOnSelect: false,
+    allowHtml: true,
+    allowClear: true,
+    tags: true
+});
+
+$(".js-select2").on('click', function () {
+    if ($('.select2-container--open .select2-dropdown--below').show) {
+        $('.select2-container--default, .select2-selection--multiple').is(":hover").css({
+            '-webkit-box-shadow': 'none',
+            '-moz-box-shadow': 'none',
+            'box-shadow': 'none'
+        });
+    }
+})
+});
+/*====================================================================
+                                 End
+ =====================================================================*/
 
 /*====================================================================
                          Toggle menu function
@@ -81,21 +80,18 @@ $('.nav-bar-toggle').on('click', function () {
 /*====================================================================
                          Parallax functions
  =====================================================================*/
+// Parallax Services
 $('.parallax-services').parallax({
     imageSrc: '../img/background/bg-services.jpg'
 });
-$('.parallax-reasons').parallax({
-    imageSrc: '../img/background/reason-bg.jpg'
-});
 
-// $('.wrapper-section').mousemove(function(e){
-//     var moveX = (e.pageX * 1 / 105 + 750);
-//     var moveY = (e.pageY * 1 / 50);
-//     $(this).css('background-position', moveX + 'px ' + moveY + 'px')
-// });
-
+// Parallax Count
 var  parallaxBg = document.getElementById('parallax-bg');
 var parallaxInstance = new Parallax(parallaxBg);
+
+// Parallax Discount
+var scene = document.getElementById('scene');
+var parallaxInstance = new Parallax(scene);
 /*====================================================================
                                  End
  =====================================================================*/
@@ -164,7 +160,6 @@ $('.manager-slider').slick({
 var a = 0;
 $(window).on('scroll', function() {
     var oTop = $('.count-container').offset().top - window.innerHeight;
-
     if (a === 0 && $(window).scrollTop() > oTop) {
         $('.value').each(function() {
             var $this = $(this),
@@ -174,7 +169,6 @@ $(window).on('scroll', function() {
             }).animate({
                     countNum: countTo
                 },
-
                 {
                     duration: 2000,
                     easing: 'swing',
@@ -206,32 +200,30 @@ $('.video-bg').bgVideo({
                                  End
  =====================================================================*/
 
-
-$(() => {
+/*====================================================================
+                        Якийсь говнокод Дені =Р
+ =====================================================================*/
+$(function(){
     var $sendBtn = $('.animation_plane'),
         $iWrapper = $('.icon-wrapper'),
         $i1 = $('.icon-1'),
         $i2 = $('.icon-2');
-
     function animationEvent() {
         var t,
             el = document.createElement('fakeelement');
-
         var animations = {
             animation: 'animationend',
             OAnimation: 'oAnimationEnd',
             MozAnimation: 'animationend',
             WebkitAnimation: 'webkitAnimationEnd'
         };
-
         for (t in animations) {
             if (el.style[t] !== undefined) {
                 return animations[t];
             }
         }
     }
-
-    $sendBtn.on('click', e => {
+    $sendBtn.on('click', function(e) {
         $iWrapper.css('color', '#006aff');
         $iWrapper.addClass('icon-wrapper-animation');
         $sendBtn.addClass('clicked');
@@ -241,20 +233,17 @@ $(() => {
         $i2.delay(300);
         $i2.fadeTo(300, 1);
     });
-
-    $sendBtn.on(animationEvent(), e => {
+    $sendBtn.on(animationEvent(), function(e) {
         if (e.originalEvent.animationName == 'input-shadow') {
             $sendBtn.removeClass('clicked');
         }
     });
-
-    $iWrapper.on(animationEvent(), e => {
+    $iWrapper.on(animationEvent(), function(e) {
         if (e.originalEvent.animationName == 'icon-animation') {
             $iWrapper.removeClass('icon-wrapper-animation');
             setTimeout(reset, 5000);
         }
     });
-
     function reset() {
         $i1.fadeTo(250, 1);
         $i2.fadeTo(250, 0);
@@ -262,6 +251,10 @@ $(() => {
         $('body').css('overflow-x', 'auto')
     }
 }); // end of document ready
+/*====================================================================
+                                 End
+ =====================================================================*/
+
 /*====================================================================
                         Scroll Down Menu Fix
  =====================================================================*/
@@ -296,6 +289,30 @@ $('#menu-open-btn').on('click', function () {
  =====================================================================*/
 
 /*====================================================================
+                             Main Menu Dropdown list
+ =====================================================================*/
+$('.link').on('click', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    var $ul = $(this).next();
+    if (!$ul.hasClass('dropdown-menu-active')) {
+        $ul.addClass('dropdown-menu-active');
+    } else {
+        $ul.removeClass('dropdown-menu-active');
+    }
+});
+// Close the dropdown if the user clicks outside of it
+$(document).mouseup(function(e) {
+    var $target = $(e.target);
+    if ($target.closest(".link").length === 0) {
+        $(this).next().toggleClass("dropdown-menu-active");
+    }
+});
+/*====================================================================
+                                 End
+ =====================================================================*/
+
+/*====================================================================
                              Scroll Spy
  =====================================================================*/
 $(document).ready(function () {
@@ -322,76 +339,47 @@ $(document).ready(function () {
  =====================================================================*/
 
 /*====================================================================
-                                 Parallax Discount
+                          Vertical Timeline
  =====================================================================*/
-
-var scene = document.getElementById('scene');
-var parallaxInstance = new Parallax(scene);
-
-/*====================================================================
-                                 End
-<<<<<<< HEAD
-=======
- =====================================================================*/
-
-/*====================================================================
-                                 Vertical Timeline
- =====================================================================*/
-
 $(function () {
-
     window.sr = ScrollReveal();
-
     if ($(window).width() < 768) {
-
         if ($('.timeline-content').hasClass('js--fadeInLeft')) {
             $('.timeline-content').removeClass('js--fadeInLeft').addClass('js--fadeInRight');
         }
-
         sr.reveal('.js--fadeInRight', {
             origin: 'right',
             distance: '300px',
             easing: 'ease-in-out',
-            duration: 800,
+            duration: 800
         });
-
     } else {
-
         sr.reveal('.js--fadeInLeft', {
             origin: 'left',
             distance: '300px',
             easing: 'ease-in-out',
-            duration: 800,
+            duration: 800
         });
-
         sr.reveal('.js--fadeInRight', {
             origin: 'right',
             distance: '300px',
             easing: 'ease-in-out',
-            duration: 800,
+            duration: 800
         });
-
     }
-
     sr.reveal('.js--fadeInLeft', {
         origin: 'left',
         distance: '300px',
         easing: 'ease-in-out',
-        duration: 800,
+        duration: 800
     });
-
     sr.reveal('.js--fadeInRight', {
         origin: 'right',
         distance: '300px',
         easing: 'ease-in-out',
-        duration: 800,
+        duration: 800
     });
-
-
 });
-
-
 /*====================================================================
                                  End
->>>>>>> c4f9b914615535f308582b295db437e98ba3399e
  =====================================================================*/
