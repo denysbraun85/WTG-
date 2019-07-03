@@ -90,8 +90,8 @@ var  parallaxBg = document.getElementById('parallax-bg');
 var parallaxInstance = new Parallax(parallaxBg);
 
 // Parallax Discount
-var scene = document.getElementById('scene');
-var parallaxInstance = new Parallax(scene);
+// var scene = document.getElementById('scene');
+// var parallaxInstance = new Parallax(scene);
 /*====================================================================
                                  End
  =====================================================================*/
