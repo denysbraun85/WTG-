@@ -1081,6 +1081,8 @@ figure
   overflow: hidden
   // background: #ffffff
   //background-color:  $section-color-white
+  //@media only screen and (max-width: 992px)
+  //  padding-bottom: 100px
   .wrapper-section
     position: relative
     width: 100%
@@ -1089,18 +1091,21 @@ figure
       margin-bottom: 20px
       text-align: left
       @media only screen and (max-width: 992px)
-        position: absolute
-        top: 50px
+        display: none
       h3
         margin: 0 auto 20px
-        font-size: 25px
+        font-size: 30px
+        @media only screen and (max-width: 1200px)
+          font-size: 25px
       p
-        font-size: 16px
+        font-size: 18px
     .video-container
       position: relative
       max-width: 750px
       width: 100%
       box-shadow: 20px 30px 30px rgba(0,0,0,.2)
+      @media only screen and (max-width: 992px)
+        margin-bottom: 100px
       .video-link
         width: 80px
         height: 80px
@@ -1157,23 +1162,37 @@ figure
       display: flex
       flex-direction: column
       width: 100%
+      @media only screen and (max-width: 992px)
+        flex-direction: row
+        justify-content: space-between
+        margin-top: 30px
+        margin-bottom: 30px
       .count-item
         margin-bottom: 50px
         @media only screen and (max-width: 992px)
           margin-bottom: 20px
         .count-box
           display: flex
+          @media only screen and (max-width: 768px)
+            flex-direction: column
           span
             padding-right: 20px
             font-size: 36px
             color: $text-color-black
             font-family: 'Montserrat-semibold', sans-serif
+            @media only screen and (max-width: 768px)
+              padding-right: 0
+              @media only screen and (max-width: 576px)
+                font-size: 20px
           p
             position: relative
             font-size: 16px
             line-height: 40px
             font-weight: bold
             color: $text-color-black
+            @media only screen and (max-width: 576px)
+              font-size: 12px
+              line-height: normal
             &:before
               position: absolute
               content: ''
@@ -1182,10 +1201,34 @@ figure
               bottom: 13px
               left: 0
               background: #006aff
+              @media only screen and (max-width: 768px)
+                bottom: -13px
+                @media only screen and (max-width: 576px)
+                  height: 4px
         .description
           font-size: 15px
           @media only screen and (max-width: 992px)
             display: none
+      button
+        @media only screen and (max-width: 992px)
+          position: absolute
+          left: 50%
+          transform: translateX(-50%)
+          top: 420%
+          @media only screen and (max-width: 768px)
+            top: 350%
+            @media only screen and (max-width: 767px)
+              top: 280%
+              @media only screen and (max-width: 576px)
+                top: 350%
+                @media only screen and (max-width: 500px)
+                  top: 335%
+                  @media only screen and (max-width: 450px)
+                    top: 305%
+                    @media only screen and (max-width: 400px)
+                      top: 280%
+                      @media only screen and (max-width: 350px)
+                       top: 260%
     .layer-wrap
       position: absolute
       top: 0
@@ -1211,9 +1254,15 @@ figure
       display: block
       text-align: center
       h3
-        font-size: 25px
+        font-size: 20px
         margin-top: 0
         margin-bottom: 30px
+        @media only screen and (max-width: 576px)
+          font-size: 16px
+      p
+        font-size: 16px
+        @media only screen and (max-width: 576px)
+          font-size: 14px
 
 /*====================================================================
                                    END
