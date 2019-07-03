@@ -31,6 +31,8 @@
     <link rel="stylesheet" href="libs/jBox-1.0.3/dist/jBox.all.min.css">
     <!--  Animate css  -->
     <link rel="stylesheet" href="libs/animate-css/animate.css">
+    <!--  Lightgallery -->
+    <link rel="stylesheet" href="libs/lightGallery/dist/css/lightgallery.min.css">
     <!--  Main styles -->
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -1189,6 +1191,7 @@
     </section>
     <!--Cities Section END-->
 
+    <!--Video Section-->
     <section class="section section-video-count-property">
         <div class="container">
             <div class="row">
@@ -1205,19 +1208,21 @@
         <div class="wrapper-section">
             <div class="container">
                 <div class="row justify-content-md-between">
-                    <div class="col-lg-6 order-lg-1 col-md-12 order-md-2">
+                    <div class="         col-lg-6 order-lg-1 col-md-12 order-md-2 col-sm-12 order-sm-2 col-12 order-2">
                         <!--Section Head Text-->
                         <div class="head-text-box">
                             <h3>Best Real Estate Corporation</h3>
                             <p class="upper-head">Welcome to the</p>
                         </div>
                         <!--Section Head Text END-->
-                        <div class="video-container">
-                            <img src="img/images/7.jpg" alt="7">
-                            <a class="video-link"><img class="svg_color" src="./img/svg/play-button.svg" alt="play"></a>
+                        <div class="video-container" id="video-gallery">
+                            <div class="bg-box">
+                                <img src="img/images/chuviha.jpg" alt="" data-src="img/images/chuviha.jpg">
+                            </div>
+                            <a  data-src="https://www.youtube.com/watch?v=d0HLs2V4FCI" class="video-link"><img class="svg_color" src="./img/svg/play-button.svg" alt="play"></a>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-5 order-lg-2  col-md-12 order-md-1">
+                    <div class="col-xl-3 col-lg-5 order-lg-2 col-md-12 order-md-1 col-sm-12 order-sm-1 col-12 order-1">
                         <div class="count-container">
                             <div class="count-item">
                                 <div class="count-box">
@@ -1255,6 +1260,7 @@
             </div>
         </div>
     </section>
+    <!--Video Section END-->
 
     <!--Services Section-->
     <section class="section section-services parallax-services" id="section-services" data-parallax="scroll"
@@ -1865,6 +1871,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<!--    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>-->
     <!--  Bootstrap 4.1.3  -->
     <script src="libs/bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
     <!--  Bootstrap Bundle  -->
@@ -1885,9 +1892,18 @@
     <script src="libs/jBox-1.0.3/dist/jBox.all.min.js"></script>
     <!--  Parallax  -->
     <script src="libs/compiled/parallax.min.js"></script>
+    <!--  Lightgallery -->
+    <script src="libs/lightGallery/dist/js/lightgallery.min.js"></script>
+    <script src="libs/lightGallery/dist/js/lightgallery-all.min.js"></script>
     <!--  Main js  -->
-    <script src="js/libs.min.js"></script>
+<!--    <script src="js/libs.min.js"></script>-->
     <script src="js/main.js"></script>
+
+<!--    <script>-->
+<!--        $(document).ready(function() {-->
+<!--            $("#lightgallery").lightGallery();-->
+<!--        });-->
+<!--    </script>-->
 </body>
 
 </html>
