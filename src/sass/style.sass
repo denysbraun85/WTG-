@@ -1734,16 +1734,18 @@ figure
     display: flex
     align-items: center
     font-family: 'Montserrat-light', sans-serif
-    padding: 50px 0
+    padding: 100px 0
     .location_footer
       display: flex
       flex-direction: column
       align-items: center
-      h5
-        color: #ffffff
-        padding-right: 30px
-        padding-bottom: 3px
-        font-weight: 700
+      .logo_footer
+        padding-left: 0
+        transform: translateX(-3px)
+        img
+          max-width: 100px
+          width: 100%
+          margin-bottom: 15px
       div
         max-width: 200px
         width: 100%
@@ -1751,67 +1753,80 @@ figure
         padding-left: 25px
         i
           color: #ffffff 
-          transform: translate(-25px, 19px)
+          transform: translate(-30px, 19px)
           display: block 
         span
           color: #ffffff
-          font-size: 12px
+          font-size: 9px
+          line-height: 9px
           text-align: left
-          line-height: 25px
-    .links_footer
-      margin: auto
-      text-align: left
-      display: flex
-      flex-direction: column
-      align-items: center
       ul
-        h5
-          color: #ffffff
-          font-weight: 600
-          padding-bottom: 20px
+        text-align: left
+        margin-right: 35px
         li
-          line-height: 30px
+          color: #ffffff
+          line-height: 35px
           a
             color: #ffffff
             transition: 0.3s
             &:hover
               color: #006affcc
             i
-              padding-right: 10px
+              width: 35px
+              text-align: center
           span
-            color: #ffffff
             i
-              padding-right: 15px
-    .logo_footer
+              width: 35px
+              text-align: center
+    .links_footer
+      margin: auto
+      text-align: left
       display: flex
       flex-direction: column
       align-items: center
-      justify-content: center
-      opacity: 0.9
-      img
-        max-width: 150px
-        width: 100%
-        margin-top: 40px
-    .social_footer
-      max-width: 200px
-      width: 100%
-      margin: 20px auto 0
+      .links_footer_ul
+        margin-right: 20px
       ul
-        display: flex
-        justify-content: space-between
-        align-items: center
+        h5
+          color: #ffffff
+          font-weight: 600
+          padding-bottom: 20px
+        .title_links
+          padding-left: 10px
         li
-          padding: 0 10px
+          line-height: 35px
           a
             color: #ffffff
             transition: 0.3s
             &:hover
-              color: #006affcc 
+              color: #006affcc
             i
-              font-size: 25px
+              width: 35px
+              text-align: center
+      .select_language_footer
+        .wrapper_select_footer
+          position: relative
+          margin-top: 5px
+          i
+            position: absolute
+            width: 16px
+            right: 5px
+            top: 28%
+            // z-index: -1
+            color: #006aff
+          select
+            appearance: none
+            color: #006aff
+            background: #ffffff
+            border-radius: 16px
+            font-size: 15px
+            overflow: hidden
+            padding: 5px 35px 5px 10px
+            option
+              border-radius: 16px
   .copyright_footer
     color: #ffffff
-    font-size: 12px
+    font-size: 8px
 
     
 
