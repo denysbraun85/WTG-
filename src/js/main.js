@@ -289,47 +289,37 @@ $('#menu-open-btn').on('click', function () {
  =====================================================================*/
 
 /*====================================================================
-                             Main Menu Dropdown list
+                        Main Menu Dropdown list
  =====================================================================*/
 $('.link').on('click', function (e) {
     e.preventDefault();
     e.stopPropagation();
-    var $ul = $(this).next();
-    if (!$ul.hasClass('dropdown-menu-active')) {
-        $ul.addClass('dropdown-menu-active');
-    } else {
-        $ul.removeClass('dropdown-menu-active');
+    var $listMenu = $(this).next();
+    $listMenu.toggleClass('dropdown-menu-active');
+    $('.menu-full-down:visible').parent().find('i').toggleClass('arrow-transform');
+    if($( '.menu-full-down:visible').length > 1 ) {
+        $('.menu-full-down:visible').removeClass('dropdown-menu-active');
+        $(this).next().addClass('dropdown-menu-active');
+        // $('.link i').addClass('arrow-transform');
+        $('.menu-full-down:visible').parent().find('i').addClass('arrow-transform');
     }
 });
 
-//
-// $(document).on('click', function(e) {
-//     $('.link').not($(this).has($(e.target)))
-//         .next('ul')
-//         .removeClass('dropdown-menu-active');
-// });
-// // Close the dropdown if the user clicks outside of it
-// $(document).mouseup(function(e) {
-//     var $target = $(e.target);
-//     if ($target.closest(".link").length === 0) {
-//         $(this).next().toggleClass("dropdown-menu-active");
-//     }
-// });
-//
-// // Close the dropdown if the user clicks outside of it
+// Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
     if (!event.target.matches('.link')) {
-
+        // $('.link i').toggleClass('arrow-transform');
         var dropdowns = document.getElementsByClassName("menu-full-down");
         var i;
         for (i = 0; i < dropdowns.length; i++) {
             var openDropdown = dropdowns[i];
             if (openDropdown.classList.contains('dropdown-menu-active')) {
                 openDropdown.classList.remove('dropdown-menu-active');
+                $('.link i').removeClass('arrow-transform');
             }
         }
     }
-}
+};
 /*====================================================================
                                  End
  =====================================================================*/
@@ -339,7 +329,15 @@ window.onclick = function(event) {
  =====================================================================*/
 $(document).ready(function() {
     $('#video-gallery').lightGallery({
-        download : false
+        download : false,
+        thumbnail : false,
+        counter : false,
+        auto : false,
+        fullScreen: false,
+        pager : false,
+        zoom : false,
+        share : false,
+        hash : false
     });
 });
 /*====================================================================
