@@ -81,7 +81,8 @@ $('.nav-bar-toggle').on('click', function () {
  =====================================================================*/
 // Parallax Services
 $('.parallax-services').parallax({
-    imageSrc: '../img/background/bg-services.jpg'
+    imageSrc: '../img/background/bg-services.jpg',
+    imageSrc: 'img/background/bg-services.jpg'
 });
 
 // Parallax Count
