@@ -1976,7 +1976,7 @@ figure {
         -ms-flex-align: center;
             align-items: center;
     font-family: 'Montserrat-light', sans-serif;
-    padding: 100px 0; }
+    padding: 50px 0; }
     .section-footer .footer_content_wrap .location_footer {
       display: -webkit-box;
       display: -webkit-flex;
@@ -2071,29 +2071,19 @@ figure {
           .section-footer .footer_content_wrap .links_footer ul li a i {
             width: 35px;
             text-align: center; }
-      .section-footer .footer_content_wrap .links_footer .select_language_footer .wrapper_select_footer {
-        position: relative;
-        margin-top: 5px; }
-        .section-footer .footer_content_wrap .links_footer .select_language_footer .wrapper_select_footer i {
-          position: absolute;
-          width: 16px;
-          right: 5px;
-          top: 28%;
-          color: #006aff; }
-        .section-footer .footer_content_wrap .links_footer .select_language_footer .wrapper_select_footer select {
-          -webkit-appearance: none;
-             -moz-appearance: none;
-                  appearance: none;
-          color: #006aff;
-          background: #ffffff;
-          -webkit-border-radius: 16px;
-                  border-radius: 16px;
-          font-size: 15px;
-          overflow: hidden;
-          padding: 5px 35px 5px 10px; }
-          .section-footer .footer_content_wrap .links_footer .select_language_footer .wrapper_select_footer select option {
-            -webkit-border-radius: 16px;
-                    border-radius: 16px; }
+      .section-footer .footer_content_wrap .links_footer .footer_select {
+        margin-top: 10px; }
+        .section-footer .footer_content_wrap .links_footer .footer_select .select_button_footer {
+          -webkit-border-radius: 19px;
+                  border-radius: 19px; }
+          .section-footer .footer_content_wrap .links_footer .footer_select .select_button_footer:after {
+            -webkit-transform: translateY(2px);
+                -ms-transform: translateY(2px);
+                    transform: translateY(2px); }
+        .section-footer .footer_content_wrap .links_footer .footer_select .lang_footer_dropdown {
+          -webkit-border-radius: 19px;
+                  border-radius: 19px;
+          min-width: unset; }
   .section-footer .copyright_footer {
     color: #ffffff;
     font-size: 8px; }

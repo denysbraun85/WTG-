@@ -914,6 +914,7 @@
     <section class="section section-services parallax-services" id="section-services" data-parallax="scroll" data-image-src="img/background/bg-services.jpg">
         <div class="container">
             <div class="row">
+
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="head-text-box w-100 text-center mb-5">
                         <h2 class="head-text text-capitalize text-color-white mb-4">Our Services</h2>
@@ -1595,25 +1596,19 @@
                                 <li><a href="#"> <i class="fab fa-instagram"></i> <span> Instagram </span> </a></li>
                                 <li><a href="#"> <i class="fab fa-twitter"></i> <span> Twitter </span> </a></li>
                             </ul>
-                            <!-- <select name="">
-                                <option value="English"> English </option>
-                                <option value="Spain"> Spain </option>
-                                <option value="Germany"> Germany </option>
-                                <option value="Русский"> Русский </option>
-                                <option value="France"> France </option>
-                            </select> -->
-                            <li class="select_language_footer">
-                                <div class="wrapper_select_footer">
-                                    <i class="fas fa-chevron-down"></i>
-                                    <select name="Language">
-                                        <option value="English"> English </option>
-                                        <option value="Spain"> Spain </option>
-                                        <option value="Germany"> Germany </option>
-                                        <option value="Русский"> Русский </option>
-                                        <option value="France"> France </option>
-                                    </select>
+                            <div class="dropdown footer_select">
+                                <button class="btn btn-secondary dropdown-toggle select_button_footer" type="button" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Language
+                                </button>
+                                <div class="dropdown-menu lang_footer_dropdown" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">English</a>
+                                    <a class="dropdown-item" href="#">Spain</a>
+                                    <a class="dropdown-item" href="#">Germany</a>
+                                    <a class="dropdown-item" href="#">Русский</a>
+                                    <a class="dropdown-item" href="#">France</a>
                                 </div>
-                            </li>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1655,11 +1650,6 @@
     <!--    <script src="js/libs.min.js"></script>-->
     <script src="js/main.js"></script>
 
-    <!--    <script>-->
-    <!--        $(document).ready(function() {-->
-    <!--            $("#lightgallery").lightGallery();-->
-    <!--        });-->
-    <!--    </script>-->
 </body>
 
 </html>
