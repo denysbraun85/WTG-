@@ -1591,7 +1591,7 @@ figure
     display: flex
     align-items: center
     font-family: 'Montserrat-light', sans-serif
-    padding: 100px 0
+    padding: 50px 0
     .location_footer
       display: flex
       flex-direction: column
@@ -1660,27 +1660,36 @@ figure
             i
               width: 35px
               text-align: center
-      .select_language_footer
-        .wrapper_select_footer
-          position: relative
-          margin-top: 5px
-          i
-            position: absolute
-            width: 16px
-            right: 5px
-            top: 28%
-            // z-index: -1
-            color: #006aff
-          select
-            appearance: none
-            color: #006aff
-            background: #ffffff
-            border-radius: 16px
-            font-size: 15px
-            overflow: hidden
-            padding: 5px 35px 5px 10px
-            option
-              border-radius: 16px
+      // .select_language_footer
+      //   .wrapper_select_footer
+      //     position: relative
+      //     margin-top: 5px
+      //     i
+      //       position: absolute
+      //       width: 16px
+      //       right: 5px
+      //       top: 28%
+      //       // z-index: -1
+      //       color: #006aff
+      //     select
+      //       appearance: none
+      //       color: #006aff
+      //       background: #ffffff
+      //       border-radius: 16px
+      //       font-size: 15px
+      //       overflow: hidden
+      //       padding: 5px 35px 5px 10px
+      //       option
+      //         border-radius: 16px
+      .footer_select
+        margin-top: 10px
+        .select_button_footer
+          border-radius: 19px
+          &:after
+            transform: translateY(2px)
+        .lang_footer_dropdown
+          border-radius: 19px
+          min-width: unset
   .copyright_footer
     color: #ffffff
     font-size: 8px
