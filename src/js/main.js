@@ -102,7 +102,7 @@ $('.feedback-slider').slick({
     dots: true,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 5000
+    autoplaySpeed: 6000
 });
 
 $('.manager-slider').slick({

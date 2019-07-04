@@ -1693,6 +1693,11 @@ figure {
       right: 0;
       bottom: 0;
       max-width: 200px; }
+      .section-feedback .feedback-slider .slick-dots li {
+        margin: 0 10px; }
+        .section-feedback .feedback-slider .slick-dots li button:before {
+          font-size: 18px;
+          color: #006aff; }
     .section-feedback .feedback-slider .feedback-slider-box {
       position: relative;
       width: 100%;
@@ -1914,6 +1919,9 @@ figure {
           -webkit-transition: all 0.5s ease;
           -o-transition: all 0.5s ease;
           transition: all 0.5s ease; }
+          @media (max-width: 1200px) {
+            .section-professionals .manager-slider .manager-card .card-bottom .manager-name {
+              font-size: 16px; } }
   .section-professionals .main-button-container {
     bottom: 10%; }
     .section-professionals .main-button-container button:hover span {
