@@ -2063,7 +2063,7 @@ figure {
             -o-transition: 0.3s;
             transition: 0.3s; }
       .section-footer .footer_content_wrap .links_footer #language_footer {
-        margin-top: 5px;
+        margin: 5px 5px 0 0;
         max-width: 120px;
         width: 100%;
         position: relative; }
@@ -2081,7 +2081,8 @@ figure {
           -webkit-align-items: center;
               -ms-flex-align: center;
                   align-items: center;
-          background: #ffffff;
+          background: #222d52;
+          border: 1px solid #ffffff;
           padding: 2px 5px;
           -webkit-border-radius: 13px;
                   border-radius: 13px; }
@@ -2090,13 +2091,13 @@ figure {
           .section-footer .footer_content_wrap .links_footer #language_footer .wrap_select_language_footer:hover i {
             color: #006aff; }
           .section-footer .footer_content_wrap .links_footer #language_footer .wrap_select_language_footer .selected_language_footer {
-            color: #000000;
+            color: #ffffff;
             -webkit-transition: 0.3s;
             -o-transition: 0.3s;
             transition: 0.3s;
             margin-left: 5px; }
           .section-footer .footer_content_wrap .links_footer #language_footer .wrap_select_language_footer .rotate_arrow_footer {
-            color: #000000;
+            color: #ffffff;
             -webkit-transition: 0.3s;
             -o-transition: 0.3s;
             transition: 0.3s;
@@ -2111,8 +2112,9 @@ figure {
           bottom: 26px;
           left: 0;
           right: 0;
-          background: #ffffff;
+          background: #222d52;
           text-align: left;
+          border: 1px solid #ffffff;
           -webkit-border-radius: 13px 13px 0 0;
                   border-radius: 13px 13px 0 0; }
           .section-footer .footer_content_wrap .links_footer #language_footer .hidden_lang_list_footer li {
@@ -2128,7 +2130,7 @@ figure {
               .section-footer .footer_content_wrap .links_footer #language_footer .hidden_lang_list_footer li:hover a {
                 color: #006aff; }
             .section-footer .footer_content_wrap .links_footer #language_footer .hidden_lang_list_footer li a {
-              color: #000000;
+              color: #ffffff;
               padding-left: 10px; }
   .section-footer .copyright_footer {
     color: #ffffff;
@@ -3235,19 +3237,19 @@ body {
       content: '';
       background: #eeeeee;
       width: 5px;
-      height: 79%;
+      height: 75%;
       position: absolute;
       left: 50%;
-      -webkit-transform: translate(-50%, 9%);
-          -ms-transform: translate(-50%, 9%);
-              transform: translate(-50%, 9%); }
+      -webkit-transform: translate(-50%, 11%);
+          -ms-transform: translate(-50%, 11%);
+              transform: translate(-50%, 11%); }
       @media only screen and (max-width: 768px) {
         .section_timeline .row .timeline_wrap:before {
           left: 0;
-          height: 89%;
-          -webkit-transform: translate(-50%, 6%);
-              -ms-transform: translate(-50%, 6%);
-                  transform: translate(-50%, 6%); } }
+          height: 85%;
+          -webkit-transform: translate(-50%, 7%);
+              -ms-transform: translate(-50%, 7%);
+                  transform: translate(-50%, 7%); } }
 
 @media only screen and (max-width: 991px) {
   .section_timeline .photo_border_animation {
@@ -3295,14 +3297,16 @@ body {
               -ms-flex-direction: row-reverse;
                   flex-direction: row-reverse;
           margin-left: auto; }
-          .right_timeline_containers .wrap_timelane_container .timelane_container .wrap_content_timelane_cont .title_timeline_container div {
+          .right_timeline_containers .wrap_timelane_container .timelane_container .wrap_content_timelane_cont .title_timeline_container .title_text_timeline {
             border-left: none;
             padding-left: 0;
-            padding-right: 25px;
-            border-right: 3px solid #006aff; }
-            .right_timeline_containers .wrap_timelane_container .timelane_container .wrap_content_timelane_cont .title_timeline_container div h4 {
+            padding-right: 20px;
+            border-right: 3px solid #006aff;
+            margin-right: 20px;
+            margin-left: 0; }
+            .right_timeline_containers .wrap_timelane_container .timelane_container .wrap_content_timelane_cont .title_timeline_container .title_text_timeline h4 {
               text-align: right; }
-            .right_timeline_containers .wrap_timelane_container .timelane_container .wrap_content_timelane_cont .title_timeline_container div span {
+            .right_timeline_containers .wrap_timelane_container .timelane_container .wrap_content_timelane_cont .title_timeline_container .title_text_timeline span {
               text-align: right; }
 
 .wrap_timelane_container {
@@ -3374,16 +3378,11 @@ body {
           left: -30px;
           right: unset; } }
     .timelane_container .wrap_content_timelane_cont .title_timeline_container {
-      max-width: 220px;
       width: 100%;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
       -webkit-box-align: center;
       -webkit-align-items: center;
           -ms-flex-align: center;
@@ -3397,18 +3396,22 @@ body {
               -ms-flex-direction: row-reverse;
                   flex-direction: row-reverse;
           margin-left: auto; } }
-      .timelane_container .wrap_content_timelane_cont .title_timeline_container img {
-        width: 35px; }
-      .timelane_container .wrap_content_timelane_cont .title_timeline_container div {
-        padding: 3px 0 3px 25px;
+      .timelane_container .wrap_content_timelane_cont .title_timeline_container .timeline_img_wrap {
+        padding: 5px 0; }
+        .timelane_container .wrap_content_timelane_cont .title_timeline_container .timeline_img_wrap img {
+          width: 35px; }
+      .timelane_container .wrap_content_timelane_cont .title_timeline_container .title_text_timeline {
+        margin-left: 20px;
+        padding: 3px 0 3px 20px;
         border-left: 3px solid #006aff; }
         @media only screen and (max-width: 768px) {
-          .timelane_container .wrap_content_timelane_cont .title_timeline_container div {
+          .timelane_container .wrap_content_timelane_cont .title_timeline_container .title_text_timeline {
             border-left: none;
             padding-left: 0;
             padding-right: 25px;
+            margin-right: 25px;
             border-right: 3px solid #006aff; } }
-        .timelane_container .wrap_content_timelane_cont .title_timeline_container div h4 {
+        .timelane_container .wrap_content_timelane_cont .title_timeline_container .title_text_timeline h4 {
           font-size: 14px;
           text-transform: none;
           font-weight: bold;
@@ -3416,16 +3419,16 @@ body {
           text-align: left;
           padding-bottom: 5px; }
           @media only screen and (max-width: 768px) {
-            .timelane_container .wrap_content_timelane_cont .title_timeline_container div h4 {
+            .timelane_container .wrap_content_timelane_cont .title_timeline_container .title_text_timeline h4 {
               text-align: right; } }
-        .timelane_container .wrap_content_timelane_cont .title_timeline_container div span {
+        .timelane_container .wrap_content_timelane_cont .title_timeline_container .title_text_timeline span {
           color: #606060;
           font-size: 14px;
           text-transform: uppercase;
           opacity: 0.8;
           text-align: left; }
           @media only screen and (max-width: 768px) {
-            .timelane_container .wrap_content_timelane_cont .title_timeline_container div span {
+            .timelane_container .wrap_content_timelane_cont .title_timeline_container .title_text_timeline span {
               text-align: right; } }
     .timelane_container .wrap_content_timelane_cont .info_timelane_container {
       font-size: 12px;
