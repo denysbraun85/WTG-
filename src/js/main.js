@@ -88,10 +88,6 @@ $('.parallax-services').parallax({
 // Parallax Count
 var  parallaxBg = document.getElementById('parallax-bg');
 var parallaxInstance = new Parallax(parallaxBg);
-
-// Parallax Discount
-// var scene = document.getElementById('scene');
-// var parallaxInstance = new Parallax(scene);
 /*====================================================================
                                  End
  =====================================================================*/
@@ -323,7 +319,10 @@ window.onclick = function(event) {
 /*====================================================================
                                  End
  =====================================================================*/
-
+window.onresize = function(){
+    document.body.height = window.innerHeight;
+}
+window.onresize();
 /*====================================================================
                             Lightgallery
  =====================================================================*/

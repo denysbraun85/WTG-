@@ -209,13 +209,10 @@ h3
   font-family: 'Montserrat-semibold', sans-serif
   font-size: 30px
   text-transform: capitalize
-  margin: 30px 0 100px 0
-  @media only screen and (max-width: 1200px)
-    font-size: 25px
-    @media only screen and (max-width: 992px)
-      font-size: 20px
-      @media only screen and (max-width: 576px)
-        font-size: 16px
+  //@media only screen and (max-width: 992px)
+  //  font-size: 25px
+  //  @media only screen and (max-width: 576px)
+  //    font-size: 18px
 h4
   font-size: 30px
   text-align: center
@@ -395,20 +392,46 @@ figure
       background: $color-btn-hover
       box-shadow: 0 10px 30px $main-btn-shadow
 /*-------------------------------------------------------------------------------------
-                                   Header of the section-
+                                      Header text
   ------------------------------------------------------------------------------------*/
-.head-text-box
-  width: 100%
-  text-align: center
+//.head-text-box
+//  width: 100%
+//  text-align: center
+//  z-index: 100
+//  h2
+//    color: $header-text-color
+//    text-transform: uppercase
+//  .text-inform
+//    color: $text-color-grey
+//    margin-top: 20px
+//    font-size: 22px
+//    text-transform: uppercase
+
+.head-text-box /* Container for header text */
   z-index: 100
-  h2
-    color: $header-text-color
-    text-transform: uppercase
-  .text-inform
-    color: $text-color-grey
-    margin-top: 20px
-    font-size: 22px
-    text-transform: uppercase
+  .clarification-text /* Text with header */
+    font-size: 18px
+    font-family: 'Montserrat-light', sans-serif
+    @media only screen and (max-width: 1200px)
+      font-size: 16px
+      @media only screen and (max-width: 768px)
+        font-size: 14px
+        @media only screen and (max-width: 576px)
+          font-size: 12px
+          margin-bottom: 10px
+  .head-text /* Header */
+    font-family: 'Montserrat-semibold', sans-serif
+    font-size: 30px
+    @media only screen and (max-width: 992px)
+      font-size: 25px
+      @media only screen and (max-width: 768px)
+        font-size: 22px
+.text-color-black /* Text color */
+  color: $text-color-black
+.text-color-grey /* Text color */
+  color: $text-color-grey
+.text-color-white /* Text color */
+  color: $text-color-white
 /*-------------------------------------------------------------------------------------
                                      Button Container
   ------------------------------------------------------------------------------------*/
@@ -624,7 +647,7 @@ figure
       li
         margin-top: 10px
         @media only screen and (max-width: 576px)
-          margin-top: 5px
+          margin-top: 7px
         a
           position: relative
           z-index: 1
@@ -642,8 +665,8 @@ figure
             margin: 15px 15px
             @media only screen and (max-width: 768px)
               font-size: 15px
-              @media only screen and (max-width: 576px)
-                font-size: 12px
+              //@media only screen and (max-width: 576px)
+              //  font-size: 12px
           .arrow-dropdown
             @media only screen and (min-width: 768px)
               display: none
@@ -671,7 +694,7 @@ figure
           margin-top: 20px
           transition: all 0.5s
           @media only screen and (max-width: 768px)
-            margin-top: 0
+            //margin-top: 0
             display: none
           li
             margin-bottom: 5px
@@ -683,8 +706,8 @@ figure
               color: $text-color-grey
               background-image: linear-gradient(to right, $text-color-grey, $text-color-grey 50%, $text-color-white 50%)
               padding: 0
-              @media only screen and (max-width: 576px)
-                font-size: 10px
+              //@media only screen and (max-width: 576px)
+              //  font-size: 10px
               &:before
                 background: $text-color-grey
   .social-links-container
@@ -695,7 +718,7 @@ figure
     @media only screen and (max-width: 768px)
       width: 100%
     @media only screen and (max-width: 576px)
-      bottom: 5%
+      bottom: 10%
     ul
       display: flex
       @media only screen and (max-width: 768px)
@@ -995,7 +1018,6 @@ figure
             display: none
           &:hover
             cursor: pointer
-
 /*====================================================================
                                     END
  =====================================================================*/
@@ -1026,10 +1048,20 @@ figure
         @media only screen and (max-width: 575px)
           margin-bottom: 30px
       .upper-head
+        margin-bottom: 30px
         @media only screen and (max-width: 1200px)
-          font-size: 14px
-          @media only screen and (max-width: 575px)
-            font-size: 12px
+          font-size: 16px
+          @media only screen and (max-width: 768px)
+            font-size: 14px
+            @media only screen and (max-width: 575px)
+              font-size: 12px
+      h3
+        margin-bottom: 50px
+        @media only screen and (max-width: 991px)
+          margin-bottom: 50px
+          font-size: 25px
+          @media only screen and (max-width: 768px)
+            font-size: 22px
       .text-inform
         line-height: 30px
         padding-bottom: 100px
@@ -1085,7 +1117,7 @@ figure
   width: 100%
   overflow: hidden
   // background: #ffffff
-  //background-color:  $section-color-white
+  //background-color:  $section-color-light
   //@media only screen and (max-width: 992px)
   //  padding-bottom: 100px
   .wrapper-section
@@ -1170,8 +1202,14 @@ figure
       @media only screen and (max-width: 992px)
         flex-direction: row
         justify-content: space-between
-        margin-top: 30px
+        @media only screen and (max-width: 768px)
+          justify-content: space-around
+        //margin-top: 30px
         margin-bottom: 30px
+        @media only screen and (max-width: 576px)
+          margin-bottom: 10px
+          //@media only screen and (max-width: 450px)
+          //  justify-content: space-around
       .count-item
         margin-bottom: 50px
         @media only screen and (max-width: 992px)
@@ -1180,7 +1218,11 @@ figure
           display: flex
           @media only screen and (max-width: 768px)
             flex-direction: column
-          span
+            //@media only screen and (max-width: 576px)
+            //  flex-direction: row
+            //  @media only screen and (max-width: 450px)
+            //    flex-direction: column
+          .value
             padding-right: 20px
             font-size: 36px
             color: $text-color-black
@@ -1189,6 +1231,9 @@ figure
               padding-right: 0
               @media only screen and (max-width: 576px)
                 font-size: 20px
+                padding-right: 20px
+                @media only screen and (max-width: 450px)
+                  padding-right: 0
           p
             position: relative
             font-size: 16px
@@ -1196,7 +1241,7 @@ figure
             font-weight: bold
             color: $text-color-black
             @media only screen and (max-width: 576px)
-              font-size: 12px
+              font-size: 14px
               line-height: normal
             &:before
               position: absolute
@@ -1207,9 +1252,12 @@ figure
               left: 0
               background: #006aff
               @media only screen and (max-width: 768px)
-                bottom: -13px
+                bottom: -5px
                 @media only screen and (max-width: 576px)
                   height: 4px
+                  bottom: -13px
+                  @media only screen and (max-width: 450px)
+                    bottom: -13px
         .description
           font-size: 15px
           @media only screen and (max-width: 992px)
@@ -1219,21 +1267,21 @@ figure
           position: absolute
           left: 50%
           transform: translateX(-50%)
-          top: 420%
+          top: 490%
           @media only screen and (max-width: 768px)
-            top: 350%
+            top: 390%
             @media only screen and (max-width: 767px)
-              top: 280%
+              top: 320%
               @media only screen and (max-width: 576px)
-                top: 350%
+                top: 500%
                 @media only screen and (max-width: 500px)
-                  top: 335%
+                  top: 470%
                   @media only screen and (max-width: 450px)
-                    top: 305%
+                    top: 430%
                     @media only screen and (max-width: 400px)
-                      top: 280%
+                      top: 400%
                       @media only screen and (max-width: 350px)
-                       top: 260%
+                       top: 370%
     .layer-wrap
       position: absolute
       top: 0
@@ -1278,14 +1326,15 @@ figure
  =====================================================================*/
 .section-services
   position: relative
-  padding-bottom: 250px
+  //padding-bottom: 250px
   z-index: 2
-  @media only screen and (max-width: 992px)
-    padding-bottom: 200px
+  //@media only screen and (max-width: 992px)
+  //  padding-bottom: 180px
   .service-content-container
     .no-padding
       @media only screen and (max-width: 576px)
-        padding: 10px
+        //padding: 10px
+    margin: 0 10px
     .service-block
       opacity: 0.85
       background-color: $bg-color-menu
@@ -1297,6 +1346,17 @@ figure
       transition: all 0.2s ease-in
       @media only screen and (max-width: 1200px)
         min-height: 240px
+        @media only screen and (max-width: 992px)
+          min-height: 180px
+          padding: 0 20px 20px
+          @media only screen and (max-width: 767px)
+            min-height: 130px
+            @media only screen and (max-width: 576px)
+              min-height: 60px
+              display: flex
+
+              align-items: center
+              padding: 0
       &:hover
         opacity: 1
         box-shadow: 0 70px 70px rgba(0, 0, 0, 0.2)
@@ -1305,16 +1365,41 @@ figure
         cursor: pointer
       .block-icon
         padding: 50px 0
-        img
+        @media only screen and (max-width: 992px)
+          padding: 40px 0
+          @media only screen and (max-width: 768px)
+            padding: 30px 0
+            @media only screen and (max-width: 576px)
+              padding: 10px 0
+              margin-left: 20px
+              margin-right: 50px
+              max-width: 60px
+              width: 100%
+              @media only screen and (max-width: 500px)
+                margin-right: 20px
+      img
           max-width: 20%
+          @media only screen and (max-width: 768px)
+            max-width: 15%
+            @media only screen and (max-width: 576px)
+              width: 100%
+              max-width: 30px
       .block-content
         .text-inform
           font-size: 18px
           color: $text-color-black
-  .head-text-box
-    h3
-      margin-top: 0
-      color: $text-color-white
+          @media only screen and (max-width: 992px)
+            font-size: 16px
+            @media only screen and (max-width: 768px)
+              font-size: 14px
+              @media only screen and (max-width: 576px)
+                font-size: 14px
+                @media only screen and (max-width: 500px)
+                  font-size: 12px
+  //.head-text-box
+  //  h3
+  //    margin-top: 0
+  //    color: $text-color-white
   .main-button-container
     position: absolute
     bottom: 10%
@@ -1336,10 +1421,6 @@ figure
           @media only screen and (max-width: 576px)
             padding: 10px 40px
 
-.section-services
-  .head-text-box
-    .upper-head
-      color: #ffffff
 /*====================================================================
                                    END
  =====================================================================*/
@@ -1381,7 +1462,7 @@ figure
       padding: 20px
       opacity: 0.85
       transition: all 0.5s cubic-bezier(.785,.135,.15,.86)
-      margin: 50px 5px 80px 5px
+      margin: 10px 5px 60px 5px
       @media only screen and (max-width: 1200px)
         padding: 20px 10px
         @media only screen and (max-width: 992px)
@@ -1443,11 +1524,6 @@ figure
                   @media only screen and (max-width: 380px)
                     bottom: -15%
 
-.section-feedback
-  .head-text-box
-    margin-bottom: 40px
-    .upper-head
-      color: #ffffff
 /*====================================================================
                                    END
  =====================================================================*/
@@ -1467,7 +1543,7 @@ figure
   .manager-slider
     width: 100%
     max-width: 100%
-    padding: 50px 0 100px 0
+    padding-bottom: 100px
     .manager-card
       position: relative
       overflow: hidden
@@ -1967,6 +2043,10 @@ figure
 .section_object
   background: #ffffff
   padding-bottom: 50px !important
+  .head-text-box
+    h3
+      @media only screen and (max-width: 992px)
+        margin-bottom: 50px
   .row
     border-top: 1px solid #e2e4eb
     .btn-big
@@ -2268,75 +2348,12 @@ figure
                            END STYLE OBJECT CONTAINER
  ===================================================================*/
 
-
-
-
-
-/* ==================================================================
-                           STYLE DISCOUNT
- ===================================================================*/
-
-.section_discount
-  background: $section-color-white
-  position: relative
-  margin-bottom: -3px
-  overflow: hidden
-  .background_discount
-    overflow: hidden
-    #parallax_discount_context
-      width: 101% !important
-      left: -0.5% !important
-    #parallax_discount_house
-      width: 101% !important
-      top: -3% !important
-  .info_discount
-    display: flex
-    flex-direction: column
-    justify-content: center
-    max-width: 650px
-    width: 100%
-    position: absolute
-    z-index: 9
-    transform: translate(-50%, -50%)
-    top: 62.5%
-    left: 26%
-    h4
-      max-width: 630px
-      width: 100%
-      margin-bottom: 35px
-      color: $color-btn
-      //text-shadow: rgba(white, 0.6)
-      text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.6)
-    #form_discount
-      max-width: 650px
-      width: 100%
-      display: flex
-      margin-bottom: 40px
-      input
-        max-width: 310px
-        width: 100%
-        border-radius: 50px
-        padding: 13px 30px
-        margin: 0 auto
-        border: 1px solid transparent
-        transition: 0.25s
-        &:hover
-          border-color: $color-btn-hover
-    .btn-big
-      max-width: 420px
-
-
-
-/* ==================================================================
-                          END STYLE DISCOUNT
- ===================================================================*/
-
 /* ==================================================================
                            OUR PHILOSOPHY STYLES
  ===================================================================*/
 
 .section_philosophy
-  background: #ffffff
+  background: $section-color-light
 
 .back_our_philosophy
   background: url("../img/background/ourphilosophy.jpg") no-repeat left center
