@@ -97,25 +97,12 @@ var parallaxInstance = new Parallax(parallaxBg);
  =====================================================================*/
 $('.feedback-slider').slick({
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
-    dots: false,
+    dots: true,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 5000,
-    responsive: [{
-            breakpoint: 992,
-            settings: {
-                slidesToShow: 2
-            }
-        },
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 1
-            }
-        }
-    ]
+    autoplaySpeed: 5000
 });
 
 $('.manager-slider').slick({
