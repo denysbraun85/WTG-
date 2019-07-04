@@ -1453,6 +1453,12 @@ figure
       right: 0
       bottom: 0
       max-width: 200px
+      li
+        margin: 0 10px
+        button
+          &:before
+            font-size: 18px
+            color: $icons-quote-feedback
     .feedback-slider-box
       position: relative
       width: 100%
@@ -1738,6 +1744,8 @@ figure
         .manager-name
           font-family: 'Montserrat-semibold', sans-serif
           transition: all 0.5s ease
+          @media (max-width: 1200px)
+            font-size: 16px
   .main-button-container
     bottom: 10%
     button
