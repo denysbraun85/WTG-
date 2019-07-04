@@ -1,67 +1,66 @@
 $(document).ready(function () {
+    /*====================================================================
+                        Script for change SVG color
+     =====================================================================*/
+    $(function changeSVG() {
+        $('img.svg_color').each(function () {
+            var $img = $(this);
+            var imgID = $img.attr('id');
+            var imgClass = $img.attr('class');
+            var imgURL = $img.attr('src');
 
-/*====================================================================
-                    Script for change SVG color
- =====================================================================*/
-$(function changeSVG() {
-    $('img.svg_color').each(function () {
-        var $img = $(this);
-        var imgID = $img.attr('id');
-        var imgClass = $img.attr('class');
-        var imgURL = $img.attr('src');
+            $.get(imgURL, function (data) {
+                var $svg = $(data).find('svg');
+                if (typeof imgID !== 'undefined') {
+                    $svg = $svg.attr('id', imgID);
+                }
+                if (typeof imgClass !== 'undefined') {
+                    $svg = $svg.attr('class', imgClass + ' replaced-svg');
+                }
+                $svg = $svg.removeAttr('xmlns:a');
+                if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+                    $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+                }
+                $img.replaceWith($svg);
+            }, 'xml');
 
-        $.get(imgURL, function (data) {
-            var $svg = $(data).find('svg');
-            if (typeof imgID !== 'undefined') {
-                $svg = $svg.attr('id', imgID);
-            }
-            if (typeof imgClass !== 'undefined') {
-                $svg = $svg.attr('class', imgClass + ' replaced-svg');
-            }
-            $svg = $svg.removeAttr('xmlns:a');
-            if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-                $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-            }
-            $img.replaceWith($svg);
-        }, 'xml');
-
-    });
-});
-/*====================================================================
-                                    End
-=====================================================================*/
-/*====================================================================
-                                 Select 2
-=====================================================================*/
-$(function () {
-    $('.arrow_down').on('click', function () {
-        $('html, body').animate({
-            scrollTop: $('.wrap_arrow_down').offset().top + 80
-        }, 'slow');
-        return false;
-    });
-});
-
-$('.language_select').select2({
-    'allowClear': true
-});
-
-$(".js-select2").select2({
-    closeOnSelect: false,
-    allowHtml: true,
-    allowClear: true,
-    tags: true
-});
-
-$(".js-select2").on('click', function () {
-    if ($('.select2-container--open .select2-dropdown--below').show) {
-        $('.select2-container--default, .select2-selection--multiple').is(":hover").css({
-            '-webkit-box-shadow': 'none',
-            '-moz-box-shadow': 'none',
-            'box-shadow': 'none'
         });
-    }
-})
+    });
+    /*====================================================================
+                                        End
+    =====================================================================*/
+    /*====================================================================
+                                     Select 2
+    =====================================================================*/
+    $(function () {
+        $('.arrow_down').on('click', function () {
+            $('html, body').animate({
+                scrollTop: $('.wrap_arrow_down').offset().top + 80
+            }, 'slow');
+            return false;
+        });
+    });
+
+    $('.language_select').select2({
+        'allowClear': true
+    });
+
+    $(".js-select2").select2({
+        closeOnSelect: false,
+        allowHtml: true,
+        allowClear: true,
+        tags: true
+    });
+
+    $(".js-select2").on('click', function () {
+        if ($('.select2-container--open .select2-dropdown--below').show) {
+            $('.select2-container--default, .select2-selection--multiple').is(":hover").css({
+                '-webkit-box-shadow': 'none',
+                '-moz-box-shadow': 'none',
+                'box-shadow': 'none'
+            });
+        }
+    })
 });
 /*====================================================================
                                  End
@@ -86,7 +85,7 @@ $('.parallax-services').parallax({
 });
 
 // Parallax Count
-var  parallaxBg = document.getElementById('parallax-bg');
+var parallaxBg = document.getElementById('parallax-bg');
 var parallaxInstance = new Parallax(parallaxBg);
 
 // Parallax Discount
@@ -158,28 +157,27 @@ $('.manager-slider').slick({
                          Counter function
  =====================================================================*/
 var a = 0;
-$(window).on('scroll', function() {
+$(window).on('scroll', function () {
     var oTop = $('.count-container').offset().top - window.innerHeight;
     if (a === 0 && $(window).scrollTop() > oTop) {
-        $('.value').each(function() {
+        $('.value').each(function () {
             var $this = $(this),
                 countTo = $this.attr('data-count');
             $({
                 countNum: $this.text()
             }).animate({
-                    countNum: countTo
+                countNum: countTo
+            }, {
+                duration: 2000,
+                easing: 'swing',
+                step: function () {
+                    $this.text(Math.floor(this.countNum) + " " + "+");
                 },
-                {
-                    duration: 2000,
-                    easing: 'swing',
-                    step: function() {
-                        $this.text(Math.floor(this.countNum) + " " + "+");
-                    },
-                    complete: function() {
-                        $this.text(this.countNum + " " + "+");
-                        //alert('finished');
-                    }
-                });
+                complete: function () {
+                    $this.text(this.countNum + " " + "+");
+                    //alert('finished');
+                }
+            });
         });
         a = 1;
     }
@@ -203,11 +201,12 @@ $('.video-bg').bgVideo({
 /*====================================================================
                         Якийсь говнокод Дені =Р
  =====================================================================*/
-$(function(){
+$(function () {
     var $sendBtn = $('.animation_plane'),
         $iWrapper = $('.icon-wrapper'),
         $i1 = $('.icon-1'),
         $i2 = $('.icon-2');
+
     function animationEvent() {
         var t,
             el = document.createElement('fakeelement');
@@ -223,7 +222,7 @@ $(function(){
             }
         }
     }
-    $sendBtn.on('click', function(e) {
+    $sendBtn.on('click', function (e) {
         $iWrapper.css('color', '#006aff');
         $iWrapper.addClass('icon-wrapper-animation');
         $sendBtn.addClass('clicked');
@@ -233,17 +232,18 @@ $(function(){
         $i2.delay(300);
         $i2.fadeTo(300, 1);
     });
-    $sendBtn.on(animationEvent(), function(e) {
+    $sendBtn.on(animationEvent(), function (e) {
         if (e.originalEvent.animationName == 'input-shadow') {
             $sendBtn.removeClass('clicked');
         }
     });
-    $iWrapper.on(animationEvent(), function(e) {
+    $iWrapper.on(animationEvent(), function (e) {
         if (e.originalEvent.animationName == 'icon-animation') {
             $iWrapper.removeClass('icon-wrapper-animation');
             setTimeout(reset, 5000);
         }
     });
+
     function reset() {
         $i1.fadeTo(250, 1);
         $i2.fadeTo(250, 0);
@@ -297,7 +297,7 @@ $('.link').on('click', function (e) {
     var $listMenu = $(this).next();
     $listMenu.toggleClass('dropdown-menu-active');
     $('.menu-full-down:visible').parent().find('i').toggleClass('arrow-transform');
-    if($( '.menu-full-down:visible').length > 1 ) {
+    if ($('.menu-full-down:visible').length > 1) {
         $('.menu-full-down:visible').removeClass('dropdown-menu-active');
         $(this).next().addClass('dropdown-menu-active');
         // $('.link i').addClass('arrow-transform');
@@ -306,7 +306,7 @@ $('.link').on('click', function (e) {
 });
 
 // Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (!event.target.matches('.link')) {
         // $('.link i').toggleClass('arrow-transform');
         var dropdowns = document.getElementsByClassName("menu-full-down");
@@ -327,17 +327,17 @@ window.onclick = function(event) {
 /*====================================================================
                             Lightgallery
  =====================================================================*/
-$(document).ready(function() {
+$(document).ready(function () {
     $('#video-gallery').lightGallery({
-        download : false,
-        thumbnail : false,
-        counter : false,
-        auto : false,
+        download: false,
+        thumbnail: false,
+        counter: false,
+        auto: false,
         fullScreen: false,
-        pager : false,
-        zoom : false,
-        share : false,
-        hash : false
+        pager: false,
+        zoom: false,
+        share: false,
+        hash: false
     });
 });
 /*====================================================================
@@ -414,3 +414,21 @@ $(document).ready(function () {
 /*====================================================================
                                  End
  =====================================================================*/
+
+/*====================================================================
+                                Select Footer Language
+=====================================================================*/
+$("#language_footer").on('click', function (change) {
+    change.preventDefault();
+    $(".hidden_lang_list_footer").slideToggle(300);
+    if ($('.hidden_lang_list_footer').show()) {
+        $('.wrap_select_language_footer').css("border-radius", "0 0 13px 13px");
+        $(".rotate_arrow_footer").css('transform', 'rotate(' + -180 + 'deg)');
+    } else  {
+        $('.wrap_select_language_footer').css("border-radius", "13px 13px 13px 13px");
+        $(".rotate_arrow_footer").css('transform', 'rotate(' + -90 + 'deg)');
+    }
+})
+/*====================================================================
+                                End
+=====================================================================*/
