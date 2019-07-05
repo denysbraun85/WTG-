@@ -65,7 +65,7 @@
 /*====================================================================
                                     Var
  @mixin ====================================================================*/
-.call-link .svg_color, #main-menu-modal .underlay-box, .section-video-count-property .wrapper-section .video-container .video-link, .section-video-count-property .wrapper-section .video-container .video-link .svg_color, .section-professionals .manager-slider .manager-card .manager-social-contact li a, .send-button {
+.connect-box .contact-btn .svg_color, #main-menu-modal .underlay-box, .section-video-count-property .wrapper-section .video-container .video-link, .section-video-count-property .wrapper-section .video-container .video-link .svg_color, .section-professionals .manager-slider .manager-card .manager-social-contact li a, .send-button {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -718,31 +718,7 @@ figure {
   height: 70px;
   background: #fff;
   z-index: 999;
-  -webkit-transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  -o-transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  opacity: 0.8; }
-  .call-link:hover {
-    opacity: 1;
-    background-color: #006aff; }
-    .call-link:hover .call {
-      -webkit-animation-play-state: paused;
-              animation-play-state: paused; }
-    .call-link:hover:before {
-      -webkit-transform: scale(1.3);
-          -ms-transform: scale(1.3);
-              transform: scale(1.3);
-      -webkit-animation-play-state: paused;
-              animation-play-state: paused; }
-    .call-link:hover:after {
-      background-color: #006aff;
-      -webkit-animation-play-state: paused;
-              animation-play-state: paused; }
-    .call-link:hover .svg_color {
-      fill: #fff !important;
-      -webkit-transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-      -o-transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-      transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+  opacity: 0.9; }
   .call-link:before, .call-link:after {
     position: absolute;
     content: '';
@@ -751,28 +727,43 @@ figure {
     bottom: 0;
     left: 0;
     -webkit-border-radius: inherit;
-            border-radius: inherit;
-    z-index: -1;
-    -webkit-animation: call-background 5s linear both infinite;
-            animation: call-background 5s linear both infinite;
-    -webkit-animation-delay: 1s;
-            animation-delay: 1s; }
+            border-radius: inherit; }
   .call-link:before {
     background: rgba(3, 47, 171, 0.3);
     will-change: transform;
-    -webkit-transition: all .5s ease;
-    -o-transition: all .5s ease;
-    transition: all .5s ease; }
+    -webkit-animation: call-scale 5s linear both infinite;
+            animation: call-scale 5s linear both infinite;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+    z-index: -10; }
   .call-link:after {
     background: #fff;
-    -webkit-transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    -o-transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+    will-change: transform;
+    -webkit-animation: call-background 5s linear both infinite;
+            animation: call-background 5s linear both infinite;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+    z-index: -1; }
   .call-link .svg_color {
-    max-width: 50%;
-    -webkit-transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    -o-transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-align-content: center;
+        -ms-flex-line-pack: center;
+            align-content: center;
+    margin: auto;
+    max-width: 50%; }
 
 .call {
   -webkit-animation: call-rotate 5s linear both infinite;
@@ -782,61 +773,130 @@ figure {
 
 @-webkit-keyframes call-rotate {
   1% {
-    -webkit-transform: rotate(0deg) translate(-50%, -50%);
-            transform: rotate(0deg) translate(-50%, -50%); }
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
   10% {
-    -webkit-transform: rotate(45deg) translate(-67%, 0%);
-            transform: rotate(45deg) translate(-67%, 0%); }
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
   20% {
-    -webkit-transform: rotate(0deg) translate(-50%, -50%);
-            transform: rotate(0deg) translate(-50%, -50%); } }
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); } }
 
 @keyframes call-rotate {
   1% {
-    -webkit-transform: rotate(0deg) translate(-50%, -50%);
-            transform: rotate(0deg) translate(-50%, -50%); }
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
   10% {
-    -webkit-transform: rotate(45deg) translate(-67%, 0%);
-            transform: rotate(45deg) translate(-67%, 0%); }
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
   20% {
-    -webkit-transform: rotate(0deg) translate(-50%, -50%);
-            transform: rotate(0deg) translate(-50%, -50%); } }
-
-@-webkit-keyframes call-fill {
-  1% {
-    fill: #fff; }
-  2% {
-    fill: transparent; }
-  19% {
-    fill: transparent; }
-  20% {
-    fill: #fff; } }
-
-@keyframes call-fill {
-  1% {
-    fill: #fff; }
-  2% {
-    fill: transparent; }
-  19% {
-    fill: transparent; }
-  20% {
-    fill: #fff; } }
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); } }
 
 @-webkit-keyframes call-background {
-  5% {
-    background-color: transparent; }
-  20% {
+  1% {
+    background-color: #fff; }
+  13.5% {
+    background-color: #fff; }
+  25% {
     background-color: #006aff; }
   35% {
-    background-color: transparent; } }
+    background-color: #fff; } }
 
 @keyframes call-background {
-  5% {
-    background-color: transparent; }
-  20% {
+  1% {
+    background-color: #fff; }
+  13.5% {
+    background-color: #fff; }
+  25% {
     background-color: #006aff; }
   35% {
-    background-color: transparent; } }
+    background-color: #fff; } }
+
+@-webkit-keyframes call-scale {
+  1% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  13% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  20% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3); }
+  30% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes call-scale {
+  1% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  13% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  20% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3); }
+  30% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+/*-------------------------------------------------------------------------------------
+                                      Button Menu Down
+  ------------------------------------------------------------------------------------*/
+.connect-box {
+  position: fixed;
+  display: block;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  right: 20px;
+  bottom: 20px;
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  z-index: 999; }
+  .connect-box .contact-btn {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    background: #fff;
+    border: 1px solid #006aff;
+    overflow: hidden;
+    z-index: 2; }
+    .connect-box .contact-btn:hover {
+      cursor: pointer; }
+    .connect-box .contact-btn:focus {
+      outline: none; }
+    .connect-box .contact-btn .svg_color {
+      max-width: 50%;
+      fill: #006aff !important; }
+  .connect-box .connect-item {
+    position: absolute;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    font-size: 25px;
+    background: #fff;
+    text-align: center;
+    line-height: 52px;
+    -webkit-transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    -o-transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    z-index: -1; }
+  .connect-box .item-1.open-connect-box {
+    top: -80px;
+    z-index: 1; }
+  .connect-box .item-2.open-connect-box {
+    top: -160px;
+    z-index: 1; }
 
 /*-------------------------------------------------------------------------------------
                                            Scroll
