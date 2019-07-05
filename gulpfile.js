@@ -31,7 +31,7 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
 gulp.task('scripts', function() {
     return gulp.src([ // Берем все необходимые библиотеки
         'src/libs/jquery/dist/jquery.min.js', // Берем jQuery
-        'src/libs/magnific-popup/dist/jquery.magnific-popup.min.js', // Берем Magnific Popup
+        // 'src/libs/magnific-popup/dist/jquery.magnific-popup.min.js', // Берем Magnific Popup
         'src/libs/slick/slick.min.js', // Берем Slick
         'src/libs/bootstrap-4.1.3-dist/js/bootstrap.bundle.min.js', // Берем Bootstrap Bundle
         'src/libs/bootstrap-4.1.3-dist/js/bootstrap.min.js', // Берем Bootstrap 4.1.3
