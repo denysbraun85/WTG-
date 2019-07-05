@@ -91,6 +91,26 @@ var parallaxInstance = new Parallax(parallaxBg);
 /*====================================================================
                                  End
  =====================================================================*/
+$('.contact-btn').on('click', function () {
+    $('.item-1').toggleClass('open-connect-box');
+    $('.item-2').toggleClass('open-connect-box');
+    $('.item-3').toggleClass('open-connect-box');
+    $('.item-4').toggleClass('open-connect-box');
+    // $('.contact-btn )
+});
+/*====================================================================
+                             Call Button
+ =====================================================================*/
+$(window).bind("scroll", function() {
+    if ($(this).scrollTop() >= 1500) {
+        $(".call-link").fadeIn(300);
+    } else {
+        $(".call-link").fadeOut(300);
+    }
+});
+/*====================================================================
+                                 End
+ =====================================================================*/
 
 /*====================================================================
                          Sliders functions
