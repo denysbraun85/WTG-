@@ -1979,6 +1979,8 @@ figure
       align-items: center
       @media only screen and (max-width: 991px)
         font-size: 13px
+        @media only screen and (max-width: 575px)
+          font-size: 15px !important
       .logo_footer
         padding-left: 0
         transform: translateX(-40px)
@@ -1995,6 +1997,15 @@ figure
           margin-bottom: 15px
           @media only screen and (max-width: 991px)
             max-width: 110px
+      ul
+        @media only screen and (max-width: 575px)
+          display: flex
+          flex-direction: column
+          align-items: center
+          i
+            font-size: 16px
+            @media only screen and (max-width: 575px)
+              font-size: 20px
       .location_text
         width: 100%
         text-align: left
@@ -2007,21 +2018,29 @@ figure
               margin-left: 2px
               @media only screen and (max-width: 575px)
                 width: 80%
+                margin-left: 0
+                @media only screen and (max-width: 360px)
+                  width: 100%
         .text_wrapper_footer
           display: flex
           justify-content: flex-end
           @media only screen and (max-width: 575px)
             justify-content: center
-            align-items: center
           i
             color: #ffffff
             font-size: 16px
             padding-right: 15px
+            @media only screen and (max-width: 575px)
+              font-size: 20px
+              @media only screen and (max-width: 360px)
+                padding-right: 20px
           p
             color: #ffffff
             font-size: 13px
             line-height: 21px
             text-align: left
+            @media only screen and (max-width: 575px)
+              font-size: 15px
             .br_footer
               @media only screen and (max-width: 575px)
                 display: none !important
@@ -2060,6 +2079,7 @@ figure
         font-size: 13px
         @media only screen and (max-width: 575px)
           margin-top: 20px
+          font-size: 15px
       .links_footer_ul
         margin-right: 20px
         @media only screen and (max-width: 575px)
