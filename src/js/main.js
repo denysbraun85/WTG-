@@ -101,8 +101,8 @@ $('.feedback-slider').slick({
     slidesToScroll: 1,
     dots: true,
     arrows: false,
-    autoplay: true,
-    autoplaySpeed: 6000
+    // autoplay: true,
+    // autoplaySpeed: 6000
 });
 
 $('.manager-slider').slick({
@@ -248,10 +248,12 @@ $(function () {
             $(".main-header").addClass("scroll-down-menu");
             $(".logo-box").css("max-width", "80px");
             $(".nav-bar-toggle").addClass("scroll-down-active");
+            // $(".menu li a").addClass("change-font");
         } else {
             $(".main-header").removeClass("scroll-down-menu");
             $(".logo-box").css("max-width", "110px");
             $(".nav-bar-toggle").removeClass("scroll-down-active");
+            // $(".menu li a").removeClass("change-font");
         }
     });
 });

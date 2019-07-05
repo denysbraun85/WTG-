@@ -456,6 +456,8 @@ figure
   ------------------------------------------------------------------------------------*/
 .scroll-down-menu
   background: $bg-main-menu !important
+//.change-font
+//  font-family: 'Montserrat-semibold', sans-serif !important
 .scroll-down-logo
   max-width: 80px
 .scroll-down-active
@@ -565,6 +567,92 @@ figure
   //  bottom: 30px
   //  z-index: 20
 /*-------------------------------------------------------------------------------------
+                                        Call Button
+  ------------------------------------------------------------------------------------*/
+.call-link
+  position: fixed
+  display: block
+  border-radius: 50%
+  left: 20px
+  bottom: 20px
+  width: 70px
+  height: 70px
+  background: #fff
+  z-index: 999
+  transition: all 0.5s cubic-bezier(.785,.135,.15,.86)
+  opacity: 0.8
+  &:hover
+    opacity: 1
+    background-color: $color-btn-hover
+    .call
+      animation-play-state: paused
+    &:before
+      transform: scale(1.3)
+      animation-play-state: paused
+    &:after
+      background-color: $color-btn-hover
+      animation-play-state: paused
+    .svg_color
+      fill: $color-btn !important
+      transition: all 0.5s cubic-bezier(.785,.135,.15,.86)
+    //  transform: rotate(45deg) translate(-67%,0%)
+  &:before,
+  &:after
+    position: absolute
+    content: ''
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    border-radius: inherit
+    z-index: -1
+    animation: call-background 5s linear both infinite
+    animation-delay: 1s
+  &:before
+    background: rgba(3, 47, 171, 0.3)
+    will-change: transform
+    transition: all .5s ease
+  &:after
+    background: #fff
+    transition: all 0.5s cubic-bezier(.785,.135,.15,.86)
+  .svg_color
+    max-width: 50%
+    @extend %center
+    //transform: rotate(0deg) translate(-50%,-50%)
+    transition: all 0.5s cubic-bezier(.785,.135,.15,.86)
+.call
+  animation: call-rotate 5s linear both infinite
+  animation-delay: 1s
+
+@keyframes call-rotate
+  1%
+    transform: rotate(0deg) translate(-50%,-50%)
+  10%
+    transform: rotate(45deg) translate(-67%,0%)
+  20%
+    transform: rotate(0deg) translate(-50%,-50%)
+
+@keyframes call-fill
+  1%
+    fill: $color-btn
+  2%
+    fill: transparent
+  19%
+    fill: transparent
+  20%
+    fill: $color-btn
+
+
+@keyframes call-background
+  5%
+    background-color: transparent
+  20%
+    background-color: $color-btn-hover
+  35%
+    background-color: transparent
+
+
+/*-------------------------------------------------------------------------------------
                                            Scroll
   ------------------------------------------------------------------------------------*/
 //::-webkit-scrollbar
@@ -593,6 +681,16 @@ figure
   overflow-x: hidden
   overflow-y: hidden
   white-space: nowrap
+  .logo-box-modal
+    position: absolute
+    top: 40px
+    left: 40px
+    opacity: 0.2
+    transition: all 0.2s ease-in
+    &:hover
+      opacity: 1
+    img
+      max-width: 40%
   .underlay-box
     @extend %center
     z-index: -1
@@ -626,84 +724,90 @@ figure
     //.menu-full
     display: flex
     justify-content: center
+    flex-direction: column
     @media only screen and (max-width: 768px)
       flex-direction: column
       align-items: center
       text-align: center
-    .menu-column
-      width: 33.33%
+    .menu-container-row
+      display: flex
+      justify-content: space-between
       @media only screen and (max-width: 768px)
-        width: 100%
-      .lang
-        display: none
+        flex-direction: column
+      .menu-column
+        width: 33.33%
         @media only screen and (max-width: 768px)
-          display: block
-      li
-        margin-top: 10px
-        @media only screen and (max-width: 576px)
-          margin-top: 7px
-        a
-          position: relative
-          z-index: 1
-          font-family: 'Montserrat-regular', sans-serif
-          padding: 5px 0
-          margin: 15px 30px
-          font-size: 18px
-          color: $text-color-black
-          background-image: linear-gradient(to right, $text-color-black, $text-color-black 50%, $text-color-white 50%)
-          background-size: 200% 100%
-          background-position: -100%
-          -webkit-background-clip: text
-          transition: all 0.3s ease-in-out
-          @media only screen and (max-width: 1400px)
-            margin: 15px 15px
-            @media only screen and (max-width: 768px)
-              font-size: 15px
-              //@media only screen and (max-width: 576px)
-              //  font-size: 12px
-          .arrow-dropdown
-            @media only screen and (min-width: 768px)
-              display: none
-            @media only screen and (max-width: 768px)
-              font-size: 11px
-              margin-left: 5px
-              @media only screen and (max-width: 576px)
-                font-size: 8px
-          &:before
-            display: block
-            content: ''
-            width: 0
-            height: 1px
-            left: 0
-            bottom: -3px
-            z-index: 0
-            position: absolute
-            background: $text-color-black
-            transition: all 0.3s ease-in-out
-          &:hover
-            background-position: 0
-            &:before
-              width: 100%
-        .menu-full-down
-          margin-top: 20px
-          transition: all 0.5s
+          width: 100%
+        .lang
+          display: none
           @media only screen and (max-width: 768px)
-            //margin-top: 0
-            display: none
-          li
-            margin-bottom: 5px
-            @media only screen and (max-width: 576px)
-              margin-bottom: 2px
-            a
-              font-size: 13px
-              font-family: 'Montserrat-light', sans-serif
-              color: $text-color-grey
-              background-image: linear-gradient(to right, $text-color-grey, $text-color-grey 50%, $text-color-white 50%)
-              padding: 0
-              //@media only screen and (max-width: 576px)
-              //  font-size: 10px
+            display: block
+        li
+          margin-top: 10px
+          @media only screen and (max-width: 576px)
+            margin-top: 7px
+          a
+            position: relative
+            z-index: 1
+            font-family: 'Montserrat-regular', sans-serif
+            padding: 5px 0
+            margin: 15px 30px
+            font-size: 18px
+            color: $text-color-black
+            background-image: linear-gradient(to right, $text-color-black, $text-color-black 50%, $text-color-white 50%)
+            background-size: 200% 100%
+            background-position: -100%
+            -webkit-background-clip: text
+            transition: all 0.3s ease-in-out
+            @media only screen and (max-width: 1400px)
+              margin: 15px 15px
+              @media only screen and (max-width: 768px)
+                font-size: 15px
+                //@media only screen and (max-width: 576px)
+                //  font-size: 12px
+            .arrow-dropdown
+              @media only screen and (min-width: 768px)
+                display: none
+              @media only screen and (max-width: 768px)
+                font-size: 11px
+                margin-left: 5px
+                @media only screen and (max-width: 576px)
+                  font-size: 8px
+            &:before
+              display: block
+              content: ''
+              width: 0
+              height: 1px
+              left: 0
+              bottom: -3px
+              z-index: 0
+              position: absolute
+              background: $text-color-black
+              transition: all 0.3s ease-in-out
+            &:hover
+              background-position: 0
               &:before
-                background: $text-color-grey
+                width: 100%
+          .menu-full-down
+            margin-top: 20px
+            transition: all 0.5s
+            @media only screen and (max-width: 768px)
+              //margin-top: 0
+              display: none
+            li
+              margin-bottom: 5px
+              @media only screen and (max-width: 576px)
+                margin-bottom: 2px
+              a
+                font-size: 13px
+                font-family: 'Montserrat-light', sans-serif
+                color: $text-color-grey
+                background-image: linear-gradient(to right, $text-color-grey, $text-color-grey 50%, $text-color-white 50%)
+                padding: 0
+                //@media only screen and (max-width: 576px)
+                //  font-size: 10px
+                &:before
+                  background: $text-color-grey
   .social-links-container
     position: absolute
     bottom: 10%
@@ -944,7 +1048,7 @@ figure
           a
             position: relative
             z-index: 1
-            font-family: 'Montserrat Semibold', sans-serif
+            font-family: 'Montserrat-regular', sans-serif
             padding: 5px 0
             margin: 15px 30px
             font-size: 18px
@@ -1450,8 +1554,8 @@ figure
     width: 100%
     .slick-dots
       position: absolute
-      right: 0
-      bottom: 0
+      right: -22px
+      bottom: -20px
       max-width: 200px
       li
         margin: 0 10px
@@ -1508,25 +1612,44 @@ figure
         padding: 60px 0 50px 80px
         text-align: left
         font-size: 22px
+        @media only screen and (max-width: 992px)
+          font-size: 15px
+          padding: 40px 0 40px 45px
+          @media only screen and (max-width: 576px)
+            font-size: 12px
       .guest-box
         display: flex
         justify-content: space-between
         align-items: center
         max-width: 300px
         padding-left: 80px
+        @media only screen and (max-width: 992px)
+          padding-left: 45px
+          max-width: 275px
+          @media only screen and (max-width: 576px)
+            max-width: 250px
         img
           display: block
           max-width: 70px
           width: 100%
           border-radius: 10px
+          margin-right: 20px
+          @media only screen and (max-width: 992px)
+            margin-right: 0
         .name-box
           span
             text-transform: uppercase
+            white-space: nowrap
             font-family: 'Montserrat-semibold', sans-serif
             color: $text-color-white
+            @media only screen and (max-width: 576px)
+              font-size: 12px
           p
+            font-family: 'Montserrat-semibold', sans-serif
             text-transform: capitalize
             color: $text-color-black
+            @media only screen and (max-width: 576px)
+              font-size: 12px
       //img
       //  position: absolute
       //  bottom: -25%

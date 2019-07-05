@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19722a5d-ae65-4ff2-ab51-78a7c2c5aaaf" name="Default" comment="add fonts">
+      <change beforePath="$PROJECT_DIR$/.idea/WTG-.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WTG-.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/images/manager/manager_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/images/manager/manager_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/images/manager/manager_4.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/libs.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/libs.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sass/style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/style.sass" afterDir="false" />
     </list>
@@ -159,7 +160,9 @@
       <workItem from="1561961762391" duration="26699000" />
       <workItem from="1562046625908" duration="27360000" />
       <workItem from="1562133228186" duration="24532000" />
-      <workItem from="1562219571331" duration="26799000" />
+      <workItem from="1562219571331" duration="27482000" />
+      <workItem from="1562306347159" duration="7499000" />
+      <workItem from="1562315317490" duration="7216000" />
     </task>
     <task id="LOCAL-00001" summary="fresh code">
       <created>1560240694312</created>
