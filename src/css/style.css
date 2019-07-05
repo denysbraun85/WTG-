@@ -892,11 +892,26 @@ figure {
     transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
     z-index: -1; }
   .connect-box .item-1.open-connect-box {
-    top: -80px;
+    top: -60px;
     z-index: 1; }
   .connect-box .item-2.open-connect-box {
-    top: -160px;
-    z-index: 1; }
+    top: -120px;
+    z-index: 1;
+    -webkit-transition-delay: 0.2s;
+         -o-transition-delay: 0.2s;
+            transition-delay: 0.2s; }
+  .connect-box .item-3.open-connect-box {
+    top: -180px;
+    z-index: 1;
+    -webkit-transition-delay: 0.4s;
+         -o-transition-delay: 0.4s;
+            transition-delay: 0.4s; }
+  .connect-box .item-4.open-connect-box {
+    top: -240px;
+    z-index: 1;
+    -webkit-transition-delay: 0.6s;
+         -o-transition-delay: 0.6s;
+            transition-delay: 0.6s; }
 
 /*-------------------------------------------------------------------------------------
                                            Scroll

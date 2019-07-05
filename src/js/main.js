@@ -94,6 +94,9 @@ var parallaxInstance = new Parallax(parallaxBg);
 $('.contact-btn').on('click', function () {
     $('.item-1').toggleClass('open-connect-box');
     $('.item-2').toggleClass('open-connect-box');
+    $('.item-3').toggleClass('open-connect-box');
+    $('.item-4').toggleClass('open-connect-box');
+    // $('.contact-btn )
 });
 /*====================================================================
                              Call Button
