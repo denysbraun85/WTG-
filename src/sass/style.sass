@@ -1968,53 +1968,76 @@ figure
       display: flex
       flex-direction: column
       align-items: center
+      @media only screen and (max-width: 991px)
+        font-size: 13px
       .logo_footer
         padding-left: 0
         transform: translateX(-40px)
-        // margin-right: auto;
-        // margin-left: 75px
-        // @media only screen and (max-width: 1200px)
-        //   margin-left: 45px
+        @media only screen and (max-width: 991px)
+          transform: translateX(-35px)
+          @media only screen and (max-width: 767px)
+            transform: none
+            margin-right: 35px
+            @media only screen and (max-width: 575px)
+              display: none !important
         img
           max-width: 120px
           width: 100%
           margin-bottom: 15px
+          @media only screen and (max-width: 991px)
+            max-width: 110px
       .location_text
         width: 100%
         text-align: left
         margin-top: 10px
+        @media only screen and (max-width: 1199px)
+          margin-left: 62px
+          @media only screen and (max-width: 991px)
+            margin-left: 31px
+            @media only screen and (max-width: 767px)
+              margin-left: 2px
+              @media only screen and (max-width: 575px)
+                width: 80%
         .text_wrapper_footer
           display: flex
           justify-content: flex-end
+          @media only screen and (max-width: 575px)
+            justify-content: center
+            align-items: center
+          i
+            color: #ffffff
+            font-size: 16px
+            padding-right: 15px
           p
             color: #ffffff
             font-size: 13px
             line-height: 21px
             text-align: left
-            position: relative
-            i
-              position: absolute
-              font-size: 17px
-              left: -27px
+            .br_footer
+              @media only screen and (max-width: 575px)
+                display: none !important
       ul
         text-align: left
         margin-right: 30px
+        @media only screen and (max-width: 767px)
+          margin-right: 0
         li
           color: #ffffff
           line-height: 35px
+          display: flex
+          align-items: center
           a
             color: #ffffff
             transition: 0.3s
             &:hover
               color: #006aff
-            i
-              width: 35px
-              text-align: center
           span
-            i
-              width: 35px
-              text-align: center
+          i
+            width: 35px
+            text-align: center
     .about_us_footer
+      @media only screen and (max-width: 575px)
+        display: none !important
       ul
         a
           transition: 0.3s          
@@ -2024,9 +2047,21 @@ figure
       flex-direction: column
       align-items: center
       margin: 82px auto auto
+      @media only screen and (max-width: 991px)
+        font-size: 13px
+        @media only screen and (max-width: 575px)
+          margin-top: 20px
       .links_footer_ul
         margin-right: 20px
+        @media only screen and (max-width: 575px)
+          margin-right: 0
       ul
+        @media only screen and (max-width: 575px)
+          display: flex
+          justify-content: space-between
+          align-items: center
+          width: 60%
+          margin-bottom: 10px
         .title_links
           padding-left: 10px
         li
@@ -2049,13 +2084,19 @@ figure
               text-align: center
               transition: 0.3s
               font-size: 17px
+              @media only screen and (max-width: 575px)
+                font-size: 25px
             span
               transition: 0.3s
+              @media only screen and (max-width: 575px)
+                display: none !important
       #language_footer
         margin: 5px 5px 0 0
-        max-width: 120px
+        max-width: 110px
         width: 100%
         position: relative
+        @media only screen and (max-width: 991px)
+          margin: 5px 5px 0 5px
         .wrap_select_language_footer
           cursor: pointer
           display: flex
@@ -2082,6 +2123,7 @@ figure
             font-size: 12px
         .hidden_lang_list_footer
           display: none 
+          width: 100%
           position: absolute
           bottom: 26px
           left: 0
@@ -2684,6 +2726,7 @@ figure
         .custom-btn
           max-height: 40px
           padding: 0
+          margin-right: 2px
           @media only screen and (max-width: 768px)
             max-height: 30px
             @media only screen and (max-width: 686px)
