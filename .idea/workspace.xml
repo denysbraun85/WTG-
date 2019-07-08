@@ -4,6 +4,8 @@
     <list default="true" id="19722a5d-ae65-4ff2-ab51-78a7c2c5aaaf" name="Default" comment="add fonts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/svg/cross.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/svg/cross.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/svg/headset.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/svg/headset.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sass/style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/style.sass" afterDir="false" />
@@ -29,7 +31,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/OSPanel/domains/wtg24.com" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -158,7 +160,9 @@
       <workItem from="1562133228186" duration="24532000" />
       <workItem from="1562219571331" duration="27482000" />
       <workItem from="1562306347159" duration="7499000" />
-      <workItem from="1562315317490" duration="18937000" />
+      <workItem from="1562315317490" duration="19370000" />
+      <workItem from="1562565530572" duration="14117000" />
+      <workItem from="1562582710075" duration="5374000" />
     </task>
     <task id="LOCAL-00001" summary="fresh code">
       <created>1560240694312</created>

@@ -109,6 +109,9 @@ $facebook-color: #3b5999
 $youtube-color: #dd4b39
 $twitter-color: #55acee
 $instagram-color: #c13584
+$viber-color: #665CAC
+$whatsapp-color: #25D366
+$telegram-color: #0088cc
 /*====================================================================
                                     END
  =====================================================================*/
@@ -584,12 +587,32 @@ figure
   border-radius: 50%
   left: 20px
   bottom: 20px
-  width: 70px
-  height: 70px
+  width: 50px
+  height: 50px
   background: #fff
   z-index: 999
-  //transition: all 0.5s cubic-bezier(.785,.135,.15,.86)
+  transition: all 0.5s cubic-bezier(.785,.135,.15,.86)
+  box-shadow: $box-shadow-main
   opacity: 0.9
+  &:hover
+    transition: all 0.5s cubic-bezier(.785,.135,.15,.86)
+    &:before
+      animation-play-state: paused
+      animation-delay: 0s
+      animation-duration: 0s
+      transform: scale(1.3) !important
+    &:after
+      animation-play-state: paused
+      animation-delay: 0s
+      animation-duration: 0s
+      background-color: $color-btn-hover !important
+    .svg_color
+      animation-play-state: paused
+      //animation-delay: 0s
+      //animation-duration: 0s
+      //transform: rotate(45deg) !important
+
+
 
   //&:hover
   //  opacity: 1
@@ -646,6 +669,10 @@ figure
 .call
   animation: call-rotate 5s linear both infinite
   animation-delay: 1s
+  &:hover
+    animation-play-state: paused
+    //animation-fill-mode: forwards
+
 
 @keyframes call-rotate
   1%
@@ -683,8 +710,8 @@ figure
   border-radius: 50%
   right: 20px
   bottom: 20px
-  width: 70px
-  height: 70px
+  width: 50px
+  height: 50px
   background: #fff
   z-index: 999
   .contact-btn
@@ -693,47 +720,120 @@ figure
     height: 100%
     border-radius: 50%
     background: #fff
-    border: 1px solid $text-color-sky
-    overflow: hidden
-    z-index: 2
+    //border: 1px solid $text-color-sky
+    //overflow: hidden
+    box-shadow: $box-shadow-main
+    z-index: 5
+    //$box-shadow-main: 0 1px 6px 0 rgba(32,33,36,0.28)
+    transition: all 0.5s
     &:hover
       cursor: pointer
+      transform: scale(1.2)
     &:focus
       outline: none
     .svg_color
-      @extend %center
+      //@extend %center
       max-width: 50%
-      fill: $text-color-sky !important
+      //fill: #484848 !important
+      transition: all 0.5s
+    .headset
+      @extend %center
+      backface-visibility: hidden
+    .cross
+      position: absolute
+      backface-visibility: hidden
+      transform: rotateY(180deg) translate(-50%, -50%)
   .connect-item
     position: absolute
     //top: -80px
     top: 10px
-    width: 50px
-    height: 50px
+    width: 40px
+    height: 40px
     left: 50%
     transform: translate(-50%)
     border-radius: 50%
-    font-size: 25px
+    font-size: 20px
     background: #fff
     text-align: center
-    line-height: 52px
+    line-height: 40px
+    border: 1px solid transparent
     transition: all 0.5s cubic-bezier(.785,.135,.15,.86)
+    box-shadow: $box-shadow-main
     z-index: -1
+    overflow: hidden
+    box-sizing: border-box
+    i
+      //transition: all ease 0.3s
+    &:hover
+      border: 1px solid #fff
+      i
+        color: #fff
+        &:after
+          height: 200%
+          width: 200%
+          border-radius: 0
+          opacity: 1
+    i
+      &:after
+        content: ""
+        height: 0%
+        width: 0%
+        position: absolute
+        top: -500%
+        bottom: -500%
+        left: -500%
+        right: -500%
+        margin: auto
+        border: 0 solid transparent
+        border-radius: 200px
+        opacity: 0
+        z-index: -1
+        transition: all ease 0.5s
+  .item-1
+    &:hover
+      i
+        &:after
+          background-color: $facebook-color
+  .item-2
+    &:hover
+      i
+        &:after
+          background-color: $viber-color
+  .item-3
+    &:hover
+      i
+        &:after
+          background-color: $whatsapp-color
+  .item-4
+    &:hover
+      i
+        &:after
+          background-color: $telegram-color
   .item-1.open-connect-box
-    top: -60px
-    z-index: 1
+    top: -50px
+    z-index: 4
   .item-2.open-connect-box
-    top: -120px
-    z-index: 1
-    transition-delay: 0.2s
+    top: -100px
+    z-index: 3
+    transition-delay: 1ms
   .item-3.open-connect-box
-    top: -180px
-    z-index: 1
-    transition-delay: 0.4s
+    top: -150px
+    z-index: 2
+    transition-delay: 1.5ms
   .item-4.open-connect-box
-    top: -240px
+    top: -200px
     z-index: 1
-    transition-delay: 0.6s
+    transition-delay: 2ms
+
+
+
+.active-scale
+  transform: scale(1.2)
+.rotate-btn-headset
+  transform: translate(-50%, -50%) rotateY(180deg) !important
+.rotate-btn-cross
+  transform: translate(-50%, -50%) rotateY(360deg) !important
+
 /*-------------------------------------------------------------------------------------
                                            Scroll
   ------------------------------------------------------------------------------------*/
@@ -773,6 +873,8 @@ figure
       opacity: 1
     img
       max-width: 40%
+      @media only screen and (max-width: 576px)
+        max-width: 20%
   .underlay-box
     @extend %center
     z-index: -1
@@ -1847,6 +1949,10 @@ figure
     width: 100%
     max-width: 100%
     padding-bottom: 100px
+    @media (max-width: 576px)
+      max-width: 265px
+      width: 100%
+      margin: auto
     .manager-card
       position: relative
       overflow: hidden
@@ -1893,9 +1999,16 @@ figure
               width: 50px
               height: 50px
           a
-            @extend %center
+            //@extend %center
+            display: block
             cursor: pointer
-            line-height: 18px
+            width: 100%
+            height: 100%
+            text-align: center
+            line-height: 3.7
+            &:hover
+              i
+                font-size: 26px
             @media (max-width: 1200px)
               line-height: 16px
               @media (max-width: 476px)
@@ -1903,7 +2016,7 @@ figure
             i
               font-size: 22px
               color: $text-color-white
-              transition: all 0.5s ease
+              transition: all 0.3s ease
       .img-box
         overflow: hidden
         margin-bottom: 0

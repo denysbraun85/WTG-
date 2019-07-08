@@ -91,13 +91,7 @@ var parallaxInstance = new Parallax(parallaxBg);
 /*====================================================================
                                  End
  =====================================================================*/
-$('.contact-btn').on('click', function () {
-    $('.item-1').toggleClass('open-connect-box');
-    $('.item-2').toggleClass('open-connect-box');
-    $('.item-3').toggleClass('open-connect-box');
-    $('.item-4').toggleClass('open-connect-box');
-    // $('.contact-btn )
-});
+
 /*====================================================================
                              Call Button
  =====================================================================*/
@@ -110,6 +104,22 @@ $(window).bind("scroll", function() {
 });
 /*====================================================================
                                  End
+ =====================================================================*/
+
+/*====================================================================
+                             Contact Button
+ =====================================================================*/
+$('.contact-btn').on('click', function () {
+    $('.item-1').toggleClass('open-connect-box');
+    $('.item-2').toggleClass('open-connect-box');
+    $('.item-3').toggleClass('open-connect-box');
+    $('.item-4').toggleClass('open-connect-box');
+    $('.contact-btn .headset').toggleClass('rotate-btn-headset');
+    $('.contact-btn .cross').toggleClass('rotate-btn-cross');
+    $('.contact-btn').toggleClass('active-scale');
+});
+/*====================================================================
+                                 END
  =====================================================================*/
 
 /*====================================================================
