@@ -2146,7 +2146,7 @@ figure
             @media only screen and (max-width: 575px)
               font-size: 20px
               @media only screen and (max-width: 360px)
-                padding-right: 20px
+                padding-right: 5px
           p
             color: #ffffff
             font-size: 13px
@@ -2154,6 +2154,7 @@ figure
             text-align: left
             @media only screen and (max-width: 575px)
               font-size: 15px
+              text-align: center
             .br_footer
               @media only screen and (max-width: 575px)
                 display: none !important
@@ -2581,8 +2582,9 @@ figure
     h3
       @media only screen and (max-width: 992px)
         margin-bottom: 50px
-  .row
+  .border-object
     border-top: 1px solid #e2e4eb
+    border-left: 1px solid #e2e4eb
     .btn-big
       margin-top: 70px !important
     .object_content
@@ -2633,14 +2635,16 @@ figure
           transform: translate3d(0, 0, 0)
           transition: all .4s cubic-bezier(.785,.135,.15,.86)
           will-change: clip-path
-          clip-path: inset(15px 15px 100px 15px) 
-          @media only screen and (max-width: 768px)
-            clip-path: inset(15px 15px 70px 15px)
-            @media only screen and (max-width: 686px)
-              clip-path: inset(15px 15px 56px 15px)
-              @media only screen and (max-width: 575px)
-                clip-path: inset(15px 15px 70px 15px)
-          .object_img
+          clip-path: inset(15px 15px 100px 15px)
+          @media only screen and (max-width: 1400px)
+            clip-path: inset(15px 15px 90px 15px) 
+            @media only screen and (max-width: 768px)
+              clip-path: inset(15px 15px 70px 15px)
+              @media only screen and (max-width: 686px)
+                clip-path: inset(15px 15px 56px 15px)
+                @media only screen and (max-width: 575px)
+                  clip-path: inset(15px 15px 70px 15px)
+            .object_img
             position: absolute
             width: 100%
             height: auto
@@ -2650,9 +2654,7 @@ figure
           margin-bottom: 20px
           transition: all .4s cubic-bezier(.785,.135,.15,.86)
           @media only screen and (max-width: 768px)
-            margin-bottom: 10px
-            @media only screen and (max-width: 400px)
-              margin-bottom: 12px
+            margin-bottom: 12px
           .name_list_line_1
             display: flex
             justify-content: space-between
@@ -2695,6 +2697,7 @@ figure
             justify-content: space-between
             align-items: center
             h4
+              font-family: "Montserrat-regular", sans-serif
               font-weight: 400
               max-width: 70%
               width: 100%
@@ -2702,7 +2705,7 @@ figure
               white-space: nowrap
               overflow: hidden
               text-align: left
-              font-size: 20px
+              font-size: 18px
               @media only screen and (max-width: 1400px)
                 font-size: 17px
                 @media only screen and (max-width: 768px)
@@ -2714,7 +2717,7 @@ figure
             span
               font-weight: 400
               color: black
-              font-size: 20px
+              font-size: 18px
               @media only screen and (max-width: 1400px)
                 font-size: 17px
                 @media only screen and (max-width: 768px)
@@ -2932,6 +2935,19 @@ figure
         transform: translate3d(0,0,0)
       .object_hidden_info_top
         transform: translate3d(0,0,0)
+
+.section_object
+  .btn-big
+    margin-top: 50px !important
+
+.max-width-90
+  max-width: 90%
+  width: 100%
+
+.padding-object-wrap
+  padding: 0 120px
+  @media only screen and (max-width: 992px)
+    padding: 0 15px 
 
 .color_black
   color: black
@@ -3256,19 +3272,22 @@ body
         transform: translate(-50%, 11%)
         @media only screen and (max-width: 768px)
           left: 0
-          height: 85%
+          height: 84%
           transform: translate(-50%, 7%)
+          @media only screen and (max-width: 383px)
+            height: 86%
           
     
 .section_timeline
   .photo_border_animation
-    @media only screen and (max-width: 991px)
+    @media only screen and (max-width: 1200px)
       display: none
 
 .left_timeline_containers
   width: 50%
   @media only screen and (max-width: 768px)
     width: 99%
+    position: relative
 
 .right_timeline_containers
   width: 50%
@@ -3280,6 +3299,12 @@ body
       @media only screen and (max-width: 768px)
         width: 99%
         margin-top: 0
+        position: absolute
+        top: 105px 
+        @media only screen and (max-width: 383px)
+          top: 125px 
+          @media only screen and (max-width: 367px)
+            top: 148px
   .wrap_timelane_container
     margin-left: auto
     &:before
@@ -3294,6 +3319,8 @@ body
           border-color: transparent #eeeeee transparent transparent
           left: -30px
           transform: translate(50%, -50%)
+          @media only screen and (max-width: 360px)
+            left: -25px
         .title_timeline_container
           flex-direction: row-reverse
           margin-left: auto
@@ -3302,7 +3329,7 @@ body
             padding-left: 0
             padding-right: 20px
             border-right: 3px solid #006aff
-            margin-right: 20px
+            margin-right: 25px
             margin-left: 0
             h4
               text-align: right
@@ -3314,7 +3341,7 @@ body
   margin-bottom: 50px
   position: relative
   @media only screen and (max-width: 768px)
-    margin-bottom: 10px
+    margin-bottom: 145px
   &:before
     content: ''
     border-radius: 50%
@@ -3361,6 +3388,8 @@ body
         border-color: transparent #eeeeee transparent transparent
         left: -30px
         right: unset
+        @media only screen and (max-width: 360px)
+          left: -25px
     .title_timeline_container
       width: 100%
       display: flex
@@ -3392,6 +3421,8 @@ body
           padding-bottom: 5px
           @media only screen and (max-width: 768px)
             text-align: right
+            @media only screen and (max-width: 440px)
+              font-size: 13px
         span
           color: #606060
           font-size: 14px
@@ -3400,17 +3431,57 @@ body
           text-align: left
           @media only screen and (max-width: 768px)
             text-align: right
+            @media only screen and (max-width: 440px)
+              font-size: 13px
     .info_timelane_container
       font-size: 12px
       font-weight: 400
       color: #606060
+      @media only screen and (max-width: 440px)
+        font-size: 11px
+
+.margin-b-timeline
+  @media only screen and (max-width: 768px)
+    margin-bottom: 125px
+    @media only screen and (max-width: 641px)
+      margin-bottom: 150px
+.wrap_timelane_1
+  @media only screen and (max-width: 406px)
+    margin-bottom: 170px
+    @media only screen and (max-width: 320px)
+      margin-bottom: 190px
+.wrap_timelane_2
+  @media only screen and (max-width: 367px)
+    transform: translateY(-22px)
+.wrap_timelane_3
+   @media only screen and (max-width: 641px)
+    margin-bottom: 135px
+    @media only screen and (max-width: 587px)
+      margin-bottom: 155px
+      @media only screen and (max-width: 383px)
+        margin-bottom: 150px
+        @media only screen and (max-width: 327px)
+          margin-bottom: 173px
+.wrap_timelane_4
+  @media only screen and (max-width: 641px)
+    margin-bottom: 135px
+    @media only screen and (max-width: 484px)
+      margin-bottom: 155px
+      @media only screen and (max-width: 422px)
+        margin-bottom: 175px
+.wrap_timelane_6
+  @media only screen and (max-width: 768px)
+    margin-bottom: 0
+
 
 
 
 .wrap_timelane_container
   &:hover
     &:before
-      background: #006aff
+      background: #006aff        
+      @media only screen and (max-width: 768px)
+       background: #eeeeee 
 
 .timelane_container
   transition: 0.25s
@@ -3418,12 +3489,17 @@ body
     box-shadow: 0 20px 35px 5px rgba(0, 0, 0, 0.2)
     background: #ffffff
     cursor: pointer
+    @media only screen and (max-width: 768px)
+      background: #eeeeee
+      box-shadow: none
+      cursor: unset 
     .wrap_content_timelane_cont
       &:after
         border-color: transparent transparent transparent #ffffff
         cursor: pointer
         @media only screen and (max-width: 768px)
-          border-color: transparent #ffffff transparent transparent
+          border-color: transparent #eeeeee transparent transparent
+          cursor: unset 
 
 .right_timeline_containers    
   .timelane_container
@@ -3434,8 +3510,9 @@ body
         &:after
           border-color: transparent #ffffff transparent transparent
           cursor: pointer
-
-
+          @media only screen and (max-width: 768px)
+            border-color: transparent #eeeeee transparent transparent
+            cursor: unset 
 
 .photo_border_animation
   position: relative
