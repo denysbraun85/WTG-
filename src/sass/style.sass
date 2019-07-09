@@ -737,6 +737,7 @@ figure
       //fill: #484848 !important
       transition: all 0.5s
     .headset
+      height: 30px
       @extend %center
       backface-visibility: hidden
     .cross
@@ -2115,10 +2116,11 @@ figure
           display: flex
           flex-direction: column
           align-items: center
-          i
-            font-size: 16px
-            @media only screen and (max-width: 575px)
-              font-size: 20px
+          li
+            i
+              font-size: 16px
+              @media only screen and (max-width: 575px)
+                font-size: 20px
       .location_text
         width: 100%
         text-align: left
@@ -2798,6 +2800,12 @@ figure
                 display: flex
                 align-items: center
                 justify-content: center
+          .custom-btn
+            &:hover
+              &:before
+                height: 112%
+            &:before
+              height: 50% 
       .object_hidden_info_bottom
         transform: translate3d(0,160px,0)
         bottom: 0
@@ -2943,11 +2951,8 @@ figure
 .max-width-90
   max-width: 90%
   width: 100%
-
-.padding-object-wrap
-  padding: 0 120px
   @media only screen and (max-width: 992px)
-    padding: 0 15px 
+    max-width: 100%
 
 .color_black
   color: black
@@ -3166,6 +3171,16 @@ figure
     padding: 35px 0
     max-width: 74px
     background: #ffffff
+    @media only screen and (max-width: 576px)
+      right: 50px
+      padding: 30px 0
+      max-width: 64px
+      bottom: -32px
+      @media only screen and (max-width: 400px)
+        right: 30px
+        padding: 23px 0
+        max-width: 50px
+        bottom: -23px
     .send_question
       width: 50px
       height: 50px
@@ -3196,11 +3211,25 @@ figure
 	100%
 		transform: rotate(-360deg) scale(1)
 
+@keyframes icon-animation-mobile
+	0%
+		transform: rotate(0deg) scale(1)
+	33%
+		transform: rotate(-120deg) scale(3) translate(60px, 90px)
+	66%
+		transform: rotate(-240deg) scale(3) translate(35px, 35px)
+	100%
+		transform: rotate(-360deg) scale(1)
+
 .icon-wrapper-animation
 	animation: icon-animation 1.5s linear
 	transition: color 0.4s ease
 	color: $color-btn-hover
-	
+    
+.icon-wrapper-animation
+  @media only screen  and (max-width: 576px)
+    animation: icon-animation-mobile 1.75s linear
+
 .send-button
   @extend %center
 
@@ -3212,6 +3241,12 @@ figure
   height: 74px	
   border-radius: 50%	
   color: $color-btn-hover
+  @media only screen and (max-width: 576px)
+    width: 64px
+    height: 64px
+    @media only screen and (max-width: 400px)
+      height: 50px
+      width: 50px
   .icon_send_question
     position: absolute
     transition: color 0.4s ease
@@ -3221,11 +3256,27 @@ figure
     font-size: 50px
     left: 13px
     bottom: 11px
+    @media only screen and (max-width: 576px)
+      font-size: 45px
+      left: 10px
+      bottom: 9px
+      @media only screen and (max-width: 400px)
+        font-size: 36px
+        left: 8px
+        bottom: 6px
   .icon-2
     opacity: 0
     transform: scale(1.8)
     left: 24px
     bottom: 20px
+    @media only screen and (max-width: 576px)
+      transform: scale(1.6)
+      left: 19px
+      bottom: 15px
+      @media only screen and (max-width: 400px)
+        transform: scale(1.2)
+        left: 13px
+        bottom: 8px
       
     
 .form_wrap
@@ -3272,7 +3323,7 @@ body
         transform: translate(-50%, 11%)
         @media only screen and (max-width: 768px)
           left: 0
-          height: 84%
+          height: 85%
           transform: translate(-50%, 7%)
           @media only screen and (max-width: 383px)
             height: 86%
@@ -3299,12 +3350,6 @@ body
       @media only screen and (max-width: 768px)
         width: 99%
         margin-top: 0
-        position: absolute
-        top: 105px 
-        @media only screen and (max-width: 383px)
-          top: 125px 
-          @media only screen and (max-width: 367px)
-            top: 148px
   .wrap_timelane_container
     margin-left: auto
     &:before
@@ -3341,7 +3386,7 @@ body
   margin-bottom: 50px
   position: relative
   @media only screen and (max-width: 768px)
-    margin-bottom: 145px
+    margin-bottom: 10px
   &:before
     content: ''
     border-radius: 50%
@@ -3440,48 +3485,18 @@ body
       @media only screen and (max-width: 440px)
         font-size: 11px
 
-.margin-b-timeline
+.before_mobile_timeline
   @media only screen and (max-width: 768px)
-    margin-bottom: 125px
-    @media only screen and (max-width: 641px)
-      margin-bottom: 150px
-.wrap_timelane_1
-  @media only screen and (max-width: 406px)
-    margin-bottom: 170px
-    @media only screen and (max-width: 320px)
-      margin-bottom: 190px
-.wrap_timelane_2
-  @media only screen and (max-width: 367px)
-    transform: translateY(-22px)
-.wrap_timelane_3
-   @media only screen and (max-width: 641px)
-    margin-bottom: 135px
-    @media only screen and (max-width: 587px)
-      margin-bottom: 155px
-      @media only screen and (max-width: 383px)
-        margin-bottom: 150px
-        @media only screen and (max-width: 327px)
-          margin-bottom: 173px
-.wrap_timelane_4
-  @media only screen and (max-width: 641px)
-    margin-bottom: 135px
-    @media only screen and (max-width: 484px)
-      margin-bottom: 155px
-      @media only screen and (max-width: 422px)
-        margin-bottom: 175px
-.wrap_timelane_6
+    display: none
+.after_mobile_timeline
+  display: none
   @media only screen and (max-width: 768px)
-    margin-bottom: 0
-
-
-
+    display: block
 
 .wrap_timelane_container
   &:hover
     &:before
       background: #006aff        
-      @media only screen and (max-width: 768px)
-       background: #eeeeee 
 
 .timelane_container
   transition: 0.25s
@@ -3489,17 +3504,12 @@ body
     box-shadow: 0 20px 35px 5px rgba(0, 0, 0, 0.2)
     background: #ffffff
     cursor: pointer
-    @media only screen and (max-width: 768px)
-      background: #eeeeee
-      box-shadow: none
-      cursor: unset 
     .wrap_content_timelane_cont
       &:after
         border-color: transparent transparent transparent #ffffff
         cursor: pointer
         @media only screen and (max-width: 768px)
-          border-color: transparent #eeeeee transparent transparent
-          cursor: unset 
+          border-color: transparent #ffffff transparent transparent
 
 .right_timeline_containers    
   .timelane_container
@@ -3511,8 +3521,7 @@ body
           border-color: transparent #ffffff transparent transparent
           cursor: pointer
           @media only screen and (max-width: 768px)
-            border-color: transparent #eeeeee transparent transparent
-            cursor: unset 
+            border-color: transparent #ffffff transparent transparent
 
 .photo_border_animation
   position: relative

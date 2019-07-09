@@ -257,6 +257,12 @@ $(function () {
             setTimeout(reset, 5000);
         }
     });
+    $iWrapper.on(animationEvent(), function (e) {
+        if (e.originalEvent.animationName == 'icon-animation-mobile') {
+            $iWrapper.removeClass('icon-wrapper-animation');
+            setTimeout(reset, 5000);
+        }
+    });
 
     function reset() {
         $i1.fadeTo(250, 1);
