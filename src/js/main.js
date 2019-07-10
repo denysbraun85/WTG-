@@ -39,19 +39,19 @@ $(document).ready(function () {
         filterPlaceholder: 'Search City',
         placeholder: "Cityes",
         maxHeight: 200,
-        dropUp: false
+        dropupAuto: false
     });
 
     $(".price").multiselect({
         maxHeight: 200,
-        dropUp: false
+        dropupAuto: false
     })
 
 
     $(".select_search_all").multiselect({
         includeSelectAllOption: true,
         maxHeight: 200,
-        dropUp: false
+        dropupAuto: false
     })
 
     /*====================================================================
