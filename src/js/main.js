@@ -37,16 +37,22 @@ $(document).ready(function () {
         enableFiltering: true,
         enableCaseInsensitiveFiltering: true,
         filterPlaceholder: 'Search City',
-        placeholder : "Cityes"
+        placeholder: "Cityes",
+        maxHeight: 200,
+        dropUp: false
     });
 
-    $(".price").multiselect({})
+    $(".price").multiselect({
+        maxHeight: 200,
+        dropUp: false
+    })
 
 
     $(".select_search_all").multiselect({
-        includeSelectAllOption: true
+        includeSelectAllOption: true,
+        maxHeight: 200,
+        dropUp: false
     })
-
 
     /*====================================================================
                                      End
