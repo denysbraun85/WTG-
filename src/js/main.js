@@ -30,28 +30,36 @@ $(document).ready(function () {
                                         End
     =====================================================================*/
     /*====================================================================
-                                     Bootstrap multiselect
+                                     Select 2
     =====================================================================*/
-
-    $('#city_select').multiselect({
-        enableFiltering: true,
-        enableCaseInsensitiveFiltering: true,
-        filterPlaceholder: 'Search City',
-        placeholder: "Cityes",
-        maxHeight: 200,
-        dropupAuto: false
+    $(function () {
+        $('.arrow_down').on('click', function () {
+            $('html, body').animate({
+                scrollTop: $('.wrap_arrow_down').offset().top + 80
+            }, 'slow');
+            return false;
+        });
     });
 
-    $(".price").multiselect({
-        maxHeight: 200,
-        dropupAuto: false
-    })
+    $('.language_select').select2({
+        'allowClear': true
+    });
 
+    $(".js-select2").select2({
+        closeOnSelect: false,
+        allowHtml: true,
+        allowClear: true,
+        tags: true
+    });
 
-    $(".select_search_all").multiselect({
-        includeSelectAllOption: true,
-        maxHeight: 200,
-        dropupAuto: false
+    $(".js-select2").on('click', function () {
+        if ($('.select2-container--open .select2-dropdown--below').show) {
+            $('.select2-container--default, .select2-selection--multiple').is(":hover").css({
+                '-webkit-box-shadow': 'none',
+                '-moz-box-shadow': 'none',
+                'box-shadow': 'none'
+            });
+        }
     })
 
     /*====================================================================
@@ -134,7 +142,7 @@ $(document).ready(function () {
         dots: false,
         arrows: false,
         // autoplay: true,
-        // autoplaySpeed: 6000,
+        // autoplaySpeed: 5000,
         responsive: [{
                 breakpoint: 992,
                 settings: {
@@ -148,7 +156,7 @@ $(document).ready(function () {
                 }
             },
             {
-                breakpoint: 576,
+                breakpoint: 476,
                 settings: {
                     slidesToShow: 1
                 }
