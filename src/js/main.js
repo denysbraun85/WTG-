@@ -30,41 +30,22 @@ $(document).ready(function () {
                                         End
     =====================================================================*/
     /*====================================================================
-                                     Select 2
+                                     Bootstrap multiselect
     =====================================================================*/
-    $(function () {
-        $('.arrow_down').on('click', function () {
-            $('html, body').animate({
-                scrollTop: $('.wrap_arrow_down').offset().top + 80
-            }, 'slow');
-            return false;
-        });
+
+    $('#city_select').multiselect({
+        enableFiltering: true,
+        filterPlaceholder: 'Search City',
+        placeholder : "Cityes"
     });
 
-    $('.language_select').select2({
-        'allowClear': true
-    });
+    $(".select_search").multiselect({})
 
-    $(".js-select2").select2({
-        closeOnSelect: false,
-        allowHtml: true,
-        allowClear: true,
-        tags: true
-    });
 
-    $('#all_cities').select2({
-        placeholder: "Select a State",
-    });
+    $(".select_search_all").multiselect({
+        includeSelectAllOption: true
+    })
 
-    $(".js-select2").on('click', function () {
-        if ($('.select2-container--open .select2-dropdown--below').show) {
-            $('.select2-container--default, .select2-selection--multiple').is(":hover").css({
-                '-webkit-box-shadow': 'none',
-                '-moz-box-shadow': 'none',
-                'box-shadow': 'none'
-            });
-        }
-    });
 
     /*====================================================================
                                      End
