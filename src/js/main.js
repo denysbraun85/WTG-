@@ -35,11 +35,12 @@ $(document).ready(function () {
 
     $('#city_select').multiselect({
         enableFiltering: true,
+        enableCaseInsensitiveFiltering: true,
         filterPlaceholder: 'Search City',
         placeholder : "Cityes"
     });
 
-    $(".select_search").multiselect({})
+    $(".price").multiselect({})
 
 
     $(".select_search_all").multiselect({
