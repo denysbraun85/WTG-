@@ -2304,169 +2304,143 @@ figure
  ===================================================================*/
 
 
-// .background_search_container
-//   background: $color-btn
-//   padding: 33px
-//   .wrap_select_search
-//     max-width: 1700px
-//     width: 100%
-//     margin: 0 auto
-//     display: flex
-//     justify-content: space-between
-//     align-items: center
-//     .select_container
-//       position: relative
-//       width: 100%
-//       padding: 0 10px
-//       display: flex
-//       justify-content: center
-//       align-items: center
-//       margin: 10px 0
-//       cursor: pointer
-//       z-index: 2
-//       height: 40px
-//       .placeholder_search_select
-//         position: absolute
-//         z-index: -1
-//         color: $select-search-color-text
-//         left: 25px
-//       .fas
-//         position: absolute
-//         z-index: -1
-//         color: $select-search-color-text
-//         right: 25px
-//       span
-//         border-radius: 24px
-//         cursor: pointer
-//       .select2
-//         width: 100% !important
-//         cursor: pointer
-//       button
-//         width: 100%
-//         border-radius: 24px 24px 24px 0
-//         border: 1px solid $border-search-color
-//         outline: none
-//         padding: 7px 10px
-//         cursor: pointer
-//         background: transparent
-//         &:hover
-//           box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28)
-//       .select2-selection__rendered
-//         display: none !important
-//       .select2-container--default, .select2-selection--multiple
-//         background: transparent
-//         border-color: $border-search-color
-//         height: 40px
-//         &:hover
-//           box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28)
-
-
-
-// .select2-container--default .select2-results>.select2-results__options
-//   &:before
-//     content: ''
-//     position: absolute
-//     top: 0
-//     left: 5%
-//     width: 90%
-//     height: 1px
-//     background: $border-search-color
-
-
-// .select2-results__option
-//   vertical-align: middle
-//   &:before
-//     content: ""
-//     display: inline-block
-//     position: relative
-//     height: 20px
-//     width: 20px
-//     border: 1px solid $border-search-color
-//     border-radius: 3px
-//     background-color: $color-btn
-//     margin: 0 15px 0 5px
-//     vertical-align: middle
-//   &[aria-selected=true]:before
-//     font-family: fontAwesome, sans-serif
-//     content: "\f00c"
-//     color: $color-btn
-//     background-color: $color-btn-hover
-//     border: 0
-//     display: inline-block
-//     padding-left: 2px
-//   &:last-child
-//     padding-bottom: 10px
-//     border-radius: 0 0 24px 24px
-
-
-// .select2-container--default
-//   .select2-results__option[aria-selected=true]
-//     background-color: #fff
-//   .select2-results__option--highlighted[aria-selected]
-//     background-color: #eaeaeb
-//     color: #272727
-//   &.select2-container--open.select2-container--below .select2-selection--multiple
-//     border-radius: 20px 20px 0 0
-//     box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28)
-//   &.select2-container--focus .select2-selection--multiple
-//     border-width: 1px
-//   .select2-selection--multiple
-//     border-width: 1px
-
-
-// .select2-container--default
-//   .select2-results__option[aria-selected=true]
-//     background-color: #fff
-//   .select2-results__option--highlighted[aria-selected]
-//     background-color: #eaeaeb
-//     color: #272727
-//   &.select2-container--open.select2-container--below .select2-selection
-//     border-radius: 20px 20px 0 0
-//     box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28)
-//   &.select2-container--focus .select2-selection
-//     border-width: 1px
-//   .select2-selection
-//     border-width: 1px
-
-
-// .select2-container--open .select2-dropdown--below
-//   border-radius: 0 0 24px 24px
-//   border-left: 1px solid $border-search-color
-//   border-right: 1px solid $border-search-color
-//   border-bottom: 1px solid $border-search-color
-//   top: -3px
-//   //box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08)
-//   box-shadow: 0 4px 6px 0 rgba(32,33,36,0.28)
-
-
-// .select2-selection .select2-selection--multiple:after
-//   content: 'hhghgh'
-
-.section-search
-  padding-bottom: 0
-  .wrap_search
-    max-width: 1500px
+.background_search_container
+  background: $color-btn
+  padding: 33px
+  .wrap_select_search
+    max-width: 1700px
     width: 100%
     margin: 0 auto
     display: flex
     justify-content: space-between
     align-items: center
-    .search_button
+    .select_container
+      position: relative
+      width: 100%
+      padding: 0 10px
+      display: flex
+      justify-content: center
+      align-items: center
+      margin: 10px 0
       cursor: pointer
+      z-index: 2
+      height: 40px
+      .placeholder_search_select
+        position: absolute
+        z-index: -1
+        color: $select-search-color-text
+        left: 25px
+      .fas
+        position: absolute
+        z-index: -1
+        color: $select-search-color-text
+        right: 25px
       span
-        padding: 7px 53px
-        font-size: 16px
+        border-radius: 24px
+        cursor: pointer
+      .select2
+        width: 100% !important
+        cursor: pointer
+      button
+        width: 100%
         border-radius: 24px 24px 24px 0
-        border: 1px solid #dddddd
-        &:focus
-          outline: 0
+        border: 1px solid $border-search-color
+        outline: none
+        padding: 7px 10px
+        cursor: pointer
+        background: transparent
+        &:hover
+          box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28)
+      .select2-selection__rendered
+        display: none !important
+      .select2-container--default, .select2-selection--multiple
+        background: transparent
+        border-color: $border-search-color
+        height: 40px
         &:hover
           box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28)
 
-          
 
 
+.select2-container--default .select2-results>.select2-results__options
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 5%
+    width: 90%
+    height: 1px
+    background: $border-search-color
 
+
+.select2-results__option
+  vertical-align: middle
+  &:before
+    content: ""
+    display: inline-block
+    position: relative
+    height: 20px
+    width: 20px
+    border: 1px solid $border-search-color
+    border-radius: 3px
+    background-color: $color-btn
+    margin: 0 15px 0 5px
+    vertical-align: middle
+  &[aria-selected=true]:before
+    font-family: fontAwesome, sans-serif
+    content: "\f00c"
+    color: $color-btn
+    background-color: $color-btn-hover
+    border: 0
+    display: inline-block
+    padding-left: 2px
+  &:last-child
+    padding-bottom: 10px
+    border-radius: 0 0 24px 24px
+
+
+.select2-container--default
+  .select2-results__option[aria-selected=true]
+    background-color: #fff
+  .select2-results__option--highlighted[aria-selected]
+    background-color: #eaeaeb
+    color: #272727
+  &.select2-container--open.select2-container--below .select2-selection--multiple
+    border-radius: 20px 20px 0 0
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28)
+  &.select2-container--focus .select2-selection--multiple
+    border-width: 1px
+  .select2-selection--multiple
+    border-width: 1px
+
+
+.select2-container--default
+  .select2-results__option[aria-selected=true]
+    background-color: #fff
+  .select2-results__option--highlighted[aria-selected]
+    background-color: #eaeaeb
+    color: #272727
+  &.select2-container--open.select2-container--below .select2-selection
+    border-radius: 20px 20px 0 0
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28)
+  &.select2-container--focus .select2-selection
+    border-width: 1px
+  .select2-selection
+    border-width: 1px
+
+
+.select2-container--open .select2-dropdown--below
+  border-radius: 0 0 24px 24px
+  border-left: 1px solid $border-search-color
+  border-right: 1px solid $border-search-color
+  border-bottom: 1px solid $border-search-color
+  top: -3px
+  //box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08)
+  box-shadow: 0 4px 6px 0 rgba(32,33,36,0.28)
+
+
+.select2-selection .select2-selection--multiple:after
+  content: 'hhghgh'
 
 /* ==================================================================
                            END STYLE SEARCH CONTAINER
