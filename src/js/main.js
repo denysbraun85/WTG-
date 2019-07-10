@@ -29,23 +29,6 @@ $(document).ready(function () {
     /*====================================================================
                                         End
     =====================================================================*/
-    /*====================================================================
-                                     Bootstrap multiselect
-    =====================================================================*/
-
-    $('#city_select').multiselect({
-        enableFiltering: true,
-        filterPlaceholder: 'Search City',
-        placeholder : "Cityes"
-    });
-
-    $(".select_search").multiselect({})
-
-
-    $(".select_search_all").multiselect({
-        includeSelectAllOption: true
-    })
-
 
     /*====================================================================
                                      End
