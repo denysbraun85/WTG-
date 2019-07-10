@@ -918,6 +918,7 @@ figure {
       -webkit-backface-visibility: hidden;
               backface-visibility: hidden; }
     .connect-box .contact-btn .cross {
+      max-width: 40%;
       position: absolute;
       -webkit-backface-visibility: hidden;
               backface-visibility: hidden;
@@ -2158,25 +2159,19 @@ figure {
 .section-professionals {
   position: relative;
   background: #eff4f7; }
-  .section-professionals .head-text-box {
-    margin-bottom: 30px; }
-    .section-professionals .head-text-box h3 {
-      margin: 0; }
-    .section-professionals .head-text-box .upper-head {
-      margin-top: 30px; }
   .section-professionals .manager-slider {
-    width: 100%;
-    max-width: 100%;
     padding-bottom: 100px; }
-    @media (max-width: 576px) {
+    @media (max-width: 1200px) {
       .section-professionals .manager-slider {
-        max-width: 265px;
-        width: 100%;
-        margin: auto; } }
+        padding-bottom: 60px; } }
+  @media (max-width: 1200px) and (max-width: 576px) {
+    .section-professionals .manager-slider {
+      padding-bottom: 40px;
+      max-width: 265px;
+      width: 100%;
+      margin: auto; } }
     .section-professionals .manager-slider .manager-card {
-      position: relative;
       overflow: hidden;
-      margin: 0 5px;
       border: 2px solid rgba(0, 0, 0, 0.125); }
       .section-professionals .manager-slider .manager-card:hover .manager-social-contact {
         right: 0; }
@@ -2188,6 +2183,9 @@ figure {
         height: 100%; }
         .section-professionals .manager-slider .manager-card:hover .img-box .box-shadow .contact-number-block {
           bottom: 100px; }
+          @media (max-width: 1200px) {
+            .section-professionals .manager-slider .manager-card:hover .img-box .box-shadow .contact-number-block {
+              bottom: 80px; } }
       .section-professionals .manager-slider .manager-card:hover .card-bottom {
         background: #032fab; }
         .section-professionals .manager-slider .manager-card:hover .card-bottom .manager-name {
@@ -2195,18 +2193,8 @@ figure {
         .section-professionals .manager-slider .manager-card:hover .card-bottom .manager-position {
           color: #838181; }
       .section-professionals .manager-slider .manager-card .manager-social-contact {
-        position: absolute;
         top: 0;
         right: -50px;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-            -ms-flex-direction: column;
-                flex-direction: column;
         -webkit-transition: all 0.5s ease;
         -o-transition: all 0.5s ease;
         transition: all 0.5s ease;
@@ -2218,7 +2206,6 @@ figure {
     .section-professionals .manager-slider .manager-card .manager-social-contact {
       right: -50px; } }
         .section-professionals .manager-slider .manager-card .manager-social-contact li {
-          position: relative;
           width: 50px;
           height: 50px;
           margin-bottom: 5px;
@@ -2232,88 +2219,64 @@ figure {
       width: 50px;
       height: 50px; } }
           .section-professionals .manager-slider .manager-card .manager-social-contact li a {
-            display: block;
             cursor: pointer;
-            width: 100%;
-            height: 100%;
-            text-align: center;
             line-height: 3.7; }
-            .section-professionals .manager-slider .manager-card .manager-social-contact li a:hover i {
-              font-size: 26px; }
             @media (max-width: 1200px) {
               .section-professionals .manager-slider .manager-card .manager-social-contact li a {
-                line-height: 16px; } }
+                line-height: 45px; } }
   @media (max-width: 1200px) and (max-width: 476px) {
     .section-professionals .manager-slider .manager-card .manager-social-contact li a {
-      line-height: 18px; } }
+      line-height: 57px; } }
+            .section-professionals .manager-slider .manager-card .manager-social-contact li a:hover i {
+              font-size: 26px; }
+              @media (max-width: 476px) {
+                .section-professionals .manager-slider .manager-card .manager-social-contact li a:hover i {
+                  font-size: 30px; } }
             .section-professionals .manager-slider .manager-card .manager-social-contact li a i {
               font-size: 22px;
               color: #fff;
               -webkit-transition: all 0.3s ease;
               -o-transition: all 0.3s ease;
               transition: all 0.3s ease; }
-      .section-professionals .manager-slider .manager-card .img-box {
-        overflow: hidden;
-        margin-bottom: 0;
-        height: 100%; }
-        .section-professionals .manager-slider .manager-card .img-box img {
-          width: 100%;
-          -webkit-transform: scale(1);
-              -ms-transform: scale(1);
-                  transform: scale(1);
+              @media (max-width: 476px) {
+                .section-professionals .manager-slider .manager-card .manager-social-contact li a i {
+                  font-size: 25px; } }
+      .section-professionals .manager-slider .manager-card .img-box img {
+        -webkit-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease; }
+      .section-professionals .manager-slider .manager-card .img-box .box-shadow {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: -webkit-gradient(linear, left bottom, left top, from(#000), color-stop(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0)));
+        background: -webkit-linear-gradient(bottom, #000, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+        background: -o-linear-gradient(bottom, #000, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+        background: linear-gradient(to top, #000, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+        height: 0;
+        -webkit-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        z-index: 0; }
+        .section-professionals .manager-slider .manager-card .img-box .box-shadow .contact-number-block {
+          bottom: -50px;
           -webkit-transition: all 0.5s ease;
           -o-transition: all 0.5s ease;
           transition: all 0.5s ease; }
-        .section-professionals .manager-slider .manager-card .img-box .box-shadow {
-          position: absolute;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background: -webkit-gradient(linear, left bottom, left top, from(#000), color-stop(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0)));
-          background: -webkit-linear-gradient(bottom, #000, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
-          background: -o-linear-gradient(bottom, #000, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
-          background: linear-gradient(to top, #000, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
-          height: 0;
-          -webkit-transition: all 0.5s ease;
-          -o-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-          z-index: 0; }
-          .section-professionals .manager-slider .manager-card .img-box .box-shadow .contact-number-block {
-            position: absolute;
-            bottom: -50px;
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -webkit-flex-direction: column;
-                -ms-flex-direction: column;
-                    flex-direction: column;
-            text-align: center;
-            width: 100%;
-            -webkit-transition: all 0.5s ease;
-            -o-transition: all 0.5s ease;
-            transition: all 0.5s ease; }
-            .section-professionals .manager-slider .manager-card .img-box .box-shadow .contact-number-block span {
-              font-size: 15px;
-              color: #fff;
-              width: 100%;
-              text-align: center; }
-              .section-professionals .manager-slider .manager-card .img-box .box-shadow .contact-number-block span i {
-                font-size: 18px;
-                color: #fff; }
+          .section-professionals .manager-slider .manager-card .img-box .box-shadow .contact-number-block a {
+            font-size: 15px;
+            color: #fff; }
+            .section-professionals .manager-slider .manager-card .img-box .box-shadow .contact-number-block a i {
+              font-size: 18px;
+              color: #fff; }
       .section-professionals .manager-slider .manager-card .card-bottom {
         padding: 10px;
-        text-align: center;
         background: #fff;
         -webkit-transition: all 0.5s ease;
         -o-transition: all 0.5s ease;
         transition: all 0.5s ease;
         z-index: 2;
-        position: absolute;
-        bottom: 0;
-        width: 100%; }
+        bottom: 0; }
         .section-professionals .manager-slider .manager-card .card-bottom .manager-name {
           font-family: 'Montserrat-semibold', sans-serif;
           -webkit-transition: all 0.5s ease;
@@ -2322,10 +2285,6 @@ figure {
           @media (max-width: 1200px) {
             .section-professionals .manager-slider .manager-card .card-bottom .manager-name {
               font-size: 16px; } }
-  .section-professionals .main-button-container {
-    bottom: 10%; }
-    .section-professionals .main-button-container button:hover span {
-      color: #fff; }
 
 /*====================================================================
                                    END

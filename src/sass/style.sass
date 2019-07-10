@@ -82,6 +82,7 @@ $bg-main-menu: rgba(3, 47, 171, 0.8)
 $bg-color-grey: #838181
 $header-color-menu: #032fab
 $header-color: rgba(3, 47, 171, 0.5)
+$bg-gradient-cards-managers: linear-gradient(to top, #000, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0))
 //text
 $text-color-black: #000000
 $text-color-grey: #838181
@@ -741,6 +742,7 @@ figure
       @extend %center
       backface-visibility: hidden
     .cross
+      max-width: 40%
       position: absolute
       backface-visibility: hidden
       transform: rotateY(180deg) translate(-50%, -50%)
@@ -1835,101 +1837,6 @@ figure
             color: $text-color-black
             @media only screen and (max-width: 576px)
               font-size: 12px
-      //img
-      //  position: absolute
-      //  bottom: -25%
-      //  left: 50%
-      //  transform: translate(-50%)
-      //  border-radius: 50%
-      //  max-width: 30%
-      //  border: 2px solid $border-team-photo
-      //  @media only screen and (max-width: 1200px)
-      //    bottom: -20%
-      //    @media only screen and (max-width: 992px)
-      //      bottom: -25%
-      //      @media only screen and (max-width: 768px)
-      //        max-width: 20%
-      //        bottom: -25%
-      //        @media only screen and (max-width: 470px)
-      //          bottom: -20%
-      //          @media only screen and (max-width: 420px)
-      //            bottom: -18%
-      //            @media only screen and (max-width: 380px)
-      //              bottom: -15%
-
-  //.feedback-slider
-  //  overflow: hidden
-  //  width: 100%
-  //  .feedback-slider-box
-  //    position: relative
-  //    width: 100%
-  //    background: $bg-color-menu
-  //    border: 2px solid $border-team-photo
-  //    padding: 20px
-  //    opacity: 0.85
-  //    transition: all 0.5s cubic-bezier(.785,.135,.15,.86)
-  //    margin: 10px 5px 60px 5px
-  //    @media only screen and (max-width: 1200px)
-  //      padding: 20px 10px
-  //      @media only screen and (max-width: 992px)
-  //        opacity: 1
-  //    &:hover
-  //      opacity: 1
-  //      box-shadow: 0 70px 70px rgba(0, 0, 0, 0.1)
-  //      transform: translate(0, -10px)
-  //      z-index: 100
-  //      cursor: pointer
-  //      @media only screen and (max-width: 992px)
-  //        box-shadow: none
-  //        transform: none
-  //    .quote-wrapper
-  //      position: absolute
-  //      display: flex
-  //      top: 20px
-  //      left: 50%
-  //      transform: translate(-50%)
-  //      .quote-box
-  //        margin: 0 4px
-  //        &:before
-  //          display: block
-  //          content: ''
-  //          width: 20px
-  //          height: 28px
-  //          background: $icons-quote-feedback
-  //        &:after
-  //          display: block
-  //          content: ''
-  //          width: 0
-  //          height: 0
-  //          border-style: solid
-  //          border-width: 8px 8px 0 0
-  //          border-color: $icons-quote-feedback transparent transparent transparent
-  //    p
-  //      padding: 60px 0 50px 0
-  //      text-align: center
-  //      font-size: 16px
-  //    img
-  //      position: absolute
-  //      bottom: -25%
-  //      left: 50%
-  //      transform: translate(-50%)
-  //      border-radius: 50%
-  //      max-width: 30%
-  //      border: 2px solid $border-team-photo
-  //      @media only screen and (max-width: 1200px)
-  //        bottom: -20%
-  //        @media only screen and (max-width: 992px)
-  //          bottom: -25%
-  //          @media only screen and (max-width: 768px)
-  //            max-width: 20%
-  //            bottom: -25%
-  //            @media only screen and (max-width: 470px)
-  //              bottom: -20%
-  //              @media only screen and (max-width: 420px)
-  //                bottom: -18%
-  //                @media only screen and (max-width: 380px)
-  //                  bottom: -15%
-
 /*====================================================================
                                    END
  =====================================================================*/
@@ -1940,24 +1847,17 @@ figure
 .section-professionals
   position: relative
   background: $section-color-light
-  .head-text-box
-    margin-bottom: 30px
-    h3
-      margin: 0
-    .upper-head
-      margin-top: 30px
   .manager-slider
-    width: 100%
-    max-width: 100%
     padding-bottom: 100px
-    @media (max-width: 576px)
-      max-width: 265px
-      width: 100%
-      margin: auto
+    @media (max-width: 1200px)
+      padding-bottom: 60px
+      @media (max-width: 576px)
+        padding-bottom: 40px
+        max-width: 265px
+        width: 100%
+        margin: auto
     .manager-card
-      position: relative
       overflow: hidden
-      margin: 0 5px
       border: 2px solid $border-card-manager
       &:hover
         .manager-social-contact
@@ -1969,6 +1869,8 @@ figure
             height: 100%
             .contact-number-block
               bottom: 100px
+              @media (max-width: 1200px)
+                bottom: 80px
         .card-bottom
           background: $bg-card-manager
           .manager-name
@@ -1976,11 +1878,8 @@ figure
           .manager-position
             color: $text-color-grey
       .manager-social-contact
-        position: absolute
         top: 0
         right: -50px
-        display: flex
-        flex-direction: column
         transition: all 0.5s ease
         z-index: 5
         @media (max-width: 1200px)
@@ -1988,7 +1887,6 @@ figure
           @media (max-width: 476px)
             right: -50px
         li
-          position: relative
           width: 50px
           height: 50px
           margin-bottom: 5px
@@ -2000,77 +1898,54 @@ figure
               width: 50px
               height: 50px
           a
-            //@extend %center
-            display: block
             cursor: pointer
-            width: 100%
-            height: 100%
-            text-align: center
             line-height: 3.7
+            @media (max-width: 1200px)
+              line-height: 45px
+              @media (max-width: 476px)
+                line-height: 57px
             &:hover
               i
                 font-size: 26px
-            @media (max-width: 1200px)
-              line-height: 16px
-              @media (max-width: 476px)
-                line-height: 18px
+                @media (max-width: 476px)
+                  font-size: 30px
             i
               font-size: 22px
               color: $text-color-white
               transition: all 0.3s ease
+              @media (max-width: 476px)
+                font-size: 25px
       .img-box
-        overflow: hidden
-        margin-bottom: 0
-        height: 100%
         img
-          width: 100%
-          transform: scale(1)
           transition: all 0.5s ease
         .box-shadow
-          position: absolute
           left: 0
           right: 0
           bottom: 0
-          background: linear-gradient(to top, #000, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0))
+          background: $bg-gradient-cards-managers
           height: 0
           transition: all 0.5s ease
           z-index: 0
           .contact-number-block
-            position: absolute
             bottom: -50px
-            display: flex
-            flex-direction: column
-            text-align: center
-            width: 100%
             transition: all 0.5s ease
-            span
+            a
               font-size: 15px
               color: $text-color-white
-              width: 100%
-              text-align: center
               i
                 font-size: 18px
                 color: $text-color-white
       .card-bottom
         padding: 10px
-        text-align: center
         background: $bg-color-menu
         transition: all 0.5s ease
         z-index: 2
-        position: absolute
         bottom: 0
-        width: 100%
         .manager-name
           font-family: 'Montserrat-semibold', sans-serif
           transition: all 0.5s ease
           @media (max-width: 1200px)
             font-size: 16px
-  .main-button-container
-    bottom: 10%
-    button
-      &:hover
-        span
-          color: $color-btn
 /*====================================================================
                                    END
  =====================================================================*/

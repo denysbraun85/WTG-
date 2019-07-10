@@ -52,6 +52,10 @@ $(document).ready(function () {
         tags: true
     });
 
+    $('#all_cities').select2({
+        placeholder: "Select a State",
+    });
+
     $(".js-select2").on('click', function () {
         if ($('.select2-container--open .select2-dropdown--below').show) {
             $('.select2-container--default, .select2-selection--multiple').is(":hover").css({
@@ -60,7 +64,7 @@ $(document).ready(function () {
                 'box-shadow': 'none'
             });
         }
-    })
+    });
 
     /*====================================================================
                                      End
@@ -142,7 +146,7 @@ $(document).ready(function () {
         dots: false,
         arrows: false,
         // autoplay: true,
-        // autoplaySpeed: 5000,
+        // autoplaySpeed: 6000,
         responsive: [{
                 breakpoint: 992,
                 settings: {
@@ -156,7 +160,7 @@ $(document).ready(function () {
                 }
             },
             {
-                breakpoint: 476,
+                breakpoint: 576,
                 settings: {
                     slidesToShow: 1
                 }
